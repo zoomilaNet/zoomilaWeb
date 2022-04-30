@@ -200,7 +200,7 @@ export default function Home() {
           <div className="flex justify-center mb-4">
             <a href={listingSellURL} className="w-full h-full">
               <button
-                className="relative bg-gradient-to-b from-sale_up to-sale_down w-full h-20 md:w-full flex flex-row items-center justify-between px-2 rounded-md">
+                className={saleCountAds || saleCountAds == 0?"relative bg-gradient-to-b from-sale_up to-sale_down w-full h-20 md:w-full flex flex-row items-center justify-between px-2 rounded-md":"relative cursor-not-allowed bg-gray-500 w-full h-20 md:w-full flex flex-row items-center justify-between px-2 rounded-md"}>
                 <p className="text-lg sm:text-lg font-bold">آگهی های فروش</p>
                 <span className="absolute left-1/2 right-1/2 flex items-center">
                 <Player autoplay={true} src={Touch} loop={true} style={{ width: '60px', height: '60px' }}  />
@@ -211,7 +211,7 @@ export default function Home() {
           <div className="flex justify-center mb-4">
             <a href={listingLetURL} className="w-full h-full">
               <button
-                className="relative bg-gradient-to-b from-rent_up to-rent_down w-full h-20 md:full flex flex-row items-center justify-between px-2 rounded-md">
+                className={rentCountAds || rentCountAds == 0?"relative bg-gradient-to-b from-rent_up to-rent_down w-full h-20 md:full flex flex-row items-center justify-between px-2 rounded-md":"relative cursor-not-allowed bg-gray-500 w-full h-20 md:full flex flex-row items-center justify-between px-2 rounded-md"}>
                 <p className="text-lg sm:text-lg font-bold">آگهی های اجاره</p><span className="absolute left-1/2 right-1/2 flex items-center">
                 <Player autoplay={true} src={Touch} loop={true} style={{ width: '60px', height: '60px' }}  />
                 </span>
