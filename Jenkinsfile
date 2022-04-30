@@ -60,7 +60,7 @@ pipeline{
           slackSend(channel: "back", message: "Operation Completed on ui")
         }
         failure{
-            slackSend(channel: "back", message: "containerizing of ui failed")
+            slackSend(channel: "back", message: "containerizing of ui failed🤣")
             echo "[*]:Your jenkins operation completed with an error..."
         }
     }
