@@ -1,0 +1,115 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="ChangeListManager">
+    <list default="true" id="85396787-6298-4985-82c3-6d22319d4af6" name="Default Changelist" comment="">
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+    </list>
+    <option name="SHOW_DIALOG" value="false" />
+    <option name="HIGHLIGHT_CONFLICTS" value="true" />
+    <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
+    <option name="LAST_RESOLUTION" value="IGNORE" />
+  </component>
+  <component name="FileTemplateManagerImpl">
+    <option name="RECENT_TEMPLATES">
+      <list>
+        <option value="JavaScript File" />
+      </list>
+    </option>
+  </component>
+  <component name="Git.Settings">
+    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
+  </component>
+  <component name="MarkdownSettingsMigration">
+    <option name="stateVersion" value="1" />
+  </component>
+  <component name="ProjectId" id="27rhY0Q5pD4CKCbgcav4dx7lF1J" />
+  <component name="ProjectViewState">
+    <option name="hideEmptyMiddlePackages" value="true" />
+    <option name="showLibraryContents" value="true" />
+  </component>
+  <component name="PropertiesComponent"><![CDATA[{
+  "keyToString": {
+    "RunOnceActivity.OpenProjectViewOnStart": "true",
+    "RunOnceActivity.ShowReadmeOnStart": "true",
+    "WebServerToolWindowFactoryState": "false",
+    "last_opened_file_path": "C:/Users/hp1/Desktop/next/ui",
+    "node.js.detected.package.eslint": "true",
+    "node.js.selected.package.eslint": "(autodetect)",
+    "nodejs_package_manager_path": "yarn",
+    "settings.editor.selected.configurable": "editor.preferences.fonts.default",
+    "ts.external.directory.path": "C:\\Users\\hp1\\Desktop\\next\\testnext\\node_modules\\typescript\\lib"
+  }
+}]]></component>
+  <component name="RecentsManager">
+    <key name="MoveFile.RECENT_KEYS">
+      <recent name="C:\Users\hp1\Desktop\next\testnext\src\component" />
+      <recent name="C:\Users\hp1\Desktop\next\testnext\pages" />
+    </key>
+  </component>
+  <component name="RunManager">
+    <configuration name="dev" type="js.build_tools.npm" nameIsGenerated="true">
+      <package-json value="$PROJECT_DIR$/package.json" />
+      <command value="run" />
+      <scripts>
+        <script value="dev" />
+      </scripts>
+      <node-interpreter value="project" />
+      <envs />
+      <method v="2" />
+    </configuration>
+  </component>
+  <component name="SpellCheckerSettings" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" DefaultDictionary="application-level" UseSingleDictionary="true" transferred="true" />
+  <component name="TaskManager">
+    <task active="true" id="Default" summary="Default task">
+      <changelist id="85396787-6298-4985-82c3-6d22319d4af6" name="Default Changelist" comment="" />
+      <created>1650082998471</created>
+      <option name="number" value="Default" />
+      <option name="presentableId" value="Default" />
+      <updated>1650082998471</updated>
+      <workItem from="1650083023644" duration="325000" />
+      <workItem from="1650084166206" duration="16000" />
+      <workItem from="1650084200965" duration="236000" />
+      <workItem from="1650084866813" duration="344000" />
+      <workItem from="1650087039092" duration="14890000" />
+      <workItem from="1650105879399" duration="625000" />
+      <workItem from="1650166767786" duration="6574000" />
+      <workItem from="1650192375011" duration="4192000" />
+      <workItem from="1650305429940" duration="1831000" />
+      <workItem from="1650308492152" duration="3395000" />
+      <workItem from="1650360626581" duration="37000" />
+      <workItem from="1650364643061" duration="605000" />
+      <workItem from="1650368981511" duration="1389000" />
+      <workItem from="1650426315792" duration="12000" />
+      <workItem from="1650437329863" duration="657000" />
+      <workItem from="1650439014658" duration="3390000" />
+      <workItem from="1650444752334" duration="10624000" />
+      <workItem from="1650773122489" duration="257000" />
+      <workItem from="1650773515524" duration="26164000" />
+      <workItem from="1650859921575" duration="19246000" />
+      <workItem from="1650945840506" duration="24416000" />
+      <workItem from="1651033013354" duration="22469000" />
+      <workItem from="1651063655121" duration="317000" />
+      <workItem from="1651291611994" duration="4493000" />
+      <workItem from="1651300330950" duration="401000" />
+    </task>
+    <servers />
+  </component>
+  <component name="TypeScriptGeneratedFilesManager">
+    <option name="version" value="3" />
+  </component>
+  <component name="Vcs.Log.Tabs.Properties">
+    <option name="TAB_STATES">
+      <map>
+        <entry key="MAIN">
+          <value>
+            <State />
+          </value>
+        </entry>
+      </map>
+    </option>
+  </component>
+  <component name="XSLT-Support.FileAssociations.UIState">
+    <expand />
+    <select />
+  </component>
+</project>

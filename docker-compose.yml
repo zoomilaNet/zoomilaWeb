@@ -1,0 +1,19 @@
+version: '3.9'
+services:
+  ui:
+    build:
+      context: .
+    image: ui:v1
+    container_name: ui
+    ports:
+      - "9098:3000"
+    networks:
+      - cicd
+    restart: unless-stopped
+    volumes:
+      - "/var/www/ui:/app"
+      - "/etc/timezone:/etc/timezone:ro"
+      - "/etc/localtime:/etc/localtime:ro"
+networks:
+  cicd:
+    external: true
