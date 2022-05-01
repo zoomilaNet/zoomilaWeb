@@ -10,10 +10,10 @@ module.exports = {
       red: colors.red,
       'occasion_ads_tag': '#fec0d8',        /*رنگ تگ آگهی های ویژه*/
       'featured_ads_tag': '#f9c806',        /*تگ آگهی های فوری*/
-      'simple_ads_tag': '#f3f3f3',        /*پس زمینه قیمت آگهی های ساده*/
-      'green_accent': '#28AE00',            /*رنگ سبز فروش*/
+      'simple_ads_tag': '#f3f3f3',          /*پس زمینه قیمت آگهی های ساده*/
+      'green_accent': '#218603',            /*رنگ سبز فروش*/
       'blue_accent': '#198AE1',             /*رنگ آبی اجاره*/
-      'gray_text': '#848484',               /*رنگ حروف خاکستری*/
+      'gray_text': '#656565',               /*رنگ حروف خاکستری*/
       'hf_color': '#1f1f47',
       'sale_up': '#07aba0',
       'sale_down': '#045650',

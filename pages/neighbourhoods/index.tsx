@@ -68,7 +68,7 @@ function Neighbourhoods() {
     parameter = neighbourhoodsForShow ? neighbourhoodsForShow.map((data) => <button id="squere" key={data.id} onClick={() => selectNeibourhood(data.id as number)} className={getSelected(data.id as number) ? schema[0] : schema[1]}><span className="absolute top-0 w-full h-full flex justify-center items-center">{data.name}</span></button>) : <CircularProgress />;
     return <div>
         <Head>
-            
+            <title>انتخاب محله</title>
             <meta name="robots" content="noindex"/>
         </Head>
         <main className="w-screen h-screen bg-gradient-to-b from-upgray_gradient via-with_gray to-downgray_gradient flex flex-col items-center">
@@ -84,7 +84,7 @@ function Neighbourhoods() {
                         {parameter}
                     </div>
                 </div>
-                <div className="sticky bottom-0 w-full h-20 bg-gradient-to-b from-upnblue_gradient to-downnblue_gradient px-4 py-3 flex justify-between"><button onClick={getNeighbourhoodExit} className="bg-gradient-to-b from-upgreen_gradient to-downgreen_gradient w-full rounded-md">تایید</button></div>
+                <div className="sticky bottom-0 w-full h-20 bg-gradient-to-b from-upnblue_gradient to-downnblue_gradient px-4 py-3 flex justify-between"><button id="NeighbourhoodSubmit" onClick={getNeighbourhoodExit} className="bg-gradient-to-b from-upgreen_gradient to-downgreen_gradient w-full rounded-md">تایید</button></div>
             </div>
         </div></main>
         </div>

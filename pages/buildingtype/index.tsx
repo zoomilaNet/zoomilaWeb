@@ -58,6 +58,7 @@ function BuildingType() {
     return <div>
         <Head>
             <meta name="robots" content="noindex"/>
+            <title>انتخاب نوع ملک</title>
         </Head>
         <main className="w-screen h-screen bg-gradient-to-b from-upgray_gradient via-with_gray to-downgray_gradient flex flex-col items-center">
         <div className="w-screen lg:w-2/5 h-full">
@@ -68,7 +69,7 @@ function BuildingType() {
                         {parameter}
                     </div>
                 </div>
-                <div className="sticky bottom-0 w-full h-20 bg-gradient-to-b from-upnblue_gradient to-downnblue_gradient px-4 py-3 flex justify-between"><button onClick={getNeighbourhoodExit} className="bg-gradient-to-b from-upgreen_gradient to-downgreen_gradient w-full rounded-md">تایید</button></div>
+                <div className="sticky bottom-0 w-full h-20 bg-gradient-to-b from-upnblue_gradient to-downnblue_gradient px-4 py-3 flex justify-between"><button id="BuildingTypeSubmit" onClick={getNeighbourhoodExit} className="bg-gradient-to-b from-upgreen_gradient to-downgreen_gradient w-full rounded-md">تایید</button></div>
             </div>
         </div>
     </main>

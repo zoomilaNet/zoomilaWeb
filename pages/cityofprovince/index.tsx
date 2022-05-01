@@ -78,6 +78,7 @@ function CityOfProvince() {
     return <div>
         <Head>
             <meta name="robots" content="noindex"/>
+            <title>انتخاب شهر</title>
         </Head>
         <main className="w-screen h-screen la-module bg-gradient-to-b from-upgray_gradient via-with_gray to-downgray_gradient flex flex-col items-center ">
         <div className="w-screen h-full lg:w-2/5">
@@ -89,8 +90,8 @@ function CityOfProvince() {
                     </div>
                 </div>
                 <div className="sticky bottom-0 w-full h-20 bg-gradient-to-b from-upnblue_gradient to-downnblue_gradient px-4 py-3 flex justify-between">
-                    <button className="bg-gradient-to-b from-upgreen_gradient to-downgreen_gradient w-49% rounded-md" onClick={isCity ? backToProvince : exitWithoutSelecting}>{isCity ? "تغییر استان" : "بازگشت"}</button>
-                    <button className="bg-gradient-to-b from-upgreen_gradient to-downgreen_gradient w-49% rounded-md" onClick={isCity ? getCityExit : goToCityPageHandler}>{isCity ? "تایید" : "ادامه"}</button>
+                    <button id="BackInCity" className="bg-gradient-to-b from-upgreen_gradient to-downgreen_gradient w-49% rounded-md" onClick={isCity ? backToProvince : exitWithoutSelecting}>{isCity ? "تغییر استان" : "بازگشت"}</button>
+                    <button id="CitySubmit" className="bg-gradient-to-b from-upgreen_gradient to-downgreen_gradient w-49% rounded-md" onClick={isCity ? getCityExit : goToCityPageHandler}>{isCity ? "تایید" : "ادامه"}</button>
                 </div>
             </div>
         </div>

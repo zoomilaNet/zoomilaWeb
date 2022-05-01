@@ -23,17 +23,17 @@ function Slider ({basePath,photos,photoSlug}:{basePath:string,photos:string[],ph
     }
     return <div className='container-slider'>
        {photos.map((item,index:number)=><div key={index} className={slideIndex === index + 1 ? "slide active-anim" : "slide"}><Image  src={basePath+photos[index]} alt={photoSlug} className="w-full h-full" layout='fill'/></div>)}
-       <button
+       <button id="RightArrow"
       onClick={nextSlide}
       className= "btn-slide next" 
     >
-      <img src='/image/rightarrow.svg'/>
+      <img src='/image/rightarrow.svg' alt="جهت اسلایدر" />
     </button>
-    <button
+    <button id="LeftArrow"
       onClick={prevSlide}
       className= "btn-slide prev"
     >
-      <img src='/image/leftarrow.svg'/>
+      <img src='/image/leftarrow.svg' alt="جهت اسلایدر" />
     </button>
       <div className='absolute right-0 top-0 px-1  h-6 flex flex-row justify-center items-center rounded-bl bg-black bg-opacity-60 text-white'>
         {slideIndex}/{photos.length}

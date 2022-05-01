@@ -133,7 +133,7 @@ export default function Home() {
     </Head>
 
     <header className='bg-hf_color w-screen h-14 lg:h-16 grid grid-cols-4 gap-4 px-4'>
-        <div className="flex justify-start items-center"><img src="./image/menu.svg" alt="منو زومیلا" /></div>
+        <div className="flex justify-start items-center"><img src="./image/menu.svg" alt="منو زومیلا" className="w-6 h-6"/></div>
       <div className="col-span-2 flex justify-center items-center"><img src="./image/Zoomila_Logo.svg" alt="زومیلا" className="h-12 lg:h-14 w-52" /></div>
     </header>
 
@@ -199,42 +199,42 @@ export default function Home() {
           </div>
           <div className="flex justify-center mb-4">
             <a href={listingSellURL} className="w-full h-full">
-              <button
+              <div
                 className={saleCountAds || saleCountAds == 0?"relative bg-gradient-to-b from-sale_up to-sale_down w-full h-20 md:w-full flex flex-row items-center justify-between px-2 rounded-md":"relative cursor-not-allowed bg-gray-500 w-full h-20 md:w-full flex flex-row items-center justify-between px-2 rounded-md"}>
                 <p className="text-lg sm:text-lg font-bold">آگهی های فروش</p>
                 <span className="absolute left-1/2 right-1/2 flex items-center">
                 <Player autoplay={true} src={Touch} loop={true} style={{ width: '60px', height: '60px' }}  />
                 </span>
                 <span className="text-base sm:text-base">{saleCountAds || saleCountAds == 0 ? saleCountAds < 0 ? "مشکل در برقراری اتصال به سرور" : saleCountAds + " مورد" : <CircularProgress color="inherit" size={20} />}</span>
-              </button></a>
+              </div></a>
           </div>
           <div className="flex justify-center mb-4">
             <a href={listingLetURL} className="w-full h-full">
-              <button
+              <div
                 className={rentCountAds || rentCountAds == 0?"relative bg-gradient-to-b from-rent_up to-rent_down w-full h-20 md:full flex flex-row items-center justify-between px-2 rounded-md":"relative cursor-not-allowed bg-gray-500 w-full h-20 md:full flex flex-row items-center justify-between px-2 rounded-md"}>
                 <p className="text-lg sm:text-lg font-bold">آگهی های اجاره</p><span className="absolute left-1/2 right-1/2 flex items-center">
                 <Player autoplay={true} src={Touch} loop={true} style={{ width: '60px', height: '60px' }}  />
                 </span>
                 <span className="text-base sm:text-base">{rentCountAds || rentCountAds == 0 ? rentCountAds < 0 ? "مشکل در برقراری اتصال به سرور" : rentCountAds + " مورد" : <CircularProgress color="inherit" size={20} />}</span>
-              </button></a>
+              </div></a>
           </div>
           <div className="flex justify-center mb-4">
-            <a href={`https://www.zoomila.com/`} className="w-full h-full"><button
+            <a href={`https://www.zoomila.com/`} className="w-full h-full"><div
               className="bg-white w-full h-20 md:full flex flex-row items-center justify-center px-2 rounded-md">
               <p className="text-lg sm:text-lg font-bold text-black">همه آگهی های زومیلا</p>
-            </button></a>
+            </div></a>
           </div>
           <div className="flex justify-center mb-4">
-            <a href={`https://www.zoomila.com/projects`} className="w-full h-full"><button
+            <a href={`https://www.zoomila.com/projects`} className="w-full h-full"><div
               className="bg-white w-full h-20 md:full flex flex-row items-center justify-center px-2 rounded-md">
               <p className="text-lg sm:text-lg font-bold text-black">مشاهده پروژه ها</p>
-            </button></a>
+            </div></a>
           </div>
           <div className="flex justify-center mb-4">
-            <a href={`https://www.zoomila.com/blog/`} className="w-full h-full"><button
+            <a href={`https://www.zoomila.com/blog/`} className="w-full h-full"><div
               className="bg-white w-full h-20 md:full flex flex-row items-center justify-center px-2 rounded-md">
               <p className="text-lg sm:text-lg font-bold text-black">وبلاگ زومیلا</p>
-            </button></a>
+            </div></a>
           </div>
         </div>
         <div className="w-5 h-auto"></div>
