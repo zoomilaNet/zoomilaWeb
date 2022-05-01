@@ -21,7 +21,7 @@
  */
 export interface AgencyRes {
     /**
-     * رفرنس به آژانس
+     * کد آژانس
      * @type {number}
      * @memberof AgencyRes
      */
@@ -79,13 +79,7 @@ export interface AgencyRes {
      * @type {number}
      * @memberof AgencyRes
      */
-    'contractId'?: number;
-    /**
-     * قرارداد
-     * @type {boolean}
-     * @memberof AgencyRes
-     */
-    'hasContract'?: boolean;
+    'contractId'?: number | null;
     /**
      * تاریخ انقضای قرارداد
      * @type {string}
