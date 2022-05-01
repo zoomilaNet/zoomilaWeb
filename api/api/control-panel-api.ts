@@ -1110,6 +1110,7 @@ export const ControlPanelApiAxiosParamCreator = function (configuration?: Config
         },
         /**
          * 
+         * @summary لیست آژانس ها
          * @param {number} [currentPage] صفحه جاری
          * @param {number} [pageSize] تعداد رکورد در هر صفحه
          * @param {string} [query] 
@@ -3023,6 +3024,7 @@ export const ControlPanelApiFp = function(configuration?: Configuration) {
         },
         /**
          * 
+         * @summary لیست آژانس ها
          * @param {number} [currentPage] صفحه جاری
          * @param {number} [pageSize] تعداد رکورد در هر صفحه
          * @param {string} [query] 
@@ -3738,6 +3740,7 @@ export const ControlPanelApiFactory = function (configuration?: Configuration, b
         },
         /**
          * 
+         * @summary لیست آژانس ها
          * @param {number} [currentPage] صفحه جاری
          * @param {number} [pageSize] تعداد رکورد در هر صفحه
          * @param {string} [query] 
@@ -4411,6 +4414,7 @@ export interface ControlPanelApiInterface {
 
     /**
      * 
+     * @summary لیست آژانس ها
      * @param {number} [currentPage] صفحه جاری
      * @param {number} [pageSize] تعداد رکورد در هر صفحه
      * @param {string} [query] 
@@ -5142,6 +5146,7 @@ export class ControlPanelApi extends BaseAPI implements ControlPanelApiInterface
 
     /**
      * 
+     * @summary لیست آژانس ها
      * @param {number} [currentPage] صفحه جاری
      * @param {number} [pageSize] تعداد رکورد در هر صفحه
      * @param {string} [query] 
