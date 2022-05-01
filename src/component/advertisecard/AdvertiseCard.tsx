@@ -2,16 +2,15 @@ import React from 'react';
 import {LetAd, SellAd, SellAdPublishTypeEnum} from "../../../api";
 import Slider from "../../slider/slider";
 import Seperator from '../../../models/seperator';
+import Image from "next/image";
 
 function AdvertiseCard({isSell, dataSell,dataLet}:{isSell:boolean,dataSell?: SellAd ,dataLet?:LetAd}) {
     let data:any=isSell?dataSell:dataLet;
     let showSlider:any;
     if(isSell){
          showSlider=dataSell!.photos!.length==0?<div className="w-full h-full bg-no_image flex justify-center items-center"><img src="/image/Zoomila_Logo.svg" alt="آگهی بدون عکس" /></div>:<Slider basePath={dataSell!.photoPath as string} photos={dataSell!.photos as string[]} photoSlug={dataSell!.slug as string}/>
-
     }else{
          showSlider=dataLet!.photos!.length==0?<div className="w-full h-full bg-no_image flex justify-center items-center"><img src="/image/Zoomila_Logo.svg" alt="آگهی بدون عکس" /></div>:<Slider basePath={dataLet!.photoPath as string} photos={dataLet!.photos as string[]} photoSlug={dataLet!.slug as string}/>
-
     }
     return <div className="w-full h-auto md:w-4/5 lg:w-2/5 flex flex-col border border-black my-2">
         <div className="relative aspect-w-4 aspect-h-3">
@@ -34,7 +33,7 @@ function AdvertiseCard({isSell, dataSell,dataLet}:{isSell:boolean,dataSell?: Sel
             <div className="my-1 text-xs md:text-base text-gray_text">توضیحات</div>
             <div className=" flex flex-row justify-between items-center text-sm md:text-lg my-2 md:my-4">
                 <div className="flex flex-row items-center">
-                    <img src={data.agencyLogo==null?"/image/aseman.png":data.agencyLogo} alt="agencylogo" className="border rounded ml-2 w-10 md:w-14"/>
+                    <img src={data.agencyLogo==null?"/image/aseman.png":data.agencyLogo} alt="agencylogo"  className="border rounded ml-2 w-10 md:w-14"/>
                     <p >{data.agencyName==null?"املاک آسمان":data.agencyName}</p>
                 </div>
                 <div>
