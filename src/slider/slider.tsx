@@ -1,4 +1,5 @@
 import {useState} from 'react';
+import Image from "next/image";
 function Slider ({basePath,photos,photoSlug}:{basePath:string,photos:string[],photoSlug:string}){
     const [slideIndex, setSlideIndex] = useState(1)
     const nextSlide = () => {
@@ -21,7 +22,7 @@ function Slider ({basePath,photos,photoSlug}:{basePath:string,photos:string[],ph
         setSlideIndex(index)
     }
     return <div className='container-slider'>
-       {photos.map((item,index:number)=><div key={index} className={slideIndex === index + 1 ? "slide active-anim" : "slide"}><img src={basePath+photos[index]} alt={photoSlug} className="w-full h-full"/></div>)}
+       {photos.map((item,index:number)=><div key={index} className={slideIndex === index + 1 ? "slide active-anim" : "slide"}><Image  src={basePath+photos[index]} alt={photoSlug} className="w-full h-full" layout='fill'/></div>)}
        <button
       onClick={nextSlide}
       className= "btn-slide next" 

@@ -5,6 +5,7 @@ import AdvertiseCard from "../src/component/advertisecard/AdvertiseCard";
 import cityOfProvince from "../public/ProvincesAndCities.json";
 import DeleteDash from "../models/deleteDash";
 import Pagination from "../src/component/pagination/pagination";
+import Link from "next/link";
 export const getServerSideProps: GetServerSideProps = async (context) => {
     let path:string[]= context.params!.slug! as string[];
     const fetchAdvertiseList:ClientsApi=new  ClientsApi();
@@ -84,7 +85,7 @@ export default function List({sellData,letData,isSellAds,title,page,totalPage}:{
         <div>
             <header className='bg-hf_color w-screen h-14 lg:h-16 grid grid-cols-4 gap-4 px-4'>
                 <div className="flex justify-start items-center"><img src="/image/menu.svg" alt="منو زومیلا" /></div>
-                <div className="col-span-2 flex justify-center items-center"><img src="/image/Zoomila_Logo.svg" alt="زومیلا" /></div>
+                <Link href={`./`}><div className="col-span-2 flex justify-center items-center cursor-pointer"><img src="/image/Zoomila_Logo.svg" alt="زومیلا" /></div></Link>
                 <div className="flex justify-end items-center"><img src="/image/Filter.svg" alt="filter" /></div>
             </header>
             <main className="flex flex-col justify-start">
