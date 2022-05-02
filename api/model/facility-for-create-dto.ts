@@ -135,7 +135,7 @@ export interface FacilityForCreateDto {
      */
     'intruderAlarm'?: boolean | null;
     /**
-     * ایفون تصویری دارد یا ندارد
+     * آیفون تصویری دارد یا ندارد
      * @type {boolean}
      * @memberof FacilityForCreateDto
      */

@@ -159,7 +159,7 @@ export interface FacilityToReturnDto {
      */
     'intruderAlarm'?: boolean | null;
     /**
-     * ایفون تصویری دارد یا ندارد
+     * آیفون تصویری دارد یا ندارد
      * @type {boolean}
      * @memberof FacilityToReturnDto
      */
