@@ -135,7 +135,7 @@ export interface FacilityToReturnDto {
      */
     'cooler'?: boolean | null;
     /**
-     * در ضد سرقت دارد یا نه
+     * درب ضد سرقت دارد یا نه
      * @type {boolean}
      * @memberof FacilityToReturnDto
      */
@@ -212,24 +212,6 @@ export interface FacilityToReturnDto {
      * @memberof FacilityToReturnDto
      */
     'bath'?: boolean | null;
-    /**
-     * ابگرمکن
-     * @type {boolean}
-     * @memberof FacilityToReturnDto
-     */
-    'waterWarmer'?: boolean | null;
-    /**
-     * پکیج
-     * @type {boolean}
-     * @memberof FacilityToReturnDto
-     */
-    'package'?: boolean | null;
-    /**
-     * گرمایش مرکزی
-     * @type {boolean}
-     * @memberof FacilityToReturnDto
-     */
-    'centralHeating'?: boolean | null;
     /**
      * استخر دارد یا نه
      * @type {boolean}
