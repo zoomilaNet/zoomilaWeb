@@ -44,7 +44,6 @@ function AdvertiseCard({isSell, dataSell,dataLet}:{isSell:boolean,dataSell?: Sel
         </div>
         <div className={data.publishType== SellAdPublishTypeEnum.Simple?"bg-simple_ads_tag w-full h-12 md:h-16 flex flex-row justify-between items-center px-2 text-black":data.publishType!= SellAdPublishTypeEnum.Featured? "featured_ads_tag w-full h-12 md:h-16 flex flex-row justify-between items-center px-2 text-black":"occasion_ads_tag w-full h-12 md:h-16 flex flex-row justify-between items-center px-2 text-black"}>
             {isSell?<div className="flex flex-row items-center text-xl">قیمت کل: <p className=" font-semibold mr-2"> {data.price=="0"? "توافقی":Seperator( (data.price)?.toString()!)+" تومان"}</p></div>:<div className="flex flex-row items-center text-xl">رهن: <p className="ml-4 font-semibold">{data.deposit==0 && data.rent==0? "توافقی":Seperator(data.deposit)+" تومان"}</p>اجاره: <p className="font-semibold">{data.deposit==0 && data.rent==0? "توافقی": Seperator(data.rent)+" تومان"}</p></div>}
-
         </div>
     </div>
 }

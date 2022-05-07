@@ -225,7 +225,7 @@ export default function Home() {
             </div></a>
           </div>
           <div className="flex justify-center mb-4">
-            <a href={`https://www.zoomila.com/projects`} className="w-full h-full"><div
+            <a href={`/projects`} className="w-full h-full"><div
               className="bg-white w-full h-20 md:full flex flex-row items-center justify-center px-2 rounded-md">
               <p className="text-lg sm:text-lg font-bold text-black">مشاهده پروژه ها</p>
             </div></a>
