@@ -75,6 +75,18 @@ export interface AgencyRes {
      */
     'status'?: string | null;
     /**
+     * تاییدیه آژانس
+     * @type {boolean}
+     * @memberof AgencyRes
+     */
+    'agencyIsVerified'?: boolean;
+    /**
+     * تاییدیه مدیر
+     * @type {boolean}
+     * @memberof AgencyRes
+     */
+    'ownerIsVerified'?: boolean;
+    /**
      * کد قرارداد
      * @type {number}
      * @memberof AgencyRes

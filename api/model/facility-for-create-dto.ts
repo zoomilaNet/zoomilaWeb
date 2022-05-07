@@ -111,7 +111,7 @@ export interface FacilityForCreateDto {
      */
     'cooler'?: boolean | null;
     /**
-     * در ضد سرقت دارد یا نه
+     * درب ضد سرقت دارد یا نه
      * @type {boolean}
      * @memberof FacilityForCreateDto
      */
@@ -135,7 +135,7 @@ export interface FacilityForCreateDto {
      */
     'intruderAlarm'?: boolean | null;
     /**
-     * ایفون تصویری دارد یا ندارد
+     * آیفون تصویری دارد یا ندارد
      * @type {boolean}
      * @memberof FacilityForCreateDto
      */
@@ -188,24 +188,6 @@ export interface FacilityForCreateDto {
      * @memberof FacilityForCreateDto
      */
     'bath'?: boolean | null;
-    /**
-     * ابگرمکن
-     * @type {boolean}
-     * @memberof FacilityForCreateDto
-     */
-    'waterWarmer'?: boolean | null;
-    /**
-     * پکیج
-     * @type {boolean}
-     * @memberof FacilityForCreateDto
-     */
-    'package'?: boolean | null;
-    /**
-     * گرمایش مرکزی
-     * @type {boolean}
-     * @memberof FacilityForCreateDto
-     */
-    'centralHeating'?: boolean | null;
     /**
      * استخر دارد یا نه
      * @type {boolean}
