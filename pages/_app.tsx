@@ -4,7 +4,7 @@ import { Provider } from 'react-redux';
 import {store} from '../store/store';
 
 function MyApp({ Component, pageProps }: AppProps) {
-  return <div dir='rtl' lang="fa" className="font-iransans"> <Provider store={store}><Component {...pageProps} /></Provider></div>
+  return <html lang="fa"><div dir='rtl' className="font-iransans"> <Provider store={store}><Component {...pageProps} /></Provider></div></html>
 }
 
 export default MyApp
