@@ -2,7 +2,7 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="85396787-6298-4985-82c3-6d22319d4af6" name="Default Changelist" comment="convert img tag to Image tag Bm">
-      <change beforePath="$PROJECT_DIR$/pages/[...slug].tsx" beforeDir="false" afterPath="$PROJECT_DIR$/pages/[...slug].tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/component/advertisecard/AdvertiseCard.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/component/advertisecard/AdvertiseCard.tsx" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -99,7 +99,7 @@
       <workItem from="1651896521760" duration="9504000" />
       <workItem from="1651921136847" duration="1776000" />
       <workItem from="1651986100062" duration="10839000" />
-      <workItem from="1652069585366" duration="12158000" />
+      <workItem from="1652069585366" duration="12491000" />
     </task>
     <task id="LOCAL-00001" summary="add deactive button for pagination and home page Bm">
       <created>1651321324567</created>
@@ -220,7 +220,14 @@
       <option name="project" value="LOCAL" />
       <updated>1652087943825</updated>
     </task>
-    <option name="localTasksCounter" value="18" />
+    <task id="LOCAL-00018" summary="convert img tag to Image tag Bm">
+      <created>1652088107826</created>
+      <option name="number" value="00018" />
+      <option name="presentableId" value="LOCAL-00018" />
+      <option name="project" value="LOCAL" />
+      <updated>1652088107826</updated>
+    </task>
+    <option name="localTasksCounter" value="19" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">

@@ -26,7 +26,7 @@ function AdvertiseCard({isSell, dataSell,dataLet}:{isSell:boolean,dataSell?: Sel
                 <p className="text-xs md:text-base">آگهی جدید</p>
             </div>
             <div className="flex flex-row items-center my-2 md:text-lg">
-                <Image src="/image/Location.svg" alt="icon" className="w-4 h-4"/>
+                <img src="/image/Location.svg" alt="icon" className="w-4 h-4"/>
                 <p>آدرس </p>
             </div>
             <div className="my-1 text-xs md:text-base text-gray_text">توضیحات</div>
