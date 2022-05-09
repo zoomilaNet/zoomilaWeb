@@ -9,7 +9,7 @@ import Link from "next/link";
 import { checkCookies,getCookie } from "cookies-next";
 import { changeCity } from "../store/reducer";
 import AddDash from "../models/addDash";
-import Image from "next/image";
+
 export default function Home() {
   const city:CityDto = useSelector((state: RootStateOrAny) => state.search.citySelected);
   const dispatch=useDispatch();
