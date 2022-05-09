@@ -3,7 +3,8 @@ import Image from "next/image";
 
 function Slider({basePath, photos, photoSlug}: { basePath: string, photos: string[], photoSlug: string }) {
     const [slideIndex, setSlideIndex] = useState(1);
-    const [photoUrl, setPhotoUrl] = useState<string>(basePath + photos[1]);
+    const [photoUrl, setPhotoUrl] = useState<string>(basePath + photos[0]);
+
     const nextSlide = () => {
         if (slideIndex !== photos.length) {
             {

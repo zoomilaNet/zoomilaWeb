@@ -1,11 +1,9 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="85396787-6298-4985-82c3-6d22319d4af6" name="Default Changelist" comment="convert img tag to Image tag Bm">
+    <list default="true" id="85396787-6298-4985-82c3-6d22319d4af6" name="Default Changelist" comment="change structure of image slider temp Bm">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/pages/index.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/pages/index.tsx" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/slider/slider.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/slider/slider.tsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/styles/style.css" beforeDir="false" afterPath="$PROJECT_DIR$/styles/style.css" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -102,7 +100,7 @@
       <workItem from="1651896521760" duration="9504000" />
       <workItem from="1651921136847" duration="1776000" />
       <workItem from="1651986100062" duration="10839000" />
-      <workItem from="1652069585366" duration="16366000" />
+      <workItem from="1652069585366" duration="17336000" />
     </task>
     <task id="LOCAL-00001" summary="add deactive button for pagination and home page Bm">
       <created>1651321324567</created>
@@ -237,7 +235,14 @@
       <option name="project" value="LOCAL" />
       <updated>1652088445203</updated>
     </task>
-    <option name="localTasksCounter" value="20" />
+    <task id="LOCAL-00020" summary="change structure of image slider temp Bm">
+      <created>1652092926040</created>
+      <option name="number" value="00020" />
+      <option name="presentableId" value="LOCAL-00020" />
+      <option name="project" value="LOCAL" />
+      <updated>1652092926040</updated>
+    </task>
+    <option name="localTasksCounter" value="21" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -282,7 +287,8 @@
     <MESSAGE value="add lang property Bm" />
     <MESSAGE value="change document file structure Bm" />
     <MESSAGE value="convert img tag to Image tag Bm" />
-    <option name="LAST_COMMIT_MESSAGE" value="convert img tag to Image tag Bm" />
+    <MESSAGE value="change structure of image slider temp Bm" />
+    <option name="LAST_COMMIT_MESSAGE" value="change structure of image slider temp Bm" />
   </component>
   <component name="XSLT-Support.FileAssociations.UIState">
     <expand />
