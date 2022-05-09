@@ -18,11 +18,8 @@ function Slider ({basePath,photos,photoSlug}:{basePath:string,photos:string[],ph
             setSlideIndex(photos.length)
         }
     }
-    const moveDot = (index:number) => {
-        setSlideIndex(index)
-    }
     return <div className='container-slider'>
-       {photos.map((item,index:number)=><div key={index} className={slideIndex === index + 1 ? "slide active-anim" : "slide"}><Image  src={basePath+photos[index]} alt={photoSlug} className="w-full h-full" layout='fill'/></div>)}
+       {photos.map((item,index:number)=><div key={index} className={slideIndex === index + 1 ? "slide active-anim" : "slide"}><Image  src={basePath+photos[index]} alt={photoSlug} className="w-full h-full" loading="eager" layout='fill'/></div>)}
        <button id="RightArrow"
       onClick={nextSlide}
       className= "btn-slide next" 

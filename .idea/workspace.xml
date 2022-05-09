@@ -1,10 +1,18 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="85396787-6298-4985-82c3-6d22319d4af6" name="Default Changelist" comment="implement project listing ui Bm">
+    <list default="true" id="85396787-6298-4985-82c3-6d22319d4af6" name="Default Changelist" comment="add lang property to site">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/next.config.js" beforeDir="false" afterPath="$PROJECT_DIR$/next.config.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/pages/_app.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/pages/_app.tsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/pages/projects/index.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/pages/projects/index.tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/fonts/fonts.css" beforeDir="false" afterPath="$PROJECT_DIR$/public/fonts/fonts.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/fonts/iransans.otf" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/fonts/iransansbold.otf" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/fonts/iransanslight.otf" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/fonts/iransansmedium.otf" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/fonts/iransansultralight.otf" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/component/pagination/pagination.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/component/pagination/pagination.tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/slider/slider.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/slider/slider.tsx" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -100,7 +108,8 @@
       <workItem from="1651398525843" duration="8764000" />
       <workItem from="1651896521760" duration="9504000" />
       <workItem from="1651921136847" duration="1776000" />
-      <workItem from="1651986100062" duration="4067000" />
+      <workItem from="1651986100062" duration="10839000" />
+      <workItem from="1652069585366" duration="3277000" />
     </task>
     <task id="LOCAL-00001" summary="add deactive button for pagination and home page Bm">
       <created>1651321324567</created>
@@ -144,7 +153,14 @@
       <option name="project" value="LOCAL" />
       <updated>1651921698022</updated>
     </task>
-    <option name="localTasksCounter" value="7" />
+    <task id="LOCAL-00007" summary="add lang property to site">
+      <created>1652002481470</created>
+      <option name="number" value="00007" />
+      <option name="presentableId" value="LOCAL-00007" />
+      <option name="project" value="LOCAL" />
+      <updated>1652002481470</updated>
+    </task>
+    <option name="localTasksCounter" value="8" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -180,7 +196,8 @@
     <MESSAGE value="fix seo problem and code problem for site speed Bm" />
     <MESSAGE value="change scrollbar theme Bm" />
     <MESSAGE value="implement project listing ui Bm" />
-    <option name="LAST_COMMIT_MESSAGE" value="implement project listing ui Bm" />
+    <MESSAGE value="add lang property to site" />
+    <option name="LAST_COMMIT_MESSAGE" value="add lang property to site" />
   </component>
   <component name="XSLT-Support.FileAssociations.UIState">
     <expand />

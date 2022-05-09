@@ -1,5 +1,4 @@
 import {useRouter} from "next/router";
-import {number} from "prop-types";
 
 export default function Pagination({length,currentPage}:{length:number,currentPage:number}){
     const arrayLength=Array(length).fill(1);
