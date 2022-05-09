@@ -5,7 +5,7 @@ import { useEffect, useState } from "react"
 import { RootStateOrAny, useDispatch, useSelector } from "react-redux";
 import { StringStringKeyValuePair, SystemApi } from "../../api";
 import { changeBuildings } from "../../store/reducer";
-
+import Image from "next/image";
 function BuildingType() {
     const router = useRouter();
     const dispatch = useDispatch();
@@ -44,16 +44,13 @@ function BuildingType() {
             return false;
         }
     };
-    const getNeighbourhoodExit = () => {                                                                //empty chosen building type which input to component and set new building type chosen in that and exit from component  
-        // removeCookies('buildingLenghth');
-        // setCookies('buildingLenghth', buildingChosen.length)
-        // buildingChosen.map((data, index) => setCookies('building' + index, data))
+    const getNeighbourhoodExit = () => {                                                                //empty chosen building type which input to component and set new building type chosen in that and exit from component
         dispatch(changeBuildings([...buildingChosen]));
         router.push('/');
     };
     const schema: string[] = ["relative h-0 bg-gradient-to-b from-upgreen_gradient to-downgreen_gradient flex flex-col justify-center items-center rounded-xl text-center px-2", "relative h-0 bg-gradient-to-b from-upnblue_gradient to-downnblue_gradient flex flex-col justify-center items-center rounded-xl text-center px-2"];
     let parameter;
-    parameter = buildingTypeList ? buildingTypeList.map((data, index) => <button id="squere" key={data.key} onClick={() => selectBuildings(data.key as string)} className={getSelected(data.key as string) ? schema[0] : schema[1]}><div className="absolute top-0 w-full h-full flex flex-col justify-center items-center"><img src={"https://www.zoomila.com/resources/BuildingType/" + data.key + ".svg"} alt="icon" className="mb-3" /><p>{data.value}</p></div></button>) : <div className="bg-gradient-to-b from-upnblue_gradient to-downnblue_gradient w-full h-10 "> <CircularProgress color="inherit" /></div>;
+    parameter = buildingTypeList ? buildingTypeList.map((data, index) => <button id="squere" key={data.key} onClick={() => selectBuildings(data.key as string)} className={getSelected(data.key as string) ? schema[0] : schema[1]}><div className="absolute top-0 w-full h-full flex flex-col justify-center items-center"><Image src={"https://www.zoomila.com/resources/BuildingType/" + data.key + ".svg"} alt="icon" className="mb-3" /><p>{data.value}</p></div></button>) : <div className="bg-gradient-to-b from-upnblue_gradient to-downnblue_gradient w-full h-10 "> <CircularProgress color="inherit" /></div>;
 
     return <div>
         <Head>

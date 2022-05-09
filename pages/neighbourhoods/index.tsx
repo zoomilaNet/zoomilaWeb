@@ -5,7 +5,7 @@ import { RootStateOrAny, useDispatch, useSelector } from "react-redux";
 import { useRouter } from "next/router";
 import { changeNeighbourhood } from "../../store/reducer";
 import Head from "next/head";
-
+import Image from "next/image";
 function Neighbourhoods() {
     const dispatch = useDispatch();
     const city:CityDto = useSelector((state: RootStateOrAny) => state.search.citySelected);
@@ -77,7 +77,7 @@ function Neighbourhoods() {
                 <div className="text-right text-hf_color h-auto text-lg font-semibold my-2 px-5">محله مورد نظر خود را جستجو و انتخاب کنید</div>
                 <div className="mx-4 mb-1 flex flex-row items-center bg-white rounded">
                     <input type="text" placeholder="جستجوی محله" className="my-2 w-full h-10 text-black focus:outline-0 mr-1" onChange={(event) => searchNeighbourhoodHandler(event.target.value)} />
-                    <img src="./image/search.svg" alt="search" className="w-6 h-6 ml-1" />
+                    <Image src="./image/search.svg" alt="search" className="w-6 h-6 ml-1" />
                 </div>
                 <div className=" px-4 py-4 mb-2 text-base overflow-y-scroll overflow-x-hidden md:text-xl h-full">
                     <div className="grid grid-cols-3 gap-2">

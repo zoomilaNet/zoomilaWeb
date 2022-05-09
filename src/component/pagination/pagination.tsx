@@ -1,5 +1,5 @@
 import {useRouter} from "next/router";
-
+import Image from  "next/image";
 export default function Pagination({length,currentPage}:{length:number,currentPage:number}){
     const arrayLength=Array(length).fill(1);
     let paginationList=arrayLength.map((number,index)=><option id={"page"+(index+1)}  value={index+1} key={index+1} className="lg:text-lg">{number+index}</option>);
@@ -25,7 +25,7 @@ export default function Pagination({length,currentPage}:{length:number,currentPa
                   key.map((item,index)=>{
                       if(item=="page"){
                           if(inputNumber==1){
-                              nextPageURL=nextPageURL;
+
                           }else{
                               nextPageURL=nextPageURL+item+"="+inputNumber.toString()+(index==(key.length-1)?"":"&");
                           }
@@ -58,13 +58,13 @@ export default function Pagination({length,currentPage}:{length:number,currentPa
         }
     }
     return <div className="w-full md:w-4/5 lg:w-2/5 h-20 flex flex-row justify-between items-center my-2 px-4 py-1 bg-pagination text-white">
-        <button id="PreviousPage" className={currentPage==1?"flex flex-row cursor-not-allowed":"flex flex-row"} onClick={()=>changePageHandler(currentPage-1)} ><img src="/image/go_previous_page.svg" alt="صفحه قبل" className={currentPage==1?"lg:w-28 opacity-50":"lg:w-28"}/></button>
+        <button id="PreviousPage" className={currentPage==1?"flex flex-row cursor-not-allowed":"flex flex-row"} onClick={()=>changePageHandler(currentPage-1)} ><Image src="/image/go_previous_page.svg" alt="صفحه قبل" className={currentPage==1?"lg:w-28 opacity-50":"lg:w-28"}/></button>
         <span>
            <select name="pagination" id="pagination" onChange={(event)=>changePageHandler(event)} value={currentPage} defaultValue={currentPage} className="text-black lg:text-lg rounded w-20 h-10 px-2">
                {paginationList}
            </select>
         </span>
-        <button id="NextPage" className={currentPage==length?"flex flex-row cursor-not-allowed":"flex flex-row"} onClick={()=>changePageHandler(currentPage+1)} ><img src="/image/go_next_page.svg" alt="صفحه بعد" className={currentPage==length?"lg:w-28 opacity-50":"lg:w-28"}/></button>
+        <button id="NextPage" className={currentPage==length?"flex flex-row cursor-not-allowed":"flex flex-row"} onClick={()=>changePageHandler(currentPage+1)} ><Image src="/image/go_next_page.svg" alt="صفحه بعد" className={currentPage==length?"lg:w-28 opacity-50":"lg:w-28"}/></button>
 
     </div>
 }
