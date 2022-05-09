@@ -2,12 +2,7 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="85396787-6298-4985-82c3-6d22319d4af6" name="Default Changelist" comment="convert img tag to Image tag Bm">
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/pages/buildingtype/index.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/pages/buildingtype/index.tsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/pages/index.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/pages/index.tsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/pages/neighbourhoods/index.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/pages/neighbourhoods/index.tsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/component/pagination/pagination.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/component/pagination/pagination.tsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/slider/slider.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/slider/slider.tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/pages/[...slug].tsx" beforeDir="false" afterPath="$PROJECT_DIR$/pages/[...slug].tsx" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -104,7 +99,7 @@
       <workItem from="1651896521760" duration="9504000" />
       <workItem from="1651921136847" duration="1776000" />
       <workItem from="1651986100062" duration="10839000" />
-      <workItem from="1652069585366" duration="11980000" />
+      <workItem from="1652069585366" duration="12158000" />
     </task>
     <task id="LOCAL-00001" summary="add deactive button for pagination and home page Bm">
       <created>1651321324567</created>
@@ -218,7 +213,14 @@
       <option name="project" value="LOCAL" />
       <updated>1652087511604</updated>
     </task>
-    <option name="localTasksCounter" value="17" />
+    <task id="LOCAL-00017" summary="convert img tag to Image tag Bm">
+      <created>1652087943825</created>
+      <option name="number" value="00017" />
+      <option name="presentableId" value="LOCAL-00017" />
+      <option name="project" value="LOCAL" />
+      <updated>1652087943825</updated>
+    </task>
+    <option name="localTasksCounter" value="18" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
