@@ -165,7 +165,7 @@ export interface FacilityForCreateDto {
      */
     'wallpaper'?: boolean | null;
     /**
-     * دست شویی دارد یا نه
+     * دستشویی دارد یا نه
      * @type {number}
      * @memberof FacilityForCreateDto
      */
