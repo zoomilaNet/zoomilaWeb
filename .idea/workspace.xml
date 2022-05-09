@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="85396787-6298-4985-82c3-6d22319d4af6" name="Default Changelist" comment="delete local property from next.config Bm">
+    <list default="true" id="85396787-6298-4985-82c3-6d22319d4af6" name="Default Changelist" comment="Delete woff font Bm">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/public/fonts/fonts.css" beforeDir="false" afterPath="$PROJECT_DIR$/public/fonts/fonts.css" afterDir="false" />
     </list>
@@ -100,7 +100,7 @@
       <workItem from="1651896521760" duration="9504000" />
       <workItem from="1651921136847" duration="1776000" />
       <workItem from="1651986100062" duration="10839000" />
-      <workItem from="1652069585366" duration="5011000" />
+      <workItem from="1652069585366" duration="5539000" />
     </task>
     <task id="LOCAL-00001" summary="add deactive button for pagination and home page Bm">
       <created>1651321324567</created>
@@ -172,7 +172,14 @@
       <option name="project" value="LOCAL" />
       <updated>1652075621213</updated>
     </task>
-    <option name="localTasksCounter" value="11" />
+    <task id="LOCAL-00011" summary="Delete woff font Bm">
+      <created>1652075925264</created>
+      <option name="number" value="00011" />
+      <option name="presentableId" value="LOCAL-00011" />
+      <option name="project" value="LOCAL" />
+      <updated>1652075925264</updated>
+    </task>
+    <option name="localTasksCounter" value="12" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -211,7 +218,8 @@
     <MESSAGE value="add lang property to site" />
     <MESSAGE value="delete extra font and lang for test Bm" />
     <MESSAGE value="delete local property from next.config Bm" />
-    <option name="LAST_COMMIT_MESSAGE" value="delete local property from next.config Bm" />
+    <MESSAGE value="Delete woff font Bm" />
+    <option name="LAST_COMMIT_MESSAGE" value="Delete woff font Bm" />
   </component>
   <component name="XSLT-Support.FileAssociations.UIState">
     <expand />
