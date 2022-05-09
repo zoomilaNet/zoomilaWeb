@@ -86,6 +86,18 @@ export default function List({sellData,letData,isSellAds,title,page,totalPage}:{
         <div>
             <Head>
                 <title>{title}</title>
+                <meta name="description" content="کامل ترین وب سایت املاک در ایران برای فروش و رهن واجاره با درج قیمت با به روزترین فایل ها به همراه عکس و فیلم" />
+                <meta property="og:title" content="خرید، فروش، رهن و اجاره آپارتمان، خانه، ویلا، زمین و سایر املاک با درج قیمت ملک | زومیلا" />
+                <meta property="og:description" content="زومیلا به روزترین سایت املاک ایران برای جستجوی آگهی های خرید خانه، اجاره خانه ،فروش آپارتمان،خرید مغازه ،اجاره ویلا ،خرید زمین، باغ و سایر املاک مسکونی، تجاری و اداری" />
+                <meta property="og:type" content="website" />
+                <meta property="og:site_name" content="zoomila" />
+                <meta property="og:image" content="https://www.zoomila.com/images/logo/icon.png" />
+                <meta property="og:url" content="https://www.zoomila.com/" />
+                <meta property="og:local" content="fa" />
+                <meta name="twitter:card" content="summary" />
+                <meta name="twitter:description" content="زومیلا به روزترین سایت املاک ایران برای جستجوی آگهی های خرید خانه، اجاره خانه ،فروش آپارتمان،خرید مغازه ،اجاره ویلا ،خرید زمین، باغ و سایر املاک مسکونی، تجاری و اداری" />
+                <meta name="twitter:site" content="@zoomilaofficial" />
+                <meta name="twitter:title" content="خرید، فروش، رهن و اجاره آپارتمان، خانه، ویلا، زمین و سایر املاک با درج قیمت ملک | زومیلا" />
             </Head>
             <header className='bg-hf_color w-screen h-14 lg:h-16 grid grid-cols-4 gap-4 px-4'>
                 <div className="flex justify-start items-center"><img src="/image/menu.svg" alt="منو زومیلا" className="w-6 h-6"/></div>
