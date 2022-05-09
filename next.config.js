@@ -2,8 +2,6 @@
 const isProd = process.env.NODE_ENV === 'production'
 const nextConfig = {
   i18n: {
-    locales: ["fa"],
-    defaultLocale: "fa",
     lang:"fa"
   },
   images: {
