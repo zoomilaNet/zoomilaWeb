@@ -1,9 +1,6 @@
 /** @type {import('next').NextConfig} */
 const isProd = process.env.NODE_ENV === 'production'
 const nextConfig = {
-  i18n: {
-    lang:"fa"
-  },
   images: {
     domains: ['www.zoomila.com'],
   },
@@ -17,5 +14,4 @@ const nextConfig = {
     return config
   }
 }
-
 module.exports = nextConfig
