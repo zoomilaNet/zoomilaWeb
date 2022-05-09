@@ -25,17 +25,17 @@ function Slider ({basePath,photos,photoSlug}:{basePath:string,photos:string[],ph
       onClick={nextSlide}
       className= "btn-slide next" 
     >
-      <Image src='/image/rightarrow.svg' alt="جهت اسلایدر" />
+      <img src='/image/rightarrow.svg' alt="جهت اسلایدر" />
     </button>
     <button id="LeftArrow"
       onClick={prevSlide}
       className= "btn-slide prev"
     >
-      <Image src='/image/leftarrow.svg' alt="جهت اسلایدر" />
+      <img src='/image/leftarrow.svg' alt="جهت اسلایدر" />
     </button>
       <div className='absolute right-0 top-0 px-1  h-6 flex flex-row justify-center items-center rounded-bl bg-black bg-opacity-60 text-white'>
         {slideIndex}/{photos.length}
-        <Image src='/image/Picture.svg' alt="adsimage" className="w-4 h-4 mr-2"/>
+        <img src='/image/Picture.svg' alt="adsimage" className="w-4 h-4 mr-2"/>
       </div>
     </div>
 }

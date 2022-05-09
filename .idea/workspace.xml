@@ -1,13 +1,11 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="85396787-6298-4985-82c3-6d22319d4af6" name="Default Changelist" comment="change document file structure Bm">
+    <list default="true" id="85396787-6298-4985-82c3-6d22319d4af6" name="Default Changelist" comment="convert img tag to Image tag Bm">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/pages/[...slug].tsx" beforeDir="false" afterPath="$PROJECT_DIR$/pages/[...slug].tsx" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/pages/buildingtype/index.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/pages/buildingtype/index.tsx" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/pages/index.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/pages/index.tsx" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/pages/neighbourhoods/index.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/pages/neighbourhoods/index.tsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/component/advertisecard/AdvertiseCard.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/component/advertisecard/AdvertiseCard.tsx" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/component/pagination/pagination.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/component/pagination/pagination.tsx" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/slider/slider.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/slider/slider.tsx" afterDir="false" />
     </list>
@@ -106,7 +104,7 @@
       <workItem from="1651896521760" duration="9504000" />
       <workItem from="1651921136847" duration="1776000" />
       <workItem from="1651986100062" duration="10839000" />
-      <workItem from="1652069585366" duration="11524000" />
+      <workItem from="1652069585366" duration="11980000" />
     </task>
     <task id="LOCAL-00001" summary="add deactive button for pagination and home page Bm">
       <created>1651321324567</created>
@@ -213,7 +211,14 @@
       <option name="project" value="LOCAL" />
       <updated>1652078249499</updated>
     </task>
-    <option name="localTasksCounter" value="16" />
+    <task id="LOCAL-00016" summary="convert img tag to Image tag Bm">
+      <created>1652087511604</created>
+      <option name="number" value="00016" />
+      <option name="presentableId" value="LOCAL-00016" />
+      <option name="project" value="LOCAL" />
+      <updated>1652087511604</updated>
+    </task>
+    <option name="localTasksCounter" value="17" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -257,7 +262,8 @@
     <MESSAGE value="add sample meta tag to listing page Bm" />
     <MESSAGE value="add lang property Bm" />
     <MESSAGE value="change document file structure Bm" />
-    <option name="LAST_COMMIT_MESSAGE" value="change document file structure Bm" />
+    <MESSAGE value="convert img tag to Image tag Bm" />
+    <option name="LAST_COMMIT_MESSAGE" value="convert img tag to Image tag Bm" />
   </component>
   <component name="XSLT-Support.FileAssociations.UIState">
     <expand />
