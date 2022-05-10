@@ -18,7 +18,7 @@ function Neighbourhoods() {
     useEffect(() => {
         const loadNeighbourhoods = async () => {                              //fetch neighbourhoods of city which input to component 
             const country: CountryApi = new CountryApi();
-            var neighbourhoodLs = await country.apiCountryNeighbourhoodsCityCityIdGet(city.id as number, '1', 500);
+            var neighbourhoodLs = await country.apiCountryNeighbourhoodsCityCityIdGet(city.id as number, 1,500);
             setNeighbourhoodsList(neighbourhoodLs.data.data?.data!);
             setSelectedNeighbourhood([...neighbourhoods])
             if(neighbourhoods.length>0){
