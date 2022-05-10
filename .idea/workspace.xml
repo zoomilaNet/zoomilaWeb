@@ -1,15 +1,11 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="85396787-6298-4985-82c3-6d22319d4af6" name="Default Changelist" comment="image slider fix bugs Bm">
-      <change afterPath="$PROJECT_DIR$/src/component/letAdsCard/LetAdvertiseCard.tsx" afterDir="false" />
+    <list default="true" id="85396787-6298-4985-82c3-6d22319d4af6" name="Default Changelist" comment="seperate sell advertise card and let advertise card Bm">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/pages/[...slug].tsx" beforeDir="false" afterPath="$PROJECT_DIR$/pages/[...slug].tsx" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/pages/_document.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/pages/_document.tsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/pages/detail.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/pages/detail.tsx" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/pages/index.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/pages/index.tsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/component/advertisecard/AdvertiseCard.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/component/advertisecard/AdvertiseCard.tsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/slider/slider.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/slider/slider.tsx" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -107,7 +103,7 @@
       <workItem from="1651921136847" duration="1776000" />
       <workItem from="1651986100062" duration="10839000" />
       <workItem from="1652069585366" duration="19334000" />
-      <workItem from="1652155437205" duration="4722000" />
+      <workItem from="1652155437205" duration="7270000" />
     </task>
     <task id="LOCAL-00001" summary="add deactive button for pagination and home page Bm">
       <created>1651321324567</created>
@@ -256,7 +252,14 @@
       <option name="project" value="LOCAL" />
       <updated>1652093702613</updated>
     </task>
-    <option name="localTasksCounter" value="22" />
+    <task id="LOCAL-00022" summary="seperate sell advertise card and let advertise card Bm">
+      <created>1652164957379</created>
+      <option name="number" value="00022" />
+      <option name="presentableId" value="LOCAL-00022" />
+      <option name="project" value="LOCAL" />
+      <updated>1652164957379</updated>
+    </task>
+    <option name="localTasksCounter" value="23" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -303,7 +306,8 @@
     <MESSAGE value="convert img tag to Image tag Bm" />
     <MESSAGE value="change structure of image slider temp Bm" />
     <MESSAGE value="image slider fix bugs Bm" />
-    <option name="LAST_COMMIT_MESSAGE" value="image slider fix bugs Bm" />
+    <MESSAGE value="seperate sell advertise card and let advertise card Bm" />
+    <option name="LAST_COMMIT_MESSAGE" value="seperate sell advertise card and let advertise card Bm" />
   </component>
   <component name="XSLT-Support.FileAssociations.UIState">
     <expand />
