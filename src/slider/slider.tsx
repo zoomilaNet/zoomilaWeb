@@ -37,7 +37,7 @@ function Slider({basePath, photos, photoSlug}: { basePath: string, photos: strin
     }
     return <div className='container-slider'>
         <div className="slide">{photoUrl != ""? <Image src={photoUrl} alt={photoSlug} className="w-full h-full" loading="eager"
-                                      layout='fill'/>:null}</div>
+                                      layout='responsive'/>:null}</div>
         <button id="RightArrow"
                 onClick={nextSlide}
                 className="btn-slide next"

@@ -7,7 +7,7 @@ function AdvertiseCard({ dataSell}:{dataSell: SellAd }) {
     let showSlider:any;
          showSlider=dataSell!.photos!.length==0?<div className="w-full h-full bg-no_image flex justify-center items-center"><Image src="/image/Zoomila_Logo.svg" alt="آگهی بدون عکس" width="197px" height="51px"/></div>:<Slider basePath={dataSell!.photoPath as string} photos={dataSell!.photos as string[]} photoSlug={dataSell!.slug as string}/>
     return <div className="w-full h-auto md:w-4/5 lg:w-2/5 flex flex-col border border-black my-2">
-        <div className="relative aspect-w-4 aspect-h-2">
+        <div className="relative aspect-w-4 aspect-h-3">
             <div>
                 {showSlider}
             </div>
