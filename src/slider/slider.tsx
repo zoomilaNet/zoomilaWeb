@@ -1,4 +1,4 @@
-import {useEffect, useState} from 'react';
+import { useState} from 'react';
 import Image from "next/image";
 
 function Slider({basePath, photos, photoSlug}: { basePath: string, photos: string[], photoSlug: string }) {

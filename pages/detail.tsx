@@ -6,9 +6,6 @@ function Detail() {
     const showMapHandler = () => {
         setShowImage(true);
     }
-    //const markerIcon = new Leaflet.Icon({ iconUrl: "/image/maeker.svg", iconSize: [20, 20] });
-
-    //let zoomilaMap = <div className="w-full h-40"> <MapContainer center={[51.505, 25.09]} zoom={10}> <TileLayer url="https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png" attribution='&copy; <a href="https://www.openstreetmap.org/copyright">OpenStreetMap</a> contributors'></TileLayer></MapContainer></div>
     return (
         <div className="w-screen h-screen">
             <header className="bg-hf_color w-screen h-14 lg:h-16 grid grid-cols-4 gap-4 px-4">

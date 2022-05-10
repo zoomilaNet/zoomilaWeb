@@ -115,7 +115,7 @@ export default function Home() {
     calcuteAdsCount();
     listingURLCreatorHandler();
   }
-  return <div className='static bg-gradient-to-b from-upgray_gradient via-with_gray to-downgray_gradient bg-cover text-white text-xl md:text-2xl lg:text-2xl font-iransans'>
+  return <div className='static bg-cover text-white text-xl md:text-2xl lg:text-2xl'>
     <Head>
       <title>بزرگترین سایت خرید و فروش، رهن و اجاره املاک در کشور | زومیلا</title>
       <meta name="description" content="کامل ترین وب سایت املاک در ایران برای فروش و رهن واجاره با درج قیمت با به روزترین فایل ها به همراه عکس و فیلم" />
@@ -131,12 +131,10 @@ export default function Home() {
       <meta name="twitter:site" content="@zoomilaofficial" />
       <meta name="twitter:title" content="خرید، فروش، رهن و اجاره آپارتمان، خانه، ویلا، زمین و سایر املاک با درج قیمت ملک | زومیلا" />
     </Head>
-
     <header className='bg-hf_color w-screen h-14 lg:h-16 grid grid-cols-4 gap-4 px-4'>
         <div className="flex justify-start items-center"><img src="./image/menu.svg" alt="منو زومیلا" className="w-6 h-6"/></div>
       <div className="col-span-2 flex justify-center items-center"><img src="./image/Zoomila_Logo.svg" alt="زومیلا" className="h-12 lg:h-14 w-52" /></div>
     </header>
-
     <main className="flex flex-col justify-start ">
       <div className="flex justify-center items-center mb-4 mt-2">
         <h1 className=" text-black font-medium text-lg sm:text-lg md:text-2xl lg:text-2xl">ملک مورد نظر خود را جستجو نمایید</h1>

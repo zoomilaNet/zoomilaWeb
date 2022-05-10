@@ -7,7 +7,7 @@ import DeleteDash from "../models/deleteDash";
 import Pagination from "../src/component/pagination/pagination";
 import Link from "next/link";
 import Head from "next/head";
-import Image from "next/image";
+import LetAdvertiseCard from "../src/component/letAdsCard/LetAdvertiseCard";
 export const getServerSideProps: GetServerSideProps = async (context) => {
     let path:string[]= context.params!.slug! as string[];
     const fetchAdvertiseList:ClientsApi=new  ClientsApi();
@@ -109,7 +109,7 @@ export default function List({sellData,letData,isSellAds,title,page,totalPage}:{
                 <div className="w-screen h-auto flex flex-row justify-center px-4">
                     <div className="w-full flex flex-col items-center">
                         <h1 className="font-iransansbold text-xl my-6">{title}</h1>
-                        {isSellAds?sellData?.map((item)=><AdvertiseCard dataSell={item} isSell={true} key={item.sellId}/>):letData?.map((item)=><AdvertiseCard dataLet={item} isSell={false} key={item.letId}/>)}
+                        {isSellAds?sellData?.map((item)=><AdvertiseCard dataSell={item}  key={item.sellId}/>):letData?.map((item)=><LetAdvertiseCard dataLet={item} key={item.letId}/>)}
                         <Pagination  length={totalPage} currentPage={page}></Pagination>
                     </div>
                 </div>
