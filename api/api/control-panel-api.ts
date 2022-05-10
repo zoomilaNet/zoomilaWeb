@@ -41,6 +41,8 @@ import { AgencyToReturnDtoPagedList } from '../model';
 // @ts-ignore
 import { AgencyToReturnDtoPagedListResultSET } from '../model';
 // @ts-ignore
+import { ContractToReturnDtoResultSET } from '../model';
+// @ts-ignore
 import { EmployeeToReturnDto } from '../model';
 // @ts-ignore
 import { EmployeeToReturnDtoPagedList } from '../model';
@@ -48,6 +50,8 @@ import { EmployeeToReturnDtoPagedList } from '../model';
 import { EmployeeToReturnDtoPagedListResultSET } from '../model';
 // @ts-ignore
 import { GroupToReturnDto } from '../model';
+// @ts-ignore
+import { LetToReturnDtoPagedList } from '../model';
 // @ts-ignore
 import { LoginResultDto } from '../model';
 // @ts-ignore
@@ -58,6 +62,8 @@ import { RoleForCreateDto } from '../model';
 import { RoleForUpdateDto } from '../model';
 // @ts-ignore
 import { RoleToReturnDto } from '../model';
+// @ts-ignore
+import { SellToReturnDtoPagedList } from '../model';
 // @ts-ignore
 import { StringResultSET } from '../model';
 // @ts-ignore
@@ -874,6 +880,102 @@ export const ControlPanelApiAxiosParamCreator = function (configuration?: Config
         },
         /**
          * 
+         * @summary لیست آگهی های اجاره آژانس
+         * @param {number} agencyId 
+         * @param {number} [currentPage] صفحه جاری
+         * @param {number} [pageSize] تعداد رکورد در هر صفحه
+         * @param {*} [options] Override http request option.
+         * @throws {RequiredError}
+         */
+        apiControlPanelAgencyAgencyIdAdsLetGet: async (agencyId: number, currentPage?: number, pageSize?: number, options: AxiosRequestConfig = {}): Promise<RequestArgs> => {
+            // verify required parameter 'agencyId' is not null or undefined
+            assertParamExists('apiControlPanelAgencyAgencyIdAdsLetGet', 'agencyId', agencyId)
+            const localVarPath = `/api/ControlPanel/Agency/{agencyId}/Ads/Let`
+                .replace(`{${"agencyId"}}`, encodeURIComponent(String(agencyId)));
+            // use dummy base URL string because the URL constructor only accepts absolute URLs.
+            const localVarUrlObj = new URL(localVarPath, DUMMY_BASE_URL);
+            let baseOptions;
+            if (configuration) {
+                baseOptions = configuration.baseOptions;
+            }
+
+            const localVarRequestOptions = { method: 'GET', ...baseOptions, ...options};
+            const localVarHeaderParameter = {} as any;
+            const localVarQueryParameter = {} as any;
+
+            // authentication Bearer required
+            // http bearer authentication required
+            await setBearerAuthToObject(localVarHeaderParameter, configuration)
+
+            if (currentPage !== undefined) {
+                localVarQueryParameter['CurrentPage'] = currentPage;
+            }
+
+            if (pageSize !== undefined) {
+                localVarQueryParameter['PageSize'] = pageSize;
+            }
+
+
+    
+            setSearchParams(localVarUrlObj, localVarQueryParameter);
+            let headersFromBaseOptions = baseOptions && baseOptions.headers ? baseOptions.headers : {};
+            localVarRequestOptions.headers = {...localVarHeaderParameter, ...headersFromBaseOptions, ...options.headers};
+
+            return {
+                url: toPathString(localVarUrlObj),
+                options: localVarRequestOptions,
+            };
+        },
+        /**
+         * 
+         * @summary لیست آگهی های فروش آژانس
+         * @param {number} agencyId 
+         * @param {number} [currentPage] صفحه جاری
+         * @param {number} [pageSize] تعداد رکورد در هر صفحه
+         * @param {*} [options] Override http request option.
+         * @throws {RequiredError}
+         */
+        apiControlPanelAgencyAgencyIdAdsSellGet: async (agencyId: number, currentPage?: number, pageSize?: number, options: AxiosRequestConfig = {}): Promise<RequestArgs> => {
+            // verify required parameter 'agencyId' is not null or undefined
+            assertParamExists('apiControlPanelAgencyAgencyIdAdsSellGet', 'agencyId', agencyId)
+            const localVarPath = `/api/ControlPanel/Agency/{agencyId}/Ads/Sell`
+                .replace(`{${"agencyId"}}`, encodeURIComponent(String(agencyId)));
+            // use dummy base URL string because the URL constructor only accepts absolute URLs.
+            const localVarUrlObj = new URL(localVarPath, DUMMY_BASE_URL);
+            let baseOptions;
+            if (configuration) {
+                baseOptions = configuration.baseOptions;
+            }
+
+            const localVarRequestOptions = { method: 'GET', ...baseOptions, ...options};
+            const localVarHeaderParameter = {} as any;
+            const localVarQueryParameter = {} as any;
+
+            // authentication Bearer required
+            // http bearer authentication required
+            await setBearerAuthToObject(localVarHeaderParameter, configuration)
+
+            if (currentPage !== undefined) {
+                localVarQueryParameter['CurrentPage'] = currentPage;
+            }
+
+            if (pageSize !== undefined) {
+                localVarQueryParameter['PageSize'] = pageSize;
+            }
+
+
+    
+            setSearchParams(localVarUrlObj, localVarQueryParameter);
+            let headersFromBaseOptions = baseOptions && baseOptions.headers ? baseOptions.headers : {};
+            localVarRequestOptions.headers = {...localVarHeaderParameter, ...headersFromBaseOptions, ...options.headers};
+
+            return {
+                url: toPathString(localVarUrlObj),
+                options: localVarRequestOptions,
+            };
+        },
+        /**
+         * 
          * @summary لیست مشاوران یک آژانس
          * @param {number} agencyId 
          * @param {*} [options] Override http request option.
@@ -883,6 +985,43 @@ export const ControlPanelApiAxiosParamCreator = function (configuration?: Config
             // verify required parameter 'agencyId' is not null or undefined
             assertParamExists('apiControlPanelAgencyAgencyIdAdvisersGet', 'agencyId', agencyId)
             const localVarPath = `/api/ControlPanel/Agency/{agencyId}/Advisers`
+                .replace(`{${"agencyId"}}`, encodeURIComponent(String(agencyId)));
+            // use dummy base URL string because the URL constructor only accepts absolute URLs.
+            const localVarUrlObj = new URL(localVarPath, DUMMY_BASE_URL);
+            let baseOptions;
+            if (configuration) {
+                baseOptions = configuration.baseOptions;
+            }
+
+            const localVarRequestOptions = { method: 'GET', ...baseOptions, ...options};
+            const localVarHeaderParameter = {} as any;
+            const localVarQueryParameter = {} as any;
+
+            // authentication Bearer required
+            // http bearer authentication required
+            await setBearerAuthToObject(localVarHeaderParameter, configuration)
+
+
+    
+            setSearchParams(localVarUrlObj, localVarQueryParameter);
+            let headersFromBaseOptions = baseOptions && baseOptions.headers ? baseOptions.headers : {};
+            localVarRequestOptions.headers = {...localVarHeaderParameter, ...headersFromBaseOptions, ...options.headers};
+
+            return {
+                url: toPathString(localVarUrlObj),
+                options: localVarRequestOptions,
+            };
+        },
+        /**
+         * 
+         * @param {number} agencyId 
+         * @param {*} [options] Override http request option.
+         * @throws {RequiredError}
+         */
+        apiControlPanelAgencyAgencyIdContractGet: async (agencyId: number, options: AxiosRequestConfig = {}): Promise<RequestArgs> => {
+            // verify required parameter 'agencyId' is not null or undefined
+            assertParamExists('apiControlPanelAgencyAgencyIdContractGet', 'agencyId', agencyId)
+            const localVarPath = `/api/ControlPanel/Agency/{agencyId}/Contract`
                 .replace(`{${"agencyId"}}`, encodeURIComponent(String(agencyId)));
             // use dummy base URL string because the URL constructor only accepts absolute URLs.
             const localVarUrlObj = new URL(localVarPath, DUMMY_BASE_URL);
@@ -1022,13 +1161,13 @@ export const ControlPanelApiAxiosParamCreator = function (configuration?: Config
         /**
          * 
          * @summary لیست آژانس ها
+         * @param {string} [query] 
          * @param {number} [currentPage] صفحه جاری
          * @param {number} [pageSize] تعداد رکورد در هر صفحه
-         * @param {string} [query] 
          * @param {*} [options] Override http request option.
          * @throws {RequiredError}
          */
-        apiControlPanelAgencyListGet: async (currentPage?: number, pageSize?: number, query?: string, options: AxiosRequestConfig = {}): Promise<RequestArgs> => {
+        apiControlPanelAgencyListGet: async (query?: string, currentPage?: number, pageSize?: number, options: AxiosRequestConfig = {}): Promise<RequestArgs> => {
             const localVarPath = `/api/ControlPanel/Agency/List`;
             // use dummy base URL string because the URL constructor only accepts absolute URLs.
             const localVarUrlObj = new URL(localVarPath, DUMMY_BASE_URL);
@@ -1045,16 +1184,16 @@ export const ControlPanelApiAxiosParamCreator = function (configuration?: Config
             // http bearer authentication required
             await setBearerAuthToObject(localVarHeaderParameter, configuration)
 
+            if (query !== undefined) {
+                localVarQueryParameter['Query'] = query;
+            }
+
             if (currentPage !== undefined) {
                 localVarQueryParameter['CurrentPage'] = currentPage;
             }
 
             if (pageSize !== undefined) {
                 localVarQueryParameter['PageSize'] = pageSize;
-            }
-
-            if (query !== undefined) {
-                localVarQueryParameter['Query'] = query;
             }
 
 
@@ -1157,13 +1296,13 @@ export const ControlPanelApiAxiosParamCreator = function (configuration?: Config
         /**
          * 
          * @summary لیست آژانس های تایید نشده
+         * @param {string} [query] 
          * @param {number} [currentPage] صفحه جاری
          * @param {number} [pageSize] تعداد رکورد در هر صفحه
-         * @param {string} [query] 
          * @param {*} [options] Override http request option.
          * @throws {RequiredError}
          */
-        apiControlPanelAgencyNotVerifiedListGet: async (currentPage?: number, pageSize?: number, query?: string, options: AxiosRequestConfig = {}): Promise<RequestArgs> => {
+        apiControlPanelAgencyNotVerifiedListGet: async (query?: string, currentPage?: number, pageSize?: number, options: AxiosRequestConfig = {}): Promise<RequestArgs> => {
             const localVarPath = `/api/ControlPanel/Agency/NotVerified/List`;
             // use dummy base URL string because the URL constructor only accepts absolute URLs.
             const localVarUrlObj = new URL(localVarPath, DUMMY_BASE_URL);
@@ -1180,16 +1319,16 @@ export const ControlPanelApiAxiosParamCreator = function (configuration?: Config
             // http bearer authentication required
             await setBearerAuthToObject(localVarHeaderParameter, configuration)
 
+            if (query !== undefined) {
+                localVarQueryParameter['Query'] = query;
+            }
+
             if (currentPage !== undefined) {
                 localVarQueryParameter['CurrentPage'] = currentPage;
             }
 
             if (pageSize !== undefined) {
                 localVarQueryParameter['PageSize'] = pageSize;
-            }
-
-            if (query !== undefined) {
-                localVarQueryParameter['Query'] = query;
             }
 
 
@@ -1445,13 +1584,13 @@ export const ControlPanelApiAxiosParamCreator = function (configuration?: Config
         /**
          * 
          * @summary لیست پرسنل
+         * @param {string} [query] 
          * @param {number} [currentPage] صفحه جاری
          * @param {number} [pageSize] تعداد رکورد در هر صفحه
-         * @param {string} [query] 
          * @param {*} [options] Override http request option.
          * @throws {RequiredError}
          */
-        apiControlPanelEmployeeListGet: async (currentPage?: number, pageSize?: number, query?: string, options: AxiosRequestConfig = {}): Promise<RequestArgs> => {
+        apiControlPanelEmployeeListGet: async (query?: string, currentPage?: number, pageSize?: number, options: AxiosRequestConfig = {}): Promise<RequestArgs> => {
             const localVarPath = `/api/ControlPanel/Employee/List`;
             // use dummy base URL string because the URL constructor only accepts absolute URLs.
             const localVarUrlObj = new URL(localVarPath, DUMMY_BASE_URL);
@@ -1468,16 +1607,16 @@ export const ControlPanelApiAxiosParamCreator = function (configuration?: Config
             // http bearer authentication required
             await setBearerAuthToObject(localVarHeaderParameter, configuration)
 
+            if (query !== undefined) {
+                localVarQueryParameter['Query'] = query;
+            }
+
             if (currentPage !== undefined) {
                 localVarQueryParameter['CurrentPage'] = currentPage;
             }
 
             if (pageSize !== undefined) {
                 localVarQueryParameter['PageSize'] = pageSize;
-            }
-
-            if (query !== undefined) {
-                localVarQueryParameter['Query'] = query;
             }
 
 
@@ -2088,13 +2227,13 @@ export const ControlPanelApiAxiosParamCreator = function (configuration?: Config
          * 
          * @summary لیست آژانس های یک گروها
          * @param {number} groupId 
+         * @param {string} [query] 
          * @param {number} [currentPage] صفحه جاری
          * @param {number} [pageSize] تعداد رکورد در هر صفحه
-         * @param {string} [query] 
          * @param {*} [options] Override http request option.
          * @throws {RequiredError}
          */
-        apiControlPanelGroupsGroupIdAgencyListGet: async (groupId: number, currentPage?: number, pageSize?: number, query?: string, options: AxiosRequestConfig = {}): Promise<RequestArgs> => {
+        apiControlPanelGroupsGroupIdAgencyListGet: async (groupId: number, query?: string, currentPage?: number, pageSize?: number, options: AxiosRequestConfig = {}): Promise<RequestArgs> => {
             // verify required parameter 'groupId' is not null or undefined
             assertParamExists('apiControlPanelGroupsGroupIdAgencyListGet', 'groupId', groupId)
             const localVarPath = `/api/ControlPanel/Groups/{groupId}/Agency/List`
@@ -2114,16 +2253,16 @@ export const ControlPanelApiAxiosParamCreator = function (configuration?: Config
             // http bearer authentication required
             await setBearerAuthToObject(localVarHeaderParameter, configuration)
 
+            if (query !== undefined) {
+                localVarQueryParameter['Query'] = query;
+            }
+
             if (currentPage !== undefined) {
                 localVarQueryParameter['CurrentPage'] = currentPage;
             }
 
             if (pageSize !== undefined) {
                 localVarQueryParameter['PageSize'] = pageSize;
-            }
-
-            if (query !== undefined) {
-                localVarQueryParameter['Query'] = query;
             }
 
 
@@ -2262,13 +2401,13 @@ export const ControlPanelApiAxiosParamCreator = function (configuration?: Config
          * 
          * @summary لیست پرسنل یک گروه
          * @param {number} groupId 
+         * @param {string} [query] 
          * @param {number} [currentPage] صفحه جاری
          * @param {number} [pageSize] تعداد رکورد در هر صفحه
-         * @param {string} [query] 
          * @param {*} [options] Override http request option.
          * @throws {RequiredError}
          */
-        apiControlPanelGroupsGroupIdEmployeeListGet: async (groupId: number, currentPage?: number, pageSize?: number, query?: string, options: AxiosRequestConfig = {}): Promise<RequestArgs> => {
+        apiControlPanelGroupsGroupIdEmployeeListGet: async (groupId: number, query?: string, currentPage?: number, pageSize?: number, options: AxiosRequestConfig = {}): Promise<RequestArgs> => {
             // verify required parameter 'groupId' is not null or undefined
             assertParamExists('apiControlPanelGroupsGroupIdEmployeeListGet', 'groupId', groupId)
             const localVarPath = `/api/ControlPanel/Groups/{groupId}/Employee/List`
@@ -2288,16 +2427,16 @@ export const ControlPanelApiAxiosParamCreator = function (configuration?: Config
             // http bearer authentication required
             await setBearerAuthToObject(localVarHeaderParameter, configuration)
 
+            if (query !== undefined) {
+                localVarQueryParameter['Query'] = query;
+            }
+
             if (currentPage !== undefined) {
                 localVarQueryParameter['CurrentPage'] = currentPage;
             }
 
             if (pageSize !== undefined) {
                 localVarQueryParameter['PageSize'] = pageSize;
-            }
-
-            if (query !== undefined) {
-                localVarQueryParameter['Query'] = query;
             }
 
 
@@ -3076,6 +3215,32 @@ export const ControlPanelApiFp = function(configuration?: Configuration) {
         },
         /**
          * 
+         * @summary لیست آگهی های اجاره آژانس
+         * @param {number} agencyId 
+         * @param {number} [currentPage] صفحه جاری
+         * @param {number} [pageSize] تعداد رکورد در هر صفحه
+         * @param {*} [options] Override http request option.
+         * @throws {RequiredError}
+         */
+        async apiControlPanelAgencyAgencyIdAdsLetGet(agencyId: number, currentPage?: number, pageSize?: number, options?: AxiosRequestConfig): Promise<(axios?: AxiosInstance, basePath?: string) => AxiosPromise<LetToReturnDtoPagedList>> {
+            const localVarAxiosArgs = await localVarAxiosParamCreator.apiControlPanelAgencyAgencyIdAdsLetGet(agencyId, currentPage, pageSize, options);
+            return createRequestFunction(localVarAxiosArgs, globalAxios, BASE_PATH, configuration);
+        },
+        /**
+         * 
+         * @summary لیست آگهی های فروش آژانس
+         * @param {number} agencyId 
+         * @param {number} [currentPage] صفحه جاری
+         * @param {number} [pageSize] تعداد رکورد در هر صفحه
+         * @param {*} [options] Override http request option.
+         * @throws {RequiredError}
+         */
+        async apiControlPanelAgencyAgencyIdAdsSellGet(agencyId: number, currentPage?: number, pageSize?: number, options?: AxiosRequestConfig): Promise<(axios?: AxiosInstance, basePath?: string) => AxiosPromise<SellToReturnDtoPagedList>> {
+            const localVarAxiosArgs = await localVarAxiosParamCreator.apiControlPanelAgencyAgencyIdAdsSellGet(agencyId, currentPage, pageSize, options);
+            return createRequestFunction(localVarAxiosArgs, globalAxios, BASE_PATH, configuration);
+        },
+        /**
+         * 
          * @summary لیست مشاوران یک آژانس
          * @param {number} agencyId 
          * @param {*} [options] Override http request option.
@@ -3083,6 +3248,16 @@ export const ControlPanelApiFp = function(configuration?: Configuration) {
          */
         async apiControlPanelAgencyAgencyIdAdvisersGet(agencyId: number, options?: AxiosRequestConfig): Promise<(axios?: AxiosInstance, basePath?: string) => AxiosPromise<Array<AdviserToReturnDto>>> {
             const localVarAxiosArgs = await localVarAxiosParamCreator.apiControlPanelAgencyAgencyIdAdvisersGet(agencyId, options);
+            return createRequestFunction(localVarAxiosArgs, globalAxios, BASE_PATH, configuration);
+        },
+        /**
+         * 
+         * @param {number} agencyId 
+         * @param {*} [options] Override http request option.
+         * @throws {RequiredError}
+         */
+        async apiControlPanelAgencyAgencyIdContractGet(agencyId: number, options?: AxiosRequestConfig): Promise<(axios?: AxiosInstance, basePath?: string) => AxiosPromise<ContractToReturnDtoResultSET>> {
+            const localVarAxiosArgs = await localVarAxiosParamCreator.apiControlPanelAgencyAgencyIdContractGet(agencyId, options);
             return createRequestFunction(localVarAxiosArgs, globalAxios, BASE_PATH, configuration);
         },
         /**
@@ -3119,14 +3294,14 @@ export const ControlPanelApiFp = function(configuration?: Configuration) {
         /**
          * 
          * @summary لیست آژانس ها
+         * @param {string} [query] 
          * @param {number} [currentPage] صفحه جاری
          * @param {number} [pageSize] تعداد رکورد در هر صفحه
-         * @param {string} [query] 
          * @param {*} [options] Override http request option.
          * @throws {RequiredError}
          */
-        async apiControlPanelAgencyListGet(currentPage?: number, pageSize?: number, query?: string, options?: AxiosRequestConfig): Promise<(axios?: AxiosInstance, basePath?: string) => AxiosPromise<AgencyResPagedList>> {
-            const localVarAxiosArgs = await localVarAxiosParamCreator.apiControlPanelAgencyListGet(currentPage, pageSize, query, options);
+        async apiControlPanelAgencyListGet(query?: string, currentPage?: number, pageSize?: number, options?: AxiosRequestConfig): Promise<(axios?: AxiosInstance, basePath?: string) => AxiosPromise<AgencyResPagedList>> {
+            const localVarAxiosArgs = await localVarAxiosParamCreator.apiControlPanelAgencyListGet(query, currentPage, pageSize, options);
             return createRequestFunction(localVarAxiosArgs, globalAxios, BASE_PATH, configuration);
         },
         /**
@@ -3155,14 +3330,14 @@ export const ControlPanelApiFp = function(configuration?: Configuration) {
         /**
          * 
          * @summary لیست آژانس های تایید نشده
+         * @param {string} [query] 
          * @param {number} [currentPage] صفحه جاری
          * @param {number} [pageSize] تعداد رکورد در هر صفحه
-         * @param {string} [query] 
          * @param {*} [options] Override http request option.
          * @throws {RequiredError}
          */
-        async apiControlPanelAgencyNotVerifiedListGet(currentPage?: number, pageSize?: number, query?: string, options?: AxiosRequestConfig): Promise<(axios?: AxiosInstance, basePath?: string) => AxiosPromise<AgencyToReturnDtoPagedListResultSET>> {
-            const localVarAxiosArgs = await localVarAxiosParamCreator.apiControlPanelAgencyNotVerifiedListGet(currentPage, pageSize, query, options);
+        async apiControlPanelAgencyNotVerifiedListGet(query?: string, currentPage?: number, pageSize?: number, options?: AxiosRequestConfig): Promise<(axios?: AxiosInstance, basePath?: string) => AxiosPromise<AgencyToReturnDtoPagedListResultSET>> {
+            const localVarAxiosArgs = await localVarAxiosParamCreator.apiControlPanelAgencyNotVerifiedListGet(query, currentPage, pageSize, options);
             return createRequestFunction(localVarAxiosArgs, globalAxios, BASE_PATH, configuration);
         },
         /**
@@ -3233,14 +3408,14 @@ export const ControlPanelApiFp = function(configuration?: Configuration) {
         /**
          * 
          * @summary لیست پرسنل
+         * @param {string} [query] 
          * @param {number} [currentPage] صفحه جاری
          * @param {number} [pageSize] تعداد رکورد در هر صفحه
-         * @param {string} [query] 
          * @param {*} [options] Override http request option.
          * @throws {RequiredError}
          */
-        async apiControlPanelEmployeeListGet(currentPage?: number, pageSize?: number, query?: string, options?: AxiosRequestConfig): Promise<(axios?: AxiosInstance, basePath?: string) => AxiosPromise<EmployeeToReturnDtoPagedListResultSET>> {
-            const localVarAxiosArgs = await localVarAxiosParamCreator.apiControlPanelEmployeeListGet(currentPage, pageSize, query, options);
+        async apiControlPanelEmployeeListGet(query?: string, currentPage?: number, pageSize?: number, options?: AxiosRequestConfig): Promise<(axios?: AxiosInstance, basePath?: string) => AxiosPromise<EmployeeToReturnDtoPagedListResultSET>> {
+            const localVarAxiosArgs = await localVarAxiosParamCreator.apiControlPanelEmployeeListGet(query, currentPage, pageSize, options);
             return createRequestFunction(localVarAxiosArgs, globalAxios, BASE_PATH, configuration);
         },
         /**
@@ -3406,14 +3581,14 @@ export const ControlPanelApiFp = function(configuration?: Configuration) {
          * 
          * @summary لیست آژانس های یک گروها
          * @param {number} groupId 
+         * @param {string} [query] 
          * @param {number} [currentPage] صفحه جاری
          * @param {number} [pageSize] تعداد رکورد در هر صفحه
-         * @param {string} [query] 
          * @param {*} [options] Override http request option.
          * @throws {RequiredError}
          */
-        async apiControlPanelGroupsGroupIdAgencyListGet(groupId: number, currentPage?: number, pageSize?: number, query?: string, options?: AxiosRequestConfig): Promise<(axios?: AxiosInstance, basePath?: string) => AxiosPromise<AgencyToReturnDtoPagedList>> {
-            const localVarAxiosArgs = await localVarAxiosParamCreator.apiControlPanelGroupsGroupIdAgencyListGet(groupId, currentPage, pageSize, query, options);
+        async apiControlPanelGroupsGroupIdAgencyListGet(groupId: number, query?: string, currentPage?: number, pageSize?: number, options?: AxiosRequestConfig): Promise<(axios?: AxiosInstance, basePath?: string) => AxiosPromise<AgencyToReturnDtoPagedList>> {
+            const localVarAxiosArgs = await localVarAxiosParamCreator.apiControlPanelGroupsGroupIdAgencyListGet(groupId, query, currentPage, pageSize, options);
             return createRequestFunction(localVarAxiosArgs, globalAxios, BASE_PATH, configuration);
         },
         /**
@@ -3454,14 +3629,14 @@ export const ControlPanelApiFp = function(configuration?: Configuration) {
          * 
          * @summary لیست پرسنل یک گروه
          * @param {number} groupId 
+         * @param {string} [query] 
          * @param {number} [currentPage] صفحه جاری
          * @param {number} [pageSize] تعداد رکورد در هر صفحه
-         * @param {string} [query] 
          * @param {*} [options] Override http request option.
          * @throws {RequiredError}
          */
-        async apiControlPanelGroupsGroupIdEmployeeListGet(groupId: number, currentPage?: number, pageSize?: number, query?: string, options?: AxiosRequestConfig): Promise<(axios?: AxiosInstance, basePath?: string) => AxiosPromise<EmployeeToReturnDtoPagedList>> {
-            const localVarAxiosArgs = await localVarAxiosParamCreator.apiControlPanelGroupsGroupIdEmployeeListGet(groupId, currentPage, pageSize, query, options);
+        async apiControlPanelGroupsGroupIdEmployeeListGet(groupId: number, query?: string, currentPage?: number, pageSize?: number, options?: AxiosRequestConfig): Promise<(axios?: AxiosInstance, basePath?: string) => AxiosPromise<EmployeeToReturnDtoPagedList>> {
+            const localVarAxiosArgs = await localVarAxiosParamCreator.apiControlPanelGroupsGroupIdEmployeeListGet(groupId, query, currentPage, pageSize, options);
             return createRequestFunction(localVarAxiosArgs, globalAxios, BASE_PATH, configuration);
         },
         /**
@@ -3831,6 +4006,30 @@ export const ControlPanelApiFactory = function (configuration?: Configuration, b
         },
         /**
          * 
+         * @summary لیست آگهی های اجاره آژانس
+         * @param {number} agencyId 
+         * @param {number} [currentPage] صفحه جاری
+         * @param {number} [pageSize] تعداد رکورد در هر صفحه
+         * @param {*} [options] Override http request option.
+         * @throws {RequiredError}
+         */
+        apiControlPanelAgencyAgencyIdAdsLetGet(agencyId: number, currentPage?: number, pageSize?: number, options?: any): AxiosPromise<LetToReturnDtoPagedList> {
+            return localVarFp.apiControlPanelAgencyAgencyIdAdsLetGet(agencyId, currentPage, pageSize, options).then((request) => request(axios, basePath));
+        },
+        /**
+         * 
+         * @summary لیست آگهی های فروش آژانس
+         * @param {number} agencyId 
+         * @param {number} [currentPage] صفحه جاری
+         * @param {number} [pageSize] تعداد رکورد در هر صفحه
+         * @param {*} [options] Override http request option.
+         * @throws {RequiredError}
+         */
+        apiControlPanelAgencyAgencyIdAdsSellGet(agencyId: number, currentPage?: number, pageSize?: number, options?: any): AxiosPromise<SellToReturnDtoPagedList> {
+            return localVarFp.apiControlPanelAgencyAgencyIdAdsSellGet(agencyId, currentPage, pageSize, options).then((request) => request(axios, basePath));
+        },
+        /**
+         * 
          * @summary لیست مشاوران یک آژانس
          * @param {number} agencyId 
          * @param {*} [options] Override http request option.
@@ -3838,6 +4037,15 @@ export const ControlPanelApiFactory = function (configuration?: Configuration, b
          */
         apiControlPanelAgencyAgencyIdAdvisersGet(agencyId: number, options?: any): AxiosPromise<Array<AdviserToReturnDto>> {
             return localVarFp.apiControlPanelAgencyAgencyIdAdvisersGet(agencyId, options).then((request) => request(axios, basePath));
+        },
+        /**
+         * 
+         * @param {number} agencyId 
+         * @param {*} [options] Override http request option.
+         * @throws {RequiredError}
+         */
+        apiControlPanelAgencyAgencyIdContractGet(agencyId: number, options?: any): AxiosPromise<ContractToReturnDtoResultSET> {
+            return localVarFp.apiControlPanelAgencyAgencyIdContractGet(agencyId, options).then((request) => request(axios, basePath));
         },
         /**
          * 
@@ -3870,14 +4078,14 @@ export const ControlPanelApiFactory = function (configuration?: Configuration, b
         /**
          * 
          * @summary لیست آژانس ها
+         * @param {string} [query] 
          * @param {number} [currentPage] صفحه جاری
          * @param {number} [pageSize] تعداد رکورد در هر صفحه
-         * @param {string} [query] 
          * @param {*} [options] Override http request option.
          * @throws {RequiredError}
          */
-        apiControlPanelAgencyListGet(currentPage?: number, pageSize?: number, query?: string, options?: any): AxiosPromise<AgencyResPagedList> {
-            return localVarFp.apiControlPanelAgencyListGet(currentPage, pageSize, query, options).then((request) => request(axios, basePath));
+        apiControlPanelAgencyListGet(query?: string, currentPage?: number, pageSize?: number, options?: any): AxiosPromise<AgencyResPagedList> {
+            return localVarFp.apiControlPanelAgencyListGet(query, currentPage, pageSize, options).then((request) => request(axios, basePath));
         },
         /**
          * 
@@ -3903,14 +4111,14 @@ export const ControlPanelApiFactory = function (configuration?: Configuration, b
         /**
          * 
          * @summary لیست آژانس های تایید نشده
+         * @param {string} [query] 
          * @param {number} [currentPage] صفحه جاری
          * @param {number} [pageSize] تعداد رکورد در هر صفحه
-         * @param {string} [query] 
          * @param {*} [options] Override http request option.
          * @throws {RequiredError}
          */
-        apiControlPanelAgencyNotVerifiedListGet(currentPage?: number, pageSize?: number, query?: string, options?: any): AxiosPromise<AgencyToReturnDtoPagedListResultSET> {
-            return localVarFp.apiControlPanelAgencyNotVerifiedListGet(currentPage, pageSize, query, options).then((request) => request(axios, basePath));
+        apiControlPanelAgencyNotVerifiedListGet(query?: string, currentPage?: number, pageSize?: number, options?: any): AxiosPromise<AgencyToReturnDtoPagedListResultSET> {
+            return localVarFp.apiControlPanelAgencyNotVerifiedListGet(query, currentPage, pageSize, options).then((request) => request(axios, basePath));
         },
         /**
          * 
@@ -3974,14 +4182,14 @@ export const ControlPanelApiFactory = function (configuration?: Configuration, b
         /**
          * 
          * @summary لیست پرسنل
+         * @param {string} [query] 
          * @param {number} [currentPage] صفحه جاری
          * @param {number} [pageSize] تعداد رکورد در هر صفحه
-         * @param {string} [query] 
          * @param {*} [options] Override http request option.
          * @throws {RequiredError}
          */
-        apiControlPanelEmployeeListGet(currentPage?: number, pageSize?: number, query?: string, options?: any): AxiosPromise<EmployeeToReturnDtoPagedListResultSET> {
-            return localVarFp.apiControlPanelEmployeeListGet(currentPage, pageSize, query, options).then((request) => request(axios, basePath));
+        apiControlPanelEmployeeListGet(query?: string, currentPage?: number, pageSize?: number, options?: any): AxiosPromise<EmployeeToReturnDtoPagedListResultSET> {
+            return localVarFp.apiControlPanelEmployeeListGet(query, currentPage, pageSize, options).then((request) => request(axios, basePath));
         },
         /**
          * 
@@ -4131,14 +4339,14 @@ export const ControlPanelApiFactory = function (configuration?: Configuration, b
          * 
          * @summary لیست آژانس های یک گروها
          * @param {number} groupId 
+         * @param {string} [query] 
          * @param {number} [currentPage] صفحه جاری
          * @param {number} [pageSize] تعداد رکورد در هر صفحه
-         * @param {string} [query] 
          * @param {*} [options] Override http request option.
          * @throws {RequiredError}
          */
-        apiControlPanelGroupsGroupIdAgencyListGet(groupId: number, currentPage?: number, pageSize?: number, query?: string, options?: any): AxiosPromise<AgencyToReturnDtoPagedList> {
-            return localVarFp.apiControlPanelGroupsGroupIdAgencyListGet(groupId, currentPage, pageSize, query, options).then((request) => request(axios, basePath));
+        apiControlPanelGroupsGroupIdAgencyListGet(groupId: number, query?: string, currentPage?: number, pageSize?: number, options?: any): AxiosPromise<AgencyToReturnDtoPagedList> {
+            return localVarFp.apiControlPanelGroupsGroupIdAgencyListGet(groupId, query, currentPage, pageSize, options).then((request) => request(axios, basePath));
         },
         /**
          * 
@@ -4175,14 +4383,14 @@ export const ControlPanelApiFactory = function (configuration?: Configuration, b
          * 
          * @summary لیست پرسنل یک گروه
          * @param {number} groupId 
+         * @param {string} [query] 
          * @param {number} [currentPage] صفحه جاری
          * @param {number} [pageSize] تعداد رکورد در هر صفحه
-         * @param {string} [query] 
          * @param {*} [options] Override http request option.
          * @throws {RequiredError}
          */
-        apiControlPanelGroupsGroupIdEmployeeListGet(groupId: number, currentPage?: number, pageSize?: number, query?: string, options?: any): AxiosPromise<EmployeeToReturnDtoPagedList> {
-            return localVarFp.apiControlPanelGroupsGroupIdEmployeeListGet(groupId, currentPage, pageSize, query, options).then((request) => request(axios, basePath));
+        apiControlPanelGroupsGroupIdEmployeeListGet(groupId: number, query?: string, currentPage?: number, pageSize?: number, options?: any): AxiosPromise<EmployeeToReturnDtoPagedList> {
+            return localVarFp.apiControlPanelGroupsGroupIdEmployeeListGet(groupId, query, currentPage, pageSize, options).then((request) => request(axios, basePath));
         },
         /**
          * 
@@ -4535,6 +4743,30 @@ export interface ControlPanelApiInterface {
 
     /**
      * 
+     * @summary لیست آگهی های اجاره آژانس
+     * @param {number} agencyId 
+     * @param {number} [currentPage] صفحه جاری
+     * @param {number} [pageSize] تعداد رکورد در هر صفحه
+     * @param {*} [options] Override http request option.
+     * @throws {RequiredError}
+     * @memberof ControlPanelApiInterface
+     */
+    apiControlPanelAgencyAgencyIdAdsLetGet(agencyId: number, currentPage?: number, pageSize?: number, options?: AxiosRequestConfig): AxiosPromise<LetToReturnDtoPagedList>;
+
+    /**
+     * 
+     * @summary لیست آگهی های فروش آژانس
+     * @param {number} agencyId 
+     * @param {number} [currentPage] صفحه جاری
+     * @param {number} [pageSize] تعداد رکورد در هر صفحه
+     * @param {*} [options] Override http request option.
+     * @throws {RequiredError}
+     * @memberof ControlPanelApiInterface
+     */
+    apiControlPanelAgencyAgencyIdAdsSellGet(agencyId: number, currentPage?: number, pageSize?: number, options?: AxiosRequestConfig): AxiosPromise<SellToReturnDtoPagedList>;
+
+    /**
+     * 
      * @summary لیست مشاوران یک آژانس
      * @param {number} agencyId 
      * @param {*} [options] Override http request option.
@@ -4542,6 +4774,15 @@ export interface ControlPanelApiInterface {
      * @memberof ControlPanelApiInterface
      */
     apiControlPanelAgencyAgencyIdAdvisersGet(agencyId: number, options?: AxiosRequestConfig): AxiosPromise<Array<AdviserToReturnDto>>;
+
+    /**
+     * 
+     * @param {number} agencyId 
+     * @param {*} [options] Override http request option.
+     * @throws {RequiredError}
+     * @memberof ControlPanelApiInterface
+     */
+    apiControlPanelAgencyAgencyIdContractGet(agencyId: number, options?: AxiosRequestConfig): AxiosPromise<ContractToReturnDtoResultSET>;
 
     /**
      * 
@@ -4574,14 +4815,14 @@ export interface ControlPanelApiInterface {
     /**
      * 
      * @summary لیست آژانس ها
+     * @param {string} [query] 
      * @param {number} [currentPage] صفحه جاری
      * @param {number} [pageSize] تعداد رکورد در هر صفحه
-     * @param {string} [query] 
      * @param {*} [options] Override http request option.
      * @throws {RequiredError}
      * @memberof ControlPanelApiInterface
      */
-    apiControlPanelAgencyListGet(currentPage?: number, pageSize?: number, query?: string, options?: AxiosRequestConfig): AxiosPromise<AgencyResPagedList>;
+    apiControlPanelAgencyListGet(query?: string, currentPage?: number, pageSize?: number, options?: AxiosRequestConfig): AxiosPromise<AgencyResPagedList>;
 
     /**
      * 
@@ -4607,14 +4848,14 @@ export interface ControlPanelApiInterface {
     /**
      * 
      * @summary لیست آژانس های تایید نشده
+     * @param {string} [query] 
      * @param {number} [currentPage] صفحه جاری
      * @param {number} [pageSize] تعداد رکورد در هر صفحه
-     * @param {string} [query] 
      * @param {*} [options] Override http request option.
      * @throws {RequiredError}
      * @memberof ControlPanelApiInterface
      */
-    apiControlPanelAgencyNotVerifiedListGet(currentPage?: number, pageSize?: number, query?: string, options?: AxiosRequestConfig): AxiosPromise<AgencyToReturnDtoPagedListResultSET>;
+    apiControlPanelAgencyNotVerifiedListGet(query?: string, currentPage?: number, pageSize?: number, options?: AxiosRequestConfig): AxiosPromise<AgencyToReturnDtoPagedListResultSET>;
 
     /**
      * 
@@ -4678,14 +4919,14 @@ export interface ControlPanelApiInterface {
     /**
      * 
      * @summary لیست پرسنل
+     * @param {string} [query] 
      * @param {number} [currentPage] صفحه جاری
      * @param {number} [pageSize] تعداد رکورد در هر صفحه
-     * @param {string} [query] 
      * @param {*} [options] Override http request option.
      * @throws {RequiredError}
      * @memberof ControlPanelApiInterface
      */
-    apiControlPanelEmployeeListGet(currentPage?: number, pageSize?: number, query?: string, options?: AxiosRequestConfig): AxiosPromise<EmployeeToReturnDtoPagedListResultSET>;
+    apiControlPanelEmployeeListGet(query?: string, currentPage?: number, pageSize?: number, options?: AxiosRequestConfig): AxiosPromise<EmployeeToReturnDtoPagedListResultSET>;
 
     /**
      * 
@@ -4835,14 +5076,14 @@ export interface ControlPanelApiInterface {
      * 
      * @summary لیست آژانس های یک گروها
      * @param {number} groupId 
+     * @param {string} [query] 
      * @param {number} [currentPage] صفحه جاری
      * @param {number} [pageSize] تعداد رکورد در هر صفحه
-     * @param {string} [query] 
      * @param {*} [options] Override http request option.
      * @throws {RequiredError}
      * @memberof ControlPanelApiInterface
      */
-    apiControlPanelGroupsGroupIdAgencyListGet(groupId: number, currentPage?: number, pageSize?: number, query?: string, options?: AxiosRequestConfig): AxiosPromise<AgencyToReturnDtoPagedList>;
+    apiControlPanelGroupsGroupIdAgencyListGet(groupId: number, query?: string, currentPage?: number, pageSize?: number, options?: AxiosRequestConfig): AxiosPromise<AgencyToReturnDtoPagedList>;
 
     /**
      * 
@@ -4879,14 +5120,14 @@ export interface ControlPanelApiInterface {
      * 
      * @summary لیست پرسنل یک گروه
      * @param {number} groupId 
+     * @param {string} [query] 
      * @param {number} [currentPage] صفحه جاری
      * @param {number} [pageSize] تعداد رکورد در هر صفحه
-     * @param {string} [query] 
      * @param {*} [options] Override http request option.
      * @throws {RequiredError}
      * @memberof ControlPanelApiInterface
      */
-    apiControlPanelGroupsGroupIdEmployeeListGet(groupId: number, currentPage?: number, pageSize?: number, query?: string, options?: AxiosRequestConfig): AxiosPromise<EmployeeToReturnDtoPagedList>;
+    apiControlPanelGroupsGroupIdEmployeeListGet(groupId: number, query?: string, currentPage?: number, pageSize?: number, options?: AxiosRequestConfig): AxiosPromise<EmployeeToReturnDtoPagedList>;
 
     /**
      * 
@@ -5285,6 +5526,34 @@ export class ControlPanelApi extends BaseAPI implements ControlPanelApiInterface
 
     /**
      * 
+     * @summary لیست آگهی های اجاره آژانس
+     * @param {number} agencyId 
+     * @param {number} [currentPage] صفحه جاری
+     * @param {number} [pageSize] تعداد رکورد در هر صفحه
+     * @param {*} [options] Override http request option.
+     * @throws {RequiredError}
+     * @memberof ControlPanelApi
+     */
+    public apiControlPanelAgencyAgencyIdAdsLetGet(agencyId: number, currentPage?: number, pageSize?: number, options?: AxiosRequestConfig) {
+        return ControlPanelApiFp(this.configuration).apiControlPanelAgencyAgencyIdAdsLetGet(agencyId, currentPage, pageSize, options).then((request) => request(this.axios, this.basePath));
+    }
+
+    /**
+     * 
+     * @summary لیست آگهی های فروش آژانس
+     * @param {number} agencyId 
+     * @param {number} [currentPage] صفحه جاری
+     * @param {number} [pageSize] تعداد رکورد در هر صفحه
+     * @param {*} [options] Override http request option.
+     * @throws {RequiredError}
+     * @memberof ControlPanelApi
+     */
+    public apiControlPanelAgencyAgencyIdAdsSellGet(agencyId: number, currentPage?: number, pageSize?: number, options?: AxiosRequestConfig) {
+        return ControlPanelApiFp(this.configuration).apiControlPanelAgencyAgencyIdAdsSellGet(agencyId, currentPage, pageSize, options).then((request) => request(this.axios, this.basePath));
+    }
+
+    /**
+     * 
      * @summary لیست مشاوران یک آژانس
      * @param {number} agencyId 
      * @param {*} [options] Override http request option.
@@ -5293,6 +5562,17 @@ export class ControlPanelApi extends BaseAPI implements ControlPanelApiInterface
      */
     public apiControlPanelAgencyAgencyIdAdvisersGet(agencyId: number, options?: AxiosRequestConfig) {
         return ControlPanelApiFp(this.configuration).apiControlPanelAgencyAgencyIdAdvisersGet(agencyId, options).then((request) => request(this.axios, this.basePath));
+    }
+
+    /**
+     * 
+     * @param {number} agencyId 
+     * @param {*} [options] Override http request option.
+     * @throws {RequiredError}
+     * @memberof ControlPanelApi
+     */
+    public apiControlPanelAgencyAgencyIdContractGet(agencyId: number, options?: AxiosRequestConfig) {
+        return ControlPanelApiFp(this.configuration).apiControlPanelAgencyAgencyIdContractGet(agencyId, options).then((request) => request(this.axios, this.basePath));
     }
 
     /**
@@ -5332,15 +5612,15 @@ export class ControlPanelApi extends BaseAPI implements ControlPanelApiInterface
     /**
      * 
      * @summary لیست آژانس ها
+     * @param {string} [query] 
      * @param {number} [currentPage] صفحه جاری
      * @param {number} [pageSize] تعداد رکورد در هر صفحه
-     * @param {string} [query] 
      * @param {*} [options] Override http request option.
      * @throws {RequiredError}
      * @memberof ControlPanelApi
      */
-    public apiControlPanelAgencyListGet(currentPage?: number, pageSize?: number, query?: string, options?: AxiosRequestConfig) {
-        return ControlPanelApiFp(this.configuration).apiControlPanelAgencyListGet(currentPage, pageSize, query, options).then((request) => request(this.axios, this.basePath));
+    public apiControlPanelAgencyListGet(query?: string, currentPage?: number, pageSize?: number, options?: AxiosRequestConfig) {
+        return ControlPanelApiFp(this.configuration).apiControlPanelAgencyListGet(query, currentPage, pageSize, options).then((request) => request(this.axios, this.basePath));
     }
 
     /**
@@ -5371,15 +5651,15 @@ export class ControlPanelApi extends BaseAPI implements ControlPanelApiInterface
     /**
      * 
      * @summary لیست آژانس های تایید نشده
+     * @param {string} [query] 
      * @param {number} [currentPage] صفحه جاری
      * @param {number} [pageSize] تعداد رکورد در هر صفحه
-     * @param {string} [query] 
      * @param {*} [options] Override http request option.
      * @throws {RequiredError}
      * @memberof ControlPanelApi
      */
-    public apiControlPanelAgencyNotVerifiedListGet(currentPage?: number, pageSize?: number, query?: string, options?: AxiosRequestConfig) {
-        return ControlPanelApiFp(this.configuration).apiControlPanelAgencyNotVerifiedListGet(currentPage, pageSize, query, options).then((request) => request(this.axios, this.basePath));
+    public apiControlPanelAgencyNotVerifiedListGet(query?: string, currentPage?: number, pageSize?: number, options?: AxiosRequestConfig) {
+        return ControlPanelApiFp(this.configuration).apiControlPanelAgencyNotVerifiedListGet(query, currentPage, pageSize, options).then((request) => request(this.axios, this.basePath));
     }
 
     /**
@@ -5456,15 +5736,15 @@ export class ControlPanelApi extends BaseAPI implements ControlPanelApiInterface
     /**
      * 
      * @summary لیست پرسنل
+     * @param {string} [query] 
      * @param {number} [currentPage] صفحه جاری
      * @param {number} [pageSize] تعداد رکورد در هر صفحه
-     * @param {string} [query] 
      * @param {*} [options] Override http request option.
      * @throws {RequiredError}
      * @memberof ControlPanelApi
      */
-    public apiControlPanelEmployeeListGet(currentPage?: number, pageSize?: number, query?: string, options?: AxiosRequestConfig) {
-        return ControlPanelApiFp(this.configuration).apiControlPanelEmployeeListGet(currentPage, pageSize, query, options).then((request) => request(this.axios, this.basePath));
+    public apiControlPanelEmployeeListGet(query?: string, currentPage?: number, pageSize?: number, options?: AxiosRequestConfig) {
+        return ControlPanelApiFp(this.configuration).apiControlPanelEmployeeListGet(query, currentPage, pageSize, options).then((request) => request(this.axios, this.basePath));
     }
 
     /**
@@ -5645,15 +5925,15 @@ export class ControlPanelApi extends BaseAPI implements ControlPanelApiInterface
      * 
      * @summary لیست آژانس های یک گروها
      * @param {number} groupId 
+     * @param {string} [query] 
      * @param {number} [currentPage] صفحه جاری
      * @param {number} [pageSize] تعداد رکورد در هر صفحه
-     * @param {string} [query] 
      * @param {*} [options] Override http request option.
      * @throws {RequiredError}
      * @memberof ControlPanelApi
      */
-    public apiControlPanelGroupsGroupIdAgencyListGet(groupId: number, currentPage?: number, pageSize?: number, query?: string, options?: AxiosRequestConfig) {
-        return ControlPanelApiFp(this.configuration).apiControlPanelGroupsGroupIdAgencyListGet(groupId, currentPage, pageSize, query, options).then((request) => request(this.axios, this.basePath));
+    public apiControlPanelGroupsGroupIdAgencyListGet(groupId: number, query?: string, currentPage?: number, pageSize?: number, options?: AxiosRequestConfig) {
+        return ControlPanelApiFp(this.configuration).apiControlPanelGroupsGroupIdAgencyListGet(groupId, query, currentPage, pageSize, options).then((request) => request(this.axios, this.basePath));
     }
 
     /**
@@ -5697,15 +5977,15 @@ export class ControlPanelApi extends BaseAPI implements ControlPanelApiInterface
      * 
      * @summary لیست پرسنل یک گروه
      * @param {number} groupId 
+     * @param {string} [query] 
      * @param {number} [currentPage] صفحه جاری
      * @param {number} [pageSize] تعداد رکورد در هر صفحه
-     * @param {string} [query] 
      * @param {*} [options] Override http request option.
      * @throws {RequiredError}
      * @memberof ControlPanelApi
      */
-    public apiControlPanelGroupsGroupIdEmployeeListGet(groupId: number, currentPage?: number, pageSize?: number, query?: string, options?: AxiosRequestConfig) {
-        return ControlPanelApiFp(this.configuration).apiControlPanelGroupsGroupIdEmployeeListGet(groupId, currentPage, pageSize, query, options).then((request) => request(this.axios, this.basePath));
+    public apiControlPanelGroupsGroupIdEmployeeListGet(groupId: number, query?: string, currentPage?: number, pageSize?: number, options?: AxiosRequestConfig) {
+        return ControlPanelApiFp(this.configuration).apiControlPanelGroupsGroupIdEmployeeListGet(groupId, query, currentPage, pageSize, options).then((request) => request(this.axios, this.basePath));
     }
 
     /**

@@ -42,13 +42,13 @@ export const CountryApiAxiosParamCreator = function (configuration?: Configurati
          * 
          * @summary لیست شهر های یک استان
          * @param {number} provinceId 
+         * @param {string} [query] 
          * @param {number} [currentPage] صفحه جاری
          * @param {number} [pageSize] تعداد رکورد در هر صفحه
-         * @param {string} [query] 
          * @param {*} [options] Override http request option.
          * @throws {RequiredError}
          */
-        apiCountryCitiesProvinceProvinceIdGet: async (provinceId: number, currentPage?: number, pageSize?: number, query?: string, options: AxiosRequestConfig = {}): Promise<RequestArgs> => {
+        apiCountryCitiesProvinceProvinceIdGet: async (provinceId: number, query?: string, currentPage?: number, pageSize?: number, options: AxiosRequestConfig = {}): Promise<RequestArgs> => {
             // verify required parameter 'provinceId' is not null or undefined
             assertParamExists('apiCountryCitiesProvinceProvinceIdGet', 'provinceId', provinceId)
             const localVarPath = `/api/Country/Cities/Province/{provinceId}`
@@ -68,16 +68,16 @@ export const CountryApiAxiosParamCreator = function (configuration?: Configurati
             // http bearer authentication required
             await setBearerAuthToObject(localVarHeaderParameter, configuration)
 
+            if (query !== undefined) {
+                localVarQueryParameter['Query'] = query;
+            }
+
             if (currentPage !== undefined) {
                 localVarQueryParameter['CurrentPage'] = currentPage;
             }
 
             if (pageSize !== undefined) {
                 localVarQueryParameter['PageSize'] = pageSize;
-            }
-
-            if (query !== undefined) {
-                localVarQueryParameter['Query'] = query;
             }
 
 
@@ -171,13 +171,13 @@ export const CountryApiAxiosParamCreator = function (configuration?: Configurati
          * 
          * @summary لیست محلات یک شهر
          * @param {number} cityId 
+         * @param {string} [query] 
          * @param {number} [currentPage] صفحه جاری
          * @param {number} [pageSize] تعداد رکورد در هر صفحه
-         * @param {string} [query] 
          * @param {*} [options] Override http request option.
          * @throws {RequiredError}
          */
-        apiCountryNeighbourhoodsCityCityIdGet: async (cityId: number, currentPage?: number, pageSize?: number, query?: string, options: AxiosRequestConfig = {}): Promise<RequestArgs> => {
+        apiCountryNeighbourhoodsCityCityIdGet: async (cityId: number, query?: string, currentPage?: number, pageSize?: number, options: AxiosRequestConfig = {}): Promise<RequestArgs> => {
             // verify required parameter 'cityId' is not null or undefined
             assertParamExists('apiCountryNeighbourhoodsCityCityIdGet', 'cityId', cityId)
             const localVarPath = `/api/Country/Neighbourhoods/City/{cityId}`
@@ -197,16 +197,16 @@ export const CountryApiAxiosParamCreator = function (configuration?: Configurati
             // http bearer authentication required
             await setBearerAuthToObject(localVarHeaderParameter, configuration)
 
+            if (query !== undefined) {
+                localVarQueryParameter['Query'] = query;
+            }
+
             if (currentPage !== undefined) {
                 localVarQueryParameter['CurrentPage'] = currentPage;
             }
 
             if (pageSize !== undefined) {
                 localVarQueryParameter['PageSize'] = pageSize;
-            }
-
-            if (query !== undefined) {
-                localVarQueryParameter['Query'] = query;
             }
 
 
@@ -261,13 +261,13 @@ export const CountryApiAxiosParamCreator = function (configuration?: Configurati
         /**
          * 
          * @summary لیست استانها
+         * @param {string} [query] 
          * @param {number} [currentPage] صفحه جاری
          * @param {number} [pageSize] تعداد رکورد در هر صفحه
-         * @param {string} [query] 
          * @param {*} [options] Override http request option.
          * @throws {RequiredError}
          */
-        apiCountryProvincesGet: async (currentPage?: number, pageSize?: number, query?: string, options: AxiosRequestConfig = {}): Promise<RequestArgs> => {
+        apiCountryProvincesGet: async (query?: string, currentPage?: number, pageSize?: number, options: AxiosRequestConfig = {}): Promise<RequestArgs> => {
             const localVarPath = `/api/Country/Provinces`;
             // use dummy base URL string because the URL constructor only accepts absolute URLs.
             const localVarUrlObj = new URL(localVarPath, DUMMY_BASE_URL);
@@ -284,16 +284,16 @@ export const CountryApiAxiosParamCreator = function (configuration?: Configurati
             // http bearer authentication required
             await setBearerAuthToObject(localVarHeaderParameter, configuration)
 
+            if (query !== undefined) {
+                localVarQueryParameter['Query'] = query;
+            }
+
             if (currentPage !== undefined) {
                 localVarQueryParameter['CurrentPage'] = currentPage;
             }
 
             if (pageSize !== undefined) {
                 localVarQueryParameter['PageSize'] = pageSize;
-            }
-
-            if (query !== undefined) {
-                localVarQueryParameter['Query'] = query;
             }
 
 
@@ -321,14 +321,14 @@ export const CountryApiFp = function(configuration?: Configuration) {
          * 
          * @summary لیست شهر های یک استان
          * @param {number} provinceId 
+         * @param {string} [query] 
          * @param {number} [currentPage] صفحه جاری
          * @param {number} [pageSize] تعداد رکورد در هر صفحه
-         * @param {string} [query] 
          * @param {*} [options] Override http request option.
          * @throws {RequiredError}
          */
-        async apiCountryCitiesProvinceProvinceIdGet(provinceId: number, currentPage?: number, pageSize?: number, query?: string, options?: AxiosRequestConfig): Promise<(axios?: AxiosInstance, basePath?: string) => AxiosPromise<CityDtoPagedListResultSET>> {
-            const localVarAxiosArgs = await localVarAxiosParamCreator.apiCountryCitiesProvinceProvinceIdGet(provinceId, currentPage, pageSize, query, options);
+        async apiCountryCitiesProvinceProvinceIdGet(provinceId: number, query?: string, currentPage?: number, pageSize?: number, options?: AxiosRequestConfig): Promise<(axios?: AxiosInstance, basePath?: string) => AxiosPromise<CityDtoPagedListResultSET>> {
+            const localVarAxiosArgs = await localVarAxiosParamCreator.apiCountryCitiesProvinceProvinceIdGet(provinceId, query, currentPage, pageSize, options);
             return createRequestFunction(localVarAxiosArgs, globalAxios, BASE_PATH, configuration);
         },
         /**
@@ -357,14 +357,14 @@ export const CountryApiFp = function(configuration?: Configuration) {
          * 
          * @summary لیست محلات یک شهر
          * @param {number} cityId 
+         * @param {string} [query] 
          * @param {number} [currentPage] صفحه جاری
          * @param {number} [pageSize] تعداد رکورد در هر صفحه
-         * @param {string} [query] 
          * @param {*} [options] Override http request option.
          * @throws {RequiredError}
          */
-        async apiCountryNeighbourhoodsCityCityIdGet(cityId: number, currentPage?: number, pageSize?: number, query?: string, options?: AxiosRequestConfig): Promise<(axios?: AxiosInstance, basePath?: string) => AxiosPromise<NeighbourhoodDtoPagedListResultSET>> {
-            const localVarAxiosArgs = await localVarAxiosParamCreator.apiCountryNeighbourhoodsCityCityIdGet(cityId, currentPage, pageSize, query, options);
+        async apiCountryNeighbourhoodsCityCityIdGet(cityId: number, query?: string, currentPage?: number, pageSize?: number, options?: AxiosRequestConfig): Promise<(axios?: AxiosInstance, basePath?: string) => AxiosPromise<NeighbourhoodDtoPagedListResultSET>> {
+            const localVarAxiosArgs = await localVarAxiosParamCreator.apiCountryNeighbourhoodsCityCityIdGet(cityId, query, currentPage, pageSize, options);
             return createRequestFunction(localVarAxiosArgs, globalAxios, BASE_PATH, configuration);
         },
         /**
@@ -381,14 +381,14 @@ export const CountryApiFp = function(configuration?: Configuration) {
         /**
          * 
          * @summary لیست استانها
+         * @param {string} [query] 
          * @param {number} [currentPage] صفحه جاری
          * @param {number} [pageSize] تعداد رکورد در هر صفحه
-         * @param {string} [query] 
          * @param {*} [options] Override http request option.
          * @throws {RequiredError}
          */
-        async apiCountryProvincesGet(currentPage?: number, pageSize?: number, query?: string, options?: AxiosRequestConfig): Promise<(axios?: AxiosInstance, basePath?: string) => AxiosPromise<ProvinceDtoPagedListResultSET>> {
-            const localVarAxiosArgs = await localVarAxiosParamCreator.apiCountryProvincesGet(currentPage, pageSize, query, options);
+        async apiCountryProvincesGet(query?: string, currentPage?: number, pageSize?: number, options?: AxiosRequestConfig): Promise<(axios?: AxiosInstance, basePath?: string) => AxiosPromise<ProvinceDtoPagedListResultSET>> {
+            const localVarAxiosArgs = await localVarAxiosParamCreator.apiCountryProvincesGet(query, currentPage, pageSize, options);
             return createRequestFunction(localVarAxiosArgs, globalAxios, BASE_PATH, configuration);
         },
     }
@@ -405,14 +405,14 @@ export const CountryApiFactory = function (configuration?: Configuration, basePa
          * 
          * @summary لیست شهر های یک استان
          * @param {number} provinceId 
+         * @param {string} [query] 
          * @param {number} [currentPage] صفحه جاری
          * @param {number} [pageSize] تعداد رکورد در هر صفحه
-         * @param {string} [query] 
          * @param {*} [options] Override http request option.
          * @throws {RequiredError}
          */
-        apiCountryCitiesProvinceProvinceIdGet(provinceId: number, currentPage?: number, pageSize?: number, query?: string, options?: any): AxiosPromise<CityDtoPagedListResultSET> {
-            return localVarFp.apiCountryCitiesProvinceProvinceIdGet(provinceId, currentPage, pageSize, query, options).then((request) => request(axios, basePath));
+        apiCountryCitiesProvinceProvinceIdGet(provinceId: number, query?: string, currentPage?: number, pageSize?: number, options?: any): AxiosPromise<CityDtoPagedListResultSET> {
+            return localVarFp.apiCountryCitiesProvinceProvinceIdGet(provinceId, query, currentPage, pageSize, options).then((request) => request(axios, basePath));
         },
         /**
          * 
@@ -438,14 +438,14 @@ export const CountryApiFactory = function (configuration?: Configuration, basePa
          * 
          * @summary لیست محلات یک شهر
          * @param {number} cityId 
+         * @param {string} [query] 
          * @param {number} [currentPage] صفحه جاری
          * @param {number} [pageSize] تعداد رکورد در هر صفحه
-         * @param {string} [query] 
          * @param {*} [options] Override http request option.
          * @throws {RequiredError}
          */
-        apiCountryNeighbourhoodsCityCityIdGet(cityId: number, currentPage?: number, pageSize?: number, query?: string, options?: any): AxiosPromise<NeighbourhoodDtoPagedListResultSET> {
-            return localVarFp.apiCountryNeighbourhoodsCityCityIdGet(cityId, currentPage, pageSize, query, options).then((request) => request(axios, basePath));
+        apiCountryNeighbourhoodsCityCityIdGet(cityId: number, query?: string, currentPage?: number, pageSize?: number, options?: any): AxiosPromise<NeighbourhoodDtoPagedListResultSET> {
+            return localVarFp.apiCountryNeighbourhoodsCityCityIdGet(cityId, query, currentPage, pageSize, options).then((request) => request(axios, basePath));
         },
         /**
          * 
@@ -460,14 +460,14 @@ export const CountryApiFactory = function (configuration?: Configuration, basePa
         /**
          * 
          * @summary لیست استانها
+         * @param {string} [query] 
          * @param {number} [currentPage] صفحه جاری
          * @param {number} [pageSize] تعداد رکورد در هر صفحه
-         * @param {string} [query] 
          * @param {*} [options] Override http request option.
          * @throws {RequiredError}
          */
-        apiCountryProvincesGet(currentPage?: number, pageSize?: number, query?: string, options?: any): AxiosPromise<ProvinceDtoPagedListResultSET> {
-            return localVarFp.apiCountryProvincesGet(currentPage, pageSize, query, options).then((request) => request(axios, basePath));
+        apiCountryProvincesGet(query?: string, currentPage?: number, pageSize?: number, options?: any): AxiosPromise<ProvinceDtoPagedListResultSET> {
+            return localVarFp.apiCountryProvincesGet(query, currentPage, pageSize, options).then((request) => request(axios, basePath));
         },
     };
 };
@@ -482,14 +482,14 @@ export interface CountryApiInterface {
      * 
      * @summary لیست شهر های یک استان
      * @param {number} provinceId 
+     * @param {string} [query] 
      * @param {number} [currentPage] صفحه جاری
      * @param {number} [pageSize] تعداد رکورد در هر صفحه
-     * @param {string} [query] 
      * @param {*} [options] Override http request option.
      * @throws {RequiredError}
      * @memberof CountryApiInterface
      */
-    apiCountryCitiesProvinceProvinceIdGet(provinceId: number, currentPage?: number, pageSize?: number, query?: string, options?: AxiosRequestConfig): AxiosPromise<CityDtoPagedListResultSET>;
+    apiCountryCitiesProvinceProvinceIdGet(provinceId: number, query?: string, currentPage?: number, pageSize?: number, options?: AxiosRequestConfig): AxiosPromise<CityDtoPagedListResultSET>;
 
     /**
      * 
@@ -515,14 +515,14 @@ export interface CountryApiInterface {
      * 
      * @summary لیست محلات یک شهر
      * @param {number} cityId 
+     * @param {string} [query] 
      * @param {number} [currentPage] صفحه جاری
      * @param {number} [pageSize] تعداد رکورد در هر صفحه
-     * @param {string} [query] 
      * @param {*} [options] Override http request option.
      * @throws {RequiredError}
      * @memberof CountryApiInterface
      */
-    apiCountryNeighbourhoodsCityCityIdGet(cityId: number, currentPage?: number, pageSize?: number, query?: string, options?: AxiosRequestConfig): AxiosPromise<NeighbourhoodDtoPagedListResultSET>;
+    apiCountryNeighbourhoodsCityCityIdGet(cityId: number, query?: string, currentPage?: number, pageSize?: number, options?: AxiosRequestConfig): AxiosPromise<NeighbourhoodDtoPagedListResultSET>;
 
     /**
      * 
@@ -537,14 +537,14 @@ export interface CountryApiInterface {
     /**
      * 
      * @summary لیست استانها
+     * @param {string} [query] 
      * @param {number} [currentPage] صفحه جاری
      * @param {number} [pageSize] تعداد رکورد در هر صفحه
-     * @param {string} [query] 
      * @param {*} [options] Override http request option.
      * @throws {RequiredError}
      * @memberof CountryApiInterface
      */
-    apiCountryProvincesGet(currentPage?: number, pageSize?: number, query?: string, options?: AxiosRequestConfig): AxiosPromise<ProvinceDtoPagedListResultSET>;
+    apiCountryProvincesGet(query?: string, currentPage?: number, pageSize?: number, options?: AxiosRequestConfig): AxiosPromise<ProvinceDtoPagedListResultSET>;
 
 }
 
@@ -559,15 +559,15 @@ export class CountryApi extends BaseAPI implements CountryApiInterface {
      * 
      * @summary لیست شهر های یک استان
      * @param {number} provinceId 
+     * @param {string} [query] 
      * @param {number} [currentPage] صفحه جاری
      * @param {number} [pageSize] تعداد رکورد در هر صفحه
-     * @param {string} [query] 
      * @param {*} [options] Override http request option.
      * @throws {RequiredError}
      * @memberof CountryApi
      */
-    public apiCountryCitiesProvinceProvinceIdGet(provinceId: number, currentPage?: number, pageSize?: number, query?: string, options?: AxiosRequestConfig) {
-        return CountryApiFp(this.configuration).apiCountryCitiesProvinceProvinceIdGet(provinceId, currentPage, pageSize, query, options).then((request) => request(this.axios, this.basePath));
+    public apiCountryCitiesProvinceProvinceIdGet(provinceId: number, query?: string, currentPage?: number, pageSize?: number, options?: AxiosRequestConfig) {
+        return CountryApiFp(this.configuration).apiCountryCitiesProvinceProvinceIdGet(provinceId, query, currentPage, pageSize, options).then((request) => request(this.axios, this.basePath));
     }
 
     /**
@@ -598,15 +598,15 @@ export class CountryApi extends BaseAPI implements CountryApiInterface {
      * 
      * @summary لیست محلات یک شهر
      * @param {number} cityId 
+     * @param {string} [query] 
      * @param {number} [currentPage] صفحه جاری
      * @param {number} [pageSize] تعداد رکورد در هر صفحه
-     * @param {string} [query] 
      * @param {*} [options] Override http request option.
      * @throws {RequiredError}
      * @memberof CountryApi
      */
-    public apiCountryNeighbourhoodsCityCityIdGet(cityId: number, currentPage?: number, pageSize?: number, query?: string, options?: AxiosRequestConfig) {
-        return CountryApiFp(this.configuration).apiCountryNeighbourhoodsCityCityIdGet(cityId, currentPage, pageSize, query, options).then((request) => request(this.axios, this.basePath));
+    public apiCountryNeighbourhoodsCityCityIdGet(cityId: number, query?: string, currentPage?: number, pageSize?: number, options?: AxiosRequestConfig) {
+        return CountryApiFp(this.configuration).apiCountryNeighbourhoodsCityCityIdGet(cityId, query, currentPage, pageSize, options).then((request) => request(this.axios, this.basePath));
     }
 
     /**
@@ -624,14 +624,14 @@ export class CountryApi extends BaseAPI implements CountryApiInterface {
     /**
      * 
      * @summary لیست استانها
+     * @param {string} [query] 
      * @param {number} [currentPage] صفحه جاری
      * @param {number} [pageSize] تعداد رکورد در هر صفحه
-     * @param {string} [query] 
      * @param {*} [options] Override http request option.
      * @throws {RequiredError}
      * @memberof CountryApi
      */
-    public apiCountryProvincesGet(currentPage?: number, pageSize?: number, query?: string, options?: AxiosRequestConfig) {
-        return CountryApiFp(this.configuration).apiCountryProvincesGet(currentPage, pageSize, query, options).then((request) => request(this.axios, this.basePath));
+    public apiCountryProvincesGet(query?: string, currentPage?: number, pageSize?: number, options?: AxiosRequestConfig) {
+        return CountryApiFp(this.configuration).apiCountryProvincesGet(query, currentPage, pageSize, options).then((request) => request(this.axios, this.basePath));
     }
 }
