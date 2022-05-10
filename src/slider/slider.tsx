@@ -16,7 +16,7 @@ function Slider({basePath, photos, photoSlug}: { basePath: string, photos: strin
             {
                 setSlideIndex(1)
             }
-            {setPhotoUrl(basePath + photos[slideIndex])}
+            {setPhotoUrl(basePath + photos[1])}
 
         }
     }
@@ -31,7 +31,7 @@ function Slider({basePath, photos, photoSlug}: { basePath: string, photos: strin
             {
                 setSlideIndex(photos.length)
             }
-            {setPhotoUrl(basePath + photos[slideIndex])}
+            {setPhotoUrl(basePath + photos[photos.length])}
 
         }
     }
