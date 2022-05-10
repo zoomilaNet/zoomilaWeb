@@ -108,7 +108,7 @@ export default function List({sellData,letData,isSellAds,title,page,totalPage}:{
             <main className="flex flex-col justify-start">
                 <div className="w-screen h-auto flex flex-row justify-center px-4">
                     <div className="w-full flex flex-col items-center">
-                        <h1 className="font-iransansbold text-xl my-6">{title}</h1>
+                        <h1 className="font-iransansbold text-xl mt-3 mb-1">{title}</h1>
                         {isSellAds?sellData?.map((item)=><AdvertiseCard dataSell={item as SellAd}  key={item.sellId}/>):letData?.map((item)=><LetAdvertiseCard dataLet={item as LetAd} key={item.letId}/>)}
                         <Pagination  length={totalPage} currentPage={page}></Pagination>
                     </div>
