@@ -40,7 +40,7 @@ export const getServerSideProps: GetServerSideProps = async (context) => {
         let enteredPathNeighbourhood:string="";
         enteredPathNeighbourhood=DeleteDash(path[2].toString());
         let countriApi:CountryApi=new CountryApi();
-        let neighbourhoodOfCity=await countriApi.apiCountryNeighbourhoodsCityCityIdGet(cityId,'',1,500);
+        let neighbourhoodOfCity=await countriApi.apiCountryNeighbourhoodsCityCityIdGet(cityId,"1",500);
         neighbourhoodOfCity.data.data?.data?.forEach(item=>{
             if(item.name==enteredPathNeighbourhood){
             neighbourhood[0]=(Number(item.id));

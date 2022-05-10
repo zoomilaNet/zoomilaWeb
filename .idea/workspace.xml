@@ -1,11 +1,10 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="85396787-6298-4985-82c3-6d22319d4af6" name="Default Changelist" comment="fix fetch neighbourhood error Bm">
+    <list default="true" id="85396787-6298-4985-82c3-6d22319d4af6" name="Default Changelist" comment="decrease aspect ratio of advertise card images Bm">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/pages/[...slug].tsx" beforeDir="false" afterPath="$PROJECT_DIR$/pages/[...slug].tsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/component/advertisecard/AdvertiseCard.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/component/advertisecard/AdvertiseCard.tsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/component/letAdsCard/LetAdvertiseCard.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/component/letAdsCard/LetAdvertiseCard.tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/pages/neighbourhoods/index.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/pages/neighbourhoods/index.tsx" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -104,7 +103,7 @@
       <workItem from="1651986100062" duration="10839000" />
       <workItem from="1652069585366" duration="19334000" />
       <workItem from="1652155437205" duration="8949000" />
-      <workItem from="1652169296324" duration="1999000" />
+      <workItem from="1652169296324" duration="3131000" />
     </task>
     <task id="LOCAL-00001" summary="add deactive button for pagination and home page Bm">
       <created>1651321324567</created>
@@ -274,7 +273,14 @@
       <option name="project" value="LOCAL" />
       <updated>1652171909872</updated>
     </task>
-    <option name="localTasksCounter" value="25" />
+    <task id="LOCAL-00025" summary="decrease aspect ratio of advertise card images Bm">
+      <created>1652176963179</created>
+      <option name="number" value="00025" />
+      <option name="presentableId" value="LOCAL-00025" />
+      <option name="project" value="LOCAL" />
+      <updated>1652176963179</updated>
+    </task>
+    <option name="localTasksCounter" value="26" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -312,7 +318,8 @@
     <MESSAGE value="seperate sell advertise card and let advertise card Bm" />
     <MESSAGE value="delete style from document file Bm" />
     <MESSAGE value="fix fetch neighbourhood error Bm" />
-    <option name="LAST_COMMIT_MESSAGE" value="fix fetch neighbourhood error Bm" />
+    <MESSAGE value="decrease aspect ratio of advertise card images Bm" />
+    <option name="LAST_COMMIT_MESSAGE" value="decrease aspect ratio of advertise card images Bm" />
   </component>
   <component name="XSLT-Support.FileAssociations.UIState">
     <expand />
