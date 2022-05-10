@@ -115,7 +115,7 @@ export default function Home() {
     calcuteAdsCount();
     listingURLCreatorHandler();
   }
-  return <div className='static bg-gradient-to-b from-upgray_gradient via-with_gray to-downgray_gradient text-white text-xl md:text-2xl lg:text-2xl'>
+  return <div className='static text-white text-xl md:text-2xl lg:text-2xl'>
     <Head>
       <title>بزرگترین سایت خرید و فروش، رهن و اجاره املاک در کشور | زومیلا</title>
       <meta name="description" content="کامل ترین وب سایت املاک در ایران برای فروش و رهن واجاره با درج قیمت با به روزترین فایل ها به همراه عکس و فیلم" />
