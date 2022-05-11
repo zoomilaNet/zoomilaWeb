@@ -1,8 +1,12 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="85396787-6298-4985-82c3-6d22319d4af6" name="Default Changelist" comment="change image layout of slider Bm">
+    <list default="true" id="85396787-6298-4985-82c3-6d22319d4af6" name="Default Changelist" comment="fix slider number Bm">
+      <change afterPath="$PROJECT_DIR$/public/lottie/loading.json" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/pages/[...slug].tsx" beforeDir="false" afterPath="$PROJECT_DIR$/pages/[...slug].tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/pages/detail.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/pages/[fsp]/[detail].tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/pages/index.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/pages/index.tsx" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/slider/slider.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/slider/slider.tsx" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -43,6 +47,7 @@
 }</component>
   <component name="RecentsManager">
     <key name="MoveFile.RECENT_KEYS">
+      <recent name="C:\Users\hp1\Desktop\next\UI\pages\[fsp]" />
       <recent name="C:\Users\hp1\Desktop\next\testnext\src\component" />
       <recent name="C:\Users\hp1\Desktop\next\testnext\pages" />
     </key>
@@ -102,7 +107,9 @@
       <workItem from="1651986100062" duration="10839000" />
       <workItem from="1652069585366" duration="19334000" />
       <workItem from="1652155437205" duration="8949000" />
-      <workItem from="1652169296324" duration="6877000" />
+      <workItem from="1652169296324" duration="8175000" />
+      <workItem from="1652242471680" duration="6636000" />
+      <workItem from="1652252869371" duration="4517000" />
     </task>
     <task id="LOCAL-00001" summary="add deactive button for pagination and home page Bm">
       <created>1651321324567</created>
@@ -300,7 +307,14 @@
       <option name="project" value="LOCAL" />
       <updated>1652183542683</updated>
     </task>
-    <option name="localTasksCounter" value="29" />
+    <task id="LOCAL-00029" summary="fix slider number Bm">
+      <created>1652184189220</created>
+      <option name="number" value="00029" />
+      <option name="presentableId" value="LOCAL-00029" />
+      <option name="project" value="LOCAL" />
+      <updated>1652184189220</updated>
+    </task>
+    <option name="localTasksCounter" value="30" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -341,7 +355,8 @@
     <MESSAGE value="decrease aspect ratio of advertise card images Bm" />
     <MESSAGE value="fix neighbourhood api method Bm" />
     <MESSAGE value="change image layout of slider Bm" />
-    <option name="LAST_COMMIT_MESSAGE" value="change image layout of slider Bm" />
+    <MESSAGE value="fix slider number Bm" />
+    <option name="LAST_COMMIT_MESSAGE" value="fix slider number Bm" />
   </component>
   <component name="XSLT-Support.FileAssociations.UIState">
     <expand />

@@ -21,7 +21,6 @@ export const getServerSideProps: GetServerSideProps = async (context) => {
     let enteredPathCity:string="";
     let isSellOrNot:boolean=true;
     let totalPageOfAds:number=0;
-
     const setCityInURL= ()=>{
         cityOfProvince.forEach(city=>{
             if( city.CityName===enteredPathCity){
@@ -59,6 +58,15 @@ export const getServerSideProps: GetServerSideProps = async (context) => {
     }
     if (context.query.page != null && Number(context.query.page)>1){
         currentPage=Number(context.query.page);
+    }
+
+    if (context.query.nbs != null){
+       let nbsArray:string[]=context.query.nbs.toString().split("-");
+       nbsArray.map(item=>neighbourhood.push(Number(item)));
+    }
+    if (context.query.blds != null){
+        let buildingArray:string[]=context.query.blds.toString().split("-");
+        buildingArray.map(item=>buildingTypeList.push(item));
     }
 
 if(findCity != null){

@@ -61,6 +61,46 @@ export default function Home() {
         tempUrlLet=tempUrlLet+"/";
       }
     }
+    if(neighbourhoods.length>1){
+      tempUrlSell=tempUrlSell+"?"+"nbs"+"=";
+      tempUrlLet=tempUrlLet+"?"+"nbs"+"=";
+      neighbourhoods.map((item,index)=>{
+        if(index!=0){
+          if(index<neighbourhoods.length-1){
+          tempUrlSell=tempUrlSell+item+"-";
+            tempUrlLet=tempUrlLet+item+"-";
+          }else{
+            tempUrlSell=tempUrlSell+item;
+            tempUrlLet=tempUrlLet+item;
+          }
+        }
+      });
+    }
+    if(buildings.length>1){
+      if (tempUrlSell.includes("?")){
+        tempUrlSell=tempUrlSell+"&"+"blds"+"=";
+      }
+      else{
+        tempUrlSell=tempUrlSell+"?"+"blds"+"=";
+      }
+      if (tempUrlLet.includes("?")){
+        tempUrlLet=tempUrlLet+"&"+"blds"+"=";
+      }
+      else{
+        tempUrlLet=tempUrlLet+"?"+"blds"+"=";
+      }
+      buildings.map((item,index)=>{
+        if(index!=0){
+          if(index<buildings.length-1){
+            tempUrlSell=tempUrlSell+item+"-";
+            tempUrlLet=tempUrlLet+item+"-";
+          }else{
+            tempUrlSell=tempUrlSell+item;
+            tempUrlLet=tempUrlLet+item;
+          }
+        }
+      });
+    }
     {
       setListingSellURL(tempUrlSell);
       setListingLetURL(tempUrlLet)
