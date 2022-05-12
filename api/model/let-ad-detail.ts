@@ -25,6 +25,12 @@ export interface LetAdDetail {
      * @type {number}
      * @memberof LetAdDetail
      */
+    'letId'?: number;
+    /**
+     * 
+     * @type {number}
+     * @memberof LetAdDetail
+     */
     'buildingId'?: number;
     /**
      * 

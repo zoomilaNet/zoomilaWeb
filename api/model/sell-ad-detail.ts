@@ -25,6 +25,12 @@ export interface SellAdDetail {
      * @type {number}
      * @memberof SellAdDetail
      */
+    'sellId'?: number;
+    /**
+     * 
+     * @type {number}
+     * @memberof SellAdDetail
+     */
     'buildingId'?: number;
     /**
      * 

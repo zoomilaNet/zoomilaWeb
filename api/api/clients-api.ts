@@ -131,6 +131,44 @@ export const ClientsApiAxiosParamCreator = function (configuration?: Configurati
         },
         /**
          * 
+         * @summary جزییات آگهی اجاره با کد ساختمان
+         * @param {number} buildingId 
+         * @param {*} [options] Override http request option.
+         * @throws {RequiredError}
+         */
+        apiClientsAdsLetBuildingBuildingIdGet: async (buildingId: number, options: AxiosRequestConfig = {}): Promise<RequestArgs> => {
+            // verify required parameter 'buildingId' is not null or undefined
+            assertParamExists('apiClientsAdsLetBuildingBuildingIdGet', 'buildingId', buildingId)
+            const localVarPath = `/api/Clients/Ads/Let/building/{buildingId}`
+                .replace(`{${"buildingId"}}`, encodeURIComponent(String(buildingId)));
+            // use dummy base URL string because the URL constructor only accepts absolute URLs.
+            const localVarUrlObj = new URL(localVarPath, DUMMY_BASE_URL);
+            let baseOptions;
+            if (configuration) {
+                baseOptions = configuration.baseOptions;
+            }
+
+            const localVarRequestOptions = { method: 'GET', ...baseOptions, ...options};
+            const localVarHeaderParameter = {} as any;
+            const localVarQueryParameter = {} as any;
+
+            // authentication Bearer required
+            // http bearer authentication required
+            await setBearerAuthToObject(localVarHeaderParameter, configuration)
+
+
+    
+            setSearchParams(localVarUrlObj, localVarQueryParameter);
+            let headersFromBaseOptions = baseOptions && baseOptions.headers ? baseOptions.headers : {};
+            localVarRequestOptions.headers = {...localVarHeaderParameter, ...headersFromBaseOptions, ...options.headers};
+
+            return {
+                url: toPathString(localVarUrlObj),
+                options: localVarRequestOptions,
+            };
+        },
+        /**
+         * 
          * @summary تعداد آگهی های اجاره
          * @param {*} [options] Override http request option.
          * @throws {RequiredError}
@@ -234,6 +272,44 @@ export const ClientsApiAxiosParamCreator = function (configuration?: Configurati
             assertParamExists('apiClientsAdsSellAdIdGet', 'adId', adId)
             const localVarPath = `/api/Clients/Ads/Sell/{adId}`
                 .replace(`{${"adId"}}`, encodeURIComponent(String(adId)));
+            // use dummy base URL string because the URL constructor only accepts absolute URLs.
+            const localVarUrlObj = new URL(localVarPath, DUMMY_BASE_URL);
+            let baseOptions;
+            if (configuration) {
+                baseOptions = configuration.baseOptions;
+            }
+
+            const localVarRequestOptions = { method: 'GET', ...baseOptions, ...options};
+            const localVarHeaderParameter = {} as any;
+            const localVarQueryParameter = {} as any;
+
+            // authentication Bearer required
+            // http bearer authentication required
+            await setBearerAuthToObject(localVarHeaderParameter, configuration)
+
+
+    
+            setSearchParams(localVarUrlObj, localVarQueryParameter);
+            let headersFromBaseOptions = baseOptions && baseOptions.headers ? baseOptions.headers : {};
+            localVarRequestOptions.headers = {...localVarHeaderParameter, ...headersFromBaseOptions, ...options.headers};
+
+            return {
+                url: toPathString(localVarUrlObj),
+                options: localVarRequestOptions,
+            };
+        },
+        /**
+         * 
+         * @summary جزییات آگهی فروش با کد ساختمان
+         * @param {number} buildingId 
+         * @param {*} [options] Override http request option.
+         * @throws {RequiredError}
+         */
+        apiClientsAdsSellBuildingBuildingIdGet: async (buildingId: number, options: AxiosRequestConfig = {}): Promise<RequestArgs> => {
+            // verify required parameter 'buildingId' is not null or undefined
+            assertParamExists('apiClientsAdsSellBuildingBuildingIdGet', 'buildingId', buildingId)
+            const localVarPath = `/api/Clients/Ads/Sell/building/{buildingId}`
+                .replace(`{${"buildingId"}}`, encodeURIComponent(String(buildingId)));
             // use dummy base URL string because the URL constructor only accepts absolute URLs.
             const localVarUrlObj = new URL(localVarPath, DUMMY_BASE_URL);
             let baseOptions;
@@ -1153,6 +1229,17 @@ export const ClientsApiFp = function(configuration?: Configuration) {
         },
         /**
          * 
+         * @summary جزییات آگهی اجاره با کد ساختمان
+         * @param {number} buildingId 
+         * @param {*} [options] Override http request option.
+         * @throws {RequiredError}
+         */
+        async apiClientsAdsLetBuildingBuildingIdGet(buildingId: number, options?: AxiosRequestConfig): Promise<(axios?: AxiosInstance, basePath?: string) => AxiosPromise<LetAdDetail>> {
+            const localVarAxiosArgs = await localVarAxiosParamCreator.apiClientsAdsLetBuildingBuildingIdGet(buildingId, options);
+            return createRequestFunction(localVarAxiosArgs, globalAxios, BASE_PATH, configuration);
+        },
+        /**
+         * 
          * @summary تعداد آگهی های اجاره
          * @param {*} [options] Override http request option.
          * @throws {RequiredError}
@@ -1185,6 +1272,17 @@ export const ClientsApiFp = function(configuration?: Configuration) {
          */
         async apiClientsAdsSellAdIdGet(adId: number, options?: AxiosRequestConfig): Promise<(axios?: AxiosInstance, basePath?: string) => AxiosPromise<SellAdDetail>> {
             const localVarAxiosArgs = await localVarAxiosParamCreator.apiClientsAdsSellAdIdGet(adId, options);
+            return createRequestFunction(localVarAxiosArgs, globalAxios, BASE_PATH, configuration);
+        },
+        /**
+         * 
+         * @summary جزییات آگهی فروش با کد ساختمان
+         * @param {number} buildingId 
+         * @param {*} [options] Override http request option.
+         * @throws {RequiredError}
+         */
+        async apiClientsAdsSellBuildingBuildingIdGet(buildingId: number, options?: AxiosRequestConfig): Promise<(axios?: AxiosInstance, basePath?: string) => AxiosPromise<SellAdDetail>> {
+            const localVarAxiosArgs = await localVarAxiosParamCreator.apiClientsAdsSellBuildingBuildingIdGet(buildingId, options);
             return createRequestFunction(localVarAxiosArgs, globalAxios, BASE_PATH, configuration);
         },
         /**
@@ -1460,6 +1558,16 @@ export const ClientsApiFactory = function (configuration?: Configuration, basePa
         },
         /**
          * 
+         * @summary جزییات آگهی اجاره با کد ساختمان
+         * @param {number} buildingId 
+         * @param {*} [options] Override http request option.
+         * @throws {RequiredError}
+         */
+        apiClientsAdsLetBuildingBuildingIdGet(buildingId: number, options?: any): AxiosPromise<LetAdDetail> {
+            return localVarFp.apiClientsAdsLetBuildingBuildingIdGet(buildingId, options).then((request) => request(axios, basePath));
+        },
+        /**
+         * 
          * @summary تعداد آگهی های اجاره
          * @param {*} [options] Override http request option.
          * @throws {RequiredError}
@@ -1490,6 +1598,16 @@ export const ClientsApiFactory = function (configuration?: Configuration, basePa
          */
         apiClientsAdsSellAdIdGet(adId: number, options?: any): AxiosPromise<SellAdDetail> {
             return localVarFp.apiClientsAdsSellAdIdGet(adId, options).then((request) => request(axios, basePath));
+        },
+        /**
+         * 
+         * @summary جزییات آگهی فروش با کد ساختمان
+         * @param {number} buildingId 
+         * @param {*} [options] Override http request option.
+         * @throws {RequiredError}
+         */
+        apiClientsAdsSellBuildingBuildingIdGet(buildingId: number, options?: any): AxiosPromise<SellAdDetail> {
+            return localVarFp.apiClientsAdsSellBuildingBuildingIdGet(buildingId, options).then((request) => request(axios, basePath));
         },
         /**
          * 
@@ -1742,6 +1860,16 @@ export interface ClientsApiInterface {
 
     /**
      * 
+     * @summary جزییات آگهی اجاره با کد ساختمان
+     * @param {number} buildingId 
+     * @param {*} [options] Override http request option.
+     * @throws {RequiredError}
+     * @memberof ClientsApiInterface
+     */
+    apiClientsAdsLetBuildingBuildingIdGet(buildingId: number, options?: AxiosRequestConfig): AxiosPromise<LetAdDetail>;
+
+    /**
+     * 
      * @summary تعداد آگهی های اجاره
      * @param {*} [options] Override http request option.
      * @throws {RequiredError}
@@ -1772,6 +1900,16 @@ export interface ClientsApiInterface {
      * @memberof ClientsApiInterface
      */
     apiClientsAdsSellAdIdGet(adId: number, options?: AxiosRequestConfig): AxiosPromise<SellAdDetail>;
+
+    /**
+     * 
+     * @summary جزییات آگهی فروش با کد ساختمان
+     * @param {number} buildingId 
+     * @param {*} [options] Override http request option.
+     * @throws {RequiredError}
+     * @memberof ClientsApiInterface
+     */
+    apiClientsAdsSellBuildingBuildingIdGet(buildingId: number, options?: AxiosRequestConfig): AxiosPromise<SellAdDetail>;
 
     /**
      * 
@@ -2028,6 +2166,18 @@ export class ClientsApi extends BaseAPI implements ClientsApiInterface {
 
     /**
      * 
+     * @summary جزییات آگهی اجاره با کد ساختمان
+     * @param {number} buildingId 
+     * @param {*} [options] Override http request option.
+     * @throws {RequiredError}
+     * @memberof ClientsApi
+     */
+    public apiClientsAdsLetBuildingBuildingIdGet(buildingId: number, options?: AxiosRequestConfig) {
+        return ClientsApiFp(this.configuration).apiClientsAdsLetBuildingBuildingIdGet(buildingId, options).then((request) => request(this.axios, this.basePath));
+    }
+
+    /**
+     * 
      * @summary تعداد آگهی های اجاره
      * @param {*} [options] Override http request option.
      * @throws {RequiredError}
@@ -2063,6 +2213,18 @@ export class ClientsApi extends BaseAPI implements ClientsApiInterface {
      */
     public apiClientsAdsSellAdIdGet(adId: number, options?: AxiosRequestConfig) {
         return ClientsApiFp(this.configuration).apiClientsAdsSellAdIdGet(adId, options).then((request) => request(this.axios, this.basePath));
+    }
+
+    /**
+     * 
+     * @summary جزییات آگهی فروش با کد ساختمان
+     * @param {number} buildingId 
+     * @param {*} [options] Override http request option.
+     * @throws {RequiredError}
+     * @memberof ClientsApi
+     */
+    public apiClientsAdsSellBuildingBuildingIdGet(buildingId: number, options?: AxiosRequestConfig) {
+        return ClientsApiFp(this.configuration).apiClientsAdsSellBuildingBuildingIdGet(buildingId, options).then((request) => request(this.axios, this.basePath));
     }
 
     /**
