@@ -541,7 +541,7 @@ export const RealStateApiAxiosParamCreator = function (configuration?: Configura
         /**
          * 
          * @summary لیست اگهی های اجاره من
-         * @param {'not_verified' | 'local' | 'pending' | 'published' | 'skiped' | 'traded' | 'canceled' | 'removed'} [status] 
+         * @param {'not_verified' | 'local' | 'pending' | 'published' | 'skip' | 'traded' | 'canceled' | 'removed'} [status] 
          * @param {'simple' | 'occasion' | 'featured'} [publishType] 
          * @param {string} [query] 
          * @param {number} [currentPage] صفحه جاری
@@ -549,7 +549,7 @@ export const RealStateApiAxiosParamCreator = function (configuration?: Configura
          * @param {*} [options] Override http request option.
          * @throws {RequiredError}
          */
-        apiRealStateAdsLetGet: async (status?: 'not_verified' | 'local' | 'pending' | 'published' | 'skiped' | 'traded' | 'canceled' | 'removed', publishType?: 'simple' | 'occasion' | 'featured', query?: string, currentPage?: number, pageSize?: number, options: AxiosRequestConfig = {}): Promise<RequestArgs> => {
+        apiRealStateAdsLetGet: async (status?: 'not_verified' | 'local' | 'pending' | 'published' | 'skip' | 'traded' | 'canceled' | 'removed', publishType?: 'simple' | 'occasion' | 'featured', query?: string, currentPage?: number, pageSize?: number, options: AxiosRequestConfig = {}): Promise<RequestArgs> => {
             const localVarPath = `/api/RealState/Ads/let`;
             // use dummy base URL string because the URL constructor only accepts absolute URLs.
             const localVarUrlObj = new URL(localVarPath, DUMMY_BASE_URL);
@@ -638,11 +638,11 @@ export const RealStateApiAxiosParamCreator = function (configuration?: Configura
         /**
          * 
          * @summary تعداد کل آگهی های اجاره مشاور
-         * @param {'not_verified' | 'local' | 'pending' | 'published' | 'skiped' | 'traded' | 'canceled' | 'removed'} status 
+         * @param {'not_verified' | 'local' | 'pending' | 'published' | 'skip' | 'traded' | 'canceled' | 'removed'} status 
          * @param {*} [options] Override http request option.
          * @throws {RequiredError}
          */
-        apiRealStateAdsLetStatusCountGet: async (status: 'not_verified' | 'local' | 'pending' | 'published' | 'skiped' | 'traded' | 'canceled' | 'removed', options: AxiosRequestConfig = {}): Promise<RequestArgs> => {
+        apiRealStateAdsLetStatusCountGet: async (status: 'not_verified' | 'local' | 'pending' | 'published' | 'skip' | 'traded' | 'canceled' | 'removed', options: AxiosRequestConfig = {}): Promise<RequestArgs> => {
             // verify required parameter 'status' is not null or undefined
             assertParamExists('apiRealStateAdsLetStatusCountGet', 'status', status)
             const localVarPath = `/api/RealState/Ads/Let/{status}/Count`
@@ -774,7 +774,7 @@ export const RealStateApiAxiosParamCreator = function (configuration?: Configura
         /**
          * 
          * @summary لیست آگهی های فروش من
-         * @param {'not_verified' | 'local' | 'pending' | 'published' | 'skiped' | 'traded' | 'canceled' | 'removed'} [status] 
+         * @param {'not_verified' | 'local' | 'pending' | 'published' | 'skip' | 'traded' | 'canceled' | 'removed'} [status] 
          * @param {'simple' | 'occasion' | 'featured'} [publishType] 
          * @param {string} [query] 
          * @param {number} [currentPage] صفحه جاری
@@ -782,7 +782,7 @@ export const RealStateApiAxiosParamCreator = function (configuration?: Configura
          * @param {*} [options] Override http request option.
          * @throws {RequiredError}
          */
-        apiRealStateAdsSellGet: async (status?: 'not_verified' | 'local' | 'pending' | 'published' | 'skiped' | 'traded' | 'canceled' | 'removed', publishType?: 'simple' | 'occasion' | 'featured', query?: string, currentPage?: number, pageSize?: number, options: AxiosRequestConfig = {}): Promise<RequestArgs> => {
+        apiRealStateAdsSellGet: async (status?: 'not_verified' | 'local' | 'pending' | 'published' | 'skip' | 'traded' | 'canceled' | 'removed', publishType?: 'simple' | 'occasion' | 'featured', query?: string, currentPage?: number, pageSize?: number, options: AxiosRequestConfig = {}): Promise<RequestArgs> => {
             const localVarPath = `/api/RealState/Ads/Sell`;
             // use dummy base URL string because the URL constructor only accepts absolute URLs.
             const localVarUrlObj = new URL(localVarPath, DUMMY_BASE_URL);
@@ -871,11 +871,11 @@ export const RealStateApiAxiosParamCreator = function (configuration?: Configura
         /**
          * 
          * @summary تعداد کل آگهی های فروش مشاور
-         * @param {'not_verified' | 'local' | 'pending' | 'published' | 'skiped' | 'traded' | 'canceled' | 'removed'} status 
+         * @param {'not_verified' | 'local' | 'pending' | 'published' | 'skip' | 'traded' | 'canceled' | 'removed'} status 
          * @param {*} [options] Override http request option.
          * @throws {RequiredError}
          */
-        apiRealStateAdsSellStatusCountGet: async (status: 'not_verified' | 'local' | 'pending' | 'published' | 'skiped' | 'traded' | 'canceled' | 'removed', options: AxiosRequestConfig = {}): Promise<RequestArgs> => {
+        apiRealStateAdsSellStatusCountGet: async (status: 'not_verified' | 'local' | 'pending' | 'published' | 'skip' | 'traded' | 'canceled' | 'removed', options: AxiosRequestConfig = {}): Promise<RequestArgs> => {
             // verify required parameter 'status' is not null or undefined
             assertParamExists('apiRealStateAdsSellStatusCountGet', 'status', status)
             const localVarPath = `/api/RealState/Ads/Sell/{status}/Count`
@@ -2509,7 +2509,7 @@ export const RealStateApiFp = function(configuration?: Configuration) {
         /**
          * 
          * @summary لیست اگهی های اجاره من
-         * @param {'not_verified' | 'local' | 'pending' | 'published' | 'skiped' | 'traded' | 'canceled' | 'removed'} [status] 
+         * @param {'not_verified' | 'local' | 'pending' | 'published' | 'skip' | 'traded' | 'canceled' | 'removed'} [status] 
          * @param {'simple' | 'occasion' | 'featured'} [publishType] 
          * @param {string} [query] 
          * @param {number} [currentPage] صفحه جاری
@@ -2517,7 +2517,7 @@ export const RealStateApiFp = function(configuration?: Configuration) {
          * @param {*} [options] Override http request option.
          * @throws {RequiredError}
          */
-        async apiRealStateAdsLetGet(status?: 'not_verified' | 'local' | 'pending' | 'published' | 'skiped' | 'traded' | 'canceled' | 'removed', publishType?: 'simple' | 'occasion' | 'featured', query?: string, currentPage?: number, pageSize?: number, options?: AxiosRequestConfig): Promise<(axios?: AxiosInstance, basePath?: string) => AxiosPromise<LetToReturnDtoPagedListResultSET>> {
+        async apiRealStateAdsLetGet(status?: 'not_verified' | 'local' | 'pending' | 'published' | 'skip' | 'traded' | 'canceled' | 'removed', publishType?: 'simple' | 'occasion' | 'featured', query?: string, currentPage?: number, pageSize?: number, options?: AxiosRequestConfig): Promise<(axios?: AxiosInstance, basePath?: string) => AxiosPromise<LetToReturnDtoPagedListResultSET>> {
             const localVarAxiosArgs = await localVarAxiosParamCreator.apiRealStateAdsLetGet(status, publishType, query, currentPage, pageSize, options);
             return createRequestFunction(localVarAxiosArgs, globalAxios, BASE_PATH, configuration);
         },
@@ -2535,11 +2535,11 @@ export const RealStateApiFp = function(configuration?: Configuration) {
         /**
          * 
          * @summary تعداد کل آگهی های اجاره مشاور
-         * @param {'not_verified' | 'local' | 'pending' | 'published' | 'skiped' | 'traded' | 'canceled' | 'removed'} status 
+         * @param {'not_verified' | 'local' | 'pending' | 'published' | 'skip' | 'traded' | 'canceled' | 'removed'} status 
          * @param {*} [options] Override http request option.
          * @throws {RequiredError}
          */
-        async apiRealStateAdsLetStatusCountGet(status: 'not_verified' | 'local' | 'pending' | 'published' | 'skiped' | 'traded' | 'canceled' | 'removed', options?: AxiosRequestConfig): Promise<(axios?: AxiosInstance, basePath?: string) => AxiosPromise<number>> {
+        async apiRealStateAdsLetStatusCountGet(status: 'not_verified' | 'local' | 'pending' | 'published' | 'skip' | 'traded' | 'canceled' | 'removed', options?: AxiosRequestConfig): Promise<(axios?: AxiosInstance, basePath?: string) => AxiosPromise<number>> {
             const localVarAxiosArgs = await localVarAxiosParamCreator.apiRealStateAdsLetStatusCountGet(status, options);
             return createRequestFunction(localVarAxiosArgs, globalAxios, BASE_PATH, configuration);
         },
@@ -2572,7 +2572,7 @@ export const RealStateApiFp = function(configuration?: Configuration) {
         /**
          * 
          * @summary لیست آگهی های فروش من
-         * @param {'not_verified' | 'local' | 'pending' | 'published' | 'skiped' | 'traded' | 'canceled' | 'removed'} [status] 
+         * @param {'not_verified' | 'local' | 'pending' | 'published' | 'skip' | 'traded' | 'canceled' | 'removed'} [status] 
          * @param {'simple' | 'occasion' | 'featured'} [publishType] 
          * @param {string} [query] 
          * @param {number} [currentPage] صفحه جاری
@@ -2580,7 +2580,7 @@ export const RealStateApiFp = function(configuration?: Configuration) {
          * @param {*} [options] Override http request option.
          * @throws {RequiredError}
          */
-        async apiRealStateAdsSellGet(status?: 'not_verified' | 'local' | 'pending' | 'published' | 'skiped' | 'traded' | 'canceled' | 'removed', publishType?: 'simple' | 'occasion' | 'featured', query?: string, currentPage?: number, pageSize?: number, options?: AxiosRequestConfig): Promise<(axios?: AxiosInstance, basePath?: string) => AxiosPromise<SellToReturnDtoPagedListResultSET>> {
+        async apiRealStateAdsSellGet(status?: 'not_verified' | 'local' | 'pending' | 'published' | 'skip' | 'traded' | 'canceled' | 'removed', publishType?: 'simple' | 'occasion' | 'featured', query?: string, currentPage?: number, pageSize?: number, options?: AxiosRequestConfig): Promise<(axios?: AxiosInstance, basePath?: string) => AxiosPromise<SellToReturnDtoPagedListResultSET>> {
             const localVarAxiosArgs = await localVarAxiosParamCreator.apiRealStateAdsSellGet(status, publishType, query, currentPage, pageSize, options);
             return createRequestFunction(localVarAxiosArgs, globalAxios, BASE_PATH, configuration);
         },
@@ -2598,11 +2598,11 @@ export const RealStateApiFp = function(configuration?: Configuration) {
         /**
          * 
          * @summary تعداد کل آگهی های فروش مشاور
-         * @param {'not_verified' | 'local' | 'pending' | 'published' | 'skiped' | 'traded' | 'canceled' | 'removed'} status 
+         * @param {'not_verified' | 'local' | 'pending' | 'published' | 'skip' | 'traded' | 'canceled' | 'removed'} status 
          * @param {*} [options] Override http request option.
          * @throws {RequiredError}
          */
-        async apiRealStateAdsSellStatusCountGet(status: 'not_verified' | 'local' | 'pending' | 'published' | 'skiped' | 'traded' | 'canceled' | 'removed', options?: AxiosRequestConfig): Promise<(axios?: AxiosInstance, basePath?: string) => AxiosPromise<number>> {
+        async apiRealStateAdsSellStatusCountGet(status: 'not_verified' | 'local' | 'pending' | 'published' | 'skip' | 'traded' | 'canceled' | 'removed', options?: AxiosRequestConfig): Promise<(axios?: AxiosInstance, basePath?: string) => AxiosPromise<number>> {
             const localVarAxiosArgs = await localVarAxiosParamCreator.apiRealStateAdsSellStatusCountGet(status, options);
             return createRequestFunction(localVarAxiosArgs, globalAxios, BASE_PATH, configuration);
         },
@@ -3128,7 +3128,7 @@ export const RealStateApiFactory = function (configuration?: Configuration, base
         /**
          * 
          * @summary لیست اگهی های اجاره من
-         * @param {'not_verified' | 'local' | 'pending' | 'published' | 'skiped' | 'traded' | 'canceled' | 'removed'} [status] 
+         * @param {'not_verified' | 'local' | 'pending' | 'published' | 'skip' | 'traded' | 'canceled' | 'removed'} [status] 
          * @param {'simple' | 'occasion' | 'featured'} [publishType] 
          * @param {string} [query] 
          * @param {number} [currentPage] صفحه جاری
@@ -3136,7 +3136,7 @@ export const RealStateApiFactory = function (configuration?: Configuration, base
          * @param {*} [options] Override http request option.
          * @throws {RequiredError}
          */
-        apiRealStateAdsLetGet(status?: 'not_verified' | 'local' | 'pending' | 'published' | 'skiped' | 'traded' | 'canceled' | 'removed', publishType?: 'simple' | 'occasion' | 'featured', query?: string, currentPage?: number, pageSize?: number, options?: any): AxiosPromise<LetToReturnDtoPagedListResultSET> {
+        apiRealStateAdsLetGet(status?: 'not_verified' | 'local' | 'pending' | 'published' | 'skip' | 'traded' | 'canceled' | 'removed', publishType?: 'simple' | 'occasion' | 'featured', query?: string, currentPage?: number, pageSize?: number, options?: any): AxiosPromise<LetToReturnDtoPagedListResultSET> {
             return localVarFp.apiRealStateAdsLetGet(status, publishType, query, currentPage, pageSize, options).then((request) => request(axios, basePath));
         },
         /**
@@ -3152,11 +3152,11 @@ export const RealStateApiFactory = function (configuration?: Configuration, base
         /**
          * 
          * @summary تعداد کل آگهی های اجاره مشاور
-         * @param {'not_verified' | 'local' | 'pending' | 'published' | 'skiped' | 'traded' | 'canceled' | 'removed'} status 
+         * @param {'not_verified' | 'local' | 'pending' | 'published' | 'skip' | 'traded' | 'canceled' | 'removed'} status 
          * @param {*} [options] Override http request option.
          * @throws {RequiredError}
          */
-        apiRealStateAdsLetStatusCountGet(status: 'not_verified' | 'local' | 'pending' | 'published' | 'skiped' | 'traded' | 'canceled' | 'removed', options?: any): AxiosPromise<number> {
+        apiRealStateAdsLetStatusCountGet(status: 'not_verified' | 'local' | 'pending' | 'published' | 'skip' | 'traded' | 'canceled' | 'removed', options?: any): AxiosPromise<number> {
             return localVarFp.apiRealStateAdsLetStatusCountGet(status, options).then((request) => request(axios, basePath));
         },
         /**
@@ -3186,7 +3186,7 @@ export const RealStateApiFactory = function (configuration?: Configuration, base
         /**
          * 
          * @summary لیست آگهی های فروش من
-         * @param {'not_verified' | 'local' | 'pending' | 'published' | 'skiped' | 'traded' | 'canceled' | 'removed'} [status] 
+         * @param {'not_verified' | 'local' | 'pending' | 'published' | 'skip' | 'traded' | 'canceled' | 'removed'} [status] 
          * @param {'simple' | 'occasion' | 'featured'} [publishType] 
          * @param {string} [query] 
          * @param {number} [currentPage] صفحه جاری
@@ -3194,7 +3194,7 @@ export const RealStateApiFactory = function (configuration?: Configuration, base
          * @param {*} [options] Override http request option.
          * @throws {RequiredError}
          */
-        apiRealStateAdsSellGet(status?: 'not_verified' | 'local' | 'pending' | 'published' | 'skiped' | 'traded' | 'canceled' | 'removed', publishType?: 'simple' | 'occasion' | 'featured', query?: string, currentPage?: number, pageSize?: number, options?: any): AxiosPromise<SellToReturnDtoPagedListResultSET> {
+        apiRealStateAdsSellGet(status?: 'not_verified' | 'local' | 'pending' | 'published' | 'skip' | 'traded' | 'canceled' | 'removed', publishType?: 'simple' | 'occasion' | 'featured', query?: string, currentPage?: number, pageSize?: number, options?: any): AxiosPromise<SellToReturnDtoPagedListResultSET> {
             return localVarFp.apiRealStateAdsSellGet(status, publishType, query, currentPage, pageSize, options).then((request) => request(axios, basePath));
         },
         /**
@@ -3210,11 +3210,11 @@ export const RealStateApiFactory = function (configuration?: Configuration, base
         /**
          * 
          * @summary تعداد کل آگهی های فروش مشاور
-         * @param {'not_verified' | 'local' | 'pending' | 'published' | 'skiped' | 'traded' | 'canceled' | 'removed'} status 
+         * @param {'not_verified' | 'local' | 'pending' | 'published' | 'skip' | 'traded' | 'canceled' | 'removed'} status 
          * @param {*} [options] Override http request option.
          * @throws {RequiredError}
          */
-        apiRealStateAdsSellStatusCountGet(status: 'not_verified' | 'local' | 'pending' | 'published' | 'skiped' | 'traded' | 'canceled' | 'removed', options?: any): AxiosPromise<number> {
+        apiRealStateAdsSellStatusCountGet(status: 'not_verified' | 'local' | 'pending' | 'published' | 'skip' | 'traded' | 'canceled' | 'removed', options?: any): AxiosPromise<number> {
             return localVarFp.apiRealStateAdsSellStatusCountGet(status, options).then((request) => request(axios, basePath));
         },
         /**
@@ -3704,7 +3704,7 @@ export interface RealStateApiInterface {
     /**
      * 
      * @summary لیست اگهی های اجاره من
-     * @param {'not_verified' | 'local' | 'pending' | 'published' | 'skiped' | 'traded' | 'canceled' | 'removed'} [status] 
+     * @param {'not_verified' | 'local' | 'pending' | 'published' | 'skip' | 'traded' | 'canceled' | 'removed'} [status] 
      * @param {'simple' | 'occasion' | 'featured'} [publishType] 
      * @param {string} [query] 
      * @param {number} [currentPage] صفحه جاری
@@ -3713,7 +3713,7 @@ export interface RealStateApiInterface {
      * @throws {RequiredError}
      * @memberof RealStateApiInterface
      */
-    apiRealStateAdsLetGet(status?: 'not_verified' | 'local' | 'pending' | 'published' | 'skiped' | 'traded' | 'canceled' | 'removed', publishType?: 'simple' | 'occasion' | 'featured', query?: string, currentPage?: number, pageSize?: number, options?: AxiosRequestConfig): AxiosPromise<LetToReturnDtoPagedListResultSET>;
+    apiRealStateAdsLetGet(status?: 'not_verified' | 'local' | 'pending' | 'published' | 'skip' | 'traded' | 'canceled' | 'removed', publishType?: 'simple' | 'occasion' | 'featured', query?: string, currentPage?: number, pageSize?: number, options?: AxiosRequestConfig): AxiosPromise<LetToReturnDtoPagedListResultSET>;
 
     /**
      * 
@@ -3728,12 +3728,12 @@ export interface RealStateApiInterface {
     /**
      * 
      * @summary تعداد کل آگهی های اجاره مشاور
-     * @param {'not_verified' | 'local' | 'pending' | 'published' | 'skiped' | 'traded' | 'canceled' | 'removed'} status 
+     * @param {'not_verified' | 'local' | 'pending' | 'published' | 'skip' | 'traded' | 'canceled' | 'removed'} status 
      * @param {*} [options] Override http request option.
      * @throws {RequiredError}
      * @memberof RealStateApiInterface
      */
-    apiRealStateAdsLetStatusCountGet(status: 'not_verified' | 'local' | 'pending' | 'published' | 'skiped' | 'traded' | 'canceled' | 'removed', options?: AxiosRequestConfig): AxiosPromise<number>;
+    apiRealStateAdsLetStatusCountGet(status: 'not_verified' | 'local' | 'pending' | 'published' | 'skip' | 'traded' | 'canceled' | 'removed', options?: AxiosRequestConfig): AxiosPromise<number>;
 
     /**
      * 
@@ -3762,7 +3762,7 @@ export interface RealStateApiInterface {
     /**
      * 
      * @summary لیست آگهی های فروش من
-     * @param {'not_verified' | 'local' | 'pending' | 'published' | 'skiped' | 'traded' | 'canceled' | 'removed'} [status] 
+     * @param {'not_verified' | 'local' | 'pending' | 'published' | 'skip' | 'traded' | 'canceled' | 'removed'} [status] 
      * @param {'simple' | 'occasion' | 'featured'} [publishType] 
      * @param {string} [query] 
      * @param {number} [currentPage] صفحه جاری
@@ -3771,7 +3771,7 @@ export interface RealStateApiInterface {
      * @throws {RequiredError}
      * @memberof RealStateApiInterface
      */
-    apiRealStateAdsSellGet(status?: 'not_verified' | 'local' | 'pending' | 'published' | 'skiped' | 'traded' | 'canceled' | 'removed', publishType?: 'simple' | 'occasion' | 'featured', query?: string, currentPage?: number, pageSize?: number, options?: AxiosRequestConfig): AxiosPromise<SellToReturnDtoPagedListResultSET>;
+    apiRealStateAdsSellGet(status?: 'not_verified' | 'local' | 'pending' | 'published' | 'skip' | 'traded' | 'canceled' | 'removed', publishType?: 'simple' | 'occasion' | 'featured', query?: string, currentPage?: number, pageSize?: number, options?: AxiosRequestConfig): AxiosPromise<SellToReturnDtoPagedListResultSET>;
 
     /**
      * 
@@ -3786,12 +3786,12 @@ export interface RealStateApiInterface {
     /**
      * 
      * @summary تعداد کل آگهی های فروش مشاور
-     * @param {'not_verified' | 'local' | 'pending' | 'published' | 'skiped' | 'traded' | 'canceled' | 'removed'} status 
+     * @param {'not_verified' | 'local' | 'pending' | 'published' | 'skip' | 'traded' | 'canceled' | 'removed'} status 
      * @param {*} [options] Override http request option.
      * @throws {RequiredError}
      * @memberof RealStateApiInterface
      */
-    apiRealStateAdsSellStatusCountGet(status: 'not_verified' | 'local' | 'pending' | 'published' | 'skiped' | 'traded' | 'canceled' | 'removed', options?: AxiosRequestConfig): AxiosPromise<number>;
+    apiRealStateAdsSellStatusCountGet(status: 'not_verified' | 'local' | 'pending' | 'published' | 'skip' | 'traded' | 'canceled' | 'removed', options?: AxiosRequestConfig): AxiosPromise<number>;
 
     /**
      * 
@@ -4300,7 +4300,7 @@ export class RealStateApi extends BaseAPI implements RealStateApiInterface {
     /**
      * 
      * @summary لیست اگهی های اجاره من
-     * @param {'not_verified' | 'local' | 'pending' | 'published' | 'skiped' | 'traded' | 'canceled' | 'removed'} [status] 
+     * @param {'not_verified' | 'local' | 'pending' | 'published' | 'skip' | 'traded' | 'canceled' | 'removed'} [status] 
      * @param {'simple' | 'occasion' | 'featured'} [publishType] 
      * @param {string} [query] 
      * @param {number} [currentPage] صفحه جاری
@@ -4309,7 +4309,7 @@ export class RealStateApi extends BaseAPI implements RealStateApiInterface {
      * @throws {RequiredError}
      * @memberof RealStateApi
      */
-    public apiRealStateAdsLetGet(status?: 'not_verified' | 'local' | 'pending' | 'published' | 'skiped' | 'traded' | 'canceled' | 'removed', publishType?: 'simple' | 'occasion' | 'featured', query?: string, currentPage?: number, pageSize?: number, options?: AxiosRequestConfig) {
+    public apiRealStateAdsLetGet(status?: 'not_verified' | 'local' | 'pending' | 'published' | 'skip' | 'traded' | 'canceled' | 'removed', publishType?: 'simple' | 'occasion' | 'featured', query?: string, currentPage?: number, pageSize?: number, options?: AxiosRequestConfig) {
         return RealStateApiFp(this.configuration).apiRealStateAdsLetGet(status, publishType, query, currentPage, pageSize, options).then((request) => request(this.axios, this.basePath));
     }
 
@@ -4328,12 +4328,12 @@ export class RealStateApi extends BaseAPI implements RealStateApiInterface {
     /**
      * 
      * @summary تعداد کل آگهی های اجاره مشاور
-     * @param {'not_verified' | 'local' | 'pending' | 'published' | 'skiped' | 'traded' | 'canceled' | 'removed'} status 
+     * @param {'not_verified' | 'local' | 'pending' | 'published' | 'skip' | 'traded' | 'canceled' | 'removed'} status 
      * @param {*} [options] Override http request option.
      * @throws {RequiredError}
      * @memberof RealStateApi
      */
-    public apiRealStateAdsLetStatusCountGet(status: 'not_verified' | 'local' | 'pending' | 'published' | 'skiped' | 'traded' | 'canceled' | 'removed', options?: AxiosRequestConfig) {
+    public apiRealStateAdsLetStatusCountGet(status: 'not_verified' | 'local' | 'pending' | 'published' | 'skip' | 'traded' | 'canceled' | 'removed', options?: AxiosRequestConfig) {
         return RealStateApiFp(this.configuration).apiRealStateAdsLetStatusCountGet(status, options).then((request) => request(this.axios, this.basePath));
     }
 
@@ -4368,7 +4368,7 @@ export class RealStateApi extends BaseAPI implements RealStateApiInterface {
     /**
      * 
      * @summary لیست آگهی های فروش من
-     * @param {'not_verified' | 'local' | 'pending' | 'published' | 'skiped' | 'traded' | 'canceled' | 'removed'} [status] 
+     * @param {'not_verified' | 'local' | 'pending' | 'published' | 'skip' | 'traded' | 'canceled' | 'removed'} [status] 
      * @param {'simple' | 'occasion' | 'featured'} [publishType] 
      * @param {string} [query] 
      * @param {number} [currentPage] صفحه جاری
@@ -4377,7 +4377,7 @@ export class RealStateApi extends BaseAPI implements RealStateApiInterface {
      * @throws {RequiredError}
      * @memberof RealStateApi
      */
-    public apiRealStateAdsSellGet(status?: 'not_verified' | 'local' | 'pending' | 'published' | 'skiped' | 'traded' | 'canceled' | 'removed', publishType?: 'simple' | 'occasion' | 'featured', query?: string, currentPage?: number, pageSize?: number, options?: AxiosRequestConfig) {
+    public apiRealStateAdsSellGet(status?: 'not_verified' | 'local' | 'pending' | 'published' | 'skip' | 'traded' | 'canceled' | 'removed', publishType?: 'simple' | 'occasion' | 'featured', query?: string, currentPage?: number, pageSize?: number, options?: AxiosRequestConfig) {
         return RealStateApiFp(this.configuration).apiRealStateAdsSellGet(status, publishType, query, currentPage, pageSize, options).then((request) => request(this.axios, this.basePath));
     }
 
@@ -4396,12 +4396,12 @@ export class RealStateApi extends BaseAPI implements RealStateApiInterface {
     /**
      * 
      * @summary تعداد کل آگهی های فروش مشاور
-     * @param {'not_verified' | 'local' | 'pending' | 'published' | 'skiped' | 'traded' | 'canceled' | 'removed'} status 
+     * @param {'not_verified' | 'local' | 'pending' | 'published' | 'skip' | 'traded' | 'canceled' | 'removed'} status 
      * @param {*} [options] Override http request option.
      * @throws {RequiredError}
      * @memberof RealStateApi
      */
-    public apiRealStateAdsSellStatusCountGet(status: 'not_verified' | 'local' | 'pending' | 'published' | 'skiped' | 'traded' | 'canceled' | 'removed', options?: AxiosRequestConfig) {
+    public apiRealStateAdsSellStatusCountGet(status: 'not_verified' | 'local' | 'pending' | 'published' | 'skip' | 'traded' | 'canceled' | 'removed', options?: AxiosRequestConfig) {
         return RealStateApiFp(this.configuration).apiRealStateAdsSellStatusCountGet(status, options).then((request) => request(this.axios, this.basePath));
     }
 
