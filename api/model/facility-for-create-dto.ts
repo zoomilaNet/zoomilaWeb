@@ -256,40 +256,48 @@ export interface FacilityForCreateDto {
     'loan'?: string | null;
 }
 
-export const FacilityForCreateDtoParkingEnum = {
-    DoesNotHave: 'DoesNotHave',
-    Exclusive: 'Exclusive',
-    Annoying: 'Annoying',
-    NoAnnoying: 'NoAnnoying'
-} as const;
-
-export type FacilityForCreateDtoParkingEnum = typeof FacilityForCreateDtoParkingEnum[keyof typeof FacilityForCreateDtoParkingEnum];
-export const FacilityForCreateDtoKitchenUnitEnum = {
-    DoesNotHave: 'DoesNotHave',
-    Mdf: 'MDF',
-    Metal: 'Metal',
-    Membrane: 'Membrane'
-} as const;
-
-export type FacilityForCreateDtoKitchenUnitEnum = typeof FacilityForCreateDtoKitchenUnitEnum[keyof typeof FacilityForCreateDtoKitchenUnitEnum];
-export const FacilityForCreateDtoFlooringEnum = {
-    Stone: 'Stone',
-    Parquet: 'Parquet',
-    Ceramic: 'Ceramic',
-    Carpet: 'Carpet',
-    Mosaic: 'Mosaic'
-} as const;
-
-export type FacilityForCreateDtoFlooringEnum = typeof FacilityForCreateDtoFlooringEnum[keyof typeof FacilityForCreateDtoFlooringEnum];
-export const FacilityForCreateDtoHeatingSystemEnum = {
-    Package: 'Package',
-    Heater: 'Heater',
-    CentralHeating: 'CentralHeating',
-    UnderFloorHeating: 'UnderFloorHeating',
-    Radiator: 'Radiator',
-    Split: 'Split'
-} as const;
-
-export type FacilityForCreateDtoHeatingSystemEnum = typeof FacilityForCreateDtoHeatingSystemEnum[keyof typeof FacilityForCreateDtoHeatingSystemEnum];
+/**
+    * @export
+    * @enum {string}
+    */
+export enum FacilityForCreateDtoParkingEnum {
+    DoesNotHave = 'DoesNotHave',
+    Exclusive = 'Exclusive',
+    Annoying = 'Annoying',
+    NoAnnoying = 'NoAnnoying'
+}
+/**
+    * @export
+    * @enum {string}
+    */
+export enum FacilityForCreateDtoKitchenUnitEnum {
+    DoesNotHave = 'DoesNotHave',
+    Mdf = 'MDF',
+    Metal = 'Metal',
+    Membrane = 'Membrane'
+}
+/**
+    * @export
+    * @enum {string}
+    */
+export enum FacilityForCreateDtoFlooringEnum {
+    Stone = 'Stone',
+    Parquet = 'Parquet',
+    Ceramic = 'Ceramic',
+    Carpet = 'Carpet',
+    Mosaic = 'Mosaic'
+}
+/**
+    * @export
+    * @enum {string}
+    */
+export enum FacilityForCreateDtoHeatingSystemEnum {
+    Package = 'Package',
+    Heater = 'Heater',
+    CentralHeating = 'CentralHeating',
+    UnderFloorHeating = 'UnderFloorHeating',
+    Radiator = 'Radiator',
+    Split = 'Split'
+}
 
 

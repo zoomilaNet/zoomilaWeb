@@ -163,67 +163,75 @@ export interface ToRentBuildingForCreateDto {
     'video'?: string | null;
 }
 
-export const ToRentBuildingForCreateDtoTypeEnum = {
-    Apartment: 'Apartment',
-    Home: 'Home',
-    Villa: 'Villa',
-    OldHouse: 'OldHouse',
-    ResidentialLand: 'ResidentialLand',
-    Garden: 'Garden',
-    Office: 'Office',
-    Shop: 'Shop',
-    Clinic: 'Clinic',
-    FarmLand: 'FarmLand',
-    CommercialLand: 'CommercialLand',
-    Store: 'Store',
-    IndustrialShed: 'IndustrialShed',
-    Workshop: 'Workshop',
-    Factory: 'Factory',
-    CoastalLand: 'CoastalLand'
-} as const;
-
-export type ToRentBuildingForCreateDtoTypeEnum = typeof ToRentBuildingForCreateDtoTypeEnum[keyof typeof ToRentBuildingForCreateDtoTypeEnum];
-export const ToRentBuildingForCreateDtoUseEnum = {
-    Residential: 'Residential',
-    Commercial: 'Commercial',
-    LandAndGarden: 'LandAndGarden',
-    Industrial: 'Industrial',
-    ResidentialProperties: 'ResidentialProperties',
-    Apartment: 'Apartment',
-    Villa: 'Villa',
-    Home: 'Home',
-    ResidentialLand: 'ResidentialLand',
-    Garden: 'Garden',
-    OldHouse: 'OldHouse',
-    Farm: 'Farm',
-    CommercialLand: 'CommercialLand',
-    Office: 'Office',
-    Clinic: 'Clinic',
-    Store: 'Store',
-    Shop: 'Shop',
-    IndustrialShed: 'IndustrialShed',
-    Factory: 'Factory'
-} as const;
-
-export type ToRentBuildingForCreateDtoUseEnum = typeof ToRentBuildingForCreateDtoUseEnum[keyof typeof ToRentBuildingForCreateDtoUseEnum];
-export const ToRentBuildingForCreateDtoDocumentTypeEnum = {
-    WrittenPromise: 'WrittenPromise',
-    Certain: 'Certain',
-    Mortgage: 'Mortgage',
-    Advocacy: 'Advocacy',
-    Endowment: 'Endowment',
-    Common: 'Common',
-    RightOfBusiness: 'RightOfBusiness',
-    Ongoing: 'Ongoing',
-    Other: 'Other'
-} as const;
-
-export type ToRentBuildingForCreateDtoDocumentTypeEnum = typeof ToRentBuildingForCreateDtoDocumentTypeEnum[keyof typeof ToRentBuildingForCreateDtoDocumentTypeEnum];
-export const ToRentBuildingForCreateDtoConditionEnum = {
-    NonConvertible: 'NonConvertible',
-    Convertable: 'Convertable'
-} as const;
-
-export type ToRentBuildingForCreateDtoConditionEnum = typeof ToRentBuildingForCreateDtoConditionEnum[keyof typeof ToRentBuildingForCreateDtoConditionEnum];
+/**
+    * @export
+    * @enum {string}
+    */
+export enum ToRentBuildingForCreateDtoTypeEnum {
+    Apartment = 'Apartment',
+    Home = 'Home',
+    Villa = 'Villa',
+    OldHouse = 'OldHouse',
+    ResidentialLand = 'ResidentialLand',
+    Garden = 'Garden',
+    Office = 'Office',
+    Shop = 'Shop',
+    Clinic = 'Clinic',
+    FarmLand = 'FarmLand',
+    CommercialLand = 'CommercialLand',
+    Store = 'Store',
+    IndustrialShed = 'IndustrialShed',
+    Workshop = 'Workshop',
+    Factory = 'Factory',
+    CoastalLand = 'CoastalLand'
+}
+/**
+    * @export
+    * @enum {string}
+    */
+export enum ToRentBuildingForCreateDtoUseEnum {
+    Residential = 'Residential',
+    Commercial = 'Commercial',
+    LandAndGarden = 'LandAndGarden',
+    Industrial = 'Industrial',
+    ResidentialProperties = 'ResidentialProperties',
+    Apartment = 'Apartment',
+    Villa = 'Villa',
+    Home = 'Home',
+    ResidentialLand = 'ResidentialLand',
+    Garden = 'Garden',
+    OldHouse = 'OldHouse',
+    Farm = 'Farm',
+    CommercialLand = 'CommercialLand',
+    Office = 'Office',
+    Clinic = 'Clinic',
+    Store = 'Store',
+    Shop = 'Shop',
+    IndustrialShed = 'IndustrialShed',
+    Factory = 'Factory'
+}
+/**
+    * @export
+    * @enum {string}
+    */
+export enum ToRentBuildingForCreateDtoDocumentTypeEnum {
+    WrittenPromise = 'WrittenPromise',
+    Certain = 'Certain',
+    Mortgage = 'Mortgage',
+    Advocacy = 'Advocacy',
+    Endowment = 'Endowment',
+    Common = 'Common',
+    RightOfBusiness = 'RightOfBusiness',
+    Ongoing = 'Ongoing',
+    Other = 'Other'
+}
+/**
+    * @export
+    * @enum {string}
+    */
+export enum ToRentBuildingForCreateDtoConditionEnum {
+    NonConvertible = 'NonConvertible',
+    Convertable = 'Convertable'
+}
 
 

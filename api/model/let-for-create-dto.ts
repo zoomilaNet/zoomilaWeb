@@ -65,12 +65,14 @@ export interface LetForCreateDto {
     'adviserId'?: number;
 }
 
-export const LetForCreateDtoPublishTypeEnum = {
-    Simple: 'simple',
-    Occasion: 'occasion',
-    Featured: 'featured'
-} as const;
-
-export type LetForCreateDtoPublishTypeEnum = typeof LetForCreateDtoPublishTypeEnum[keyof typeof LetForCreateDtoPublishTypeEnum];
+/**
+    * @export
+    * @enum {string}
+    */
+export enum LetForCreateDtoPublishTypeEnum {
+    Simple = 'simple',
+    Occasion = 'occasion',
+    Featured = 'featured'
+}
 
 

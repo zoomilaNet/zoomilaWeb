@@ -208,32 +208,36 @@ export interface SellAdDetail {
     'link'?: string | null;
 }
 
-export const SellAdDetailPublishTypeEnum = {
-    Simple: 'simple',
-    Occasion: 'occasion',
-    Featured: 'featured'
-} as const;
-
-export type SellAdDetailPublishTypeEnum = typeof SellAdDetailPublishTypeEnum[keyof typeof SellAdDetailPublishTypeEnum];
-export const SellAdDetailBuildingTypeEnum = {
-    Apartment: 'Apartment',
-    Home: 'Home',
-    Villa: 'Villa',
-    OldHouse: 'OldHouse',
-    ResidentialLand: 'ResidentialLand',
-    Garden: 'Garden',
-    Office: 'Office',
-    Shop: 'Shop',
-    Clinic: 'Clinic',
-    FarmLand: 'FarmLand',
-    CommercialLand: 'CommercialLand',
-    Store: 'Store',
-    IndustrialShed: 'IndustrialShed',
-    Workshop: 'Workshop',
-    Factory: 'Factory',
-    CoastalLand: 'CoastalLand'
-} as const;
-
-export type SellAdDetailBuildingTypeEnum = typeof SellAdDetailBuildingTypeEnum[keyof typeof SellAdDetailBuildingTypeEnum];
+/**
+    * @export
+    * @enum {string}
+    */
+export enum SellAdDetailPublishTypeEnum {
+    Simple = 'simple',
+    Occasion = 'occasion',
+    Featured = 'featured'
+}
+/**
+    * @export
+    * @enum {string}
+    */
+export enum SellAdDetailBuildingTypeEnum {
+    Apartment = 'Apartment',
+    Home = 'Home',
+    Villa = 'Villa',
+    OldHouse = 'OldHouse',
+    ResidentialLand = 'ResidentialLand',
+    Garden = 'Garden',
+    Office = 'Office',
+    Shop = 'Shop',
+    Clinic = 'Clinic',
+    FarmLand = 'FarmLand',
+    CommercialLand = 'CommercialLand',
+    Store = 'Store',
+    IndustrialShed = 'IndustrialShed',
+    Workshop = 'Workshop',
+    Factory = 'Factory',
+    CoastalLand = 'CoastalLand'
+}
 
 

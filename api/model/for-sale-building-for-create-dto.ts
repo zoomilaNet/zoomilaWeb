@@ -163,70 +163,78 @@ export interface ForSaleBuildingForCreateDto {
     'video'?: string | null;
 }
 
-export const ForSaleBuildingForCreateDtoTypeEnum = {
-    Apartment: 'Apartment',
-    Home: 'Home',
-    Villa: 'Villa',
-    OldHouse: 'OldHouse',
-    ResidentialLand: 'ResidentialLand',
-    Garden: 'Garden',
-    Office: 'Office',
-    Shop: 'Shop',
-    Clinic: 'Clinic',
-    FarmLand: 'FarmLand',
-    CommercialLand: 'CommercialLand',
-    Store: 'Store',
-    IndustrialShed: 'IndustrialShed',
-    Workshop: 'Workshop',
-    Factory: 'Factory',
-    CoastalLand: 'CoastalLand'
-} as const;
-
-export type ForSaleBuildingForCreateDtoTypeEnum = typeof ForSaleBuildingForCreateDtoTypeEnum[keyof typeof ForSaleBuildingForCreateDtoTypeEnum];
-export const ForSaleBuildingForCreateDtoUseEnum = {
-    Residential: 'Residential',
-    Commercial: 'Commercial',
-    LandAndGarden: 'LandAndGarden',
-    Industrial: 'Industrial',
-    ResidentialProperties: 'ResidentialProperties',
-    Apartment: 'Apartment',
-    Villa: 'Villa',
-    Home: 'Home',
-    ResidentialLand: 'ResidentialLand',
-    Garden: 'Garden',
-    OldHouse: 'OldHouse',
-    Farm: 'Farm',
-    CommercialLand: 'CommercialLand',
-    Office: 'Office',
-    Clinic: 'Clinic',
-    Store: 'Store',
-    Shop: 'Shop',
-    IndustrialShed: 'IndustrialShed',
-    Factory: 'Factory'
-} as const;
-
-export type ForSaleBuildingForCreateDtoUseEnum = typeof ForSaleBuildingForCreateDtoUseEnum[keyof typeof ForSaleBuildingForCreateDtoUseEnum];
-export const ForSaleBuildingForCreateDtoDocumentTypeEnum = {
-    WrittenPromise: 'WrittenPromise',
-    Certain: 'Certain',
-    Mortgage: 'Mortgage',
-    Advocacy: 'Advocacy',
-    Endowment: 'Endowment',
-    Common: 'Common',
-    RightOfBusiness: 'RightOfBusiness',
-    Ongoing: 'Ongoing',
-    Other: 'Other'
-} as const;
-
-export type ForSaleBuildingForCreateDtoDocumentTypeEnum = typeof ForSaleBuildingForCreateDtoDocumentTypeEnum[keyof typeof ForSaleBuildingForCreateDtoDocumentTypeEnum];
-export const ForSaleBuildingForCreateDtoConditionEnum = {
-    CashSales: 'CashSales',
-    Changeable: 'Changeable',
-    Leasing: 'Leasing',
-    Presell: 'Presell',
-    ParticipationInConstruction: 'ParticipationInConstruction'
-} as const;
-
-export type ForSaleBuildingForCreateDtoConditionEnum = typeof ForSaleBuildingForCreateDtoConditionEnum[keyof typeof ForSaleBuildingForCreateDtoConditionEnum];
+/**
+    * @export
+    * @enum {string}
+    */
+export enum ForSaleBuildingForCreateDtoTypeEnum {
+    Apartment = 'Apartment',
+    Home = 'Home',
+    Villa = 'Villa',
+    OldHouse = 'OldHouse',
+    ResidentialLand = 'ResidentialLand',
+    Garden = 'Garden',
+    Office = 'Office',
+    Shop = 'Shop',
+    Clinic = 'Clinic',
+    FarmLand = 'FarmLand',
+    CommercialLand = 'CommercialLand',
+    Store = 'Store',
+    IndustrialShed = 'IndustrialShed',
+    Workshop = 'Workshop',
+    Factory = 'Factory',
+    CoastalLand = 'CoastalLand'
+}
+/**
+    * @export
+    * @enum {string}
+    */
+export enum ForSaleBuildingForCreateDtoUseEnum {
+    Residential = 'Residential',
+    Commercial = 'Commercial',
+    LandAndGarden = 'LandAndGarden',
+    Industrial = 'Industrial',
+    ResidentialProperties = 'ResidentialProperties',
+    Apartment = 'Apartment',
+    Villa = 'Villa',
+    Home = 'Home',
+    ResidentialLand = 'ResidentialLand',
+    Garden = 'Garden',
+    OldHouse = 'OldHouse',
+    Farm = 'Farm',
+    CommercialLand = 'CommercialLand',
+    Office = 'Office',
+    Clinic = 'Clinic',
+    Store = 'Store',
+    Shop = 'Shop',
+    IndustrialShed = 'IndustrialShed',
+    Factory = 'Factory'
+}
+/**
+    * @export
+    * @enum {string}
+    */
+export enum ForSaleBuildingForCreateDtoDocumentTypeEnum {
+    WrittenPromise = 'WrittenPromise',
+    Certain = 'Certain',
+    Mortgage = 'Mortgage',
+    Advocacy = 'Advocacy',
+    Endowment = 'Endowment',
+    Common = 'Common',
+    RightOfBusiness = 'RightOfBusiness',
+    Ongoing = 'Ongoing',
+    Other = 'Other'
+}
+/**
+    * @export
+    * @enum {string}
+    */
+export enum ForSaleBuildingForCreateDtoConditionEnum {
+    CashSales = 'CashSales',
+    Changeable = 'Changeable',
+    Leasing = 'Leasing',
+    Presell = 'Presell',
+    ParticipationInConstruction = 'ParticipationInConstruction'
+}
 
 

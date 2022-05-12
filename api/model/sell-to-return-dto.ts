@@ -107,12 +107,14 @@ export interface SellToReturnDto {
     'deletedAt'?: string | null;
 }
 
-export const SellToReturnDtoPublishTypeEnum = {
-    Simple: 'simple',
-    Occasion: 'occasion',
-    Featured: 'featured'
-} as const;
-
-export type SellToReturnDtoPublishTypeEnum = typeof SellToReturnDtoPublishTypeEnum[keyof typeof SellToReturnDtoPublishTypeEnum];
+/**
+    * @export
+    * @enum {string}
+    */
+export enum SellToReturnDtoPublishTypeEnum {
+    Simple = 'simple',
+    Occasion = 'occasion',
+    Featured = 'featured'
+}
 
 
