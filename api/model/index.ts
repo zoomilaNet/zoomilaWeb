@@ -59,6 +59,7 @@ export * from './help-for-creation-dto';
 export * from './int32-nullable-result-set';
 export * from './landlord-for-create-dto';
 export * from './landlord-to-return-dto';
+export * from './lat-lon';
 export * from './let-ad';
 export * from './let-ad-detail';
 export * from './let-ad-landing';

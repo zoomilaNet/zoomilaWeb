@@ -74,6 +74,7 @@ model/index.ts
 model/int32-nullable-result-set.ts
 model/landlord-for-create-dto.ts
 model/landlord-to-return-dto.ts
+model/lat-lon.ts
 model/let-ad-detail.ts
 model/let-ad-landing.ts
 model/let-ad.ts
