@@ -3,11 +3,12 @@ import Image from "next/image";
 import Slider from "../../slider/slider";
 import Seperator from "../../../models/seperator";
 import React from "react";
+import AddDash from "../../../models/addDash";
 
 function LetAdvertiseCard({dataLet}:{dataLet:LetAd}){
     let showSlider:any;
         showSlider=dataLet!.photos!.length==0?<div className="w-full h-full bg-no_image flex justify-center items-center"><Image src="/image/Zoomila_Logo.svg" alt="آگهی بدون عکس" width="197px" height="51px"/></div>:<Slider basePath={dataLet!.photoPath as string} photos={dataLet!.photos as string[]} photoSlug={dataLet!.slug as string}/>
-    return <div className="w-full h-auto md:w-4/5 lg:w-2/5 flex flex-col border border-black my-2">
+    return <a href={"/trp-"+dataLet.letId+"/"+AddDash(dataLet.slug!)} className="w-full h-auto md:w-4/5 lg:w-2/5 flex flex-col border border-black my-2">
         <div className="relative aspect-w-4 aspect-h-3">
             <div>
                 {showSlider}
@@ -41,6 +42,6 @@ function LetAdvertiseCard({dataLet}:{dataLet:LetAd}){
         <div className={dataLet.publishType== LetAdPublishTypeEnum.Simple?"bg-simple_ads_tag w-full h-12 md:h-16 flex flex-row justify-between items-center px-2 text-black":dataLet.publishType!= LetAdPublishTypeEnum.Featured? "featured_ads_tag w-full h-12 md:h-16 flex flex-row justify-between items-center px-2 text-black":"occasion_ads_tag w-full h-12 md:h-16 flex flex-row justify-between items-center px-2 text-black"}>
             <div className="flex flex-row items-center text-xl">رهن: <p className="ml-4 font-semibold">{dataLet.deposit=="0" && dataLet.rent=="0"? "توافقی":Seperator(dataLet.deposit!)+" تومان"}</p>اجاره: <p className="font-semibold">{dataLet.deposit=="0" && dataLet.rent =="0"? "توافقی": Seperator(dataLet.rent!)+" تومان"}</p></div>
         </div>
-    </div>
+    </a>
 }
 export default LetAdvertiseCard

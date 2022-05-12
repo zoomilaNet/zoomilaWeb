@@ -3,10 +3,11 @@ import {LetAd, SellAd, SellAdPublishTypeEnum} from "../../../api";
 import Slider from "../../slider/slider";
 import Seperator from '../../../models/seperator';
 import Image from "next/image";
+import AddDash from "../../../models/addDash";
 function AdvertiseCard({ dataSell}:{dataSell: SellAd }) {
     let showSlider:any;
          showSlider=dataSell!.photos!.length==0?<div className="w-full h-full bg-no_image flex justify-center items-center"><Image src="/image/Zoomila_Logo.svg" alt="آگهی بدون عکس" width="197px" height="51px"/></div>:<Slider basePath={dataSell!.photoPath as string} photos={dataSell!.photos as string[]} photoSlug={dataSell!.slug as string}/>
-    return <div className="w-full h-auto md:w-4/5 lg:w-2/5 flex flex-col border border-black my-2">
+    return <a href={"/fsp-"+dataSell.sellId+"/"+AddDash(dataSell.slug!)} className="w-full h-auto md:w-4/5 lg:w-2/5 flex flex-col border border-black my-2">
         <div className="relative aspect-w-4 aspect-h-3">
             <div>
                 {showSlider}
@@ -40,6 +41,6 @@ function AdvertiseCard({ dataSell}:{dataSell: SellAd }) {
         <div className={dataSell.publishType== SellAdPublishTypeEnum.Simple?"bg-simple_ads_tag w-full h-12 md:h-16 flex flex-row justify-between items-center px-2 text-black":dataSell.publishType!= SellAdPublishTypeEnum.Featured? "featured_ads_tag w-full h-12 md:h-16 flex flex-row justify-between items-center px-2 text-black":"occasion_ads_tag w-full h-12 md:h-16 flex flex-row justify-between items-center px-2 text-black"}>
             <div className="flex flex-row items-center text-xl">قیمت کل: <p className=" font-semibold mr-2"> {dataSell.price=="0"? "توافقی":Seperator( (dataSell.price)?.toString()!)+" تومان"}</p></div>
         </div>
-    </div>
+    </a>
 }
 export default AdvertiseCard
