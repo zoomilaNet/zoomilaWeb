@@ -119,14 +119,12 @@ export interface LetToReturnDto {
     'deletedAt'?: string | null;
 }
 
-/**
-    * @export
-    * @enum {string}
-    */
-export enum LetToReturnDtoPublishTypeEnum {
-    Simple = 'simple',
-    Occasion = 'occasion',
-    Featured = 'featured'
-}
+export const LetToReturnDtoPublishTypeEnum = {
+    Simple: 'simple',
+    Occasion: 'occasion',
+    Featured: 'featured'
+} as const;
+
+export type LetToReturnDtoPublishTypeEnum = typeof LetToReturnDtoPublishTypeEnum[keyof typeof LetToReturnDtoPublishTypeEnum];
 
 

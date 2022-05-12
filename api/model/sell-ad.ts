@@ -166,36 +166,32 @@ export interface SellAd {
     'createdAt'?: string | null;
 }
 
-/**
-    * @export
-    * @enum {string}
-    */
-export enum SellAdPublishTypeEnum {
-    Simple = 'simple',
-    Occasion = 'occasion',
-    Featured = 'featured'
-}
-/**
-    * @export
-    * @enum {string}
-    */
-export enum SellAdBuildingTypeEnum {
-    Apartment = 'Apartment',
-    Home = 'Home',
-    Villa = 'Villa',
-    OldHouse = 'OldHouse',
-    ResidentialLand = 'ResidentialLand',
-    Garden = 'Garden',
-    Office = 'Office',
-    Shop = 'Shop',
-    Clinic = 'Clinic',
-    FarmLand = 'FarmLand',
-    CommercialLand = 'CommercialLand',
-    Store = 'Store',
-    IndustrialShed = 'IndustrialShed',
-    Workshop = 'Workshop',
-    Factory = 'Factory',
-    CoastalLand = 'CoastalLand'
-}
+export const SellAdPublishTypeEnum = {
+    Simple: 'simple',
+    Occasion: 'occasion',
+    Featured: 'featured'
+} as const;
+
+export type SellAdPublishTypeEnum = typeof SellAdPublishTypeEnum[keyof typeof SellAdPublishTypeEnum];
+export const SellAdBuildingTypeEnum = {
+    Apartment: 'Apartment',
+    Home: 'Home',
+    Villa: 'Villa',
+    OldHouse: 'OldHouse',
+    ResidentialLand: 'ResidentialLand',
+    Garden: 'Garden',
+    Office: 'Office',
+    Shop: 'Shop',
+    Clinic: 'Clinic',
+    FarmLand: 'FarmLand',
+    CommercialLand: 'CommercialLand',
+    Store: 'Store',
+    IndustrialShed: 'IndustrialShed',
+    Workshop: 'Workshop',
+    Factory: 'Factory',
+    CoastalLand: 'CoastalLand'
+} as const;
+
+export type SellAdBuildingTypeEnum = typeof SellAdBuildingTypeEnum[keyof typeof SellAdBuildingTypeEnum];
 
 

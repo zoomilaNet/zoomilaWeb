@@ -220,36 +220,32 @@ export interface LetAdDetail {
     'link'?: string | null;
 }
 
-/**
-    * @export
-    * @enum {string}
-    */
-export enum LetAdDetailPublishTypeEnum {
-    Simple = 'simple',
-    Occasion = 'occasion',
-    Featured = 'featured'
-}
-/**
-    * @export
-    * @enum {string}
-    */
-export enum LetAdDetailBuildingTypeEnum {
-    Apartment = 'Apartment',
-    Home = 'Home',
-    Villa = 'Villa',
-    OldHouse = 'OldHouse',
-    ResidentialLand = 'ResidentialLand',
-    Garden = 'Garden',
-    Office = 'Office',
-    Shop = 'Shop',
-    Clinic = 'Clinic',
-    FarmLand = 'FarmLand',
-    CommercialLand = 'CommercialLand',
-    Store = 'Store',
-    IndustrialShed = 'IndustrialShed',
-    Workshop = 'Workshop',
-    Factory = 'Factory',
-    CoastalLand = 'CoastalLand'
-}
+export const LetAdDetailPublishTypeEnum = {
+    Simple: 'simple',
+    Occasion: 'occasion',
+    Featured: 'featured'
+} as const;
+
+export type LetAdDetailPublishTypeEnum = typeof LetAdDetailPublishTypeEnum[keyof typeof LetAdDetailPublishTypeEnum];
+export const LetAdDetailBuildingTypeEnum = {
+    Apartment: 'Apartment',
+    Home: 'Home',
+    Villa: 'Villa',
+    OldHouse: 'OldHouse',
+    ResidentialLand: 'ResidentialLand',
+    Garden: 'Garden',
+    Office: 'Office',
+    Shop: 'Shop',
+    Clinic: 'Clinic',
+    FarmLand: 'FarmLand',
+    CommercialLand: 'CommercialLand',
+    Store: 'Store',
+    IndustrialShed: 'IndustrialShed',
+    Workshop: 'Workshop',
+    Factory: 'Factory',
+    CoastalLand: 'CoastalLand'
+} as const;
+
+export type LetAdDetailBuildingTypeEnum = typeof LetAdDetailBuildingTypeEnum[keyof typeof LetAdDetailBuildingTypeEnum];
 
 

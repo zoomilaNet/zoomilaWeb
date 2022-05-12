@@ -218,78 +218,70 @@ export interface BuildingToReturnDto {
     'deletedAt'?: string | null;
 }
 
-/**
-    * @export
-    * @enum {string}
-    */
-export enum BuildingToReturnDtoTypeEnum {
-    Apartment = 'Apartment',
-    Home = 'Home',
-    Villa = 'Villa',
-    OldHouse = 'OldHouse',
-    ResidentialLand = 'ResidentialLand',
-    Garden = 'Garden',
-    Office = 'Office',
-    Shop = 'Shop',
-    Clinic = 'Clinic',
-    FarmLand = 'FarmLand',
-    CommercialLand = 'CommercialLand',
-    Store = 'Store',
-    IndustrialShed = 'IndustrialShed',
-    Workshop = 'Workshop',
-    Factory = 'Factory',
-    CoastalLand = 'CoastalLand'
-}
-/**
-    * @export
-    * @enum {string}
-    */
-export enum BuildingToReturnDtoUseEnum {
-    Residential = 'Residential',
-    Commercial = 'Commercial',
-    LandAndGarden = 'LandAndGarden',
-    Industrial = 'Industrial',
-    ResidentialProperties = 'ResidentialProperties',
-    Apartment = 'Apartment',
-    Villa = 'Villa',
-    Home = 'Home',
-    ResidentialLand = 'ResidentialLand',
-    Garden = 'Garden',
-    OldHouse = 'OldHouse',
-    Farm = 'Farm',
-    CommercialLand = 'CommercialLand',
-    Office = 'Office',
-    Clinic = 'Clinic',
-    Store = 'Store',
-    Shop = 'Shop',
-    IndustrialShed = 'IndustrialShed',
-    Factory = 'Factory'
-}
-/**
-    * @export
-    * @enum {string}
-    */
-export enum BuildingToReturnDtoDocumentTypeEnum {
-    WrittenPromise = 'WrittenPromise',
-    Certain = 'Certain',
-    Mortgage = 'Mortgage',
-    Advocacy = 'Advocacy',
-    Endowment = 'Endowment',
-    Common = 'Common',
-    RightOfBusiness = 'RightOfBusiness',
-    Ongoing = 'Ongoing',
-    Other = 'Other'
-}
-/**
-    * @export
-    * @enum {string}
-    */
-export enum BuildingToReturnDtoConditionEnum {
-    CashSales = 'CashSales',
-    Changeable = 'Changeable',
-    Leasing = 'Leasing',
-    Presell = 'Presell',
-    ParticipationInConstruction = 'ParticipationInConstruction'
-}
+export const BuildingToReturnDtoTypeEnum = {
+    Apartment: 'Apartment',
+    Home: 'Home',
+    Villa: 'Villa',
+    OldHouse: 'OldHouse',
+    ResidentialLand: 'ResidentialLand',
+    Garden: 'Garden',
+    Office: 'Office',
+    Shop: 'Shop',
+    Clinic: 'Clinic',
+    FarmLand: 'FarmLand',
+    CommercialLand: 'CommercialLand',
+    Store: 'Store',
+    IndustrialShed: 'IndustrialShed',
+    Workshop: 'Workshop',
+    Factory: 'Factory',
+    CoastalLand: 'CoastalLand'
+} as const;
+
+export type BuildingToReturnDtoTypeEnum = typeof BuildingToReturnDtoTypeEnum[keyof typeof BuildingToReturnDtoTypeEnum];
+export const BuildingToReturnDtoUseEnum = {
+    Residential: 'Residential',
+    Commercial: 'Commercial',
+    LandAndGarden: 'LandAndGarden',
+    Industrial: 'Industrial',
+    ResidentialProperties: 'ResidentialProperties',
+    Apartment: 'Apartment',
+    Villa: 'Villa',
+    Home: 'Home',
+    ResidentialLand: 'ResidentialLand',
+    Garden: 'Garden',
+    OldHouse: 'OldHouse',
+    Farm: 'Farm',
+    CommercialLand: 'CommercialLand',
+    Office: 'Office',
+    Clinic: 'Clinic',
+    Store: 'Store',
+    Shop: 'Shop',
+    IndustrialShed: 'IndustrialShed',
+    Factory: 'Factory'
+} as const;
+
+export type BuildingToReturnDtoUseEnum = typeof BuildingToReturnDtoUseEnum[keyof typeof BuildingToReturnDtoUseEnum];
+export const BuildingToReturnDtoDocumentTypeEnum = {
+    WrittenPromise: 'WrittenPromise',
+    Certain: 'Certain',
+    Mortgage: 'Mortgage',
+    Advocacy: 'Advocacy',
+    Endowment: 'Endowment',
+    Common: 'Common',
+    RightOfBusiness: 'RightOfBusiness',
+    Ongoing: 'Ongoing',
+    Other: 'Other'
+} as const;
+
+export type BuildingToReturnDtoDocumentTypeEnum = typeof BuildingToReturnDtoDocumentTypeEnum[keyof typeof BuildingToReturnDtoDocumentTypeEnum];
+export const BuildingToReturnDtoConditionEnum = {
+    CashSales: 'CashSales',
+    Changeable: 'Changeable',
+    Leasing: 'Leasing',
+    Presell: 'Presell',
+    ParticipationInConstruction: 'ParticipationInConstruction'
+} as const;
+
+export type BuildingToReturnDtoConditionEnum = typeof BuildingToReturnDtoConditionEnum[keyof typeof BuildingToReturnDtoConditionEnum];
 
 

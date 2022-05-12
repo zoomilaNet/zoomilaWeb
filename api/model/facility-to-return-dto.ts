@@ -280,48 +280,40 @@ export interface FacilityToReturnDto {
     'loan'?: string | null;
 }
 
-/**
-    * @export
-    * @enum {string}
-    */
-export enum FacilityToReturnDtoParkingEnum {
-    DoesNotHave = 'DoesNotHave',
-    Exclusive = 'Exclusive',
-    Annoying = 'Annoying',
-    NoAnnoying = 'NoAnnoying'
-}
-/**
-    * @export
-    * @enum {string}
-    */
-export enum FacilityToReturnDtoKitchenUnitEnum {
-    DoesNotHave = 'DoesNotHave',
-    Mdf = 'MDF',
-    Metal = 'Metal',
-    Membrane = 'Membrane'
-}
-/**
-    * @export
-    * @enum {string}
-    */
-export enum FacilityToReturnDtoFlooringEnum {
-    Stone = 'Stone',
-    Parquet = 'Parquet',
-    Ceramic = 'Ceramic',
-    Carpet = 'Carpet',
-    Mosaic = 'Mosaic'
-}
-/**
-    * @export
-    * @enum {string}
-    */
-export enum FacilityToReturnDtoHeatingSystemEnum {
-    Package = 'Package',
-    Heater = 'Heater',
-    CentralHeating = 'CentralHeating',
-    UnderFloorHeating = 'UnderFloorHeating',
-    Radiator = 'Radiator',
-    Split = 'Split'
-}
+export const FacilityToReturnDtoParkingEnum = {
+    DoesNotHave: 'DoesNotHave',
+    Exclusive: 'Exclusive',
+    Annoying: 'Annoying',
+    NoAnnoying: 'NoAnnoying'
+} as const;
+
+export type FacilityToReturnDtoParkingEnum = typeof FacilityToReturnDtoParkingEnum[keyof typeof FacilityToReturnDtoParkingEnum];
+export const FacilityToReturnDtoKitchenUnitEnum = {
+    DoesNotHave: 'DoesNotHave',
+    Mdf: 'MDF',
+    Metal: 'Metal',
+    Membrane: 'Membrane'
+} as const;
+
+export type FacilityToReturnDtoKitchenUnitEnum = typeof FacilityToReturnDtoKitchenUnitEnum[keyof typeof FacilityToReturnDtoKitchenUnitEnum];
+export const FacilityToReturnDtoFlooringEnum = {
+    Stone: 'Stone',
+    Parquet: 'Parquet',
+    Ceramic: 'Ceramic',
+    Carpet: 'Carpet',
+    Mosaic: 'Mosaic'
+} as const;
+
+export type FacilityToReturnDtoFlooringEnum = typeof FacilityToReturnDtoFlooringEnum[keyof typeof FacilityToReturnDtoFlooringEnum];
+export const FacilityToReturnDtoHeatingSystemEnum = {
+    Package: 'Package',
+    Heater: 'Heater',
+    CentralHeating: 'CentralHeating',
+    UnderFloorHeating: 'UnderFloorHeating',
+    Radiator: 'Radiator',
+    Split: 'Split'
+} as const;
+
+export type FacilityToReturnDtoHeatingSystemEnum = typeof FacilityToReturnDtoHeatingSystemEnum[keyof typeof FacilityToReturnDtoHeatingSystemEnum];
 
 

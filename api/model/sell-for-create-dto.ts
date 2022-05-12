@@ -59,14 +59,12 @@ export interface SellForCreateDto {
     'adviserId'?: number;
 }
 
-/**
-    * @export
-    * @enum {string}
-    */
-export enum SellForCreateDtoPublishTypeEnum {
-    Simple = 'simple',
-    Occasion = 'occasion',
-    Featured = 'featured'
-}
+export const SellForCreateDtoPublishTypeEnum = {
+    Simple: 'simple',
+    Occasion: 'occasion',
+    Featured: 'featured'
+} as const;
+
+export type SellForCreateDtoPublishTypeEnum = typeof SellForCreateDtoPublishTypeEnum[keyof typeof SellForCreateDtoPublishTypeEnum];
 
 

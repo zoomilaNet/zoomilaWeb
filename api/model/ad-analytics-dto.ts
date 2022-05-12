@@ -58,13 +58,11 @@ export interface AdAnalyticsDto {
     'visitCount'?: number;
 }
 
-/**
-    * @export
-    * @enum {string}
-    */
-export enum AdAnalyticsDtoAdTypeEnum {
-    Sell = 'sell',
-    Let = 'let'
-}
+export const AdAnalyticsDtoAdTypeEnum = {
+    Sell: 'sell',
+    Let: 'let'
+} as const;
+
+export type AdAnalyticsDtoAdTypeEnum = typeof AdAnalyticsDtoAdTypeEnum[keyof typeof AdAnalyticsDtoAdTypeEnum];
 
 
