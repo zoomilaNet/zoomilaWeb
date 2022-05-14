@@ -15,103 +15,103 @@
 
 
 /**
- * {\"occasion\":25,\"featured\":50,\"simple\":9049,\"republish\":75,\"logo\":1,\"panorama\":0,\"sban\":1,\"sbanMobile\":0,\"bannerMobile\":0,\"banner\":1,\"teaser\":0,\"voice\":0,\"blogAd\":1,\"topBanner\":0,\"topBannerMobile\":0,\"specialIntro\":0}
+ * 
  * @export
  * @interface ProductsDto
  */
 export interface ProductsDto {
     /**
-     * 
+     * فوری
      * @type {number}
      * @memberof ProductsDto
      */
     'occasion'?: number;
     /**
-     * 
+     * ویژه
      * @type {number}
      * @memberof ProductsDto
      */
     'featured'?: number;
     /**
-     * 
+     * ساده
      * @type {number}
      * @memberof ProductsDto
      */
     'simple'?: number;
     /**
-     * 
+     * بازنشر
      * @type {number}
      * @memberof ProductsDto
      */
     'republish'?: number;
     /**
-     * 
+     * لوگو
      * @type {number}
      * @memberof ProductsDto
      */
     'logo'?: number | null;
     /**
-     * 
+     * پاناروما
      * @type {number}
      * @memberof ProductsDto
      */
     'panorama'?: number;
     /**
-     * 
+     * ساید بنر
      * @type {number}
      * @memberof ProductsDto
      */
     'sban'?: number;
     /**
-     * 
+     * ساید بنر موبایل
      * @type {number}
      * @memberof ProductsDto
      */
     'sbanMobile'?: number;
     /**
-     * 
+     * بنر موبایل
      * @type {number}
      * @memberof ProductsDto
      */
     'bannerMobile'?: number;
     /**
-     * 
+     * بنر
      * @type {number}
      * @memberof ProductsDto
      */
     'banner'?: number;
     /**
-     * 
+     * تیزر
      * @type {number}
      * @memberof ProductsDto
      */
     'teaser'?: number;
     /**
-     * 
+     * صدا
      * @type {number}
      * @memberof ProductsDto
      */
     'voice'?: number;
     /**
-     * 
+     * آگهی بلاگ
      * @type {number}
      * @memberof ProductsDto
      */
     'blogAd'?: number;
     /**
-     * 
+     * بنر بالایی
      * @type {number}
      * @memberof ProductsDto
      */
     'topBanner'?: number;
     /**
-     * 
+     * بنر بالایی موبایل
      * @type {number}
      * @memberof ProductsDto
      */
     'topBannerMobile'?: number;
     /**
-     * 
+     * معرفی ویژه
      * @type {number}
      * @memberof ProductsDto
      */
