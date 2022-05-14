@@ -1292,12 +1292,12 @@ export const ControlPanelApiAxiosParamCreator = function (configuration?: Config
          * @param {number} [agencyId] کد آژانس
          * @param {number} [packageId] کد بسته
          * @param {number} [duration] مدت اعتبار
-         * @param {number} [price] قیمت تمام شده
+         * @param {string} [price] قیمت تمام شده
          * @param {string} [description] توضیحات
          * @param {*} [options] Override http request option.
          * @throws {RequiredError}
          */
-        apiControlPanelAgencyRegisterContractPost: async (agencyId?: number, packageId?: number, duration?: number, price?: number, description?: string, options: AxiosRequestConfig = {}): Promise<RequestArgs> => {
+        apiControlPanelAgencyRegisterContractPost: async (agencyId?: number, packageId?: number, duration?: number, price?: string, description?: string, options: AxiosRequestConfig = {}): Promise<RequestArgs> => {
             const localVarPath = `/api/ControlPanel/Agency/Register/Contract`;
             // use dummy base URL string because the URL constructor only accepts absolute URLs.
             const localVarUrlObj = new URL(localVarPath, DUMMY_BASE_URL);
@@ -3421,12 +3421,12 @@ export const ControlPanelApiFp = function(configuration?: Configuration) {
          * @param {number} [agencyId] کد آژانس
          * @param {number} [packageId] کد بسته
          * @param {number} [duration] مدت اعتبار
-         * @param {number} [price] قیمت تمام شده
+         * @param {string} [price] قیمت تمام شده
          * @param {string} [description] توضیحات
          * @param {*} [options] Override http request option.
          * @throws {RequiredError}
          */
-        async apiControlPanelAgencyRegisterContractPost(agencyId?: number, packageId?: number, duration?: number, price?: number, description?: string, options?: AxiosRequestConfig): Promise<(axios?: AxiosInstance, basePath?: string) => AxiosPromise<string>> {
+        async apiControlPanelAgencyRegisterContractPost(agencyId?: number, packageId?: number, duration?: number, price?: string, description?: string, options?: AxiosRequestConfig): Promise<(axios?: AxiosInstance, basePath?: string) => AxiosPromise<string>> {
             const localVarAxiosArgs = await localVarAxiosParamCreator.apiControlPanelAgencyRegisterContractPost(agencyId, packageId, duration, price, description, options);
             return createRequestFunction(localVarAxiosArgs, globalAxios, BASE_PATH, configuration);
         },
@@ -4224,12 +4224,12 @@ export const ControlPanelApiFactory = function (configuration?: Configuration, b
          * @param {number} [agencyId] کد آژانس
          * @param {number} [packageId] کد بسته
          * @param {number} [duration] مدت اعتبار
-         * @param {number} [price] قیمت تمام شده
+         * @param {string} [price] قیمت تمام شده
          * @param {string} [description] توضیحات
          * @param {*} [options] Override http request option.
          * @throws {RequiredError}
          */
-        apiControlPanelAgencyRegisterContractPost(agencyId?: number, packageId?: number, duration?: number, price?: number, description?: string, options?: any): AxiosPromise<string> {
+        apiControlPanelAgencyRegisterContractPost(agencyId?: number, packageId?: number, duration?: number, price?: string, description?: string, options?: any): AxiosPromise<string> {
             return localVarFp.apiControlPanelAgencyRegisterContractPost(agencyId, packageId, duration, price, description, options).then((request) => request(axios, basePath));
         },
         /**
@@ -4982,13 +4982,13 @@ export interface ControlPanelApiInterface {
      * @param {number} [agencyId] کد آژانس
      * @param {number} [packageId] کد بسته
      * @param {number} [duration] مدت اعتبار
-     * @param {number} [price] قیمت تمام شده
+     * @param {string} [price] قیمت تمام شده
      * @param {string} [description] توضیحات
      * @param {*} [options] Override http request option.
      * @throws {RequiredError}
      * @memberof ControlPanelApiInterface
      */
-    apiControlPanelAgencyRegisterContractPost(agencyId?: number, packageId?: number, duration?: number, price?: number, description?: string, options?: AxiosRequestConfig): AxiosPromise<string>;
+    apiControlPanelAgencyRegisterContractPost(agencyId?: number, packageId?: number, duration?: number, price?: string, description?: string, options?: AxiosRequestConfig): AxiosPromise<string>;
 
     /**
      * 
@@ -5804,13 +5804,13 @@ export class ControlPanelApi extends BaseAPI implements ControlPanelApiInterface
      * @param {number} [agencyId] کد آژانس
      * @param {number} [packageId] کد بسته
      * @param {number} [duration] مدت اعتبار
-     * @param {number} [price] قیمت تمام شده
+     * @param {string} [price] قیمت تمام شده
      * @param {string} [description] توضیحات
      * @param {*} [options] Override http request option.
      * @throws {RequiredError}
      * @memberof ControlPanelApi
      */
-    public apiControlPanelAgencyRegisterContractPost(agencyId?: number, packageId?: number, duration?: number, price?: number, description?: string, options?: AxiosRequestConfig) {
+    public apiControlPanelAgencyRegisterContractPost(agencyId?: number, packageId?: number, duration?: number, price?: string, description?: string, options?: AxiosRequestConfig) {
         return ControlPanelApiFp(this.configuration).apiControlPanelAgencyRegisterContractPost(agencyId, packageId, duration, price, description, options).then((request) => request(this.axios, this.basePath));
     }
 
