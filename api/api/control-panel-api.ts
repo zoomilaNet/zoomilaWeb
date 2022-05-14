@@ -43,6 +43,8 @@ import { AgencyToReturnDtoPagedListResultSET } from '../model';
 // @ts-ignore
 import { ContractToReturnDtoResultSET } from '../model';
 // @ts-ignore
+import { CreatePackageReq } from '../model';
+// @ts-ignore
 import { EmployeeToReturnDto } from '../model';
 // @ts-ignore
 import { EmployeeToReturnDtoPagedList } from '../model';
@@ -55,7 +57,13 @@ import { LetToReturnDtoPagedList } from '../model';
 // @ts-ignore
 import { LoginResultDto } from '../model';
 // @ts-ignore
+import { PackageToReturnDto } from '../model';
+// @ts-ignore
+import { PackageToReturnDtoPagedList } from '../model';
+// @ts-ignore
 import { ProblemDetails } from '../model';
+// @ts-ignore
+import { ProductsToReturnDto } from '../model';
 // @ts-ignore
 import { RoleForCreateDto } from '../model';
 // @ts-ignore
@@ -311,74 +319,8 @@ export const ControlPanelApiAxiosParamCreator = function (configuration?: Config
          * @param {*} [options] Override http request option.
          * @throws {RequiredError}
          */
-        apiControlPanelAdHitsStaticsGet: async (options: AxiosRequestConfig = {}): Promise<RequestArgs> => {
-            const localVarPath = `/api/ControlPanel/AdHitsStatics`;
-            // use dummy base URL string because the URL constructor only accepts absolute URLs.
-            const localVarUrlObj = new URL(localVarPath, DUMMY_BASE_URL);
-            let baseOptions;
-            if (configuration) {
-                baseOptions = configuration.baseOptions;
-            }
-
-            const localVarRequestOptions = { method: 'GET', ...baseOptions, ...options};
-            const localVarHeaderParameter = {} as any;
-            const localVarQueryParameter = {} as any;
-
-            // authentication Bearer required
-            // http bearer authentication required
-            await setBearerAuthToObject(localVarHeaderParameter, configuration)
-
-
-    
-            setSearchParams(localVarUrlObj, localVarQueryParameter);
-            let headersFromBaseOptions = baseOptions && baseOptions.headers ? baseOptions.headers : {};
-            localVarRequestOptions.headers = {...localVarHeaderParameter, ...headersFromBaseOptions, ...options.headers};
-
-            return {
-                url: toPathString(localVarUrlObj),
-                options: localVarRequestOptions,
-            };
-        },
-        /**
-         * 
-         * @param {*} [options] Override http request option.
-         * @throws {RequiredError}
-         */
         apiControlPanelAddMainBannerGet: async (options: AxiosRequestConfig = {}): Promise<RequestArgs> => {
             const localVarPath = `/api/ControlPanel/AddMainBanner`;
-            // use dummy base URL string because the URL constructor only accepts absolute URLs.
-            const localVarUrlObj = new URL(localVarPath, DUMMY_BASE_URL);
-            let baseOptions;
-            if (configuration) {
-                baseOptions = configuration.baseOptions;
-            }
-
-            const localVarRequestOptions = { method: 'GET', ...baseOptions, ...options};
-            const localVarHeaderParameter = {} as any;
-            const localVarQueryParameter = {} as any;
-
-            // authentication Bearer required
-            // http bearer authentication required
-            await setBearerAuthToObject(localVarHeaderParameter, configuration)
-
-
-    
-            setSearchParams(localVarUrlObj, localVarQueryParameter);
-            let headersFromBaseOptions = baseOptions && baseOptions.headers ? baseOptions.headers : {};
-            localVarRequestOptions.headers = {...localVarHeaderParameter, ...headersFromBaseOptions, ...options.headers};
-
-            return {
-                url: toPathString(localVarUrlObj),
-                options: localVarRequestOptions,
-            };
-        },
-        /**
-         * 
-         * @param {*} [options] Override http request option.
-         * @throws {RequiredError}
-         */
-        apiControlPanelAddPackageGet: async (options: AxiosRequestConfig = {}): Promise<RequestArgs> => {
-            const localVarPath = `/api/ControlPanel/AddPackage`;
             // use dummy base URL string because the URL constructor only accepts absolute URLs.
             const localVarUrlObj = new URL(localVarPath, DUMMY_BASE_URL);
             let baseOptions;
@@ -1090,39 +1032,6 @@ export const ControlPanelApiAxiosParamCreator = function (configuration?: Config
         },
         /**
          * 
-         * @param {*} [options] Override http request option.
-         * @throws {RequiredError}
-         */
-        apiControlPanelAgencyContractPost: async (options: AxiosRequestConfig = {}): Promise<RequestArgs> => {
-            const localVarPath = `/api/ControlPanel/Agency/Contract`;
-            // use dummy base URL string because the URL constructor only accepts absolute URLs.
-            const localVarUrlObj = new URL(localVarPath, DUMMY_BASE_URL);
-            let baseOptions;
-            if (configuration) {
-                baseOptions = configuration.baseOptions;
-            }
-
-            const localVarRequestOptions = { method: 'POST', ...baseOptions, ...options};
-            const localVarHeaderParameter = {} as any;
-            const localVarQueryParameter = {} as any;
-
-            // authentication Bearer required
-            // http bearer authentication required
-            await setBearerAuthToObject(localVarHeaderParameter, configuration)
-
-
-    
-            setSearchParams(localVarUrlObj, localVarQueryParameter);
-            let headersFromBaseOptions = baseOptions && baseOptions.headers ? baseOptions.headers : {};
-            localVarRequestOptions.headers = {...localVarHeaderParameter, ...headersFromBaseOptions, ...options.headers};
-
-            return {
-                url: toPathString(localVarUrlObj),
-                options: localVarRequestOptions,
-            };
-        },
-        /**
-         * 
          * @summary آژانس
          * @param {number} id 
          * @param {*} [options] Override http request option.
@@ -1379,6 +1288,69 @@ export const ControlPanelApiAxiosParamCreator = function (configuration?: Config
         },
         /**
          * 
+         * @summary عقد قرارداد برای آژانس
+         * @param {number} [agencyId] کد آژانس
+         * @param {number} [packageId] کد بسته
+         * @param {number} [duration] مدت اعتبار
+         * @param {string} [price] قیمت تمام شده
+         * @param {string} [description] توضیحات
+         * @param {*} [options] Override http request option.
+         * @throws {RequiredError}
+         */
+        apiControlPanelAgencyRegisterContractPost: async (agencyId?: number, packageId?: number, duration?: number, price?: string, description?: string, options: AxiosRequestConfig = {}): Promise<RequestArgs> => {
+            const localVarPath = `/api/ControlPanel/Agency/Register/Contract`;
+            // use dummy base URL string because the URL constructor only accepts absolute URLs.
+            const localVarUrlObj = new URL(localVarPath, DUMMY_BASE_URL);
+            let baseOptions;
+            if (configuration) {
+                baseOptions = configuration.baseOptions;
+            }
+
+            const localVarRequestOptions = { method: 'POST', ...baseOptions, ...options};
+            const localVarHeaderParameter = {} as any;
+            const localVarQueryParameter = {} as any;
+            const localVarFormParams = new ((configuration && configuration.formDataCtor) || FormData)();
+
+            // authentication Bearer required
+            // http bearer authentication required
+            await setBearerAuthToObject(localVarHeaderParameter, configuration)
+
+
+            if (agencyId !== undefined) { 
+                localVarFormParams.append('AgencyId', agencyId as any);
+            }
+    
+            if (packageId !== undefined) { 
+                localVarFormParams.append('PackageId', packageId as any);
+            }
+    
+            if (duration !== undefined) { 
+                localVarFormParams.append('Duration', duration as any);
+            }
+    
+            if (price !== undefined) { 
+                localVarFormParams.append('Price', price as any);
+            }
+    
+            if (description !== undefined) { 
+                localVarFormParams.append('Description', description as any);
+            }
+    
+    
+            localVarHeaderParameter['Content-Type'] = 'multipart/form-data';
+    
+            setSearchParams(localVarUrlObj, localVarQueryParameter);
+            let headersFromBaseOptions = baseOptions && baseOptions.headers ? baseOptions.headers : {};
+            localVarRequestOptions.headers = {...localVarHeaderParameter, ...headersFromBaseOptions, ...options.headers};
+            localVarRequestOptions.data = localVarFormParams;
+
+            return {
+                url: toPathString(localVarUrlObj),
+                options: localVarRequestOptions,
+            };
+        },
+        /**
+         * 
          * @summary تایید آژانس توسط پرسنل
          * @param {number} agencyId 
          * @param {*} [options] Override http request option.
@@ -1472,39 +1444,6 @@ export const ControlPanelApiAxiosParamCreator = function (configuration?: Config
             let headersFromBaseOptions = baseOptions && baseOptions.headers ? baseOptions.headers : {};
             localVarRequestOptions.headers = {...localVarHeaderParameter, ...headersFromBaseOptions, ...options.headers};
             localVarRequestOptions.data = localVarFormParams;
-
-            return {
-                url: toPathString(localVarUrlObj),
-                options: localVarRequestOptions,
-            };
-        },
-        /**
-         * 
-         * @param {*} [options] Override http request option.
-         * @throws {RequiredError}
-         */
-        apiControlPanelDeletePackageGet: async (options: AxiosRequestConfig = {}): Promise<RequestArgs> => {
-            const localVarPath = `/api/ControlPanel/DeletePackage`;
-            // use dummy base URL string because the URL constructor only accepts absolute URLs.
-            const localVarUrlObj = new URL(localVarPath, DUMMY_BASE_URL);
-            let baseOptions;
-            if (configuration) {
-                baseOptions = configuration.baseOptions;
-            }
-
-            const localVarRequestOptions = { method: 'GET', ...baseOptions, ...options};
-            const localVarHeaderParameter = {} as any;
-            const localVarQueryParameter = {} as any;
-
-            // authentication Bearer required
-            // http bearer authentication required
-            await setBearerAuthToObject(localVarHeaderParameter, configuration)
-
-
-    
-            setSearchParams(localVarUrlObj, localVarQueryParameter);
-            let headersFromBaseOptions = baseOptions && baseOptions.headers ? baseOptions.headers : {};
-            localVarRequestOptions.headers = {...localVarHeaderParameter, ...headersFromBaseOptions, ...options.headers};
 
             return {
                 url: toPathString(localVarUrlObj),
@@ -1777,39 +1716,6 @@ export const ControlPanelApiAxiosParamCreator = function (configuration?: Config
          * @param {*} [options] Override http request option.
          * @throws {RequiredError}
          */
-        apiControlPanelGetAgencyListGet: async (options: AxiosRequestConfig = {}): Promise<RequestArgs> => {
-            const localVarPath = `/api/ControlPanel/GetAgencyList`;
-            // use dummy base URL string because the URL constructor only accepts absolute URLs.
-            const localVarUrlObj = new URL(localVarPath, DUMMY_BASE_URL);
-            let baseOptions;
-            if (configuration) {
-                baseOptions = configuration.baseOptions;
-            }
-
-            const localVarRequestOptions = { method: 'GET', ...baseOptions, ...options};
-            const localVarHeaderParameter = {} as any;
-            const localVarQueryParameter = {} as any;
-
-            // authentication Bearer required
-            // http bearer authentication required
-            await setBearerAuthToObject(localVarHeaderParameter, configuration)
-
-
-    
-            setSearchParams(localVarUrlObj, localVarQueryParameter);
-            let headersFromBaseOptions = baseOptions && baseOptions.headers ? baseOptions.headers : {};
-            localVarRequestOptions.headers = {...localVarHeaderParameter, ...headersFromBaseOptions, ...options.headers};
-
-            return {
-                url: toPathString(localVarUrlObj),
-                options: localVarRequestOptions,
-            };
-        },
-        /**
-         * 
-         * @param {*} [options] Override http request option.
-         * @throws {RequiredError}
-         */
         apiControlPanelGetCityListGet: async (options: AxiosRequestConfig = {}): Promise<RequestArgs> => {
             const localVarPath = `/api/ControlPanel/GetCityList`;
             // use dummy base URL string because the URL constructor only accepts absolute URLs.
@@ -1878,39 +1784,6 @@ export const ControlPanelApiAxiosParamCreator = function (configuration?: Config
          */
         apiControlPanelGetMainBannerListGet: async (options: AxiosRequestConfig = {}): Promise<RequestArgs> => {
             const localVarPath = `/api/ControlPanel/GetMainBannerList`;
-            // use dummy base URL string because the URL constructor only accepts absolute URLs.
-            const localVarUrlObj = new URL(localVarPath, DUMMY_BASE_URL);
-            let baseOptions;
-            if (configuration) {
-                baseOptions = configuration.baseOptions;
-            }
-
-            const localVarRequestOptions = { method: 'GET', ...baseOptions, ...options};
-            const localVarHeaderParameter = {} as any;
-            const localVarQueryParameter = {} as any;
-
-            // authentication Bearer required
-            // http bearer authentication required
-            await setBearerAuthToObject(localVarHeaderParameter, configuration)
-
-
-    
-            setSearchParams(localVarUrlObj, localVarQueryParameter);
-            let headersFromBaseOptions = baseOptions && baseOptions.headers ? baseOptions.headers : {};
-            localVarRequestOptions.headers = {...localVarHeaderParameter, ...headersFromBaseOptions, ...options.headers};
-
-            return {
-                url: toPathString(localVarUrlObj),
-                options: localVarRequestOptions,
-            };
-        },
-        /**
-         * 
-         * @param {*} [options] Override http request option.
-         * @throws {RequiredError}
-         */
-        apiControlPanelGetPackageListGet: async (options: AxiosRequestConfig = {}): Promise<RequestArgs> => {
-            const localVarPath = `/api/ControlPanel/GetPackageList`;
             // use dummy base URL string because the URL constructor only accepts absolute URLs.
             const localVarUrlObj = new URL(localVarPath, DUMMY_BASE_URL);
             let baseOptions;
@@ -2685,6 +2558,190 @@ export const ControlPanelApiAxiosParamCreator = function (configuration?: Config
         },
         /**
          * 
+         * @summary افزودن بسته
+         * @param {string} [packageName] 包裹名称
+         * @param {boolean} [active] 包裹类型
+         * @param {string} [duration] 包裹类型
+         * @param {string} [price] 包裹类型
+         * @param {Array<CreatePackageReq>} [createPackageReq] 
+         * @param {*} [options] Override http request option.
+         * @throws {RequiredError}
+         */
+        apiControlPanelPackageCreatePost: async (packageName?: string, active?: boolean, duration?: string, price?: string, createPackageReq?: Array<CreatePackageReq>, options: AxiosRequestConfig = {}): Promise<RequestArgs> => {
+            const localVarPath = `/api/ControlPanel/Package/Create`;
+            // use dummy base URL string because the URL constructor only accepts absolute URLs.
+            const localVarUrlObj = new URL(localVarPath, DUMMY_BASE_URL);
+            let baseOptions;
+            if (configuration) {
+                baseOptions = configuration.baseOptions;
+            }
+
+            const localVarRequestOptions = { method: 'POST', ...baseOptions, ...options};
+            const localVarHeaderParameter = {} as any;
+            const localVarQueryParameter = {} as any;
+
+            // authentication Bearer required
+            // http bearer authentication required
+            await setBearerAuthToObject(localVarHeaderParameter, configuration)
+
+            if (packageName !== undefined) {
+                localVarQueryParameter['PackageName'] = packageName;
+            }
+
+            if (active !== undefined) {
+                localVarQueryParameter['Active'] = active;
+            }
+
+            if (duration !== undefined) {
+                localVarQueryParameter['Duration'] = duration;
+            }
+
+            if (price !== undefined) {
+                localVarQueryParameter['Price'] = price;
+            }
+
+
+    
+            localVarHeaderParameter['Content-Type'] = 'application/json';
+
+            setSearchParams(localVarUrlObj, localVarQueryParameter);
+            let headersFromBaseOptions = baseOptions && baseOptions.headers ? baseOptions.headers : {};
+            localVarRequestOptions.headers = {...localVarHeaderParameter, ...headersFromBaseOptions, ...options.headers};
+            localVarRequestOptions.data = serializeDataIfNeeded(createPackageReq, localVarRequestOptions, configuration)
+
+            return {
+                url: toPathString(localVarUrlObj),
+                options: localVarRequestOptions,
+            };
+        },
+        /**
+         * 
+         * @summary لیست پکیج ها
+         * @param {'MostPopular' | 'Newest' | 'Oldest' | 'MostExpensive' | 'Cheapest'} [order] 
+         * @param {'Active' | 'Inactive'} [type] 
+         * @param {number} [currentPage] صفحه جاری
+         * @param {number} [pageSize] تعداد رکورد در هر صفحه
+         * @param {*} [options] Override http request option.
+         * @throws {RequiredError}
+         */
+        apiControlPanelPackageGet: async (order?: 'MostPopular' | 'Newest' | 'Oldest' | 'MostExpensive' | 'Cheapest', type?: 'Active' | 'Inactive', currentPage?: number, pageSize?: number, options: AxiosRequestConfig = {}): Promise<RequestArgs> => {
+            const localVarPath = `/api/ControlPanel/Package`;
+            // use dummy base URL string because the URL constructor only accepts absolute URLs.
+            const localVarUrlObj = new URL(localVarPath, DUMMY_BASE_URL);
+            let baseOptions;
+            if (configuration) {
+                baseOptions = configuration.baseOptions;
+            }
+
+            const localVarRequestOptions = { method: 'GET', ...baseOptions, ...options};
+            const localVarHeaderParameter = {} as any;
+            const localVarQueryParameter = {} as any;
+
+            // authentication Bearer required
+            // http bearer authentication required
+            await setBearerAuthToObject(localVarHeaderParameter, configuration)
+
+            if (order !== undefined) {
+                localVarQueryParameter['Order'] = order;
+            }
+
+            if (type !== undefined) {
+                localVarQueryParameter['Type'] = type;
+            }
+
+            if (currentPage !== undefined) {
+                localVarQueryParameter['CurrentPage'] = currentPage;
+            }
+
+            if (pageSize !== undefined) {
+                localVarQueryParameter['PageSize'] = pageSize;
+            }
+
+
+    
+            setSearchParams(localVarUrlObj, localVarQueryParameter);
+            let headersFromBaseOptions = baseOptions && baseOptions.headers ? baseOptions.headers : {};
+            localVarRequestOptions.headers = {...localVarHeaderParameter, ...headersFromBaseOptions, ...options.headers};
+
+            return {
+                url: toPathString(localVarUrlObj),
+                options: localVarRequestOptions,
+            };
+        },
+        /**
+         * 
+         * @summary حذف بسته
+         * @param {number} packageId 
+         * @param {*} [options] Override http request option.
+         * @throws {RequiredError}
+         */
+        apiControlPanelPackagePackageIdDelete: async (packageId: number, options: AxiosRequestConfig = {}): Promise<RequestArgs> => {
+            // verify required parameter 'packageId' is not null or undefined
+            assertParamExists('apiControlPanelPackagePackageIdDelete', 'packageId', packageId)
+            const localVarPath = `/api/ControlPanel/Package/{packageId}`
+                .replace(`{${"packageId"}}`, encodeURIComponent(String(packageId)));
+            // use dummy base URL string because the URL constructor only accepts absolute URLs.
+            const localVarUrlObj = new URL(localVarPath, DUMMY_BASE_URL);
+            let baseOptions;
+            if (configuration) {
+                baseOptions = configuration.baseOptions;
+            }
+
+            const localVarRequestOptions = { method: 'DELETE', ...baseOptions, ...options};
+            const localVarHeaderParameter = {} as any;
+            const localVarQueryParameter = {} as any;
+
+            // authentication Bearer required
+            // http bearer authentication required
+            await setBearerAuthToObject(localVarHeaderParameter, configuration)
+
+
+    
+            setSearchParams(localVarUrlObj, localVarQueryParameter);
+            let headersFromBaseOptions = baseOptions && baseOptions.headers ? baseOptions.headers : {};
+            localVarRequestOptions.headers = {...localVarHeaderParameter, ...headersFromBaseOptions, ...options.headers};
+
+            return {
+                url: toPathString(localVarUrlObj),
+                options: localVarRequestOptions,
+            };
+        },
+        /**
+         * 
+         * @summary محصولات
+         * @param {*} [options] Override http request option.
+         * @throws {RequiredError}
+         */
+        apiControlPanelProductGet: async (options: AxiosRequestConfig = {}): Promise<RequestArgs> => {
+            const localVarPath = `/api/ControlPanel/Product`;
+            // use dummy base URL string because the URL constructor only accepts absolute URLs.
+            const localVarUrlObj = new URL(localVarPath, DUMMY_BASE_URL);
+            let baseOptions;
+            if (configuration) {
+                baseOptions = configuration.baseOptions;
+            }
+
+            const localVarRequestOptions = { method: 'GET', ...baseOptions, ...options};
+            const localVarHeaderParameter = {} as any;
+            const localVarQueryParameter = {} as any;
+
+            // authentication Bearer required
+            // http bearer authentication required
+            await setBearerAuthToObject(localVarHeaderParameter, configuration)
+
+
+    
+            setSearchParams(localVarUrlObj, localVarQueryParameter);
+            let headersFromBaseOptions = baseOptions && baseOptions.headers ? baseOptions.headers : {};
+            localVarRequestOptions.headers = {...localVarHeaderParameter, ...headersFromBaseOptions, ...options.headers};
+
+            return {
+                url: toPathString(localVarUrlObj),
+                options: localVarRequestOptions,
+            };
+        },
+        /**
+         * 
          * @summary تصویر کیو آر کد
          * @param {number} adviserId 
          * @param {*} [options] Override http request option.
@@ -3088,26 +3145,8 @@ export const ControlPanelApiFp = function(configuration?: Configuration) {
          * @param {*} [options] Override http request option.
          * @throws {RequiredError}
          */
-        async apiControlPanelAdHitsStaticsGet(options?: AxiosRequestConfig): Promise<(axios?: AxiosInstance, basePath?: string) => AxiosPromise<void>> {
-            const localVarAxiosArgs = await localVarAxiosParamCreator.apiControlPanelAdHitsStaticsGet(options);
-            return createRequestFunction(localVarAxiosArgs, globalAxios, BASE_PATH, configuration);
-        },
-        /**
-         * 
-         * @param {*} [options] Override http request option.
-         * @throws {RequiredError}
-         */
         async apiControlPanelAddMainBannerGet(options?: AxiosRequestConfig): Promise<(axios?: AxiosInstance, basePath?: string) => AxiosPromise<void>> {
             const localVarAxiosArgs = await localVarAxiosParamCreator.apiControlPanelAddMainBannerGet(options);
-            return createRequestFunction(localVarAxiosArgs, globalAxios, BASE_PATH, configuration);
-        },
-        /**
-         * 
-         * @param {*} [options] Override http request option.
-         * @throws {RequiredError}
-         */
-        async apiControlPanelAddPackageGet(options?: AxiosRequestConfig): Promise<(axios?: AxiosInstance, basePath?: string) => AxiosPromise<void>> {
-            const localVarAxiosArgs = await localVarAxiosParamCreator.apiControlPanelAddPackageGet(options);
             return createRequestFunction(localVarAxiosArgs, globalAxios, BASE_PATH, configuration);
         },
         /**
@@ -3308,15 +3347,6 @@ export const ControlPanelApiFp = function(configuration?: Configuration) {
         },
         /**
          * 
-         * @param {*} [options] Override http request option.
-         * @throws {RequiredError}
-         */
-        async apiControlPanelAgencyContractPost(options?: AxiosRequestConfig): Promise<(axios?: AxiosInstance, basePath?: string) => AxiosPromise<void>> {
-            const localVarAxiosArgs = await localVarAxiosParamCreator.apiControlPanelAgencyContractPost(options);
-            return createRequestFunction(localVarAxiosArgs, globalAxios, BASE_PATH, configuration);
-        },
-        /**
-         * 
          * @summary آژانس
          * @param {number} id 
          * @param {*} [options] Override http request option.
@@ -3387,6 +3417,21 @@ export const ControlPanelApiFp = function(configuration?: Configuration) {
         },
         /**
          * 
+         * @summary عقد قرارداد برای آژانس
+         * @param {number} [agencyId] کد آژانس
+         * @param {number} [packageId] کد بسته
+         * @param {number} [duration] مدت اعتبار
+         * @param {string} [price] قیمت تمام شده
+         * @param {string} [description] توضیحات
+         * @param {*} [options] Override http request option.
+         * @throws {RequiredError}
+         */
+        async apiControlPanelAgencyRegisterContractPost(agencyId?: number, packageId?: number, duration?: number, price?: string, description?: string, options?: AxiosRequestConfig): Promise<(axios?: AxiosInstance, basePath?: string) => AxiosPromise<string>> {
+            const localVarAxiosArgs = await localVarAxiosParamCreator.apiControlPanelAgencyRegisterContractPost(agencyId, packageId, duration, price, description, options);
+            return createRequestFunction(localVarAxiosArgs, globalAxios, BASE_PATH, configuration);
+        },
+        /**
+         * 
          * @summary تایید آژانس توسط پرسنل
          * @param {number} agencyId 
          * @param {*} [options] Override http request option.
@@ -3409,15 +3454,6 @@ export const ControlPanelApiFp = function(configuration?: Configuration) {
          */
         async apiControlPanelApkUploadPost(versionName?: string, versionNumber?: string, required?: boolean, path?: any, notes?: string, options?: AxiosRequestConfig): Promise<(axios?: AxiosInstance, basePath?: string) => AxiosPromise<string>> {
             const localVarAxiosArgs = await localVarAxiosParamCreator.apiControlPanelApkUploadPost(versionName, versionNumber, required, path, notes, options);
-            return createRequestFunction(localVarAxiosArgs, globalAxios, BASE_PATH, configuration);
-        },
-        /**
-         * 
-         * @param {*} [options] Override http request option.
-         * @throws {RequiredError}
-         */
-        async apiControlPanelDeletePackageGet(options?: AxiosRequestConfig): Promise<(axios?: AxiosInstance, basePath?: string) => AxiosPromise<void>> {
-            const localVarAxiosArgs = await localVarAxiosParamCreator.apiControlPanelDeletePackageGet(options);
             return createRequestFunction(localVarAxiosArgs, globalAxios, BASE_PATH, configuration);
         },
         /**
@@ -3492,15 +3528,6 @@ export const ControlPanelApiFp = function(configuration?: Configuration) {
          * @param {*} [options] Override http request option.
          * @throws {RequiredError}
          */
-        async apiControlPanelGetAgencyListGet(options?: AxiosRequestConfig): Promise<(axios?: AxiosInstance, basePath?: string) => AxiosPromise<void>> {
-            const localVarAxiosArgs = await localVarAxiosParamCreator.apiControlPanelGetAgencyListGet(options);
-            return createRequestFunction(localVarAxiosArgs, globalAxios, BASE_PATH, configuration);
-        },
-        /**
-         * 
-         * @param {*} [options] Override http request option.
-         * @throws {RequiredError}
-         */
         async apiControlPanelGetCityListGet(options?: AxiosRequestConfig): Promise<(axios?: AxiosInstance, basePath?: string) => AxiosPromise<void>> {
             const localVarAxiosArgs = await localVarAxiosParamCreator.apiControlPanelGetCityListGet(options);
             return createRequestFunction(localVarAxiosArgs, globalAxios, BASE_PATH, configuration);
@@ -3521,15 +3548,6 @@ export const ControlPanelApiFp = function(configuration?: Configuration) {
          */
         async apiControlPanelGetMainBannerListGet(options?: AxiosRequestConfig): Promise<(axios?: AxiosInstance, basePath?: string) => AxiosPromise<void>> {
             const localVarAxiosArgs = await localVarAxiosParamCreator.apiControlPanelGetMainBannerListGet(options);
-            return createRequestFunction(localVarAxiosArgs, globalAxios, BASE_PATH, configuration);
-        },
-        /**
-         * 
-         * @param {*} [options] Override http request option.
-         * @throws {RequiredError}
-         */
-        async apiControlPanelGetPackageListGet(options?: AxiosRequestConfig): Promise<(axios?: AxiosInstance, basePath?: string) => AxiosPromise<void>> {
-            const localVarAxiosArgs = await localVarAxiosParamCreator.apiControlPanelGetPackageListGet(options);
             return createRequestFunction(localVarAxiosArgs, globalAxios, BASE_PATH, configuration);
         },
         /**
@@ -3740,6 +3758,56 @@ export const ControlPanelApiFp = function(configuration?: Configuration) {
         },
         /**
          * 
+         * @summary افزودن بسته
+         * @param {string} [packageName] 包裹名称
+         * @param {boolean} [active] 包裹类型
+         * @param {string} [duration] 包裹类型
+         * @param {string} [price] 包裹类型
+         * @param {Array<CreatePackageReq>} [createPackageReq] 
+         * @param {*} [options] Override http request option.
+         * @throws {RequiredError}
+         */
+        async apiControlPanelPackageCreatePost(packageName?: string, active?: boolean, duration?: string, price?: string, createPackageReq?: Array<CreatePackageReq>, options?: AxiosRequestConfig): Promise<(axios?: AxiosInstance, basePath?: string) => AxiosPromise<PackageToReturnDto>> {
+            const localVarAxiosArgs = await localVarAxiosParamCreator.apiControlPanelPackageCreatePost(packageName, active, duration, price, createPackageReq, options);
+            return createRequestFunction(localVarAxiosArgs, globalAxios, BASE_PATH, configuration);
+        },
+        /**
+         * 
+         * @summary لیست پکیج ها
+         * @param {'MostPopular' | 'Newest' | 'Oldest' | 'MostExpensive' | 'Cheapest'} [order] 
+         * @param {'Active' | 'Inactive'} [type] 
+         * @param {number} [currentPage] صفحه جاری
+         * @param {number} [pageSize] تعداد رکورد در هر صفحه
+         * @param {*} [options] Override http request option.
+         * @throws {RequiredError}
+         */
+        async apiControlPanelPackageGet(order?: 'MostPopular' | 'Newest' | 'Oldest' | 'MostExpensive' | 'Cheapest', type?: 'Active' | 'Inactive', currentPage?: number, pageSize?: number, options?: AxiosRequestConfig): Promise<(axios?: AxiosInstance, basePath?: string) => AxiosPromise<PackageToReturnDtoPagedList>> {
+            const localVarAxiosArgs = await localVarAxiosParamCreator.apiControlPanelPackageGet(order, type, currentPage, pageSize, options);
+            return createRequestFunction(localVarAxiosArgs, globalAxios, BASE_PATH, configuration);
+        },
+        /**
+         * 
+         * @summary حذف بسته
+         * @param {number} packageId 
+         * @param {*} [options] Override http request option.
+         * @throws {RequiredError}
+         */
+        async apiControlPanelPackagePackageIdDelete(packageId: number, options?: AxiosRequestConfig): Promise<(axios?: AxiosInstance, basePath?: string) => AxiosPromise<string>> {
+            const localVarAxiosArgs = await localVarAxiosParamCreator.apiControlPanelPackagePackageIdDelete(packageId, options);
+            return createRequestFunction(localVarAxiosArgs, globalAxios, BASE_PATH, configuration);
+        },
+        /**
+         * 
+         * @summary محصولات
+         * @param {*} [options] Override http request option.
+         * @throws {RequiredError}
+         */
+        async apiControlPanelProductGet(options?: AxiosRequestConfig): Promise<(axios?: AxiosInstance, basePath?: string) => AxiosPromise<Array<ProductsToReturnDto>>> {
+            const localVarAxiosArgs = await localVarAxiosParamCreator.apiControlPanelProductGet(options);
+            return createRequestFunction(localVarAxiosArgs, globalAxios, BASE_PATH, configuration);
+        },
+        /**
+         * 
          * @summary تصویر کیو آر کد
          * @param {number} adviserId 
          * @param {*} [options] Override http request option.
@@ -3906,24 +3974,8 @@ export const ControlPanelApiFactory = function (configuration?: Configuration, b
          * @param {*} [options] Override http request option.
          * @throws {RequiredError}
          */
-        apiControlPanelAdHitsStaticsGet(options?: any): AxiosPromise<void> {
-            return localVarFp.apiControlPanelAdHitsStaticsGet(options).then((request) => request(axios, basePath));
-        },
-        /**
-         * 
-         * @param {*} [options] Override http request option.
-         * @throws {RequiredError}
-         */
         apiControlPanelAddMainBannerGet(options?: any): AxiosPromise<void> {
             return localVarFp.apiControlPanelAddMainBannerGet(options).then((request) => request(axios, basePath));
-        },
-        /**
-         * 
-         * @param {*} [options] Override http request option.
-         * @throws {RequiredError}
-         */
-        apiControlPanelAddPackageGet(options?: any): AxiosPromise<void> {
-            return localVarFp.apiControlPanelAddPackageGet(options).then((request) => request(axios, basePath));
         },
         /**
          * 
@@ -4104,14 +4156,6 @@ export const ControlPanelApiFactory = function (configuration?: Configuration, b
         },
         /**
          * 
-         * @param {*} [options] Override http request option.
-         * @throws {RequiredError}
-         */
-        apiControlPanelAgencyContractPost(options?: any): AxiosPromise<void> {
-            return localVarFp.apiControlPanelAgencyContractPost(options).then((request) => request(axios, basePath));
-        },
-        /**
-         * 
          * @summary آژانس
          * @param {number} id 
          * @param {*} [options] Override http request option.
@@ -4176,6 +4220,20 @@ export const ControlPanelApiFactory = function (configuration?: Configuration, b
         },
         /**
          * 
+         * @summary عقد قرارداد برای آژانس
+         * @param {number} [agencyId] کد آژانس
+         * @param {number} [packageId] کد بسته
+         * @param {number} [duration] مدت اعتبار
+         * @param {string} [price] قیمت تمام شده
+         * @param {string} [description] توضیحات
+         * @param {*} [options] Override http request option.
+         * @throws {RequiredError}
+         */
+        apiControlPanelAgencyRegisterContractPost(agencyId?: number, packageId?: number, duration?: number, price?: string, description?: string, options?: any): AxiosPromise<string> {
+            return localVarFp.apiControlPanelAgencyRegisterContractPost(agencyId, packageId, duration, price, description, options).then((request) => request(axios, basePath));
+        },
+        /**
+         * 
          * @summary تایید آژانس توسط پرسنل
          * @param {number} agencyId 
          * @param {*} [options] Override http request option.
@@ -4197,14 +4255,6 @@ export const ControlPanelApiFactory = function (configuration?: Configuration, b
          */
         apiControlPanelApkUploadPost(versionName?: string, versionNumber?: string, required?: boolean, path?: any, notes?: string, options?: any): AxiosPromise<string> {
             return localVarFp.apiControlPanelApkUploadPost(versionName, versionNumber, required, path, notes, options).then((request) => request(axios, basePath));
-        },
-        /**
-         * 
-         * @param {*} [options] Override http request option.
-         * @throws {RequiredError}
-         */
-        apiControlPanelDeletePackageGet(options?: any): AxiosPromise<void> {
-            return localVarFp.apiControlPanelDeletePackageGet(options).then((request) => request(axios, basePath));
         },
         /**
          * 
@@ -4273,14 +4323,6 @@ export const ControlPanelApiFactory = function (configuration?: Configuration, b
          * @param {*} [options] Override http request option.
          * @throws {RequiredError}
          */
-        apiControlPanelGetAgencyListGet(options?: any): AxiosPromise<void> {
-            return localVarFp.apiControlPanelGetAgencyListGet(options).then((request) => request(axios, basePath));
-        },
-        /**
-         * 
-         * @param {*} [options] Override http request option.
-         * @throws {RequiredError}
-         */
         apiControlPanelGetCityListGet(options?: any): AxiosPromise<void> {
             return localVarFp.apiControlPanelGetCityListGet(options).then((request) => request(axios, basePath));
         },
@@ -4299,14 +4341,6 @@ export const ControlPanelApiFactory = function (configuration?: Configuration, b
          */
         apiControlPanelGetMainBannerListGet(options?: any): AxiosPromise<void> {
             return localVarFp.apiControlPanelGetMainBannerListGet(options).then((request) => request(axios, basePath));
-        },
-        /**
-         * 
-         * @param {*} [options] Override http request option.
-         * @throws {RequiredError}
-         */
-        apiControlPanelGetPackageListGet(options?: any): AxiosPromise<void> {
-            return localVarFp.apiControlPanelGetPackageListGet(options).then((request) => request(axios, basePath));
         },
         /**
          * 
@@ -4496,6 +4530,52 @@ export const ControlPanelApiFactory = function (configuration?: Configuration, b
         },
         /**
          * 
+         * @summary افزودن بسته
+         * @param {string} [packageName] 包裹名称
+         * @param {boolean} [active] 包裹类型
+         * @param {string} [duration] 包裹类型
+         * @param {string} [price] 包裹类型
+         * @param {Array<CreatePackageReq>} [createPackageReq] 
+         * @param {*} [options] Override http request option.
+         * @throws {RequiredError}
+         */
+        apiControlPanelPackageCreatePost(packageName?: string, active?: boolean, duration?: string, price?: string, createPackageReq?: Array<CreatePackageReq>, options?: any): AxiosPromise<PackageToReturnDto> {
+            return localVarFp.apiControlPanelPackageCreatePost(packageName, active, duration, price, createPackageReq, options).then((request) => request(axios, basePath));
+        },
+        /**
+         * 
+         * @summary لیست پکیج ها
+         * @param {'MostPopular' | 'Newest' | 'Oldest' | 'MostExpensive' | 'Cheapest'} [order] 
+         * @param {'Active' | 'Inactive'} [type] 
+         * @param {number} [currentPage] صفحه جاری
+         * @param {number} [pageSize] تعداد رکورد در هر صفحه
+         * @param {*} [options] Override http request option.
+         * @throws {RequiredError}
+         */
+        apiControlPanelPackageGet(order?: 'MostPopular' | 'Newest' | 'Oldest' | 'MostExpensive' | 'Cheapest', type?: 'Active' | 'Inactive', currentPage?: number, pageSize?: number, options?: any): AxiosPromise<PackageToReturnDtoPagedList> {
+            return localVarFp.apiControlPanelPackageGet(order, type, currentPage, pageSize, options).then((request) => request(axios, basePath));
+        },
+        /**
+         * 
+         * @summary حذف بسته
+         * @param {number} packageId 
+         * @param {*} [options] Override http request option.
+         * @throws {RequiredError}
+         */
+        apiControlPanelPackagePackageIdDelete(packageId: number, options?: any): AxiosPromise<string> {
+            return localVarFp.apiControlPanelPackagePackageIdDelete(packageId, options).then((request) => request(axios, basePath));
+        },
+        /**
+         * 
+         * @summary محصولات
+         * @param {*} [options] Override http request option.
+         * @throws {RequiredError}
+         */
+        apiControlPanelProductGet(options?: any): AxiosPromise<Array<ProductsToReturnDto>> {
+            return localVarFp.apiControlPanelProductGet(options).then((request) => request(axios, basePath));
+        },
+        /**
+         * 
          * @summary تصویر کیو آر کد
          * @param {number} adviserId 
          * @param {*} [options] Override http request option.
@@ -4653,23 +4733,7 @@ export interface ControlPanelApiInterface {
      * @throws {RequiredError}
      * @memberof ControlPanelApiInterface
      */
-    apiControlPanelAdHitsStaticsGet(options?: AxiosRequestConfig): AxiosPromise<void>;
-
-    /**
-     * 
-     * @param {*} [options] Override http request option.
-     * @throws {RequiredError}
-     * @memberof ControlPanelApiInterface
-     */
     apiControlPanelAddMainBannerGet(options?: AxiosRequestConfig): AxiosPromise<void>;
-
-    /**
-     * 
-     * @param {*} [options] Override http request option.
-     * @throws {RequiredError}
-     * @memberof ControlPanelApiInterface
-     */
-    apiControlPanelAddPackageGet(options?: AxiosRequestConfig): AxiosPromise<void>;
 
     /**
      * 
@@ -4850,14 +4914,6 @@ export interface ControlPanelApiInterface {
 
     /**
      * 
-     * @param {*} [options] Override http request option.
-     * @throws {RequiredError}
-     * @memberof ControlPanelApiInterface
-     */
-    apiControlPanelAgencyContractPost(options?: AxiosRequestConfig): AxiosPromise<void>;
-
-    /**
-     * 
      * @summary آژانس
      * @param {number} id 
      * @param {*} [options] Override http request option.
@@ -4922,6 +4978,20 @@ export interface ControlPanelApiInterface {
 
     /**
      * 
+     * @summary عقد قرارداد برای آژانس
+     * @param {number} [agencyId] کد آژانس
+     * @param {number} [packageId] کد بسته
+     * @param {number} [duration] مدت اعتبار
+     * @param {string} [price] قیمت تمام شده
+     * @param {string} [description] توضیحات
+     * @param {*} [options] Override http request option.
+     * @throws {RequiredError}
+     * @memberof ControlPanelApiInterface
+     */
+    apiControlPanelAgencyRegisterContractPost(agencyId?: number, packageId?: number, duration?: number, price?: string, description?: string, options?: AxiosRequestConfig): AxiosPromise<string>;
+
+    /**
+     * 
      * @summary تایید آژانس توسط پرسنل
      * @param {number} agencyId 
      * @param {*} [options] Override http request option.
@@ -4943,14 +5013,6 @@ export interface ControlPanelApiInterface {
      * @memberof ControlPanelApiInterface
      */
     apiControlPanelApkUploadPost(versionName?: string, versionNumber?: string, required?: boolean, path?: any, notes?: string, options?: AxiosRequestConfig): AxiosPromise<string>;
-
-    /**
-     * 
-     * @param {*} [options] Override http request option.
-     * @throws {RequiredError}
-     * @memberof ControlPanelApiInterface
-     */
-    apiControlPanelDeletePackageGet(options?: AxiosRequestConfig): AxiosPromise<void>;
 
     /**
      * 
@@ -5020,14 +5082,6 @@ export interface ControlPanelApiInterface {
      * @throws {RequiredError}
      * @memberof ControlPanelApiInterface
      */
-    apiControlPanelGetAgencyListGet(options?: AxiosRequestConfig): AxiosPromise<void>;
-
-    /**
-     * 
-     * @param {*} [options] Override http request option.
-     * @throws {RequiredError}
-     * @memberof ControlPanelApiInterface
-     */
     apiControlPanelGetCityListGet(options?: AxiosRequestConfig): AxiosPromise<void>;
 
     /**
@@ -5045,14 +5099,6 @@ export interface ControlPanelApiInterface {
      * @memberof ControlPanelApiInterface
      */
     apiControlPanelGetMainBannerListGet(options?: AxiosRequestConfig): AxiosPromise<void>;
-
-    /**
-     * 
-     * @param {*} [options] Override http request option.
-     * @throws {RequiredError}
-     * @memberof ControlPanelApiInterface
-     */
-    apiControlPanelGetPackageListGet(options?: AxiosRequestConfig): AxiosPromise<void>;
 
     /**
      * 
@@ -5242,6 +5288,52 @@ export interface ControlPanelApiInterface {
 
     /**
      * 
+     * @summary افزودن بسته
+     * @param {string} [packageName] 包裹名称
+     * @param {boolean} [active] 包裹类型
+     * @param {string} [duration] 包裹类型
+     * @param {string} [price] 包裹类型
+     * @param {Array<CreatePackageReq>} [createPackageReq] 
+     * @param {*} [options] Override http request option.
+     * @throws {RequiredError}
+     * @memberof ControlPanelApiInterface
+     */
+    apiControlPanelPackageCreatePost(packageName?: string, active?: boolean, duration?: string, price?: string, createPackageReq?: Array<CreatePackageReq>, options?: AxiosRequestConfig): AxiosPromise<PackageToReturnDto>;
+
+    /**
+     * 
+     * @summary لیست پکیج ها
+     * @param {'MostPopular' | 'Newest' | 'Oldest' | 'MostExpensive' | 'Cheapest'} [order] 
+     * @param {'Active' | 'Inactive'} [type] 
+     * @param {number} [currentPage] صفحه جاری
+     * @param {number} [pageSize] تعداد رکورد در هر صفحه
+     * @param {*} [options] Override http request option.
+     * @throws {RequiredError}
+     * @memberof ControlPanelApiInterface
+     */
+    apiControlPanelPackageGet(order?: 'MostPopular' | 'Newest' | 'Oldest' | 'MostExpensive' | 'Cheapest', type?: 'Active' | 'Inactive', currentPage?: number, pageSize?: number, options?: AxiosRequestConfig): AxiosPromise<PackageToReturnDtoPagedList>;
+
+    /**
+     * 
+     * @summary حذف بسته
+     * @param {number} packageId 
+     * @param {*} [options] Override http request option.
+     * @throws {RequiredError}
+     * @memberof ControlPanelApiInterface
+     */
+    apiControlPanelPackagePackageIdDelete(packageId: number, options?: AxiosRequestConfig): AxiosPromise<string>;
+
+    /**
+     * 
+     * @summary محصولات
+     * @param {*} [options] Override http request option.
+     * @throws {RequiredError}
+     * @memberof ControlPanelApiInterface
+     */
+    apiControlPanelProductGet(options?: AxiosRequestConfig): AxiosPromise<Array<ProductsToReturnDto>>;
+
+    /**
+     * 
      * @summary تصویر کیو آر کد
      * @param {number} adviserId 
      * @param {*} [options] Override http request option.
@@ -5411,28 +5503,8 @@ export class ControlPanelApi extends BaseAPI implements ControlPanelApiInterface
      * @throws {RequiredError}
      * @memberof ControlPanelApi
      */
-    public apiControlPanelAdHitsStaticsGet(options?: AxiosRequestConfig) {
-        return ControlPanelApiFp(this.configuration).apiControlPanelAdHitsStaticsGet(options).then((request) => request(this.axios, this.basePath));
-    }
-
-    /**
-     * 
-     * @param {*} [options] Override http request option.
-     * @throws {RequiredError}
-     * @memberof ControlPanelApi
-     */
     public apiControlPanelAddMainBannerGet(options?: AxiosRequestConfig) {
         return ControlPanelApiFp(this.configuration).apiControlPanelAddMainBannerGet(options).then((request) => request(this.axios, this.basePath));
-    }
-
-    /**
-     * 
-     * @param {*} [options] Override http request option.
-     * @throws {RequiredError}
-     * @memberof ControlPanelApi
-     */
-    public apiControlPanelAddPackageGet(options?: AxiosRequestConfig) {
-        return ControlPanelApiFp(this.configuration).apiControlPanelAddPackageGet(options).then((request) => request(this.axios, this.basePath));
     }
 
     /**
@@ -5652,16 +5724,6 @@ export class ControlPanelApi extends BaseAPI implements ControlPanelApiInterface
 
     /**
      * 
-     * @param {*} [options] Override http request option.
-     * @throws {RequiredError}
-     * @memberof ControlPanelApi
-     */
-    public apiControlPanelAgencyContractPost(options?: AxiosRequestConfig) {
-        return ControlPanelApiFp(this.configuration).apiControlPanelAgencyContractPost(options).then((request) => request(this.axios, this.basePath));
-    }
-
-    /**
-     * 
      * @summary آژانس
      * @param {number} id 
      * @param {*} [options] Override http request option.
@@ -5738,6 +5800,22 @@ export class ControlPanelApi extends BaseAPI implements ControlPanelApiInterface
 
     /**
      * 
+     * @summary عقد قرارداد برای آژانس
+     * @param {number} [agencyId] کد آژانس
+     * @param {number} [packageId] کد بسته
+     * @param {number} [duration] مدت اعتبار
+     * @param {string} [price] قیمت تمام شده
+     * @param {string} [description] توضیحات
+     * @param {*} [options] Override http request option.
+     * @throws {RequiredError}
+     * @memberof ControlPanelApi
+     */
+    public apiControlPanelAgencyRegisterContractPost(agencyId?: number, packageId?: number, duration?: number, price?: string, description?: string, options?: AxiosRequestConfig) {
+        return ControlPanelApiFp(this.configuration).apiControlPanelAgencyRegisterContractPost(agencyId, packageId, duration, price, description, options).then((request) => request(this.axios, this.basePath));
+    }
+
+    /**
+     * 
      * @summary تایید آژانس توسط پرسنل
      * @param {number} agencyId 
      * @param {*} [options] Override http request option.
@@ -5762,16 +5840,6 @@ export class ControlPanelApi extends BaseAPI implements ControlPanelApiInterface
      */
     public apiControlPanelApkUploadPost(versionName?: string, versionNumber?: string, required?: boolean, path?: any, notes?: string, options?: AxiosRequestConfig) {
         return ControlPanelApiFp(this.configuration).apiControlPanelApkUploadPost(versionName, versionNumber, required, path, notes, options).then((request) => request(this.axios, this.basePath));
-    }
-
-    /**
-     * 
-     * @param {*} [options] Override http request option.
-     * @throws {RequiredError}
-     * @memberof ControlPanelApi
-     */
-    public apiControlPanelDeletePackageGet(options?: AxiosRequestConfig) {
-        return ControlPanelApiFp(this.configuration).apiControlPanelDeletePackageGet(options).then((request) => request(this.axios, this.basePath));
     }
 
     /**
@@ -5852,16 +5920,6 @@ export class ControlPanelApi extends BaseAPI implements ControlPanelApiInterface
      * @throws {RequiredError}
      * @memberof ControlPanelApi
      */
-    public apiControlPanelGetAgencyListGet(options?: AxiosRequestConfig) {
-        return ControlPanelApiFp(this.configuration).apiControlPanelGetAgencyListGet(options).then((request) => request(this.axios, this.basePath));
-    }
-
-    /**
-     * 
-     * @param {*} [options] Override http request option.
-     * @throws {RequiredError}
-     * @memberof ControlPanelApi
-     */
     public apiControlPanelGetCityListGet(options?: AxiosRequestConfig) {
         return ControlPanelApiFp(this.configuration).apiControlPanelGetCityListGet(options).then((request) => request(this.axios, this.basePath));
     }
@@ -5884,16 +5942,6 @@ export class ControlPanelApi extends BaseAPI implements ControlPanelApiInterface
      */
     public apiControlPanelGetMainBannerListGet(options?: AxiosRequestConfig) {
         return ControlPanelApiFp(this.configuration).apiControlPanelGetMainBannerListGet(options).then((request) => request(this.axios, this.basePath));
-    }
-
-    /**
-     * 
-     * @param {*} [options] Override http request option.
-     * @throws {RequiredError}
-     * @memberof ControlPanelApi
-     */
-    public apiControlPanelGetPackageListGet(options?: AxiosRequestConfig) {
-        return ControlPanelApiFp(this.configuration).apiControlPanelGetPackageListGet(options).then((request) => request(this.axios, this.basePath));
     }
 
     /**
@@ -6120,6 +6168,60 @@ export class ControlPanelApi extends BaseAPI implements ControlPanelApiInterface
      */
     public apiControlPanelMoveNeighbourHoodsGet(options?: AxiosRequestConfig) {
         return ControlPanelApiFp(this.configuration).apiControlPanelMoveNeighbourHoodsGet(options).then((request) => request(this.axios, this.basePath));
+    }
+
+    /**
+     * 
+     * @summary افزودن بسته
+     * @param {string} [packageName] 包裹名称
+     * @param {boolean} [active] 包裹类型
+     * @param {string} [duration] 包裹类型
+     * @param {string} [price] 包裹类型
+     * @param {Array<CreatePackageReq>} [createPackageReq] 
+     * @param {*} [options] Override http request option.
+     * @throws {RequiredError}
+     * @memberof ControlPanelApi
+     */
+    public apiControlPanelPackageCreatePost(packageName?: string, active?: boolean, duration?: string, price?: string, createPackageReq?: Array<CreatePackageReq>, options?: AxiosRequestConfig) {
+        return ControlPanelApiFp(this.configuration).apiControlPanelPackageCreatePost(packageName, active, duration, price, createPackageReq, options).then((request) => request(this.axios, this.basePath));
+    }
+
+    /**
+     * 
+     * @summary لیست پکیج ها
+     * @param {'MostPopular' | 'Newest' | 'Oldest' | 'MostExpensive' | 'Cheapest'} [order] 
+     * @param {'Active' | 'Inactive'} [type] 
+     * @param {number} [currentPage] صفحه جاری
+     * @param {number} [pageSize] تعداد رکورد در هر صفحه
+     * @param {*} [options] Override http request option.
+     * @throws {RequiredError}
+     * @memberof ControlPanelApi
+     */
+    public apiControlPanelPackageGet(order?: 'MostPopular' | 'Newest' | 'Oldest' | 'MostExpensive' | 'Cheapest', type?: 'Active' | 'Inactive', currentPage?: number, pageSize?: number, options?: AxiosRequestConfig) {
+        return ControlPanelApiFp(this.configuration).apiControlPanelPackageGet(order, type, currentPage, pageSize, options).then((request) => request(this.axios, this.basePath));
+    }
+
+    /**
+     * 
+     * @summary حذف بسته
+     * @param {number} packageId 
+     * @param {*} [options] Override http request option.
+     * @throws {RequiredError}
+     * @memberof ControlPanelApi
+     */
+    public apiControlPanelPackagePackageIdDelete(packageId: number, options?: AxiosRequestConfig) {
+        return ControlPanelApiFp(this.configuration).apiControlPanelPackagePackageIdDelete(packageId, options).then((request) => request(this.axios, this.basePath));
+    }
+
+    /**
+     * 
+     * @summary محصولات
+     * @param {*} [options] Override http request option.
+     * @throws {RequiredError}
+     * @memberof ControlPanelApi
+     */
+    public apiControlPanelProductGet(options?: AxiosRequestConfig) {
+        return ControlPanelApiFp(this.configuration).apiControlPanelProductGet(options).then((request) => request(this.axios, this.basePath));
     }
 
     /**

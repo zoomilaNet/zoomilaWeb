@@ -59,6 +59,7 @@ model/city-dto-paged-list.ts
 model/city-dto.ts
 model/contract-to-return-dto-result-set.ts
 model/contract-to-return-dto.ts
+model/create-package-req.ts
 model/employee-to-return-dto-paged-list-result-set.ts
 model/employee-to-return-dto-paged-list.ts
 model/employee-to-return-dto.ts
@@ -88,8 +89,11 @@ model/neighbourhood-dto-paged-list-result-set.ts
 model/neighbourhood-dto-paged-list.ts
 model/neighbourhood-dto.ts
 model/neighbourhood-for-create-dto.ts
+model/package-to-return-dto-paged-list.ts
+model/package-to-return-dto.ts
 model/problem-details.ts
 model/products-dto.ts
+model/products-to-return-dto.ts
 model/province-dto-paged-list-result-set.ts
 model/province-dto-paged-list.ts
 model/province-dto.ts
