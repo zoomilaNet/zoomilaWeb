@@ -52,11 +52,6 @@ function CityOfProvince() {
             {
                 if (await checkNeighbourhoodsBlongCity(neighbourhoods[0])) {
                     dispatch(changeNeighbourhood([]))
-                    // let lenghth = Number(getCookie('neighbourLenghth'));
-                    // for (let i = 0; i < lenghth; i++) {
-                    //     removeCookies('neighbour' + i)
-                    // }
-                    // removeCookies('neighbourLenghth')
                 }
             }
         }

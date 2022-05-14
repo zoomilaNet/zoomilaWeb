@@ -3,20 +3,27 @@ import React, {useEffect, useState} from "react";
 import cityOfProvince from "../../../public/ProvincesAndCities.json";
 import Image from "next/image";
 import Slider from "../../slider/slider";
+import buildingTypeJson from "../../../public/BuildinType.json";
 
 export default function RentDetail({data}:{data:LetAd}){
     const [showImage, setShowImage] = useState(false);
+    const [provinceName,setProvinceName]=useState<string>("")
+    const [buildingType,setBuildingType]=useState<string>("")
     const showMapHandler = () => {
         setShowImage(true);
     }
-    let provinceName:string="";
+
     useEffect(() => {
         cityOfProvince.map(item => {
             if (item.CityId == Number(data.cityId)) {
-                provinceName = item.ProvinceName.toString()
+                setProvinceName(  item.ProvinceName.toString())
             }
         });
-
+        buildingTypeJson.map(item=>{
+            if (item.key == data.buildingType) {
+                setBuildingType(  item.value.toString())
+            }
+        });
     }, []);
     let showSlider:any;
     showSlider=data!.photos!.length==0?<div className="w-full h-full bg-no_image flex justify-center items-center"><Image src="/image/Zoomila_Logo.svg" alt="آگهی بدون عکس" width="197px" height="51px"/></div>:<Slider basePath={data!.photoPath as string} photos={data!.photos as string[]} photoSlug={data!.slug as string}/>
@@ -88,15 +95,15 @@ export default function RentDetail({data}:{data:LetAd}){
                 <img src="/image/Location.svg" alt="" />
                 <span className="flex flex-row mr-1">
                                         <p>آدرس:</p>
-                                        <span className="text-lg text-justify font-iransansbold mr-1"><p> استان:</p><p>{provinceName}</p><p>شهر: </p><p>{data.cityName}</p><p>محله: </p><p>{data.neibourhoodName}</p></span>
+                                        <span className="text-lg text-justify font-iransansbold mr-1 flex flex-row space-x-2"><p className="ml-2"> استان:</p><p>{provinceName}</p><p>شهر: </p><p>{data.cityName}</p><p>محله: </p><p>{data.neibourhoodName}</p></span>
                                     </span>
             </div>
 
             <div className="px-2 my-6">
                 <div className="rounded-t h-12 bg-hf_color text-white font-medium text-xl flex flex-col justify-center items-center"><p>مشخصات آگهی</p></div>
                 <div className="rounded-b p-2 bg-gray-100 flex flex-col justify-start space-y-2">
-                    <span className="flex flex-row items-center"><p className="ml-1">نو ملک:</p><p className="font-semibold">آپارتمان</p></span>
-                    <span className="flex flex-row items-center"><p className="ml-1">متراژ:</p><p className="font-semibold">80 متر</p></span>
+                    <span className="flex flex-row items-center"><p className="ml-1">نوع ملک:</p><p className="font-semibold">{buildingType}</p></span>
+                    <span className="flex flex-row items-center"><p className="ml-1">متراژ:</p><p className="font-semibold">{data.area} متر</p></span>
                     <span className="flex flex-row items-center"><p className="ml-1">شرایط معامله:</p><p className="font-semibold">فروش نقدی</p></span>
                     <span className="flex flex-row items-center"><p className="ml-1">سال ساخت:</p><p className="font-semibold">1384</p></span>
                     <span className="flex flex-row items-center"><p className="ml-1">طبقه:</p><p className="font-semibold">4</p></span>

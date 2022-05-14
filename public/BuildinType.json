@@ -1,0 +1,66 @@
+[
+  {
+    "key": "Apartment",
+    "value": "آپارتمان"
+  },
+  {
+    "key": "Home",
+    "value": "خانه"
+  },
+  {
+    "key": "Villa",
+    "value": "ویلا"
+  },
+  {
+    "key": "OldHouse",
+    "value": "کلنگی"
+  },
+  {
+    "key": "ResidentialLand",
+    "value": "زمین مسکونی"
+  },
+  {
+    "key": "Garden",
+    "value": "باغ"
+  },
+  {
+    "key": "Office",
+    "value": "دفتر کار"
+  },
+  {
+    "key": "Shop",
+    "value": "مغازه"
+  },
+  {
+    "key": "Clinic",
+    "value": "مطب"
+  },
+  {
+    "key": "FarmLand",
+    "value": "زمین زراعی"
+  },
+  {
+    "key": "CommercialLand",
+    "value": "زمین تجاری"
+  },
+  {
+    "key": "Store",
+    "value": "انبار"
+  },
+  {
+    "key": "IndustrialShed",
+    "value": "سوله"
+  },
+  {
+    "key": "Workshop",
+    "value": "کارگاه"
+  },
+  {
+    "key": "Factory",
+    "value": "کارخانه"
+  },
+  {
+    "key": "CoastalLand",
+    "value": "زمین ساحلی"
+  }
+]

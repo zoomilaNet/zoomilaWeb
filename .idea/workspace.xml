@@ -1,13 +1,12 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="85396787-6298-4985-82c3-6d22319d4af6" name="Default Changelist" comment="create neighbourhoods list and building list in listing page url and search by theme and serve page Bm">
-      <change afterPath="$PROJECT_DIR$/src/component/rentDetail/RentDetail.tsx" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/component/sellDetail/SellDetail.tsx" afterDir="false" />
+    <list default="true" id="85396787-6298-4985-82c3-6d22319d4af6" name="Default Changelist" comment="create detail page and method of fetch by url Bm">
+      <change afterPath="$PROJECT_DIR$/public/BuildinType.json" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/pages/[fsp]/[detail].tsx" beforeDir="false" afterPath="$PROJECT_DIR$/pages/[adstype]/[detail].tsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/component/advertisecard/AdvertiseCard.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/component/advertisecard/AdvertiseCard.tsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/component/letAdsCard/LetAdvertiseCard.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/component/letAdsCard/LetAdvertiseCard.tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/pages/cityofprovince/index.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/pages/cityofprovince/index.tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/component/rentDetail/RentDetail.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/component/rentDetail/RentDetail.tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/component/sellDetail/SellDetail.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/component/sellDetail/SellDetail.tsx" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -111,7 +110,8 @@
       <workItem from="1652242471680" duration="6636000" />
       <workItem from="1652252869371" duration="8943000" />
       <workItem from="1652266316718" duration="6465000" />
-      <workItem from="1652329682155" duration="11483000" />
+      <workItem from="1652329682155" duration="12095000" />
+      <workItem from="1652501779565" duration="5386000" />
     </task>
     <task id="LOCAL-00001" summary="add deactive button for pagination and home page Bm">
       <created>1651321324567</created>
@@ -323,7 +323,14 @@
       <option name="project" value="LOCAL" />
       <updated>1652261544768</updated>
     </task>
-    <option name="localTasksCounter" value="31" />
+    <task id="LOCAL-00031" summary="create detail page and method of fetch by url Bm">
+      <created>1652341899766</created>
+      <option name="number" value="00031" />
+      <option name="presentableId" value="LOCAL-00031" />
+      <option name="project" value="LOCAL" />
+      <updated>1652341899766</updated>
+    </task>
+    <option name="localTasksCounter" value="32" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -341,7 +348,6 @@
     </option>
   </component>
   <component name="VcsManagerConfiguration">
-    <MESSAGE value="add deactive button for pagination and home page Bm" />
     <MESSAGE value="convert img tag to image tag Bm" />
     <MESSAGE value="set pagination next and previous page button correct image Bm" />
     <MESSAGE value="fix seo problem and code problem for site speed Bm" />
@@ -366,7 +372,8 @@
     <MESSAGE value="change image layout of slider Bm" />
     <MESSAGE value="fix slider number Bm" />
     <MESSAGE value="create neighbourhoods list and building list in listing page url and search by theme and serve page Bm" />
-    <option name="LAST_COMMIT_MESSAGE" value="create neighbourhoods list and building list in listing page url and search by theme and serve page Bm" />
+    <MESSAGE value="create detail page and method of fetch by url Bm" />
+    <option name="LAST_COMMIT_MESSAGE" value="create detail page and method of fetch by url Bm" />
   </component>
   <component name="XSLT-Support.FileAssociations.UIState">
     <expand />
