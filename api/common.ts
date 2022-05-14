@@ -21,7 +21,7 @@ import { AxiosInstance, AxiosResponse } from 'axios';
  *
  * @export
  */
-export const DUMMY_BASE_URL = 'https://api.zoomila.net'
+export const DUMMY_BASE_URL = 'https://api.zoomila.com'
 
 /**
  *
