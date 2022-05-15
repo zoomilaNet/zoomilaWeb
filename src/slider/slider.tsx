@@ -53,13 +53,13 @@ function Slider({basePath, photos, photoSlug}: { basePath: string, photos: strin
             <Image src={photoUrl} alt={photoSlug} className="w-full h-full " loading="eager"
                                       layout="fill"/>
         </div>
-        <button id="RightArrow"
+        <button id={"RightArrow"+basePath}
                 onClick={nextSlide}
                 className="btn-slide next"
         >
             <img src='/image/rightarrow.svg' alt="جهت اسلایدر"/>
         </button>
-        <button id="LeftArrow"
+        <button id={"LeftArrow"+basePath}
                 onClick={prevSlide}
                 className="btn-slide prev"
         >

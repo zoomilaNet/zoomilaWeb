@@ -28,13 +28,13 @@ function AdvertiseCard({ dataSell}:{dataSell: SellAd }) {
             <div className="my-1 text-xs md:text-base text-gray_text">توضیحات</div>
             <div className="flex flex-row justify-between items-center text-sm md:text-lg my-2 md:my-4">
                 <div className="flex flex-row items-center">
-                    <Image src={dataSell.agencyLogo==null?"/image/aseman.png":dataSell.agencyLogo} alt="agencylogo" width="60px" height="60px" className="border rounded ml-4"/>
+                    <img src={dataSell.agencyLogo==null?"/image/aseman.png":dataSell.agencyLogo} alt="agencylogo"  className="border w-12 h-12 lg:w-20 lg:h-20 object-cover rounded ml-4"/>
                     <p >{dataSell.agencyName==null?"املاک آسمان":dataSell.agencyName}</p>
                 </div>
                 <div>
                     {dataSell.publishType!= SellAdPublishTypeEnum.Simple?<span className={dataSell.publishType== SellAdPublishTypeEnum.Featured?"bg-featured_ads_tag p-2 rounded ml-1 md:ml-3 text-black":dataSell.publishType== SellAdPublishTypeEnum.Occasion?"bg-featured_ads_tag p-2 rounded ml-1 md:ml-3 text-black":"p-2 rounded ml-1 md:ml-3 text-black"}>{dataSell.publishType== SellAdPublishTypeEnum.Featured?"فوری":dataSell.publishType== SellAdPublishTypeEnum.Occasion?"ویژه":""}</span>:null}
-                    <button id="SMSButton" className="p-3 lg:p-4 text-sm lg:text-lg rounded ml-1 md:ml-3 text-white bg-green_accent">پیامک</button>
-                    <button id="CallButton" className="p-3 lg:p-4 text-sm lg:text-lg rounded text-white bg-green_accent">تماس</button>
+                    <button id={"SMSButton"+dataSell.sellId} className="p-3 lg:p-4 text-sm lg:text-lg rounded ml-1 md:ml-3 text-white bg-green_accent">پیامک</button>
+                    <button id={"CallButton"+dataSell.sellId} className="p-3 lg:p-4 text-sm lg:text-lg rounded text-white bg-green_accent">تماس</button>
                 </div>
             </div>
         </div>

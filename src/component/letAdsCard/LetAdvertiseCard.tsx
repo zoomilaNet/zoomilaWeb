@@ -34,8 +34,8 @@ function LetAdvertiseCard({dataLet}:{dataLet:LetAd}){
                 </div>
                 <div>
                     {dataLet.publishType!= LetAdPublishTypeEnum.Simple?<span className={dataLet.publishType== LetAdPublishTypeEnum.Featured?"bg-featured_ads_tag p-2 rounded ml-1 md:ml-3 text-black":dataLet.publishType== LetAdPublishTypeEnum.Occasion?"bg-featured_ads_tag p-2 rounded ml-1 md:ml-3 text-black":"p-2 rounded ml-1 md:ml-3 text-black"}>{dataLet.publishType== LetAdPublishTypeEnum.Featured?"فوری":dataLet.publishType== LetAdPublishTypeEnum.Occasion?"ویژه":""}</span>:null}
-                    <button id="SMSButton" className="p-3 lg:p-4 text-sm lg:text-lg rounded ml-1 md:ml-3 text-white bg-green_accent">پیامک</button>
-                    <button id="CallButton" className="p-3 lg:p-4 text-sm lg:text-lg rounded text-white bg-green_accent">تماس</button>
+                    <button id={"SMSButton"+dataLet.letId} className="p-3 lg:p-4 text-sm lg:text-lg rounded ml-1 md:ml-3 text-white bg-green_accent">پیامک</button>
+                    <button id={"CallButton"+dataLet.letId} className="p-3 lg:p-4 text-sm lg:text-lg rounded text-white bg-green_accent">تماس</button>
                 </div>
             </div>
         </div>
