@@ -1809,10 +1809,12 @@ export const ControlPanelApiAxiosParamCreator = function (configuration?: Config
         },
         /**
          * 
-         * @param {number} [followUpCode] کد پیگیری
+         * @summary لیست پیگیری ها
+         * @param {string} [followUpCode] کد پیگیری
          * @param {number} [employeeId] بر اساس کارمند
+         * @param {string} [employeeName] نام کارمند
          * @param {number} [agencyId] کد آژانس
-         * @param {number} [agencyTrackingCode] کد پیگیری آژانس
+         * @param {string} [agencyTrackingCode] کد پیگیری آژانس
          * @param {string} [agencyName] نام آزانس
          * @param {string} [fromDt] از تاریخ
          * @param {string} [toDt] تا تاریخ
@@ -1821,7 +1823,7 @@ export const ControlPanelApiAxiosParamCreator = function (configuration?: Config
          * @param {*} [options] Override http request option.
          * @throws {RequiredError}
          */
-        apiControlPanelFollowUpsGet: async (followUpCode?: number, employeeId?: number, agencyId?: number, agencyTrackingCode?: number, agencyName?: string, fromDt?: string, toDt?: string, currentPage?: number, pageSize?: number, options: AxiosRequestConfig = {}): Promise<RequestArgs> => {
+        apiControlPanelFollowUpsGet: async (followUpCode?: string, employeeId?: number, employeeName?: string, agencyId?: number, agencyTrackingCode?: string, agencyName?: string, fromDt?: string, toDt?: string, currentPage?: number, pageSize?: number, options: AxiosRequestConfig = {}): Promise<RequestArgs> => {
             const localVarPath = `/api/ControlPanel/FollowUps`;
             // use dummy base URL string because the URL constructor only accepts absolute URLs.
             const localVarUrlObj = new URL(localVarPath, DUMMY_BASE_URL);
@@ -1833,56 +1835,60 @@ export const ControlPanelApiAxiosParamCreator = function (configuration?: Config
             const localVarRequestOptions = { method: 'GET', ...baseOptions, ...options};
             const localVarHeaderParameter = {} as any;
             const localVarQueryParameter = {} as any;
-            const localVarFormParams = new ((configuration && configuration.formDataCtor) || FormData)();
 
             // authentication Bearer required
             // http bearer authentication required
             await setBearerAuthToObject(localVarHeaderParameter, configuration)
 
+            if (followUpCode !== undefined) {
+                localVarQueryParameter['FollowUpCode'] = followUpCode;
+            }
 
-            if (followUpCode !== undefined) { 
-                localVarFormParams.append('FollowUpCode', followUpCode as any);
+            if (employeeId !== undefined) {
+                localVarQueryParameter['EmployeeId'] = employeeId;
             }
-    
-            if (employeeId !== undefined) { 
-                localVarFormParams.append('EmployeeId', employeeId as any);
+
+            if (employeeName !== undefined) {
+                localVarQueryParameter['EmployeeName'] = employeeName;
             }
-    
-            if (agencyId !== undefined) { 
-                localVarFormParams.append('AgencyId', agencyId as any);
+
+            if (agencyId !== undefined) {
+                localVarQueryParameter['AgencyId'] = agencyId;
             }
-    
-            if (agencyTrackingCode !== undefined) { 
-                localVarFormParams.append('AgencyTrackingCode', agencyTrackingCode as any);
+
+            if (agencyTrackingCode !== undefined) {
+                localVarQueryParameter['AgencyTrackingCode'] = agencyTrackingCode;
             }
-    
-            if (agencyName !== undefined) { 
-                localVarFormParams.append('AgencyName', agencyName as any);
+
+            if (agencyName !== undefined) {
+                localVarQueryParameter['AgencyName'] = agencyName;
             }
-    
-            if (fromDt !== undefined) { 
-                localVarFormParams.append('FromDt', fromDt as any);
+
+            if (fromDt !== undefined) {
+                localVarQueryParameter['FromDt'] = (fromDt as any instanceof Date) ?
+                    (fromDt as any).toISOString() :
+                    fromDt;
             }
-    
-            if (toDt !== undefined) { 
-                localVarFormParams.append('ToDt', toDt as any);
+
+            if (toDt !== undefined) {
+                localVarQueryParameter['ToDt'] = (toDt as any instanceof Date) ?
+                    (toDt as any).toISOString() :
+                    toDt;
             }
-    
-            if (currentPage !== undefined) { 
-                localVarFormParams.append('CurrentPage', currentPage as any);
+
+            if (currentPage !== undefined) {
+                localVarQueryParameter['CurrentPage'] = currentPage;
             }
-    
-            if (pageSize !== undefined) { 
-                localVarFormParams.append('PageSize', pageSize as any);
+
+            if (pageSize !== undefined) {
+                localVarQueryParameter['PageSize'] = pageSize;
             }
-    
-    
-            localVarHeaderParameter['Content-Type'] = 'multipart/form-data';
+
+
     
             setSearchParams(localVarUrlObj, localVarQueryParameter);
             let headersFromBaseOptions = baseOptions && baseOptions.headers ? baseOptions.headers : {};
             localVarRequestOptions.headers = {...localVarHeaderParameter, ...headersFromBaseOptions, ...options.headers};
-            localVarRequestOptions.data = localVarFormParams;
 
             return {
                 url: toPathString(localVarUrlObj),
@@ -3695,10 +3701,12 @@ export const ControlPanelApiFp = function(configuration?: Configuration) {
         },
         /**
          * 
-         * @param {number} [followUpCode] کد پیگیری
+         * @summary لیست پیگیری ها
+         * @param {string} [followUpCode] کد پیگیری
          * @param {number} [employeeId] بر اساس کارمند
+         * @param {string} [employeeName] نام کارمند
          * @param {number} [agencyId] کد آژانس
-         * @param {number} [agencyTrackingCode] کد پیگیری آژانس
+         * @param {string} [agencyTrackingCode] کد پیگیری آژانس
          * @param {string} [agencyName] نام آزانس
          * @param {string} [fromDt] از تاریخ
          * @param {string} [toDt] تا تاریخ
@@ -3707,8 +3715,8 @@ export const ControlPanelApiFp = function(configuration?: Configuration) {
          * @param {*} [options] Override http request option.
          * @throws {RequiredError}
          */
-        async apiControlPanelFollowUpsGet(followUpCode?: number, employeeId?: number, agencyId?: number, agencyTrackingCode?: number, agencyName?: string, fromDt?: string, toDt?: string, currentPage?: number, pageSize?: number, options?: AxiosRequestConfig): Promise<(axios?: AxiosInstance, basePath?: string) => AxiosPromise<FollowUpToReturnDtoPagedListResultSET>> {
-            const localVarAxiosArgs = await localVarAxiosParamCreator.apiControlPanelFollowUpsGet(followUpCode, employeeId, agencyId, agencyTrackingCode, agencyName, fromDt, toDt, currentPage, pageSize, options);
+        async apiControlPanelFollowUpsGet(followUpCode?: string, employeeId?: number, employeeName?: string, agencyId?: number, agencyTrackingCode?: string, agencyName?: string, fromDt?: string, toDt?: string, currentPage?: number, pageSize?: number, options?: AxiosRequestConfig): Promise<(axios?: AxiosInstance, basePath?: string) => AxiosPromise<FollowUpToReturnDtoPagedListResultSET>> {
+            const localVarAxiosArgs = await localVarAxiosParamCreator.apiControlPanelFollowUpsGet(followUpCode, employeeId, employeeName, agencyId, agencyTrackingCode, agencyName, fromDt, toDt, currentPage, pageSize, options);
             return createRequestFunction(localVarAxiosArgs, globalAxios, BASE_PATH, configuration);
         },
         /**
@@ -4522,10 +4530,12 @@ export const ControlPanelApiFactory = function (configuration?: Configuration, b
         },
         /**
          * 
-         * @param {number} [followUpCode] کد پیگیری
+         * @summary لیست پیگیری ها
+         * @param {string} [followUpCode] کد پیگیری
          * @param {number} [employeeId] بر اساس کارمند
+         * @param {string} [employeeName] نام کارمند
          * @param {number} [agencyId] کد آژانس
-         * @param {number} [agencyTrackingCode] کد پیگیری آژانس
+         * @param {string} [agencyTrackingCode] کد پیگیری آژانس
          * @param {string} [agencyName] نام آزانس
          * @param {string} [fromDt] از تاریخ
          * @param {string} [toDt] تا تاریخ
@@ -4534,8 +4544,8 @@ export const ControlPanelApiFactory = function (configuration?: Configuration, b
          * @param {*} [options] Override http request option.
          * @throws {RequiredError}
          */
-        apiControlPanelFollowUpsGet(followUpCode?: number, employeeId?: number, agencyId?: number, agencyTrackingCode?: number, agencyName?: string, fromDt?: string, toDt?: string, currentPage?: number, pageSize?: number, options?: any): AxiosPromise<FollowUpToReturnDtoPagedListResultSET> {
-            return localVarFp.apiControlPanelFollowUpsGet(followUpCode, employeeId, agencyId, agencyTrackingCode, agencyName, fromDt, toDt, currentPage, pageSize, options).then((request) => request(axios, basePath));
+        apiControlPanelFollowUpsGet(followUpCode?: string, employeeId?: number, employeeName?: string, agencyId?: number, agencyTrackingCode?: string, agencyName?: string, fromDt?: string, toDt?: string, currentPage?: number, pageSize?: number, options?: any): AxiosPromise<FollowUpToReturnDtoPagedListResultSET> {
+            return localVarFp.apiControlPanelFollowUpsGet(followUpCode, employeeId, employeeName, agencyId, agencyTrackingCode, agencyName, fromDt, toDt, currentPage, pageSize, options).then((request) => request(axios, basePath));
         },
         /**
          * 
@@ -5312,10 +5322,12 @@ export interface ControlPanelApiInterface {
 
     /**
      * 
-     * @param {number} [followUpCode] کد پیگیری
+     * @summary لیست پیگیری ها
+     * @param {string} [followUpCode] کد پیگیری
      * @param {number} [employeeId] بر اساس کارمند
+     * @param {string} [employeeName] نام کارمند
      * @param {number} [agencyId] کد آژانس
-     * @param {number} [agencyTrackingCode] کد پیگیری آژانس
+     * @param {string} [agencyTrackingCode] کد پیگیری آژانس
      * @param {string} [agencyName] نام آزانس
      * @param {string} [fromDt] از تاریخ
      * @param {string} [toDt] تا تاریخ
@@ -5325,7 +5337,7 @@ export interface ControlPanelApiInterface {
      * @throws {RequiredError}
      * @memberof ControlPanelApiInterface
      */
-    apiControlPanelFollowUpsGet(followUpCode?: number, employeeId?: number, agencyId?: number, agencyTrackingCode?: number, agencyName?: string, fromDt?: string, toDt?: string, currentPage?: number, pageSize?: number, options?: AxiosRequestConfig): AxiosPromise<FollowUpToReturnDtoPagedListResultSET>;
+    apiControlPanelFollowUpsGet(followUpCode?: string, employeeId?: number, employeeName?: string, agencyId?: number, agencyTrackingCode?: string, agencyName?: string, fromDt?: string, toDt?: string, currentPage?: number, pageSize?: number, options?: AxiosRequestConfig): AxiosPromise<FollowUpToReturnDtoPagedListResultSET>;
 
     /**
      * 
@@ -6186,10 +6198,12 @@ export class ControlPanelApi extends BaseAPI implements ControlPanelApiInterface
 
     /**
      * 
-     * @param {number} [followUpCode] کد پیگیری
+     * @summary لیست پیگیری ها
+     * @param {string} [followUpCode] کد پیگیری
      * @param {number} [employeeId] بر اساس کارمند
+     * @param {string} [employeeName] نام کارمند
      * @param {number} [agencyId] کد آژانس
-     * @param {number} [agencyTrackingCode] کد پیگیری آژانس
+     * @param {string} [agencyTrackingCode] کد پیگیری آژانس
      * @param {string} [agencyName] نام آزانس
      * @param {string} [fromDt] از تاریخ
      * @param {string} [toDt] تا تاریخ
@@ -6199,8 +6213,8 @@ export class ControlPanelApi extends BaseAPI implements ControlPanelApiInterface
      * @throws {RequiredError}
      * @memberof ControlPanelApi
      */
-    public apiControlPanelFollowUpsGet(followUpCode?: number, employeeId?: number, agencyId?: number, agencyTrackingCode?: number, agencyName?: string, fromDt?: string, toDt?: string, currentPage?: number, pageSize?: number, options?: AxiosRequestConfig) {
-        return ControlPanelApiFp(this.configuration).apiControlPanelFollowUpsGet(followUpCode, employeeId, agencyId, agencyTrackingCode, agencyName, fromDt, toDt, currentPage, pageSize, options).then((request) => request(this.axios, this.basePath));
+    public apiControlPanelFollowUpsGet(followUpCode?: string, employeeId?: number, employeeName?: string, agencyId?: number, agencyTrackingCode?: string, agencyName?: string, fromDt?: string, toDt?: string, currentPage?: number, pageSize?: number, options?: AxiosRequestConfig) {
+        return ControlPanelApiFp(this.configuration).apiControlPanelFollowUpsGet(followUpCode, employeeId, employeeName, agencyId, agencyTrackingCode, agencyName, fromDt, toDt, currentPage, pageSize, options).then((request) => request(this.axios, this.basePath));
     }
 
     /**

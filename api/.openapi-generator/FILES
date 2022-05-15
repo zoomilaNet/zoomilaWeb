@@ -71,6 +71,7 @@ model/facility-for-create-dto.ts
 model/facility-to-return-dto.ts
 model/follow-up-to-return-dto-paged-list-result-set.ts
 model/follow-up-to-return-dto-paged-list.ts
+model/follow-up-to-return-dto.ts
 model/for-sale-building-for-create-dto.ts
 model/forget-password-dto.ts
 model/group-to-return-dto.ts
