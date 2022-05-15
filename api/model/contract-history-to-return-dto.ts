@@ -62,6 +62,12 @@ export interface ContractHistoryToReturnDto {
      * @memberof ContractHistoryToReturnDto
      */
     'expirationTime'?: string | null;
+    /**
+     * تاریخ لاگ
+     * @type {string}
+     * @memberof ContractHistoryToReturnDto
+     */
+    'logDt'?: string | null;
 }
 
 /**
