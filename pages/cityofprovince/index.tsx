@@ -63,7 +63,7 @@ function CityOfProvince() {
     const backToProvince = () => {                                                              //set isCity false for change selected province
         setiscity(false);
     };
-    const schema: string[] = ["relative h-0 bg-gradient-to-b from-upgreen_gradient to-downgreen_gradient col-span-1 flex justify-center items-center rounded-xl text-center px-2", "relative h-0 bg-gradient-to-b from-upnblue_gradient to-downnblue_gradient col-span-1 flex justify-center items-center rounded-xl text-center px-2"];
+    const schema: string[] = ["relative h-0 bg-gradient-to-b from-upgreen_gradient to-downgreen_gradient col-span-1 flex justify-center items-center rounded text-center px-2", "relative h-0 bg-gradient-to-b from-upnblue_gradient to-downnblue_gradient col-span-1 flex justify-center items-center rounded text-center px-2"];
     let parameter;
     if (!isCity) {
         parameter = province.map(data => <button id="squere" onClick={() => selectProvinceHandler(data.id as number)} key={data.id} className={`${(data.id == provinceSelect) ? schema[0] : schema[1]}`}><span className="absolute top-0 w-full h-full flex justify-center items-center">{data.name}</span></button>);

@@ -63,7 +63,7 @@ function Neighbourhoods() {
         dispatch(changeNeighbourhood([...selectedNeighbourhood]))
         router.push('/');
     };
-    const schema: string[] = ["relative h-0 bg-gradient-to-b from-upgreen_gradient to-downgreen_gradient col-span-1 flex justify-center items-center rounded-xl text-center px-2", "relative h-0 bg-gradient-to-b from-upnblue_gradient to-downnblue_gradient col-span-1 flex justify-center items-center rounded-xl text-center px-2"];
+    const schema: string[] = ["relative h-0 bg-gradient-to-b from-upgreen_gradient to-downgreen_gradient col-span-1 flex justify-center items-center rounded text-center px-2", "relative h-0 bg-gradient-to-b from-upnblue_gradient to-downnblue_gradient col-span-1 flex justify-center items-center rounded text-center px-2"];
     let parameter;
     parameter = neighbourhoodsForShow ? neighbourhoodsForShow.map((data) => <button id="squere" key={data.id} onClick={() => selectNeibourhood(data.id as number)} className={getSelected(data.id as number) ? schema[0] : schema[1]}><span className="absolute top-0 w-full h-full flex justify-center items-center">{data.name}</span></button>) : <CircularProgress />;
     return <div>
