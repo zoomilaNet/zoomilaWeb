@@ -1,20 +1,30 @@
 @font-face {
     font-family: 'iransans';
-    src:local('') , url("iransans.ttf") format("ttf"),url("iransans.woff") format("woff");
+    font-weight: 400;
+    src:local('') ,url("iransans.woff2") format("woff2");
+    font-display: swap;
 }
 @font-face {
 font-family: 'iransansbold';
-src: local('')   ,url("iransansbold.ttf") format("ttf"),url("iransansbold.woff") format("woff");
+    font-weight: 400;
+src: local('') ,url("iransansbold.woff2") format("woff2");
+    font-display: swap;
 }
 @font-face {
 font-family: 'iransanslight';
-src:local('') , url("iransanslight.ttf") format("ttf"),url("iransanslight.woff") format("woff");
+    font-weight: 400;
+src:local('') ,url("iransanslight.woff2") format("woff2");
+    font-display: swap;
 }
 @font-face {
 font-family: 'iransansmedium';
-src:local('') , url("iransansmedium.ttf") format("ttf"),url("iransansmedium.woff") format("woff");
+    font-weight: 400;
+src:local('') ,url("iransansmedium.woff2") format("woff2");
+    font-display: swap;
 }
 @font-face {
 font-family: 'iransansultralight';
-src:local('') , url("iransansultralight.ttf") format("ttf"),url("iransansultralight.woff") format("woff");
+    font-weight: 400;
+src:local('') ,url("iransansultralight.woff2") format("woff2");
+    font-display: swap;
 }

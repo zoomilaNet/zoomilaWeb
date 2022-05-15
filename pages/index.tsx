@@ -191,7 +191,7 @@ export default function Home() {
                     <p>شهر</p>
                   </span>
                   <span className="flex flex-row items-center h-8">
-                    <span className="bg-upgreen_gradient h-full p-1 rounded ml-2 flex justify-center text-base">{city.name == "" || city.name == null ? "همه شهرها" : city.name}</span>
+                    <span className="bg-green_accent h-full p-1 rounded ml-2 flex justify-center text-base">{city.name == "" || city.name == null ? "همه شهرها" : city.name}</span>
                     <span className="p-1 bg-arrow rounded h-full flex justify-center">
                       <img src="./image/left.svg" alt="انتخاب شهر" className="w-6 h-6" />
                     </span>
@@ -208,7 +208,7 @@ export default function Home() {
                     <p>محله</p>
                   </span>
                   <span className="flex flex-row items-center h-8">
-                    <span className="bg-upgreen_gradient h-full py-1 px-2 rounded ml-2 flex justify-center text-base">{neighbourhoods.length > 0 ? neighbourhoods.length + " محله" : "همه محله ها"}</span>
+                    <span className="bg-green_accent h-full py-1 px-2 rounded ml-2 flex justify-center text-base">{neighbourhoods.length > 0 ? neighbourhoods.length + " محله" : "همه محله ها"}</span>
                     <span className="p-1 bg-arrow rounded h-full flex justify-center">
                       <img src="./image/left.svg" alt="انتخاب محله" className="w-6 h-6" />
                     </span>
@@ -226,7 +226,7 @@ export default function Home() {
                     <p>نوع ملک</p>
                   </span>
                   <span className="flex flex-row items-center h-8">
-                    <span className="bg-upgreen_gradient h-full py-1 px-2 rounded ml-2 flex justify-center text-base">{buildings.length > 0 ? buildings.length + " نوع" : "همه نوع"}</span>
+                    <span className="bg-green_accent h-full py-1 px-2 rounded ml-2 flex justify-center text-base">{buildings.length > 0 ? buildings.length + " نوع" : "همه نوع"}</span>
                     <span className="p-1 bg-arrow rounded h-full flex justify-center">
                       <img src="./image/left.svg" alt="نوع ملک" className="w-6 h-6" />
                     </span>
