@@ -57,4 +57,3 @@ function Detail({sellData,rentData,isSell}:{sellData:SellAd , rentData:LetAd,isS
     );
 }
 export default Detail;
-//<MapContainer className="w-full aspect-w-4 aspect-h-3 overflow-hidden" center={[34.78838477191029, 48.513294270074375]} zoom={2} scrollWheelZoom={true}> <TileLayer className="w-full h-full" url="https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png" attribution='&copy; <a href="https://www.openstreetmap.org/copyright">OpenStreetMap</a> contributors' /><Marker position={[34.78838477191029, 48.513294270074375]} icon={markerIcon}><Popup>zoomila</Popup></Marker></MapContainer>

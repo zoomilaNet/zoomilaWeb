@@ -4,6 +4,8 @@ import cityOfProvince from "../../../public/ProvincesAndCities.json";
 import Image from "next/image";
 import Slider from "../../slider/slider";
 import buildingTypeJson from "../../../public/BuildinType.json";
+import dynamic from "next/dynamic";
+import LatLngExtract from "../../../models/latlngextract";
 
 export default function RentDetail({data}:{data:LetAd}){
     const [showImage, setShowImage] = useState(false);
@@ -12,7 +14,9 @@ export default function RentDetail({data}:{data:LetAd}){
     const showMapHandler = () => {
         setShowImage(true);
     }
-
+    const MapWithNoSSR = dynamic(() => import('../map/zoomilaMap'), {
+        ssr: false,
+    })
     useEffect(() => {
         cityOfProvince.map(item => {
             if (item.CityId == Number(data.cityId)) {
@@ -152,7 +156,7 @@ export default function RentDetail({data}:{data:LetAd}){
             </div>
 
             <div className="p-2">
-                {showImage ? <p>show map in here</p> : <img src="/image/map.jpg" alt="" onClick={showMapHandler} />}
+                {showImage? <MapWithNoSSR latlng={LatLngExtract("36.9560,45.3876")}/>:<img src="/image/map.jpg" alt="" className="w-full h-auto" onClick={showMapHandler}/> }
             </div>
 
         </div>
