@@ -55,6 +55,8 @@ export * from './employee-to-return-dto-paged-list-result-set';
 export * from './existing-facility-dto';
 export * from './facility-for-create-dto';
 export * from './facility-to-return-dto';
+export * from './follow-up-to-return-dto-paged-list';
+export * from './follow-up-to-return-dto-paged-list-result-set';
 export * from './for-sale-building-for-create-dto';
 export * from './forget-password-dto';
 export * from './group-to-return-dto';
