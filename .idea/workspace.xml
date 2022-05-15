@@ -1,10 +1,10 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="85396787-6298-4985-82c3-6d22319d4af6" name="Default Changelist" comment="change img tag sor fix width and height Bm">
+    <list default="true" id="85396787-6298-4985-82c3-6d22319d4af6" name="Default Changelist" comment="set width and height for pagination button Bm">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/pages/[...slug].tsx" beforeDir="false" afterPath="$PROJECT_DIR$/pages/[...slug].tsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/component/pagination/pagination.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/component/pagination/pagination.tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/package.json" beforeDir="false" afterPath="$PROJECT_DIR$/package.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/slider/slider.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/slider/slider.tsx" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -117,7 +117,7 @@
       <workItem from="1652529657684" duration="672000" />
       <workItem from="1652593840862" duration="13000" />
       <workItem from="1652594025049" duration="747000" />
-      <workItem from="1652594915946" duration="10208000" />
+      <workItem from="1652594915946" duration="11447000" />
     </task>
     <task id="LOCAL-00001" summary="add deactive button for pagination and home page Bm">
       <created>1651321324567</created>
@@ -371,7 +371,14 @@
       <option name="project" value="LOCAL" />
       <updated>1652607236230</updated>
     </task>
-    <option name="localTasksCounter" value="37" />
+    <task id="LOCAL-00037" summary="set width and height for pagination button Bm">
+      <created>1652609322882</created>
+      <option name="number" value="00037" />
+      <option name="presentableId" value="LOCAL-00037" />
+      <option name="project" value="LOCAL" />
+      <updated>1652609322882</updated>
+    </task>
+    <option name="localTasksCounter" value="38" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -389,7 +396,6 @@
     </option>
   </component>
   <component name="VcsManagerConfiguration">
-    <MESSAGE value="add lang property to site" />
     <MESSAGE value="delete extra font and lang for test Bm" />
     <MESSAGE value="delete local property from next.config Bm" />
     <MESSAGE value="Delete woff font Bm" />
@@ -414,7 +420,8 @@
     <MESSAGE value="add map in details page with static coordinate and method for convert string coordinate to standard coordinate Bm" />
     <MESSAGE value="change font format to woff2 Bm" />
     <MESSAGE value="change img tag sor fix width and height Bm" />
-    <option name="LAST_COMMIT_MESSAGE" value="change img tag sor fix width and height Bm" />
+    <MESSAGE value="set width and height for pagination button Bm" />
+    <option name="LAST_COMMIT_MESSAGE" value="set width and height for pagination button Bm" />
   </component>
   <component name="XSLT-Support.FileAssociations.UIState">
     <expand />

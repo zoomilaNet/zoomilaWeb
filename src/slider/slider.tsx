@@ -1,7 +1,7 @@
 import React, { useState} from 'react';
 import Image from "next/image";
-import Loading from "../../public/lottie/loading.json";
-import {Player} from "@lottiefiles/react-lottie-player";
+
+
 
 function Slider({basePath, photos, photoSlug}: { basePath: string, photos: string[], photoSlug: string }) {
     const [slideIndex, setSlideIndex] = useState(1);
@@ -49,7 +49,6 @@ function Slider({basePath, photos, photoSlug}: { basePath: string, photos: strin
     }
     return <div className='container-slider'>
         <div className="slide">
-            {photoLoading==true ? <Player autoplay={true} src={Loading} loop={true} style={{ width: '60px', height: '60px' }} background="white" className=" absolute top-1/2 bottom-1/2 right-1/2 left-1/2"/>:null}
             <Image src={photoUrl} alt={photoSlug} className="w-full h-full " loading="eager"
                                       layout="fill"/>
         </div>
