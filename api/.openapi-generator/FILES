@@ -57,6 +57,9 @@ model/change-password-dto.ts
 model/city-dto-paged-list-result-set.ts
 model/city-dto-paged-list.ts
 model/city-dto.ts
+model/contract-history-to-return-dto-paged-list-result-set.ts
+model/contract-history-to-return-dto-paged-list.ts
+model/contract-history-to-return-dto.ts
 model/contract-to-return-dto-result-set.ts
 model/contract-to-return-dto.ts
 model/create-package-req.ts
