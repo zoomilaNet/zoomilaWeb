@@ -13,6 +13,7 @@
  */
 
 
+import { FollowUpToReturnDto } from './follow-up-to-return-dto';
 
 /**
  * 
@@ -22,10 +23,10 @@
 export interface FollowUpToReturnDtoPagedList {
     /**
      * 
-     * @type {Array<object>}
+     * @type {Array<FollowUpToReturnDto>}
      * @memberof FollowUpToReturnDtoPagedList
      */
-    'data'?: Array<object> | null;
+    'data'?: Array<FollowUpToReturnDto> | null;
     /**
      * 
      * @type {number}
