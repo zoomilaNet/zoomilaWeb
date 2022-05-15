@@ -63,8 +63,6 @@ import { PackageToReturnDto } from '../model';
 // @ts-ignore
 import { PackageToReturnDtoPagedList } from '../model';
 // @ts-ignore
-import { PaginationParams } from '../model';
-// @ts-ignore
 import { ProblemDetails } from '../model';
 // @ts-ignore
 import { ProductsToReturnDto } from '../model';
@@ -1038,11 +1036,12 @@ export const ControlPanelApiAxiosParamCreator = function (configuration?: Config
          * 
          * @summary تاریخچه قرارداد های آژانس
          * @param {number} agencyId 
-         * @param {PaginationParams} [paginationParams] 
+         * @param {number} [currentPage] صفحه جاری
+         * @param {number} [pageSize] تعداد رکورد در هر صفحه
          * @param {*} [options] Override http request option.
          * @throws {RequiredError}
          */
-        apiControlPanelAgencyContractHistoryAgencyIdGet: async (agencyId: number, paginationParams?: PaginationParams, options: AxiosRequestConfig = {}): Promise<RequestArgs> => {
+        apiControlPanelAgencyContractHistoryAgencyIdGet: async (agencyId: number, currentPage?: number, pageSize?: number, options: AxiosRequestConfig = {}): Promise<RequestArgs> => {
             // verify required parameter 'agencyId' is not null or undefined
             assertParamExists('apiControlPanelAgencyContractHistoryAgencyIdGet', 'agencyId', agencyId)
             const localVarPath = `/api/ControlPanel/Agency/Contract/History/{agencyId}`
@@ -1062,14 +1061,19 @@ export const ControlPanelApiAxiosParamCreator = function (configuration?: Config
             // http bearer authentication required
             await setBearerAuthToObject(localVarHeaderParameter, configuration)
 
+            if (currentPage !== undefined) {
+                localVarQueryParameter['CurrentPage'] = currentPage;
+            }
+
+            if (pageSize !== undefined) {
+                localVarQueryParameter['PageSize'] = pageSize;
+            }
+
 
     
-            localVarHeaderParameter['Content-Type'] = 'application/json';
-
             setSearchParams(localVarUrlObj, localVarQueryParameter);
             let headersFromBaseOptions = baseOptions && baseOptions.headers ? baseOptions.headers : {};
             localVarRequestOptions.headers = {...localVarHeaderParameter, ...headersFromBaseOptions, ...options.headers};
-            localVarRequestOptions.data = serializeDataIfNeeded(paginationParams, localVarRequestOptions, configuration)
 
             return {
                 url: toPathString(localVarUrlObj),
@@ -3395,12 +3399,13 @@ export const ControlPanelApiFp = function(configuration?: Configuration) {
          * 
          * @summary تاریخچه قرارداد های آژانس
          * @param {number} agencyId 
-         * @param {PaginationParams} [paginationParams] 
+         * @param {number} [currentPage] صفحه جاری
+         * @param {number} [pageSize] تعداد رکورد در هر صفحه
          * @param {*} [options] Override http request option.
          * @throws {RequiredError}
          */
-        async apiControlPanelAgencyContractHistoryAgencyIdGet(agencyId: number, paginationParams?: PaginationParams, options?: AxiosRequestConfig): Promise<(axios?: AxiosInstance, basePath?: string) => AxiosPromise<ContractHistoryToReturnDtoPagedListResultSET>> {
-            const localVarAxiosArgs = await localVarAxiosParamCreator.apiControlPanelAgencyContractHistoryAgencyIdGet(agencyId, paginationParams, options);
+        async apiControlPanelAgencyContractHistoryAgencyIdGet(agencyId: number, currentPage?: number, pageSize?: number, options?: AxiosRequestConfig): Promise<(axios?: AxiosInstance, basePath?: string) => AxiosPromise<ContractHistoryToReturnDtoPagedListResultSET>> {
+            const localVarAxiosArgs = await localVarAxiosParamCreator.apiControlPanelAgencyContractHistoryAgencyIdGet(agencyId, currentPage, pageSize, options);
             return createRequestFunction(localVarAxiosArgs, globalAxios, BASE_PATH, configuration);
         },
         /**
@@ -4216,12 +4221,13 @@ export const ControlPanelApiFactory = function (configuration?: Configuration, b
          * 
          * @summary تاریخچه قرارداد های آژانس
          * @param {number} agencyId 
-         * @param {PaginationParams} [paginationParams] 
+         * @param {number} [currentPage] صفحه جاری
+         * @param {number} [pageSize] تعداد رکورد در هر صفحه
          * @param {*} [options] Override http request option.
          * @throws {RequiredError}
          */
-        apiControlPanelAgencyContractHistoryAgencyIdGet(agencyId: number, paginationParams?: PaginationParams, options?: any): AxiosPromise<ContractHistoryToReturnDtoPagedListResultSET> {
-            return localVarFp.apiControlPanelAgencyContractHistoryAgencyIdGet(agencyId, paginationParams, options).then((request) => request(axios, basePath));
+        apiControlPanelAgencyContractHistoryAgencyIdGet(agencyId: number, currentPage?: number, pageSize?: number, options?: any): AxiosPromise<ContractHistoryToReturnDtoPagedListResultSET> {
+            return localVarFp.apiControlPanelAgencyContractHistoryAgencyIdGet(agencyId, currentPage, pageSize, options).then((request) => request(axios, basePath));
         },
         /**
          * 
@@ -4985,12 +4991,13 @@ export interface ControlPanelApiInterface {
      * 
      * @summary تاریخچه قرارداد های آژانس
      * @param {number} agencyId 
-     * @param {PaginationParams} [paginationParams] 
+     * @param {number} [currentPage] صفحه جاری
+     * @param {number} [pageSize] تعداد رکورد در هر صفحه
      * @param {*} [options] Override http request option.
      * @throws {RequiredError}
      * @memberof ControlPanelApiInterface
      */
-    apiControlPanelAgencyContractHistoryAgencyIdGet(agencyId: number, paginationParams?: PaginationParams, options?: AxiosRequestConfig): AxiosPromise<ContractHistoryToReturnDtoPagedListResultSET>;
+    apiControlPanelAgencyContractHistoryAgencyIdGet(agencyId: number, currentPage?: number, pageSize?: number, options?: AxiosRequestConfig): AxiosPromise<ContractHistoryToReturnDtoPagedListResultSET>;
 
     /**
      * 
@@ -5806,13 +5813,14 @@ export class ControlPanelApi extends BaseAPI implements ControlPanelApiInterface
      * 
      * @summary تاریخچه قرارداد های آژانس
      * @param {number} agencyId 
-     * @param {PaginationParams} [paginationParams] 
+     * @param {number} [currentPage] صفحه جاری
+     * @param {number} [pageSize] تعداد رکورد در هر صفحه
      * @param {*} [options] Override http request option.
      * @throws {RequiredError}
      * @memberof ControlPanelApi
      */
-    public apiControlPanelAgencyContractHistoryAgencyIdGet(agencyId: number, paginationParams?: PaginationParams, options?: AxiosRequestConfig) {
-        return ControlPanelApiFp(this.configuration).apiControlPanelAgencyContractHistoryAgencyIdGet(agencyId, paginationParams, options).then((request) => request(this.axios, this.basePath));
+    public apiControlPanelAgencyContractHistoryAgencyIdGet(agencyId: number, currentPage?: number, pageSize?: number, options?: AxiosRequestConfig) {
+        return ControlPanelApiFp(this.configuration).apiControlPanelAgencyContractHistoryAgencyIdGet(agencyId, currentPage, pageSize, options).then((request) => request(this.axios, this.basePath));
     }
 
     /**

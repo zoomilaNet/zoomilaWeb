@@ -94,7 +94,6 @@ model/neighbourhood-dto.ts
 model/neighbourhood-for-create-dto.ts
 model/package-to-return-dto-paged-list.ts
 model/package-to-return-dto.ts
-model/pagination-params.ts
 model/problem-details.ts
 model/products-dto.ts
 model/products-to-return-dto.ts

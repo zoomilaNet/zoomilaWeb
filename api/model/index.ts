@@ -79,7 +79,6 @@ export * from './neighbourhood-dto-paged-list-result-set';
 export * from './neighbourhood-for-create-dto';
 export * from './package-to-return-dto';
 export * from './package-to-return-dto-paged-list';
-export * from './pagination-params';
 export * from './problem-details';
 export * from './products-dto';
 export * from './products-to-return-dto';
