@@ -57,6 +57,9 @@ model/change-password-dto.ts
 model/city-dto-paged-list-result-set.ts
 model/city-dto-paged-list.ts
 model/city-dto.ts
+model/contract-history-to-return-dto-paged-list-result-set.ts
+model/contract-history-to-return-dto-paged-list.ts
+model/contract-history-to-return-dto.ts
 model/contract-to-return-dto-result-set.ts
 model/contract-to-return-dto.ts
 model/create-package-req.ts
@@ -91,6 +94,7 @@ model/neighbourhood-dto.ts
 model/neighbourhood-for-create-dto.ts
 model/package-to-return-dto-paged-list.ts
 model/package-to-return-dto.ts
+model/pagination-params.ts
 model/problem-details.ts
 model/products-dto.ts
 model/products-to-return-dto.ts
