@@ -73,17 +73,17 @@ if(findCity != null){
     cityId=findCity.id as number;
 }
     if(path[0]==="خرید-فروش" ){
-            data =await  fetchAdvertiseList.apiClientsAdsSellGet(cityId,neighbourhood,buildingTypeList,currentPage,20);
+            data =await  fetchAdvertiseList.apiClientsAdsSellGet(cityId,neighbourhood,buildingTypeList,currentPage,15);
             isSellOrNot=true;
             totalPageOfAds=Number(data.data.totalPages);
         listTitle="خرید"+" "+"ملک"+" "+"در "+findCity.name;
     }else if(path[0]==="رهن-اجاره"){
-            data=await  fetchAdvertiseList.apiClientsAdsLetGet(cityId,neighbourhood,buildingTypeList,currentPage,20);
+            data=await  fetchAdvertiseList.apiClientsAdsLetGet(cityId,neighbourhood,buildingTypeList,currentPage,15);
         totalPageOfAds=Number(data.data.totalPages);
             isSellOrNot=false;
         listTitle="اجاره"+" "+"ملک"+" "+"در "+findCity.name;
     }else {
-        data =await  fetchAdvertiseList.apiClientsAdsSellGet(107,[69],buildingTypeList,currentPage,20);
+        data =await  fetchAdvertiseList.apiClientsAdsSellGet(107,[69],buildingTypeList,currentPage,15);
         totalPageOfAds=Number(data.data.totalPages);
         isSellOrNot=true;
         listTitle="خرید"+" "+"ملک"+" "+"در "+"تهران";
