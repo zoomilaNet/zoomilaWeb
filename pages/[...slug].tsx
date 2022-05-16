@@ -9,6 +9,7 @@ import Link from "next/link";
 import Head from "next/head";
 import LetAdvertiseCard from "../src/component/letAdsCard/LetAdvertiseCard";
 export const getServerSideProps: GetServerSideProps = async (context) => {
+    //await new Promise((resolve)=>setTimeout(resolve,1000));
     let path:string[]= context.params!.slug! as string[];
     const fetchAdvertiseList:ClientsApi=new  ClientsApi();
     let data:any;
@@ -122,7 +123,6 @@ export default function List({sellData,letData,isSellAds,title,page,totalPage}:{
                     </div>
                 </div>
             </main>
-            <footer className='bg-hf_color w-screen h-20 flex justify-center items-center text-2xl text-white'>فوتـر</footer>
         </div>
     );
 }

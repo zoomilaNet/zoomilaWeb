@@ -1,11 +1,19 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="85396787-6298-4985-82c3-6d22319d4af6" name="Default Changelist" comment="delete lottie from slider Bm">
+    <list default="true" id="85396787-6298-4985-82c3-6d22319d4af6" name="Default Changelist" comment="change radious of city, neighbourhood and building selector Bm">
+      <change afterPath="$PROJECT_DIR$/public/image/Loading.gif" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/component/footer/footer.tsx" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/component/layout/layout.tsx" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/component/loading/loading.tsx" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/pages/buildingtype/index.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/pages/buildingtype/index.tsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/pages/cityofprovince/index.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/pages/cityofprovince/index.tsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/pages/neighbourhoods/index.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/pages/neighbourhoods/index.tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/package.json" beforeDir="false" afterPath="$PROJECT_DIR$/package.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/pages/[...slug].tsx" beforeDir="false" afterPath="$PROJECT_DIR$/pages/[...slug].tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/pages/[adstype]/[detail].tsx" beforeDir="false" afterPath="$PROJECT_DIR$/pages/[adstype]/[detail].tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/pages/_app.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/pages/_app.tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/pages/index.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/pages/index.tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/pages/projects/index.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/pages/projects/index.tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/store/reducer.ts" beforeDir="false" afterPath="$PROJECT_DIR$/store/reducer.ts" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -118,7 +126,9 @@
       <workItem from="1652529657684" duration="672000" />
       <workItem from="1652593840862" duration="13000" />
       <workItem from="1652594025049" duration="747000" />
-      <workItem from="1652594915946" duration="13047000" />
+      <workItem from="1652594915946" duration="13722000" />
+      <workItem from="1652674242838" duration="938000" />
+      <workItem from="1652694746698" duration="8868000" />
     </task>
     <task id="LOCAL-00001" summary="add deactive button for pagination and home page Bm">
       <created>1651321324567</created>
@@ -386,7 +396,14 @@
       <option name="project" value="LOCAL" />
       <updated>1652611556765</updated>
     </task>
-    <option name="localTasksCounter" value="39" />
+    <task id="LOCAL-00039" summary="change radious of city, neighbourhood and building selector Bm">
+      <created>1652617165073</created>
+      <option name="number" value="00039" />
+      <option name="presentableId" value="LOCAL-00039" />
+      <option name="project" value="LOCAL" />
+      <updated>1652617165073</updated>
+    </task>
+    <option name="localTasksCounter" value="40" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -404,7 +421,6 @@
     </option>
   </component>
   <component name="VcsManagerConfiguration">
-    <MESSAGE value="delete local property from next.config Bm" />
     <MESSAGE value="Delete woff font Bm" />
     <MESSAGE value="add again woff font Bm" />
     <MESSAGE value="add sample meta tag to listing page Bm" />
@@ -429,7 +445,8 @@
     <MESSAGE value="change img tag sor fix width and height Bm" />
     <MESSAGE value="set width and height for pagination button Bm" />
     <MESSAGE value="delete lottie from slider Bm" />
-    <option name="LAST_COMMIT_MESSAGE" value="delete lottie from slider Bm" />
+    <MESSAGE value="change radious of city, neighbourhood and building selector Bm" />
+    <option name="LAST_COMMIT_MESSAGE" value="change radious of city, neighbourhood and building selector Bm" />
   </component>
   <component name="XSLT-Support.FileAssociations.UIState">
     <expand />
