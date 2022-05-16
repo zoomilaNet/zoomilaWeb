@@ -164,5 +164,35 @@ export interface AgencyRes {
      * @memberof AgencyRes
      */
     'ownerMobile'?: string | null;
+    /**
+     * 
+     * @type {number}
+     * @memberof AgencyRes
+     */
+    'sellCount'?: number;
+    /**
+     * 
+     * @type {number}
+     * @memberof AgencyRes
+     */
+    'letCount'?: number;
+    /**
+     * 
+     * @type {string}
+     * @memberof AgencyRes
+     */
+    'createdAtContract'?: string | null;
+    /**
+     * 
+     * @type {number}
+     * @memberof AgencyRes
+     */
+    'visitCount'?: number;
+    /**
+     * 
+     * @type {string}
+     * @memberof AgencyRes
+     */
+    'expiredAtContract'?: string | null;
 }
 
