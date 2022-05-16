@@ -53,6 +53,8 @@ import { EmployeeToReturnDtoPagedList } from '../model';
 // @ts-ignore
 import { EmployeeToReturnDtoPagedListResultSET } from '../model';
 // @ts-ignore
+import { FollowUpForAgency } from '../model';
+// @ts-ignore
 import { FollowUpToReturnDtoPagedListResultSET } from '../model';
 // @ts-ignore
 import { GroupToReturnDto } from '../model';
@@ -1792,6 +1794,111 @@ export const ControlPanelApiAxiosParamCreator = function (configuration?: Config
     
             if (gender !== undefined) { 
                 localVarFormParams.append('Gender', gender as any);
+            }
+    
+    
+            localVarHeaderParameter['Content-Type'] = 'multipart/form-data';
+    
+            setSearchParams(localVarUrlObj, localVarQueryParameter);
+            let headersFromBaseOptions = baseOptions && baseOptions.headers ? baseOptions.headers : {};
+            localVarRequestOptions.headers = {...localVarHeaderParameter, ...headersFromBaseOptions, ...options.headers};
+            localVarRequestOptions.data = localVarFormParams;
+
+            return {
+                url: toPathString(localVarUrlObj),
+                options: localVarRequestOptions,
+            };
+        },
+        /**
+         * 
+         * @summary اطلاعات مورد نیاز پیگیری آژانس
+         * @param {number} agencyId 
+         * @param {*} [options] Override http request option.
+         * @throws {RequiredError}
+         */
+        apiControlPanelFollowUpAgencyAgencyIdGet: async (agencyId: number, options: AxiosRequestConfig = {}): Promise<RequestArgs> => {
+            // verify required parameter 'agencyId' is not null or undefined
+            assertParamExists('apiControlPanelFollowUpAgencyAgencyIdGet', 'agencyId', agencyId)
+            const localVarPath = `/api/ControlPanel/FollowUp/Agency/{agencyId}`
+                .replace(`{${"agencyId"}}`, encodeURIComponent(String(agencyId)));
+            // use dummy base URL string because the URL constructor only accepts absolute URLs.
+            const localVarUrlObj = new URL(localVarPath, DUMMY_BASE_URL);
+            let baseOptions;
+            if (configuration) {
+                baseOptions = configuration.baseOptions;
+            }
+
+            const localVarRequestOptions = { method: 'GET', ...baseOptions, ...options};
+            const localVarHeaderParameter = {} as any;
+            const localVarQueryParameter = {} as any;
+
+            // authentication Bearer required
+            // http bearer authentication required
+            await setBearerAuthToObject(localVarHeaderParameter, configuration)
+
+
+    
+            setSearchParams(localVarUrlObj, localVarQueryParameter);
+            let headersFromBaseOptions = baseOptions && baseOptions.headers ? baseOptions.headers : {};
+            localVarRequestOptions.headers = {...localVarHeaderParameter, ...headersFromBaseOptions, ...options.headers};
+
+            return {
+                url: toPathString(localVarUrlObj),
+                options: localVarRequestOptions,
+            };
+        },
+        /**
+         * 
+         * @summary اضافه کردن پیگیری به آژانس
+         * @param {number} agencyId 
+         * @param {string} [notes] 
+         * @param {string} [type] 
+         * @param {string} [time] 
+         * @param {string} [remiderDate] 
+         * @param {string} [reservedNote] 
+         * @param {*} [options] Override http request option.
+         * @throws {RequiredError}
+         */
+        apiControlPanelFollowUpAgencyRegisterAgencyIdPost: async (agencyId: number, notes?: string, type?: string, time?: string, remiderDate?: string, reservedNote?: string, options: AxiosRequestConfig = {}): Promise<RequestArgs> => {
+            // verify required parameter 'agencyId' is not null or undefined
+            assertParamExists('apiControlPanelFollowUpAgencyRegisterAgencyIdPost', 'agencyId', agencyId)
+            const localVarPath = `/api/ControlPanel/FollowUp/Agency/Register/{agencyId}`
+                .replace(`{${"agencyId"}}`, encodeURIComponent(String(agencyId)));
+            // use dummy base URL string because the URL constructor only accepts absolute URLs.
+            const localVarUrlObj = new URL(localVarPath, DUMMY_BASE_URL);
+            let baseOptions;
+            if (configuration) {
+                baseOptions = configuration.baseOptions;
+            }
+
+            const localVarRequestOptions = { method: 'POST', ...baseOptions, ...options};
+            const localVarHeaderParameter = {} as any;
+            const localVarQueryParameter = {} as any;
+            const localVarFormParams = new ((configuration && configuration.formDataCtor) || FormData)();
+
+            // authentication Bearer required
+            // http bearer authentication required
+            await setBearerAuthToObject(localVarHeaderParameter, configuration)
+
+
+            if (notes !== undefined) { 
+                localVarFormParams.append('Notes', notes as any);
+            }
+    
+            if (type !== undefined) { 
+                localVarFormParams.append('Type', type as any);
+            }
+    
+            if (time !== undefined) { 
+                localVarFormParams.append('Time', time as any);
+            }
+    
+            if (remiderDate !== undefined) { 
+                localVarFormParams.append('RemiderDate', remiderDate as any);
+            }
+    
+            if (reservedNote !== undefined) { 
+                localVarFormParams.append('ReservedNote', reservedNote as any);
             }
     
     
@@ -3701,6 +3808,33 @@ export const ControlPanelApiFp = function(configuration?: Configuration) {
         },
         /**
          * 
+         * @summary اطلاعات مورد نیاز پیگیری آژانس
+         * @param {number} agencyId 
+         * @param {*} [options] Override http request option.
+         * @throws {RequiredError}
+         */
+        async apiControlPanelFollowUpAgencyAgencyIdGet(agencyId: number, options?: AxiosRequestConfig): Promise<(axios?: AxiosInstance, basePath?: string) => AxiosPromise<FollowUpForAgency>> {
+            const localVarAxiosArgs = await localVarAxiosParamCreator.apiControlPanelFollowUpAgencyAgencyIdGet(agencyId, options);
+            return createRequestFunction(localVarAxiosArgs, globalAxios, BASE_PATH, configuration);
+        },
+        /**
+         * 
+         * @summary اضافه کردن پیگیری به آژانس
+         * @param {number} agencyId 
+         * @param {string} [notes] 
+         * @param {string} [type] 
+         * @param {string} [time] 
+         * @param {string} [remiderDate] 
+         * @param {string} [reservedNote] 
+         * @param {*} [options] Override http request option.
+         * @throws {RequiredError}
+         */
+        async apiControlPanelFollowUpAgencyRegisterAgencyIdPost(agencyId: number, notes?: string, type?: string, time?: string, remiderDate?: string, reservedNote?: string, options?: AxiosRequestConfig): Promise<(axios?: AxiosInstance, basePath?: string) => AxiosPromise<string>> {
+            const localVarAxiosArgs = await localVarAxiosParamCreator.apiControlPanelFollowUpAgencyRegisterAgencyIdPost(agencyId, notes, type, time, remiderDate, reservedNote, options);
+            return createRequestFunction(localVarAxiosArgs, globalAxios, BASE_PATH, configuration);
+        },
+        /**
+         * 
          * @summary لیست پیگیری ها
          * @param {string} [followUpCode] کد پیگیری
          * @param {number} [employeeId] بر اساس کارمند
@@ -4530,6 +4664,31 @@ export const ControlPanelApiFactory = function (configuration?: Configuration, b
         },
         /**
          * 
+         * @summary اطلاعات مورد نیاز پیگیری آژانس
+         * @param {number} agencyId 
+         * @param {*} [options] Override http request option.
+         * @throws {RequiredError}
+         */
+        apiControlPanelFollowUpAgencyAgencyIdGet(agencyId: number, options?: any): AxiosPromise<FollowUpForAgency> {
+            return localVarFp.apiControlPanelFollowUpAgencyAgencyIdGet(agencyId, options).then((request) => request(axios, basePath));
+        },
+        /**
+         * 
+         * @summary اضافه کردن پیگیری به آژانس
+         * @param {number} agencyId 
+         * @param {string} [notes] 
+         * @param {string} [type] 
+         * @param {string} [time] 
+         * @param {string} [remiderDate] 
+         * @param {string} [reservedNote] 
+         * @param {*} [options] Override http request option.
+         * @throws {RequiredError}
+         */
+        apiControlPanelFollowUpAgencyRegisterAgencyIdPost(agencyId: number, notes?: string, type?: string, time?: string, remiderDate?: string, reservedNote?: string, options?: any): AxiosPromise<string> {
+            return localVarFp.apiControlPanelFollowUpAgencyRegisterAgencyIdPost(agencyId, notes, type, time, remiderDate, reservedNote, options).then((request) => request(axios, basePath));
+        },
+        /**
+         * 
          * @summary لیست پیگیری ها
          * @param {string} [followUpCode] کد پیگیری
          * @param {number} [employeeId] بر اساس کارمند
@@ -5319,6 +5478,31 @@ export interface ControlPanelApiInterface {
      * @memberof ControlPanelApiInterface
      */
     apiControlPanelEmployeeRegisterPost(roleId?: number, fullName?: string, email?: string, password?: string, mobile?: string, profile?: any, born?: string, ncode?: string, phone?: string, address?: string, city?: string, province?: string, gender?: string, options?: AxiosRequestConfig): AxiosPromise<StringResultSET>;
+
+    /**
+     * 
+     * @summary اطلاعات مورد نیاز پیگیری آژانس
+     * @param {number} agencyId 
+     * @param {*} [options] Override http request option.
+     * @throws {RequiredError}
+     * @memberof ControlPanelApiInterface
+     */
+    apiControlPanelFollowUpAgencyAgencyIdGet(agencyId: number, options?: AxiosRequestConfig): AxiosPromise<FollowUpForAgency>;
+
+    /**
+     * 
+     * @summary اضافه کردن پیگیری به آژانس
+     * @param {number} agencyId 
+     * @param {string} [notes] 
+     * @param {string} [type] 
+     * @param {string} [time] 
+     * @param {string} [remiderDate] 
+     * @param {string} [reservedNote] 
+     * @param {*} [options] Override http request option.
+     * @throws {RequiredError}
+     * @memberof ControlPanelApiInterface
+     */
+    apiControlPanelFollowUpAgencyRegisterAgencyIdPost(agencyId: number, notes?: string, type?: string, time?: string, remiderDate?: string, reservedNote?: string, options?: AxiosRequestConfig): AxiosPromise<string>;
 
     /**
      * 
@@ -6194,6 +6378,35 @@ export class ControlPanelApi extends BaseAPI implements ControlPanelApiInterface
      */
     public apiControlPanelEmployeeRegisterPost(roleId?: number, fullName?: string, email?: string, password?: string, mobile?: string, profile?: any, born?: string, ncode?: string, phone?: string, address?: string, city?: string, province?: string, gender?: string, options?: AxiosRequestConfig) {
         return ControlPanelApiFp(this.configuration).apiControlPanelEmployeeRegisterPost(roleId, fullName, email, password, mobile, profile, born, ncode, phone, address, city, province, gender, options).then((request) => request(this.axios, this.basePath));
+    }
+
+    /**
+     * 
+     * @summary اطلاعات مورد نیاز پیگیری آژانس
+     * @param {number} agencyId 
+     * @param {*} [options] Override http request option.
+     * @throws {RequiredError}
+     * @memberof ControlPanelApi
+     */
+    public apiControlPanelFollowUpAgencyAgencyIdGet(agencyId: number, options?: AxiosRequestConfig) {
+        return ControlPanelApiFp(this.configuration).apiControlPanelFollowUpAgencyAgencyIdGet(agencyId, options).then((request) => request(this.axios, this.basePath));
+    }
+
+    /**
+     * 
+     * @summary اضافه کردن پیگیری به آژانس
+     * @param {number} agencyId 
+     * @param {string} [notes] 
+     * @param {string} [type] 
+     * @param {string} [time] 
+     * @param {string} [remiderDate] 
+     * @param {string} [reservedNote] 
+     * @param {*} [options] Override http request option.
+     * @throws {RequiredError}
+     * @memberof ControlPanelApi
+     */
+    public apiControlPanelFollowUpAgencyRegisterAgencyIdPost(agencyId: number, notes?: string, type?: string, time?: string, remiderDate?: string, reservedNote?: string, options?: AxiosRequestConfig) {
+        return ControlPanelApiFp(this.configuration).apiControlPanelFollowUpAgencyRegisterAgencyIdPost(agencyId, notes, type, time, remiderDate, reservedNote, options).then((request) => request(this.axios, this.basePath));
     }
 
     /**
