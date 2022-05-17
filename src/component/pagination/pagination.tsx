@@ -57,7 +57,7 @@ export default function Pagination({length,currentPage}:{length:number,currentPa
           router.push(nextPageURL);
         }
     }
-    return <div className="w-full md:w-4/5 lg:w-2/5 h-20 flex flex-row justify-between items-center my-2 px-4 py-1 bg-pagination text-white">
+    return <div className="w-full md:w-4/5 lg:container h-20 flex flex-row justify-between items-center my-2 px-4 py-1 bg-pagination text-white">
         <button id="PreviousPage" className={currentPage==1?"flex flex-row cursor-not-allowed":"flex flex-row"} onClick={()=>changePageHandler(currentPage-1)} ><img src="/image/go_previous_page.svg" alt="صفحه قبل" className={currentPage==1?"w-20 lg:w-28 h-16 opacity-50":"w-20 lg:w-28 h-16"}/></button>
         <span>
            <select name="pagination" id="pagination" onChange={(event)=>changePageHandler(event)} value={currentPage} defaultValue={currentPage} className="text-black lg:text-lg rounded w-20 h-10 px-2">

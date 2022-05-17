@@ -28,7 +28,7 @@ export const getServerSideProps: GetServerSideProps = async (context) =>{
 function Detail({sellData,rentData,isSell}:{sellData:SellAd , rentData:LetAd,isSell:boolean}) {
 
     return (
-        <div className="w-screen h-screen">
+        <div className="w-screen">
             <Head>
                 <title>{isSell? sellData.slug:rentData.slug}</title>
             </Head>
