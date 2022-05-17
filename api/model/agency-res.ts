@@ -194,5 +194,11 @@ export interface AgencyRes {
      * @memberof AgencyRes
      */
     'expiredAtContract'?: string | null;
+    /**
+     * 
+     * @type {number}
+     * @memberof AgencyRes
+     */
+    'groupId'?: number | null;
 }
 
