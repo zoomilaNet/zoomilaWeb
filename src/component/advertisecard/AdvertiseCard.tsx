@@ -4,6 +4,7 @@ import Slider from "../../slider/slider";
 import Seperator from '../../../models/seperator';
 import Image from "next/image";
 import AddDash from "../../../models/addDash";
+import Loading from "../loading/loading";
 function AdvertiseCard({ dataSell}:{dataSell: SellAd }) {
     let showSlider:any;
          showSlider=dataSell!.photos!.length==0?<div className="w-full h-full bg-no_image flex justify-center items-center"><Image src="/image/Zoomila_Logo.svg" alt="آگهی بدون عکس" width="197px" height="51px"/></div>:<Slider basePath={dataSell!.photoPath as string} photos={dataSell!.photos as string[]} photoSlug={dataSell!.slug as string}/>

@@ -13,7 +13,7 @@ function Layout({children}:{children:JSX.Element}){
     Router.events.on("routeChangeComplete",(url)=>{setShow(false)});
     let loadingShow =<div className='absolute w-screen h-screen opacity-100 flex justify-center items-center'><img src="/image/Loading.gif" alt="zoomila" /></div>;
 
-    return <div className="relative">
+    return <div >
         {show && <Loading/>}
         {children}
         <Footer/>
