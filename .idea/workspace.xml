@@ -1,12 +1,9 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="85396787-6298-4985-82c3-6d22319d4af6" name="Default Changelist" comment="change sell and let card for mobile and desktop Bm">
+    <list default="true" id="85396787-6298-4985-82c3-6d22319d4af6" name="Default Changelist" comment="no index pages Bm">
+      <change afterPath="$PROJECT_DIR$/pages/robots.txt" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/pages/[...slug].tsx" beforeDir="false" afterPath="$PROJECT_DIR$/pages/[...slug].tsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/pages/[adstype]/[detail].tsx" beforeDir="false" afterPath="$PROJECT_DIR$/pages/[adstype]/[detail].tsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/pages/index.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/pages/index.tsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/pages/projects/index.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/pages/projects/index.tsx" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -124,7 +121,7 @@
       <workItem from="1652694746698" duration="9230000" />
       <workItem from="1652760584385" duration="17968000" />
       <workItem from="1652847378790" duration="1555000" />
-      <workItem from="1652850895698" duration="257000" />
+      <workItem from="1652850895698" duration="715000" />
     </task>
     <task id="LOCAL-00001" summary="add deactive button for pagination and home page Bm">
       <created>1651321324567</created>
@@ -420,7 +417,14 @@
       <option name="project" value="LOCAL" />
       <updated>1652790109047</updated>
     </task>
-    <option name="localTasksCounter" value="43" />
+    <task id="LOCAL-00043" summary="no index pages Bm">
+      <created>1652851328705</created>
+      <option name="number" value="00043" />
+      <option name="presentableId" value="LOCAL-00043" />
+      <option name="project" value="LOCAL" />
+      <updated>1652851328705</updated>
+    </task>
+    <option name="localTasksCounter" value="44" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -438,7 +442,6 @@
     </option>
   </component>
   <component name="VcsManagerConfiguration">
-    <MESSAGE value="add lang property Bm" />
     <MESSAGE value="change document file structure Bm" />
     <MESSAGE value="convert img tag to Image tag Bm" />
     <MESSAGE value="change structure of image slider temp Bm" />
@@ -463,7 +466,8 @@
     <MESSAGE value="set loading progress in route change Bm" />
     <MESSAGE value="complete loading item for route changing Bm" />
     <MESSAGE value="change sell and let card for mobile and desktop Bm" />
-    <option name="LAST_COMMIT_MESSAGE" value="change sell and let card for mobile and desktop Bm" />
+    <MESSAGE value="no index pages Bm" />
+    <option name="LAST_COMMIT_MESSAGE" value="no index pages Bm" />
   </component>
   <component name="XSLT-Support.FileAssociations.UIState">
     <expand />
