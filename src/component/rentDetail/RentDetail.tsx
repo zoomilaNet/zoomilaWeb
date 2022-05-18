@@ -1,4 +1,4 @@
-import {LetAd} from "../../../api";
+import { LetAdDetail} from "../../../api";
 import React, {useEffect, useState} from "react";
 import cityOfProvince from "../../../public/ProvincesAndCities.json";
 import Image from "next/image";
@@ -7,7 +7,7 @@ import buildingTypeJson from "../../../public/BuildinType.json";
 import dynamic from "next/dynamic";
 import LatLngExtract from "../../../models/latlngextract";
 
-export default function RentDetail({data}:{data:LetAd}){
+export default function RentDetail({data}:{data:LetAdDetail}){
     const [showImage, setShowImage] = useState(false);
     const [provinceName,setProvinceName]=useState<string>("")
     const [buildingType,setBuildingType]=useState<string>("")
@@ -24,7 +24,7 @@ export default function RentDetail({data}:{data:LetAd}){
             }
         });
         buildingTypeJson.map(item=>{
-            if (item.key == data.buildingType) {
+            if (item.key == data.type) {
                 setBuildingType(  item.value.toString())
             }
         });
@@ -99,7 +99,7 @@ export default function RentDetail({data}:{data:LetAd}){
                 <img src="/image/Location.svg" alt="" />
                 <span className="flex flex-row mr-1">
                                         <p>آدرس:</p>
-                                        <span className="text-lg text-justify font-iransansbold mr-1 flex flex-row space-x-2"><p className="ml-2"> استان:</p><p>{provinceName}</p><p>شهر: </p><p>{data.cityName}</p><p>محله: </p><p>{data.neibourhoodName}</p></span>
+                                        <span className="text-lg text-justify font-iransansbold mr-1 flex flex-row space-x-2"><p className="ml-2"> استان:</p><p>{provinceName}</p><p>شهر: </p><p>{data.cityName}</p><p>محله: </p><p>{data.neighbourhoodName}</p></span>
                                     </span>
             </div>
 
@@ -107,17 +107,17 @@ export default function RentDetail({data}:{data:LetAd}){
                 <div className="rounded-t h-12 bg-hf_color text-white font-medium text-xl flex flex-col justify-center items-center"><p>مشخصات آگهی</p></div>
                 <div className="rounded-b p-2 bg-gray-100 flex flex-col justify-start space-y-2">
                     <span className="flex flex-row items-center"><p className="ml-1">نوع ملک:</p><p className="font-semibold">{buildingType}</p></span>
-                    <span className="flex flex-row items-center"><p className="ml-1">متراژ:</p><p className="font-semibold">{data.area} متر</p></span>
-                    <span className="flex flex-row items-center"><p className="ml-1">شرایط معامله:</p><p className="font-semibold">فروش نقدی</p></span>
-                    <span className="flex flex-row items-center"><p className="ml-1">سال ساخت:</p><p className="font-semibold">1384</p></span>
-                    <span className="flex flex-row items-center"><p className="ml-1">طبقه:</p><p className="font-semibold">4</p></span>
-                    <span className="flex flex-row items-center"><p className="ml-1">کل طبقات شاختمان:</p><p className="font-semibold">4</p></span>
-                    <span className="flex flex-row items-center"><p className="ml-1">تعداد واحد در هر طبقه:</p><p className="font-semibold">2</p></span>
-                    <span className="flex flex-row items-center"><p className="ml-1">امتیاز سازه:</p><p className="font-semibold">95</p></span>
-                    <span className="flex flex-row items-center"><p className="ml-1">نوع سند:</p><p className="font-semibold">تک برگ</p></span>
-                    <span className="flex flex-row items-center"><p className="ml-1">زیربنا:</p><p className="font-semibold">90 متر</p></span>
-                    <span className="flex flex-row items-center"><p className="ml-1">جهت ملک:</p><p className="font-semibold">شمالی</p></span>
-                    <span className="flex flex-row items-center"><p className="ml-1">وام:</p><p className="font-semibold">200,000,000</p></span>
+                    <span className="flex flex-row items-center"><p className="ml-1">متراژ:</p><p className="font-semibold">{data.area==null?"-":data.area+" متر"}</p></span>
+                    <span className="flex flex-row items-center"><p className="ml-1">شرایط معامله:</p><p className="font-semibold">{data.condition}</p></span>
+                    <span className="flex flex-row items-center"><p className="ml-1">سال ساخت:</p><p className="font-semibold">{data.buildingAge==null?"-":data.buildingAge}</p></span>
+                    <span className="flex flex-row items-center"><p className="ml-1">طبقه:</p><p className="font-semibold">{data.floorLevel==0?"-":data.floorLevel}</p></span>
+                    <span className="flex flex-row items-center"><p className="ml-1">کل طبقات شاختمان:</p><p className="font-semibold">{data.floors==0?"-":data.floors}</p></span>
+                    <span className="flex flex-row items-center"><p className="ml-1">تعداد واحد در هر طبقه:</p><p className="font-semibold">{data.unit==0?"-":data.unit}</p></span>
+                    <span className="flex flex-row items-center"><p className="ml-1">امتیاز سازه:</p><p className="font-semibold">{data.ranking==0?"-":data.ranking}</p></span>
+                    <span className="flex flex-row items-center"><p className="ml-1">نوع سند:</p><p className="font-semibold">{data.documentType}</p></span>
+                    <span className="flex flex-row items-center"><p className="ml-1">زیربنا:</p><p className="font-semibold">{data.foundation==null?"-":data.foundation+" متر"}</p></span>
+                    <span className="flex flex-row items-center"><p className="ml-1">جهت ملک:</p><p className="font-semibold">{data.direction==null||data.direction.length==0?"-":data.direction}</p></span>
+                    <span className="flex flex-row items-center"><p className="ml-1">وام:</p><p className="font-semibold">{data.facility?.loan==null?"ندارد":data.facility?.loan}</p></span>
                 </div>
             </div>
 
@@ -150,13 +150,13 @@ export default function RentDetail({data}:{data:LetAd}){
             </div>
 
             <div className="px-2 my-6">
-                <p className="text-right leading-9 text-black"><p className="text-gray_text inline-block ml-1">توضیحات</p>
+                <p className="text-right leading-9 text-black"><p className="text-gray_text inline-block ml-1">توضیحات: {data.description}</p>
 
                 </p>
             </div>
 
             <div className="p-2">
-                {showImage? <MapWithNoSSR latlng={LatLngExtract("36.9560,45.3876")}/>:<img src="/image/map.jpg" alt="" className="w-full h-auto" onClick={showMapHandler}/> }
+                {showImage? <MapWithNoSSR latlng={LatLngExtract(data.coordinate!)}/>:<img src="/image/map.jpg" alt="" className="w-full h-auto" onClick={showMapHandler}/> }
             </div>
 
         </div>

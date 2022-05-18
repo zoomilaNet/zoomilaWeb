@@ -1,7 +1,7 @@
 import React, {useEffect, useState} from "react";
 import {GetServerSideProps} from "next";
 import Head from "next/head";
-import { ClientsApi, LetAd, SellAd} from "../../api";
+import {ClientsApi, LetAd, LetAdDetail, SellAd, SellAdDetail} from "../../api";
 import cityOfProvince from "../../public/ProvincesAndCities.json";
 import SellDetail from "../../src/component/sellDetail/SellDetail";
 import RentDetail from "../../src/component/rentDetail/RentDetail";
@@ -36,7 +36,7 @@ function Detail({sellData,rentData,isSell}:{sellData:SellAd , rentData:LetAd,isS
             <main className="flex flex-col justify-start">
                 <div className="w-screen h-auto flex flex-row justify-center px-4">
                     <div className="w-full flex flex-col items-center">
-                        {isSell==true?<SellDetail data={sellData as SellAd}/>:<RentDetail data={rentData as LetAd}/>}
+                        {isSell==true?<SellDetail data={sellData as SellAdDetail}/>:<RentDetail data={rentData as LetAdDetail}/>}
                     </div>
                 </div>
             </main>
