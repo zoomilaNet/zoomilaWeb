@@ -6,6 +6,7 @@ import React from "react";
 export default function Projects() {
     return <div>
         <Head>
+            <meta name="robots" content="noindex"/>
             <title>خرید پروژه های ساختمانی | آماده فروش و در حال ساخت | زومیلا</title>
         </Head>
         <header className='bg-hf_color w-screen h-14 lg:h-16 grid grid-cols-4 gap-4 px-4'>

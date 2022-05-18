@@ -157,6 +157,7 @@ export default function Home() {
   }
   return <div className='static text-white text-xl md:text-2xl lg:text-2xl'>
     <Head>
+      <meta name="robots" content="noindex"/>
       <title>بزرگترین سایت خرید و فروش، رهن و اجاره املاک در کشور | زومیلا</title>
       <meta name="description" content="کامل ترین وب سایت املاک در ایران برای فروش و رهن واجاره با درج قیمت با به روزترین فایل ها به همراه عکس و فیلم" />
       <meta property="og:title" content="خرید، فروش، رهن و اجاره آپارتمان، خانه، ویلا، زمین و سایر املاک با درج قیمت ملک | زومیلا" />

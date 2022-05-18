@@ -1,13 +1,12 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="85396787-6298-4985-82c3-6d22319d4af6" name="Default Changelist" comment="complete loading item for route changing Bm">
+    <list default="true" id="85396787-6298-4985-82c3-6d22319d4af6" name="Default Changelist" comment="change sell and let card for mobile and desktop Bm">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/pages/[...slug].tsx" beforeDir="false" afterPath="$PROJECT_DIR$/pages/[...slug].tsx" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/pages/[adstype]/[detail].tsx" beforeDir="false" afterPath="$PROJECT_DIR$/pages/[adstype]/[detail].tsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/component/advertisecard/AdvertiseCard.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/component/advertisecard/AdvertiseCard.tsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/component/layout/layout.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/component/layout/layout.tsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/component/letAdsCard/LetAdvertiseCard.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/component/letAdsCard/LetAdvertiseCard.tsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/component/pagination/pagination.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/component/pagination/pagination.tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/pages/index.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/pages/index.tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/pages/projects/index.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/pages/projects/index.tsx" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -123,7 +122,9 @@
       <workItem from="1652594915946" duration="13722000" />
       <workItem from="1652674242838" duration="938000" />
       <workItem from="1652694746698" duration="9230000" />
-      <workItem from="1652760584385" duration="17478000" />
+      <workItem from="1652760584385" duration="17968000" />
+      <workItem from="1652847378790" duration="1555000" />
+      <workItem from="1652850895698" duration="257000" />
     </task>
     <task id="LOCAL-00001" summary="add deactive button for pagination and home page Bm">
       <created>1651321324567</created>
@@ -412,7 +413,14 @@
       <option name="project" value="LOCAL" />
       <updated>1652782811515</updated>
     </task>
-    <option name="localTasksCounter" value="42" />
+    <task id="LOCAL-00042" summary="change sell and let card for mobile and desktop Bm">
+      <created>1652790109047</created>
+      <option name="number" value="00042" />
+      <option name="presentableId" value="LOCAL-00042" />
+      <option name="project" value="LOCAL" />
+      <updated>1652790109047</updated>
+    </task>
+    <option name="localTasksCounter" value="43" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -430,7 +438,6 @@
     </option>
   </component>
   <component name="VcsManagerConfiguration">
-    <MESSAGE value="add sample meta tag to listing page Bm" />
     <MESSAGE value="add lang property Bm" />
     <MESSAGE value="change document file structure Bm" />
     <MESSAGE value="convert img tag to Image tag Bm" />
@@ -455,7 +462,8 @@
     <MESSAGE value="change radious of city, neighbourhood and building selector Bm" />
     <MESSAGE value="set loading progress in route change Bm" />
     <MESSAGE value="complete loading item for route changing Bm" />
-    <option name="LAST_COMMIT_MESSAGE" value="complete loading item for route changing Bm" />
+    <MESSAGE value="change sell and let card for mobile and desktop Bm" />
+    <option name="LAST_COMMIT_MESSAGE" value="change sell and let card for mobile and desktop Bm" />
   </component>
   <component name="XSLT-Support.FileAssociations.UIState">
     <expand />

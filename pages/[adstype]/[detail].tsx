@@ -30,6 +30,7 @@ function Detail({sellData,rentData,isSell}:{sellData:SellAd , rentData:LetAd,isS
     return (
         <div className="w-screen">
             <Head>
+                <meta name="robots" content="noindex"/>
                 <title>{isSell? sellData.slug:rentData.slug}</title>
             </Head>
             <header className="bg-hf_color w-screen h-14 lg:h-16 grid grid-cols-4 gap-4 px-4">
