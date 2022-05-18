@@ -172,10 +172,7 @@ export default function Home() {
       <meta name="twitter:site" content="@zoomilaofficial" />
       <meta name="twitter:title" content="خرید، فروش، رهن و اجاره آپارتمان، خانه، ویلا، زمین و سایر املاک با درج قیمت ملک | زومیلا" />
     </Head>
-    <header className='bg-hf_color w-screen h-14 lg:h-16 grid grid-cols-4 gap-4 px-4'>
-        <div className="flex justify-start items-center"><img src="./image/menu.svg" alt="منو زومیلا" className="w-6 h-6"/></div>
-      <div className="col-span-2 flex justify-center items-center"><img src="./image/Zoomila_Logo.svg" alt="زومیلا" className="h-12 lg:h-14 w-52" /></div>
-    </header>
+
     <main className="flex flex-col justify-start ">
       <div className="flex justify-center items-center mb-4 mt-2">
         <h1 className=" text-black font-medium text-lg sm:text-lg md:text-2xl lg:text-2xl">ملک مورد نظر خود را جستجو نمایید</h1>
@@ -274,6 +271,44 @@ export default function Home() {
               className="bg-white w-full h-20 md:full flex flex-row items-center justify-center px-2 rounded-md">
               <p className="text-lg sm:text-lg font-bold text-black">وبلاگ زومیلا</p>
             </div></a>
+          </div>
+          <div className="flex flex-col space-y-2 justify-center mb-4 text-sm md:text-base text-black">
+            <Link href="/"><span className="bg-white cursor-pointer w-full h-12 rounded-md flex justify-center items-center">خرید و فروش ویلا در شمال</span></Link>
+            <Link href="/خرید-فروش/ویلا/چمستان"><span className="bg-white cursor-pointer w-full h-12 rounded-md flex justify-center items-center">خرید و فروش ویلا در چمستان</span></Link>
+            <Link href="/خرید-فروش/ویلا/آمل"><span className="bg-white cursor-pointer w-full h-12 rounded-md flex justify-center items-center">خرید و فروش ویلا در آمل</span></Link>
+            <Link href="/خرید-فروش/ویلا/نوشهر"><span className="bg-white cursor-pointer w-full h-12 rounded-md flex justify-center items-center">خرید و فروش ویلا در نوشهر</span></Link>
+            <Link href="/خرید-فروش/ویلا/نور-مازندران"><span className="bg-white cursor-pointer w-full h-12 rounded-md flex justify-center items-center">خرید و فروش ویلا در نور</span></Link>
+            <Link href="/خرید-فروش/ویلا/محمود-آباد"><span className="bg-white cursor-pointer w-full h-12 rounded-md flex justify-center items-center">خرید و فروش ویلا در محمودآباد</span></Link>
+            <Link href="/خرید-فروش/ویلا/رامسر"><span className="bg-white cursor-pointer w-full h-12 rounded-md flex justify-center items-center">خرید و فروش ویلا در رامسر</span></Link>
+            <Link href="/خرید-فروش/ویلا/رویان/نور-مازندران"><span className="bg-white cursor-pointer w-full h-12 rounded-md flex justify-center items-center">خرید و فروش ویلا در رویان</span></Link>
+            <Link href="/خرید-فروش/ویلا/کردان/کرج"><span className="bg-white cursor-pointer w-full h-12 rounded-md flex justify-center items-center">خرید و فروش ویلا در کردان</span></Link>
+            <Link href="/خرید-فروش/ویلا/تهران"><span className="bg-white cursor-pointer w-full h-12 rounded-md flex justify-center items-center">خرید و فروش ویلا در تهران</span></Link>
+            <Link href="/خرید-فروش/ویلا/کرج"><span className="bg-white cursor-pointer w-full h-12 rounded-md flex justify-center items-center">خرید و فروش ویلا در کرج</span></Link>
+            <Link href="/خرید-فروش/ویلا/شهریار"><span className="bg-white cursor-pointer w-full h-12 rounded-md flex justify-center items-center">خرید و فروش ویلا در شهریار</span></Link>
+            <Link href="/خرید-فروش/آپارتمان/تهران"><span className="bg-white cursor-pointer w-full h-12 rounded-md flex justify-center items-center">خرید و فروش آپارتمان در تهران</span></Link>
+            <Link href="/خرید-فروش/آپارتمان/همدان"><span className="bg-white cursor-pointer w-full h-12 rounded-md flex justify-center items-center">خرید و فروش آپارتمان در همدان</span></Link>
+            <Link href="/خرید-فروش/آپارتمان/کرج"><span className="bg-white cursor-pointer w-full h-12 rounded-md flex justify-center items-center">خرید و فروش آپارتمان در کرج</span></Link>
+            <Link href="/خرید-فروش/آپارتمان/پرند"><span className="bg-white cursor-pointer w-full h-12 rounded-md flex justify-center items-center">خرید و فروش آپارتمان در پرند</span></Link>
+            <Link href="/خرید-فروش/آپارتمان/یزد"><span className="bg-white cursor-pointer w-full h-12 rounded-md flex justify-center items-center">خرید و فروش آپارتمان در یزد</span></Link>
+            <Link href="/خرید-فروش/آپارتمان/تبریز"><span className="bg-white cursor-pointer w-full h-12 rounded-md flex justify-center items-center">خرید و فروش آپارتمان در تبریز</span></Link>
+            <Link href="/خرید-فروش/آپارتمان/اصفهان"><span className="bg-white cursor-pointer w-full h-12 rounded-md flex justify-center items-center">خرید و فروش آپارتمان در اصفهان</span></Link>
+            <Link href="/خرید-فروش/آپارتمان/شیراز"><span className="bg-white cursor-pointer w-full h-12 rounded-md flex justify-center items-center">خرید و فروش آپارتمان در شیراز</span></Link>
+            <Link href="/خرید-فروش/آپارتمان/قم"><span className="bg-white cursor-pointer w-full h-12 rounded-md flex justify-center items-center">خرید و فروش آپارتمان در قم</span></Link>
+            <Link href="/خرید-فروش/آپارتمان/كیش"><span className="bg-white cursor-pointer w-full h-12 rounded-md flex justify-center items-center">خرید و فروش آپارتمان در کیش</span></Link>
+            <Link href="/خرید-فروش/آپارتمان/ساری"><span className="bg-white cursor-pointer w-full h-12 rounded-md flex justify-center items-center">خرید و فروش آپارتمان در ساری</span></Link>
+            <Link href="/خرید-فروش/آپارتمان/مشهد"><span className="bg-white cursor-pointer w-full h-12 rounded-md flex justify-center items-center">خرید و فروش آپارتمان در مشهد</span></Link>
+            <Link href="/رهن-اجاره/آپارتمان/تهران"><span className="bg-white cursor-pointer w-full h-12 rounded-md flex justify-center items-center">رهن و اجاره آپارتمان در تهران</span></Link>
+            <Link href="/رهن-اجاره/آپارتمان/تبریز"><span className="bg-white cursor-pointer w-full h-12 rounded-md flex justify-center items-center">رهن و اجاره آپارتمان در تبریز</span></Link>
+            <Link href="/رهن-اجاره/آپارتمان/یزد"><span className="bg-white cursor-pointer w-full h-12 rounded-md flex justify-center items-center">رهن و اجاره آپارتمان در یزد</span></Link>
+            <Link href="/رهن-اجاره/آپارتمان/همدان"><span className="bg-white cursor-pointer w-full h-12 rounded-md flex justify-center items-center">رهن و اجاره آپارتمان در همدان</span></Link>
+            <Link href="/رهن-اجاره/آپارتمان/ساری"><span className="bg-white cursor-pointer w-full h-12 rounded-md flex justify-center items-center">رهن و اجاره آپارتمان در ساری</span></Link>
+            <Link href="/رهن-اجاره/آپارتمان/پرند"><span className="bg-white cursor-pointer w-full h-12 rounded-md flex justify-center items-center">رهن و اجاره آپارتمان در پرند</span></Link>
+            <Link href="/رهن-اجاره/آپارتمان/کرج"><span className="bg-white cursor-pointer w-full h-12 rounded-md flex justify-center items-center">رهن و اجاره آپارتمان در کرج</span></Link>
+            <Link href="/رهن-اجاره/آپارتمان/مشهد"><span className="bg-white cursor-pointer w-full h-12 rounded-md flex justify-center items-center">رهن و اجاره آپارتمان در مشهد</span></Link>
+            <Link href="/رهن-اجاره/آپارتمان/اصفهان"><span className="bg-white cursor-pointer w-full h-12 rounded-md flex justify-center items-center">رهن و اجاره آپارتمان در اصفهان</span></Link>
+            <Link href="/رهن-اجاره/آپارتمان/شیراز"><span className="bg-white cursor-pointer w-full h-12 rounded-md flex justify-center items-center">رهن و اجاره آپارتمان در شیراز</span></Link>
+            <Link href="/رهن-اجاره/آپارتمان/رشت"><span className="bg-white cursor-pointer w-full h-12 rounded-md flex justify-center items-center">رهن و اجاره آپارتمان در رشت</span></Link>
+            <Link href="/رهن-اجاره/آپارتمان/كیش"><span className="bg-white cursor-pointer w-full h-12 rounded-md flex justify-center items-center">رهن و اجاره آپارتمان در کیش</span></Link>
           </div>
         </div>
         <div className="w-5 h-auto"></div>

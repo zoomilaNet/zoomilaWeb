@@ -33,17 +33,6 @@ function Detail({sellData,rentData,isSell}:{sellData:SellAd , rentData:LetAd,isS
                 <meta name="robots" content="noindex"/>
                 <title>{isSell? sellData.slug:rentData.slug}</title>
             </Head>
-            <header className="bg-hf_color w-screen h-14 lg:h-16 grid grid-cols-4 gap-4 px-4">
-                <div className="flex justify-start items-center">
-                    <img src="/image/menu.svg" alt="منو زومیلا" />
-                </div>
-                <a href={`/`} className="col-span-2 flex justify-center items-center">
-                    <img src="/image/Zoomila_Logo.svg" alt="زومیلا" />
-                </a>
-                <div className="flex justify-end items-center">
-                    <img src="/image/Filter.svg" alt="filter" />
-                </div>
-            </header>
             <main className="flex flex-col justify-start">
                 <div className="w-screen h-auto flex flex-row justify-center px-4">
                     <div className="w-full flex flex-col items-center">

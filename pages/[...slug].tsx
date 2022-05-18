@@ -5,7 +5,6 @@ import AdvertiseCard from "../src/component/advertisecard/AdvertiseCard";
 import cityOfProvince from "../public/ProvincesAndCities.json";
 import DeleteDash from "../models/deleteDash";
 import Pagination from "../src/component/pagination/pagination";
-import Link from "next/link";
 import Head from "next/head";
 import LetAdvertiseCard from "../src/component/letAdsCard/LetAdvertiseCard";
 export const getServerSideProps: GetServerSideProps = async (context) => {
@@ -110,12 +109,8 @@ export default function List({sellData,letData,isSellAds,title,page,totalPage}:{
                 <meta name="twitter:site" content="@zoomilaofficial" />
                 <meta name="twitter:title" content="خرید، فروش، رهن و اجاره آپارتمان، خانه، ویلا، زمین و سایر املاک با درج قیمت ملک | زومیلا" />
             </Head>
-            <header className='bg-hf_color w-screen h-14 lg:h-16 grid grid-cols-4 gap-4 px-4'>
-                <div className="flex justify-start items-center"><img src="/image/menu.svg" alt="منو زومیلا" className="w-6 h-6"/></div>
-                <Link href={`./`}><div className="col-span-2 flex justify-center items-center cursor-pointer"><img src="/image/Zoomila_Logo.svg" alt="زومیلا" className="h-12 lg:h-14 w-52"/></div></Link>
-                <div className="flex justify-end items-center"><img src="/image/Filter.svg" alt="filter" className="w-8 h-8"/></div>
-            </header>
             <main className="flex flex-col justify-start">
+                <div className="absolute top-4 left-4"><img src="/image/Filter.svg" alt="filter" className="w-8 h-8"/></div>
                 <div className="w-screen h-auto flex flex-row justify-center px-4">
                     <div className="w-full flex flex-col items-center">
                         <h1 className="font-iransansbold text-xl mt-3 mb-1">{title}</h1>
