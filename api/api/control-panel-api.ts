@@ -1172,7 +1172,6 @@ export const ControlPanelApiAxiosParamCreator = function (configuration?: Config
          * @param {number} [provinceId] کد استان
          * @param {number} [cityId] کد شهر
          * @param {string} [agencyTrackingCode] کد پیگیری آژانس
-         * @param {Array<number>} [groupIds] لیستی از کد گروه ها
          * @param {'AdviserCount' | 'PublishedSellCount' | 'PublishedLetCount' | 'SellAds' | 'LetAds' | 'Visit' | 'PhoneReq' | 'AgencyReq' | 'ExpiredContract' | 'ActiveContract'} [order] مرتب سازی
          * @param {'pending' | 'not_verified' | 'verified'} [status] وضعیت آژانس
          * @param {string} [query] 
@@ -1181,7 +1180,7 @@ export const ControlPanelApiAxiosParamCreator = function (configuration?: Config
          * @param {*} [options] Override http request option.
          * @throws {RequiredError}
          */
-        apiControlPanelAgencyListGet: async (provinceId?: number, cityId?: number, agencyTrackingCode?: string, groupIds?: Array<number>, order?: 'AdviserCount' | 'PublishedSellCount' | 'PublishedLetCount' | 'SellAds' | 'LetAds' | 'Visit' | 'PhoneReq' | 'AgencyReq' | 'ExpiredContract' | 'ActiveContract', status?: 'pending' | 'not_verified' | 'verified', query?: string, currentPage?: number, pageSize?: number, options: AxiosRequestConfig = {}): Promise<RequestArgs> => {
+        apiControlPanelAgencyListGet: async (provinceId?: number, cityId?: number, agencyTrackingCode?: string, order?: 'AdviserCount' | 'PublishedSellCount' | 'PublishedLetCount' | 'SellAds' | 'LetAds' | 'Visit' | 'PhoneReq' | 'AgencyReq' | 'ExpiredContract' | 'ActiveContract', status?: 'pending' | 'not_verified' | 'verified', query?: string, currentPage?: number, pageSize?: number, options: AxiosRequestConfig = {}): Promise<RequestArgs> => {
             const localVarPath = `/api/ControlPanel/Agency/List`;
             // use dummy base URL string because the URL constructor only accepts absolute URLs.
             const localVarUrlObj = new URL(localVarPath, DUMMY_BASE_URL);
@@ -1208,10 +1207,6 @@ export const ControlPanelApiAxiosParamCreator = function (configuration?: Config
 
             if (agencyTrackingCode !== undefined) {
                 localVarQueryParameter['AgencyTrackingCode'] = agencyTrackingCode;
-            }
-
-            if (groupIds) {
-                localVarQueryParameter['GroupIds'] = groupIds;
             }
 
             if (order !== undefined) {
@@ -2232,43 +2227,6 @@ export const ControlPanelApiAxiosParamCreator = function (configuration?: Config
         },
         /**
          * 
-         * @param {number} groupId 
-         * @param {*} [options] Override http request option.
-         * @throws {RequiredError}
-         */
-        apiControlPanelGroupGroupIdPut: async (groupId: number, options: AxiosRequestConfig = {}): Promise<RequestArgs> => {
-            // verify required parameter 'groupId' is not null or undefined
-            assertParamExists('apiControlPanelGroupGroupIdPut', 'groupId', groupId)
-            const localVarPath = `/api/ControlPanel/Group/{groupId}`
-                .replace(`{${"groupId"}}`, encodeURIComponent(String(groupId)));
-            // use dummy base URL string because the URL constructor only accepts absolute URLs.
-            const localVarUrlObj = new URL(localVarPath, DUMMY_BASE_URL);
-            let baseOptions;
-            if (configuration) {
-                baseOptions = configuration.baseOptions;
-            }
-
-            const localVarRequestOptions = { method: 'PUT', ...baseOptions, ...options};
-            const localVarHeaderParameter = {} as any;
-            const localVarQueryParameter = {} as any;
-
-            // authentication Bearer required
-            // http bearer authentication required
-            await setBearerAuthToObject(localVarHeaderParameter, configuration)
-
-
-    
-            setSearchParams(localVarUrlObj, localVarQueryParameter);
-            let headersFromBaseOptions = baseOptions && baseOptions.headers ? baseOptions.headers : {};
-            localVarRequestOptions.headers = {...localVarHeaderParameter, ...headersFromBaseOptions, ...options.headers};
-
-            return {
-                url: toPathString(localVarUrlObj),
-                options: localVarRequestOptions,
-            };
-        },
-        /**
-         * 
          * @summary لیست زمینه فعالیت گروه ها
          * @param {*} [options] Override http request option.
          * @throws {RequiredError}
@@ -2440,43 +2398,6 @@ export const ControlPanelApiAxiosParamCreator = function (configuration?: Config
         },
         /**
          * 
-         * @param {number} groupId 
-         * @param {*} [options] Override http request option.
-         * @throws {RequiredError}
-         */
-        apiControlPanelGroupsGroupIdDelete: async (groupId: number, options: AxiosRequestConfig = {}): Promise<RequestArgs> => {
-            // verify required parameter 'groupId' is not null or undefined
-            assertParamExists('apiControlPanelGroupsGroupIdDelete', 'groupId', groupId)
-            const localVarPath = `/api/ControlPanel/Groups/{groupId}`
-                .replace(`{${"groupId"}}`, encodeURIComponent(String(groupId)));
-            // use dummy base URL string because the URL constructor only accepts absolute URLs.
-            const localVarUrlObj = new URL(localVarPath, DUMMY_BASE_URL);
-            let baseOptions;
-            if (configuration) {
-                baseOptions = configuration.baseOptions;
-            }
-
-            const localVarRequestOptions = { method: 'DELETE', ...baseOptions, ...options};
-            const localVarHeaderParameter = {} as any;
-            const localVarQueryParameter = {} as any;
-
-            // authentication Bearer required
-            // http bearer authentication required
-            await setBearerAuthToObject(localVarHeaderParameter, configuration)
-
-
-    
-            setSearchParams(localVarUrlObj, localVarQueryParameter);
-            let headersFromBaseOptions = baseOptions && baseOptions.headers ? baseOptions.headers : {};
-            localVarRequestOptions.headers = {...localVarHeaderParameter, ...headersFromBaseOptions, ...options.headers};
-
-            return {
-                url: toPathString(localVarUrlObj),
-                options: localVarRequestOptions,
-            };
-        },
-        /**
-         * 
          * @summary حذف پرسنل از گروه
          * @param {number} groupId 
          * @param {number} employeeId 
@@ -2628,39 +2549,6 @@ export const ControlPanelApiAxiosParamCreator = function (configuration?: Config
             }
 
             const localVarRequestOptions = { method: 'GET', ...baseOptions, ...options};
-            const localVarHeaderParameter = {} as any;
-            const localVarQueryParameter = {} as any;
-
-            // authentication Bearer required
-            // http bearer authentication required
-            await setBearerAuthToObject(localVarHeaderParameter, configuration)
-
-
-    
-            setSearchParams(localVarUrlObj, localVarQueryParameter);
-            let headersFromBaseOptions = baseOptions && baseOptions.headers ? baseOptions.headers : {};
-            localVarRequestOptions.headers = {...localVarHeaderParameter, ...headersFromBaseOptions, ...options.headers};
-
-            return {
-                url: toPathString(localVarUrlObj),
-                options: localVarRequestOptions,
-            };
-        },
-        /**
-         * 
-         * @param {*} [options] Override http request option.
-         * @throws {RequiredError}
-         */
-        apiControlPanelGroupsPost: async (options: AxiosRequestConfig = {}): Promise<RequestArgs> => {
-            const localVarPath = `/api/ControlPanel/Groups`;
-            // use dummy base URL string because the URL constructor only accepts absolute URLs.
-            const localVarUrlObj = new URL(localVarPath, DUMMY_BASE_URL);
-            let baseOptions;
-            if (configuration) {
-                baseOptions = configuration.baseOptions;
-            }
-
-            const localVarRequestOptions = { method: 'POST', ...baseOptions, ...options};
             const localVarHeaderParameter = {} as any;
             const localVarQueryParameter = {} as any;
 
@@ -3675,7 +3563,6 @@ export const ControlPanelApiFp = function(configuration?: Configuration) {
          * @param {number} [provinceId] کد استان
          * @param {number} [cityId] کد شهر
          * @param {string} [agencyTrackingCode] کد پیگیری آژانس
-         * @param {Array<number>} [groupIds] لیستی از کد گروه ها
          * @param {'AdviserCount' | 'PublishedSellCount' | 'PublishedLetCount' | 'SellAds' | 'LetAds' | 'Visit' | 'PhoneReq' | 'AgencyReq' | 'ExpiredContract' | 'ActiveContract'} [order] مرتب سازی
          * @param {'pending' | 'not_verified' | 'verified'} [status] وضعیت آژانس
          * @param {string} [query] 
@@ -3684,8 +3571,8 @@ export const ControlPanelApiFp = function(configuration?: Configuration) {
          * @param {*} [options] Override http request option.
          * @throws {RequiredError}
          */
-        async apiControlPanelAgencyListGet(provinceId?: number, cityId?: number, agencyTrackingCode?: string, groupIds?: Array<number>, order?: 'AdviserCount' | 'PublishedSellCount' | 'PublishedLetCount' | 'SellAds' | 'LetAds' | 'Visit' | 'PhoneReq' | 'AgencyReq' | 'ExpiredContract' | 'ActiveContract', status?: 'pending' | 'not_verified' | 'verified', query?: string, currentPage?: number, pageSize?: number, options?: AxiosRequestConfig): Promise<(axios?: AxiosInstance, basePath?: string) => AxiosPromise<AgencyResPagedList>> {
-            const localVarAxiosArgs = await localVarAxiosParamCreator.apiControlPanelAgencyListGet(provinceId, cityId, agencyTrackingCode, groupIds, order, status, query, currentPage, pageSize, options);
+        async apiControlPanelAgencyListGet(provinceId?: number, cityId?: number, agencyTrackingCode?: string, order?: 'AdviserCount' | 'PublishedSellCount' | 'PublishedLetCount' | 'SellAds' | 'LetAds' | 'Visit' | 'PhoneReq' | 'AgencyReq' | 'ExpiredContract' | 'ActiveContract', status?: 'pending' | 'not_verified' | 'verified', query?: string, currentPage?: number, pageSize?: number, options?: AxiosRequestConfig): Promise<(axios?: AxiosInstance, basePath?: string) => AxiosPromise<AgencyResPagedList>> {
+            const localVarAxiosArgs = await localVarAxiosParamCreator.apiControlPanelAgencyListGet(provinceId, cityId, agencyTrackingCode, order, status, query, currentPage, pageSize, options);
             return createRequestFunction(localVarAxiosArgs, globalAxios, BASE_PATH, configuration);
         },
         /**
@@ -3945,16 +3832,6 @@ export const ControlPanelApiFp = function(configuration?: Configuration) {
         },
         /**
          * 
-         * @param {number} groupId 
-         * @param {*} [options] Override http request option.
-         * @throws {RequiredError}
-         */
-        async apiControlPanelGroupGroupIdPut(groupId: number, options?: AxiosRequestConfig): Promise<(axios?: AxiosInstance, basePath?: string) => AxiosPromise<void>> {
-            const localVarAxiosArgs = await localVarAxiosParamCreator.apiControlPanelGroupGroupIdPut(groupId, options);
-            return createRequestFunction(localVarAxiosArgs, globalAxios, BASE_PATH, configuration);
-        },
-        /**
-         * 
          * @summary لیست زمینه فعالیت گروه ها
          * @param {*} [options] Override http request option.
          * @throws {RequiredError}
@@ -4003,16 +3880,6 @@ export const ControlPanelApiFp = function(configuration?: Configuration) {
         },
         /**
          * 
-         * @param {number} groupId 
-         * @param {*} [options] Override http request option.
-         * @throws {RequiredError}
-         */
-        async apiControlPanelGroupsGroupIdDelete(groupId: number, options?: AxiosRequestConfig): Promise<(axios?: AxiosInstance, basePath?: string) => AxiosPromise<void>> {
-            const localVarAxiosArgs = await localVarAxiosParamCreator.apiControlPanelGroupsGroupIdDelete(groupId, options);
-            return createRequestFunction(localVarAxiosArgs, globalAxios, BASE_PATH, configuration);
-        },
-        /**
-         * 
          * @summary حذف پرسنل از گروه
          * @param {number} groupId 
          * @param {number} employeeId 
@@ -4057,15 +3924,6 @@ export const ControlPanelApiFp = function(configuration?: Configuration) {
          */
         async apiControlPanelGroupsListGet(options?: AxiosRequestConfig): Promise<(axios?: AxiosInstance, basePath?: string) => AxiosPromise<Array<GroupToReturnDto>>> {
             const localVarAxiosArgs = await localVarAxiosParamCreator.apiControlPanelGroupsListGet(options);
-            return createRequestFunction(localVarAxiosArgs, globalAxios, BASE_PATH, configuration);
-        },
-        /**
-         * 
-         * @param {*} [options] Override http request option.
-         * @throws {RequiredError}
-         */
-        async apiControlPanelGroupsPost(options?: AxiosRequestConfig): Promise<(axios?: AxiosInstance, basePath?: string) => AxiosPromise<void>> {
-            const localVarAxiosArgs = await localVarAxiosParamCreator.apiControlPanelGroupsPost(options);
             return createRequestFunction(localVarAxiosArgs, globalAxios, BASE_PATH, configuration);
         },
         /**
@@ -4550,7 +4408,6 @@ export const ControlPanelApiFactory = function (configuration?: Configuration, b
          * @param {number} [provinceId] کد استان
          * @param {number} [cityId] کد شهر
          * @param {string} [agencyTrackingCode] کد پیگیری آژانس
-         * @param {Array<number>} [groupIds] لیستی از کد گروه ها
          * @param {'AdviserCount' | 'PublishedSellCount' | 'PublishedLetCount' | 'SellAds' | 'LetAds' | 'Visit' | 'PhoneReq' | 'AgencyReq' | 'ExpiredContract' | 'ActiveContract'} [order] مرتب سازی
          * @param {'pending' | 'not_verified' | 'verified'} [status] وضعیت آژانس
          * @param {string} [query] 
@@ -4559,8 +4416,8 @@ export const ControlPanelApiFactory = function (configuration?: Configuration, b
          * @param {*} [options] Override http request option.
          * @throws {RequiredError}
          */
-        apiControlPanelAgencyListGet(provinceId?: number, cityId?: number, agencyTrackingCode?: string, groupIds?: Array<number>, order?: 'AdviserCount' | 'PublishedSellCount' | 'PublishedLetCount' | 'SellAds' | 'LetAds' | 'Visit' | 'PhoneReq' | 'AgencyReq' | 'ExpiredContract' | 'ActiveContract', status?: 'pending' | 'not_verified' | 'verified', query?: string, currentPage?: number, pageSize?: number, options?: any): AxiosPromise<AgencyResPagedList> {
-            return localVarFp.apiControlPanelAgencyListGet(provinceId, cityId, agencyTrackingCode, groupIds, order, status, query, currentPage, pageSize, options).then((request) => request(axios, basePath));
+        apiControlPanelAgencyListGet(provinceId?: number, cityId?: number, agencyTrackingCode?: string, order?: 'AdviserCount' | 'PublishedSellCount' | 'PublishedLetCount' | 'SellAds' | 'LetAds' | 'Visit' | 'PhoneReq' | 'AgencyReq' | 'ExpiredContract' | 'ActiveContract', status?: 'pending' | 'not_verified' | 'verified', query?: string, currentPage?: number, pageSize?: number, options?: any): AxiosPromise<AgencyResPagedList> {
+            return localVarFp.apiControlPanelAgencyListGet(provinceId, cityId, agencyTrackingCode, order, status, query, currentPage, pageSize, options).then((request) => request(axios, basePath));
         },
         /**
          * 
@@ -4798,15 +4655,6 @@ export const ControlPanelApiFactory = function (configuration?: Configuration, b
         },
         /**
          * 
-         * @param {number} groupId 
-         * @param {*} [options] Override http request option.
-         * @throws {RequiredError}
-         */
-        apiControlPanelGroupGroupIdPut(groupId: number, options?: any): AxiosPromise<void> {
-            return localVarFp.apiControlPanelGroupGroupIdPut(groupId, options).then((request) => request(axios, basePath));
-        },
-        /**
-         * 
          * @summary لیست زمینه فعالیت گروه ها
          * @param {*} [options] Override http request option.
          * @throws {RequiredError}
@@ -4851,15 +4699,6 @@ export const ControlPanelApiFactory = function (configuration?: Configuration, b
         },
         /**
          * 
-         * @param {number} groupId 
-         * @param {*} [options] Override http request option.
-         * @throws {RequiredError}
-         */
-        apiControlPanelGroupsGroupIdDelete(groupId: number, options?: any): AxiosPromise<void> {
-            return localVarFp.apiControlPanelGroupsGroupIdDelete(groupId, options).then((request) => request(axios, basePath));
-        },
-        /**
-         * 
          * @summary حذف پرسنل از گروه
          * @param {number} groupId 
          * @param {number} employeeId 
@@ -4901,14 +4740,6 @@ export const ControlPanelApiFactory = function (configuration?: Configuration, b
          */
         apiControlPanelGroupsListGet(options?: any): AxiosPromise<Array<GroupToReturnDto>> {
             return localVarFp.apiControlPanelGroupsListGet(options).then((request) => request(axios, basePath));
-        },
-        /**
-         * 
-         * @param {*} [options] Override http request option.
-         * @throws {RequiredError}
-         */
-        apiControlPanelGroupsPost(options?: any): AxiosPromise<void> {
-            return localVarFp.apiControlPanelGroupsPost(options).then((request) => request(axios, basePath));
         },
         /**
          * 
@@ -5373,7 +5204,6 @@ export interface ControlPanelApiInterface {
      * @param {number} [provinceId] کد استان
      * @param {number} [cityId] کد شهر
      * @param {string} [agencyTrackingCode] کد پیگیری آژانس
-     * @param {Array<number>} [groupIds] لیستی از کد گروه ها
      * @param {'AdviserCount' | 'PublishedSellCount' | 'PublishedLetCount' | 'SellAds' | 'LetAds' | 'Visit' | 'PhoneReq' | 'AgencyReq' | 'ExpiredContract' | 'ActiveContract'} [order] مرتب سازی
      * @param {'pending' | 'not_verified' | 'verified'} [status] وضعیت آژانس
      * @param {string} [query] 
@@ -5383,7 +5213,7 @@ export interface ControlPanelApiInterface {
      * @throws {RequiredError}
      * @memberof ControlPanelApiInterface
      */
-    apiControlPanelAgencyListGet(provinceId?: number, cityId?: number, agencyTrackingCode?: string, groupIds?: Array<number>, order?: 'AdviserCount' | 'PublishedSellCount' | 'PublishedLetCount' | 'SellAds' | 'LetAds' | 'Visit' | 'PhoneReq' | 'AgencyReq' | 'ExpiredContract' | 'ActiveContract', status?: 'pending' | 'not_verified' | 'verified', query?: string, currentPage?: number, pageSize?: number, options?: AxiosRequestConfig): AxiosPromise<AgencyResPagedList>;
+    apiControlPanelAgencyListGet(provinceId?: number, cityId?: number, agencyTrackingCode?: string, order?: 'AdviserCount' | 'PublishedSellCount' | 'PublishedLetCount' | 'SellAds' | 'LetAds' | 'Visit' | 'PhoneReq' | 'AgencyReq' | 'ExpiredContract' | 'ActiveContract', status?: 'pending' | 'not_verified' | 'verified', query?: string, currentPage?: number, pageSize?: number, options?: AxiosRequestConfig): AxiosPromise<AgencyResPagedList>;
 
     /**
      * 
@@ -5621,15 +5451,6 @@ export interface ControlPanelApiInterface {
 
     /**
      * 
-     * @param {number} groupId 
-     * @param {*} [options] Override http request option.
-     * @throws {RequiredError}
-     * @memberof ControlPanelApiInterface
-     */
-    apiControlPanelGroupGroupIdPut(groupId: number, options?: AxiosRequestConfig): AxiosPromise<void>;
-
-    /**
-     * 
      * @summary لیست زمینه فعالیت گروه ها
      * @param {*} [options] Override http request option.
      * @throws {RequiredError}
@@ -5674,15 +5495,6 @@ export interface ControlPanelApiInterface {
 
     /**
      * 
-     * @param {number} groupId 
-     * @param {*} [options] Override http request option.
-     * @throws {RequiredError}
-     * @memberof ControlPanelApiInterface
-     */
-    apiControlPanelGroupsGroupIdDelete(groupId: number, options?: AxiosRequestConfig): AxiosPromise<void>;
-
-    /**
-     * 
      * @summary حذف پرسنل از گروه
      * @param {number} groupId 
      * @param {number} employeeId 
@@ -5724,14 +5536,6 @@ export interface ControlPanelApiInterface {
      * @memberof ControlPanelApiInterface
      */
     apiControlPanelGroupsListGet(options?: AxiosRequestConfig): AxiosPromise<Array<GroupToReturnDto>>;
-
-    /**
-     * 
-     * @param {*} [options] Override http request option.
-     * @throws {RequiredError}
-     * @memberof ControlPanelApiInterface
-     */
-    apiControlPanelGroupsPost(options?: AxiosRequestConfig): AxiosPromise<void>;
 
     /**
      * 
@@ -6254,7 +6058,6 @@ export class ControlPanelApi extends BaseAPI implements ControlPanelApiInterface
      * @param {number} [provinceId] کد استان
      * @param {number} [cityId] کد شهر
      * @param {string} [agencyTrackingCode] کد پیگیری آژانس
-     * @param {Array<number>} [groupIds] لیستی از کد گروه ها
      * @param {'AdviserCount' | 'PublishedSellCount' | 'PublishedLetCount' | 'SellAds' | 'LetAds' | 'Visit' | 'PhoneReq' | 'AgencyReq' | 'ExpiredContract' | 'ActiveContract'} [order] مرتب سازی
      * @param {'pending' | 'not_verified' | 'verified'} [status] وضعیت آژانس
      * @param {string} [query] 
@@ -6264,8 +6067,8 @@ export class ControlPanelApi extends BaseAPI implements ControlPanelApiInterface
      * @throws {RequiredError}
      * @memberof ControlPanelApi
      */
-    public apiControlPanelAgencyListGet(provinceId?: number, cityId?: number, agencyTrackingCode?: string, groupIds?: Array<number>, order?: 'AdviserCount' | 'PublishedSellCount' | 'PublishedLetCount' | 'SellAds' | 'LetAds' | 'Visit' | 'PhoneReq' | 'AgencyReq' | 'ExpiredContract' | 'ActiveContract', status?: 'pending' | 'not_verified' | 'verified', query?: string, currentPage?: number, pageSize?: number, options?: AxiosRequestConfig) {
-        return ControlPanelApiFp(this.configuration).apiControlPanelAgencyListGet(provinceId, cityId, agencyTrackingCode, groupIds, order, status, query, currentPage, pageSize, options).then((request) => request(this.axios, this.basePath));
+    public apiControlPanelAgencyListGet(provinceId?: number, cityId?: number, agencyTrackingCode?: string, order?: 'AdviserCount' | 'PublishedSellCount' | 'PublishedLetCount' | 'SellAds' | 'LetAds' | 'Visit' | 'PhoneReq' | 'AgencyReq' | 'ExpiredContract' | 'ActiveContract', status?: 'pending' | 'not_verified' | 'verified', query?: string, currentPage?: number, pageSize?: number, options?: AxiosRequestConfig) {
+        return ControlPanelApiFp(this.configuration).apiControlPanelAgencyListGet(provinceId, cityId, agencyTrackingCode, order, status, query, currentPage, pageSize, options).then((request) => request(this.axios, this.basePath));
     }
 
     /**
@@ -6546,17 +6349,6 @@ export class ControlPanelApi extends BaseAPI implements ControlPanelApiInterface
 
     /**
      * 
-     * @param {number} groupId 
-     * @param {*} [options] Override http request option.
-     * @throws {RequiredError}
-     * @memberof ControlPanelApi
-     */
-    public apiControlPanelGroupGroupIdPut(groupId: number, options?: AxiosRequestConfig) {
-        return ControlPanelApiFp(this.configuration).apiControlPanelGroupGroupIdPut(groupId, options).then((request) => request(this.axios, this.basePath));
-    }
-
-    /**
-     * 
      * @summary لیست زمینه فعالیت گروه ها
      * @param {*} [options] Override http request option.
      * @throws {RequiredError}
@@ -6609,17 +6401,6 @@ export class ControlPanelApi extends BaseAPI implements ControlPanelApiInterface
 
     /**
      * 
-     * @param {number} groupId 
-     * @param {*} [options] Override http request option.
-     * @throws {RequiredError}
-     * @memberof ControlPanelApi
-     */
-    public apiControlPanelGroupsGroupIdDelete(groupId: number, options?: AxiosRequestConfig) {
-        return ControlPanelApiFp(this.configuration).apiControlPanelGroupsGroupIdDelete(groupId, options).then((request) => request(this.axios, this.basePath));
-    }
-
-    /**
-     * 
      * @summary حذف پرسنل از گروه
      * @param {number} groupId 
      * @param {number} employeeId 
@@ -6668,16 +6449,6 @@ export class ControlPanelApi extends BaseAPI implements ControlPanelApiInterface
      */
     public apiControlPanelGroupsListGet(options?: AxiosRequestConfig) {
         return ControlPanelApiFp(this.configuration).apiControlPanelGroupsListGet(options).then((request) => request(this.axios, this.basePath));
-    }
-
-    /**
-     * 
-     * @param {*} [options] Override http request option.
-     * @throws {RequiredError}
-     * @memberof ControlPanelApi
-     */
-    public apiControlPanelGroupsPost(options?: AxiosRequestConfig) {
-        return ControlPanelApiFp(this.configuration).apiControlPanelGroupsPost(options).then((request) => request(this.axios, this.basePath));
     }
 
     /**
