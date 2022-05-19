@@ -239,7 +239,7 @@ export default function RentDetail({data}:{data:LetAdDetail}){
             </div>
 
             <div className="p-2">
-                {showImage? <MapWithNoSSR latlng={LatLngExtract(data.coordinate!)}/>:<img src="/image/map.jpg" alt="" className="w-full h-auto" onClick={showMapHandler}/> }
+                {showImage? <MapWithNoSSR latlng={LatLngExtract(data.coordinate!)}/>:<div className="w-full h-20 flex justify-center items-center"><button onClick={showMapHandler} className="bg-green_accent text-white text-2xl font-iransansbold px-5 py-4 rounded-md">نمایش نقشه</button></div> }
             </div>
 
         </div>

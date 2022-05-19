@@ -14,20 +14,20 @@ function AdvertiseCard({ dataSell}:{dataSell: SellAd }) {
             </div>
         </div>
         <div className="w-full lg:w-1/2 aspect-w-4 aspect-h-3 lg:aspect-w-3 lg:aspect-h-1 row-start-2 bg-white">
-            <div className="flex flex-col items-start justify-between px-2">
-                <div className="w-full grid grid-cols-5 gap-1 my-2 md:my-4 tracking-tight">
+            <div className="flex flex-col items-start justify-between ">
+                <div className="w-full grid grid-cols-5 gap-1 my-2 md:my-4 tracking-tight px-2">
                     <a href={"/fsp-"+dataSell.sellId+"/"+AddDash(dataSell.slug!)} className="col-span-4 flex flex-row items-center">
                         <h2 className="ml-2 font-iransansbold text-ads_title text-base sm:text-xl md:text-2xl lg:text-3xl">{dataSell.slug}</h2>
                         <p className="text-gray_text text-xs md:text-base">{dataSell.cityName}</p>
                     </a>
                     <p className="col-span-1 flex items-center text-xs md:text-base">آگهی جدید</p>
                 </div>
-                <div className="w-full flex flex-row items-center my-2 lg:mb-2 md:text-lg">
+                <div className="w-full flex flex-row items-center my-2 lg:mb-2 md:text-lg px-2">
                     <img src="/image/Location.svg" alt="icon" className="w-4 h-4"/>
                     <p>آدرس </p>
                 </div>
-                <div className="my-1 lg:mb-2 text-xs md:text-base text-gray_text">توضیحات</div>
-                <div className="w-full flex flex-row justify-between items-center text-sm md:text-lg my-2 md:my-4 lg:mb-2">
+                <div className="my-1 lg:mb-2 text-xs md:text-base text-gray_text px-2">توضیحات</div>
+                <div className="w-full flex flex-row justify-between items-center text-sm md:text-lg my-2 md:my-4 lg:mb-2 px-2">
                     <div className="flex flex-row items-center">
                         <img src={dataSell.agencyLogo==null?"/image/aseman.png":dataSell.agencyLogo} alt="agencylogo"  className="border w-12 h-12 lg:w-20 lg:h-20 object-cover rounded ml-4"/>
                         <p >{dataSell.agencyName==null?"املاک آسمان":dataSell.agencyName}</p>

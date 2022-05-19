@@ -1,9 +1,9 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="85396787-6298-4985-82c3-6d22319d4af6" name="Default Changelist" comment="add some property in deteils page Bm">
+    <list default="true" id="85396787-6298-4985-82c3-6d22319d4af6" name="Default Changelist" comment="add facility to details page and add header for section of internal lin in main page Bm">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/pages/index.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/pages/index.tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/component/advertisecard/AdvertiseCard.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/component/advertisecard/AdvertiseCard.tsx" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/component/rentDetail/RentDetail.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/component/rentDetail/RentDetail.tsx" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/component/sellDetail/SellDetail.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/component/sellDetail/SellDetail.tsx" afterDir="false" />
     </list>
@@ -125,7 +125,7 @@
       <workItem from="1652760584385" duration="17968000" />
       <workItem from="1652847378790" duration="1555000" />
       <workItem from="1652850895698" duration="16267000" />
-      <workItem from="1652933137286" duration="11347000" />
+      <workItem from="1652933137286" duration="12678000" />
     </task>
     <task id="LOCAL-00001" summary="add deactive button for pagination and home page Bm">
       <created>1651321324567</created>
@@ -456,7 +456,14 @@
       <option name="project" value="LOCAL" />
       <updated>1652870812096</updated>
     </task>
-    <option name="localTasksCounter" value="48" />
+    <task id="LOCAL-00048" summary="add facility to details page and add header for section of internal lin in main page Bm">
+      <created>1652944787390</created>
+      <option name="number" value="00048" />
+      <option name="presentableId" value="LOCAL-00048" />
+      <option name="project" value="LOCAL" />
+      <updated>1652944787390</updated>
+    </task>
+    <option name="localTasksCounter" value="49" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -474,7 +481,6 @@
     </option>
   </component>
   <component name="VcsManagerConfiguration">
-    <MESSAGE value="seperate sell advertise card and let advertise card Bm" />
     <MESSAGE value="delete style from document file Bm" />
     <MESSAGE value="fix fetch neighbourhood error Bm" />
     <MESSAGE value="decrease aspect ratio of advertise card images Bm" />
@@ -499,7 +505,8 @@
     <MESSAGE value="change robots file Bm" />
     <MESSAGE value="complete layout of site and add internall link in main page for seo Bm" />
     <MESSAGE value="add some property in deteils page Bm" />
-    <option name="LAST_COMMIT_MESSAGE" value="add some property in deteils page Bm" />
+    <MESSAGE value="add facility to details page and add header for section of internal lin in main page Bm" />
+    <option name="LAST_COMMIT_MESSAGE" value="add facility to details page and add header for section of internal lin in main page Bm" />
   </component>
   <component name="XSLT-Support.FileAssociations.UIState">
     <expand />
