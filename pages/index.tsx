@@ -273,6 +273,7 @@ export default function Home() {
             </div></a>
           </div>
           <div className="flex flex-col space-y-2 justify-center mb-4 text-sm md:text-base text-black">
+            <div className="w-full h-20 bg-gray-200 rounded-md flex justify-center items-center text-lg font-iransansbold lg:text-xl">خرید و فروش ویلا</div>
             <Link href="/"><span className="bg-white cursor-pointer w-full h-12 rounded-md flex justify-center items-center">خرید و فروش ویلا در شمال</span></Link>
             <Link href="/خرید-فروش/ویلا/چمستان"><span className="bg-white cursor-pointer w-full h-12 rounded-md flex justify-center items-center">خرید و فروش ویلا در چمستان</span></Link>
             <Link href="/خرید-فروش/ویلا/آمل"><span className="bg-white cursor-pointer w-full h-12 rounded-md flex justify-center items-center">خرید و فروش ویلا در آمل</span></Link>
@@ -285,6 +286,7 @@ export default function Home() {
             <Link href="/خرید-فروش/ویلا/تهران"><span className="bg-white cursor-pointer w-full h-12 rounded-md flex justify-center items-center">خرید و فروش ویلا در تهران</span></Link>
             <Link href="/خرید-فروش/ویلا/کرج"><span className="bg-white cursor-pointer w-full h-12 rounded-md flex justify-center items-center">خرید و فروش ویلا در کرج</span></Link>
             <Link href="/خرید-فروش/ویلا/شهریار"><span className="bg-white cursor-pointer w-full h-12 rounded-md flex justify-center items-center">خرید و فروش ویلا در شهریار</span></Link>
+            <div className="w-full h-20 bg-gray-200 rounded-md flex justify-center items-center text-lg font-iransansbold lg:text-xl">خرید و فروش آپارتمان</div>
             <Link href="/خرید-فروش/آپارتمان/تهران"><span className="bg-white cursor-pointer w-full h-12 rounded-md flex justify-center items-center">خرید و فروش آپارتمان در تهران</span></Link>
             <Link href="/خرید-فروش/آپارتمان/همدان"><span className="bg-white cursor-pointer w-full h-12 rounded-md flex justify-center items-center">خرید و فروش آپارتمان در همدان</span></Link>
             <Link href="/خرید-فروش/آپارتمان/کرج"><span className="bg-white cursor-pointer w-full h-12 rounded-md flex justify-center items-center">خرید و فروش آپارتمان در کرج</span></Link>
@@ -297,6 +299,7 @@ export default function Home() {
             <Link href="/خرید-فروش/آپارتمان/كیش"><span className="bg-white cursor-pointer w-full h-12 rounded-md flex justify-center items-center">خرید و فروش آپارتمان در کیش</span></Link>
             <Link href="/خرید-فروش/آپارتمان/ساری"><span className="bg-white cursor-pointer w-full h-12 rounded-md flex justify-center items-center">خرید و فروش آپارتمان در ساری</span></Link>
             <Link href="/خرید-فروش/آپارتمان/مشهد"><span className="bg-white cursor-pointer w-full h-12 rounded-md flex justify-center items-center">خرید و فروش آپارتمان در مشهد</span></Link>
+            <div className="w-full h-20 bg-gray-200 rounded-md flex justify-center items-center text-lg font-iransansbold lg:text-xl">رهن و اجاره آپارتمان</div>
             <Link href="/رهن-اجاره/آپارتمان/تهران"><span className="bg-white cursor-pointer w-full h-12 rounded-md flex justify-center items-center">رهن و اجاره آپارتمان در تهران</span></Link>
             <Link href="/رهن-اجاره/آپارتمان/تبریز"><span className="bg-white cursor-pointer w-full h-12 rounded-md flex justify-center items-center">رهن و اجاره آپارتمان در تبریز</span></Link>
             <Link href="/رهن-اجاره/آپارتمان/یزد"><span className="bg-white cursor-pointer w-full h-12 rounded-md flex justify-center items-center">رهن و اجاره آپارتمان در یزد</span></Link>
