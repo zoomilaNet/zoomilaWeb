@@ -8,6 +8,7 @@ import cityOfProvince from "../../public/ProvincesAndCities.json";
 import { changeCity, changeNeighbourhood } from "../../store/reducer";
 import { setCookies } from "cookies-next";
 import Head from "next/head";
+
 function CityOfProvince() {
     const dispatch = useDispatch();
     const neighbourhoods: number[] = useSelector((state: RootStateOrAny) => state.search.neighbourhoodSelected);
@@ -72,25 +73,25 @@ function CityOfProvince() {
     }
     return <div>
         <Head>
-            <meta name="robots" content="noindex"/>
+            <meta name="robots" content="noindex" />
             <title>انتخاب شهر</title>
         </Head>
         <main className="w-screen h-screen la-module bg-gradient-to-b from-upgray_gradient via-with_gray to-downgray_gradient flex flex-col items-center ">
-        <div className="w-screen h-full lg:w-2/5">
-            <div className="flex flex-col  h-full w-full text-white">
-                <div className="text-right text-hf_color h-auto text-lg font-semibold mt-4 px-5">{isCity ? "شهر مورد نظر خود را انتخاب کنید" : "استان مورد نظر خود را انتخاب کنید"}</div>
-                <div className="px-4 py-4 mb-2 text-base overflow-y-scroll overflow-x-hidden md:text-xl h-full">
-                    <div className="grid grid-cols-3 gap-2">
-                        {parameter}
+            <div className="w-screen h-full lg:w-2/5">
+                <div className="flex flex-col  h-full w-full text-white">
+                    <div className="text-right text-hf_color h-auto text-lg font-semibold mt-4 px-5">{isCity ? "شهر مورد نظر خود را انتخاب کنید" : "استان مورد نظر خود را انتخاب کنید"}</div>
+                    <div className="px-4 py-4 mb-2 text-base overflow-y-scroll overflow-x-hidden md:text-xl h-full">
+                        <div className="grid grid-cols-3 gap-2">
+                            {parameter}
+                        </div>
+                    </div>
+                    <div className="sticky bottom-0 w-full h-20 bg-gradient-to-b from-upnblue_gradient to-downnblue_gradient px-4 py-3 flex justify-between">
+                        <button id="BackInCity" className="bg-gradient-to-b from-upgreen_gradient to-downgreen_gradient w-49% rounded-md" onClick={isCity ? backToProvince : exitWithoutSelecting}>{isCity ? "تغییر استان" : "بازگشت"}</button>
+                        <button id="CitySubmit" className="bg-gradient-to-b from-upgreen_gradient to-downgreen_gradient w-49% rounded-md" onClick={isCity ? getCityExit : goToCityPageHandler}>{isCity ? "تایید" : "ادامه"}</button>
                     </div>
                 </div>
-                <div className="sticky bottom-0 w-full h-20 bg-gradient-to-b from-upnblue_gradient to-downnblue_gradient px-4 py-3 flex justify-between">
-                    <button id="BackInCity" className="bg-gradient-to-b from-upgreen_gradient to-downgreen_gradient w-49% rounded-md" onClick={isCity ? backToProvince : exitWithoutSelecting}>{isCity ? "تغییر استان" : "بازگشت"}</button>
-                    <button id="CitySubmit" className="bg-gradient-to-b from-upgreen_gradient to-downgreen_gradient w-49% rounded-md" onClick={isCity ? getCityExit : goToCityPageHandler}>{isCity ? "تایید" : "ادامه"}</button>
-                </div>
             </div>
-        </div>
-    </main>
+        </main>
     </div>
 }
 export default CityOfProvince

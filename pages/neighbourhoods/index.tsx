@@ -8,7 +8,7 @@ import Head from "next/head";
 
 function Neighbourhoods() {
     const dispatch = useDispatch();
-    const city:CityDto = useSelector((state: RootStateOrAny) => state.search.citySelected);
+    const city: CityDto = useSelector((state: RootStateOrAny) => state.search.citySelected);
     const neighbourhoods: number[] = useSelector((state: RootStateOrAny) => state.search.neighbourhoodSelected)
     const router = useRouter();
     const [neighbourhoodsForShow, setNeighbourhoodsForShow] = useState<NeighbourhoodDto[]>([]);   //state for keeping neighbourhood for show to users 
@@ -18,15 +18,15 @@ function Neighbourhoods() {
     useEffect(() => {
         const loadNeighbourhoods = async () => {                              //fetch neighbourhoods of city which input to component 
             const country: CountryApi = new CountryApi();
-            var neighbourhoodLs = await country.apiCountryNeighbourhoodsCityCityIdGet(city.id as number, 1,500);
+            var neighbourhoodLs = await country.apiCountryNeighbourhoodsCityCityIdGet(city.id as number, 1, 500);
             setNeighbourhoodsList(neighbourhoodLs.data.data?.data!);
             setSelectedNeighbourhood([...neighbourhoods])
-            if(neighbourhoods.length>0){
-                let tempNeighbour:NeighbourhoodDto[]=neighbourhoodLs.data.data?.data!.filter(data=>neighbourhoods.includes(data.id as number)) as NeighbourhoodDto[]
-                let tempList:NeighbourhoodDto[] = neighbourhoodLs.data.data?.data!.filter(data=>!neighbourhoods.includes(data.id as number)) as NeighbourhoodDto[]
-                tempList.forEach(data=>tempNeighbour.push(data))
+            if (neighbourhoods.length > 0) {
+                let tempNeighbour: NeighbourhoodDto[] = neighbourhoodLs.data.data?.data!.filter(data => neighbourhoods.includes(data.id as number)) as NeighbourhoodDto[]
+                let tempList: NeighbourhoodDto[] = neighbourhoodLs.data.data?.data!.filter(data => !neighbourhoods.includes(data.id as number)) as NeighbourhoodDto[]
+                tempList.forEach(data => tempNeighbour.push(data))
                 setNeighbourhoodsForShow([...tempNeighbour])
-            }else{
+            } else {
                 setNeighbourhoodsForShow(neighbourhoodLs.data.data?.data!);
             }
         }
@@ -69,24 +69,24 @@ function Neighbourhoods() {
     return <div>
         <Head>
             <title>انتخاب محله</title>
-            <meta name="robots" content="noindex"/>
+            <meta name="robots" content="noindex" />
         </Head>
         <main className="w-screen h-screen bg-gradient-to-b from-upgray_gradient via-with_gray to-downgray_gradient flex flex-col items-center">
-        <div className="w-screen lg:w-2/5 h-full">
-            <div className="flex flex-col  h-full w-full text-white">
-                <div className="text-right text-hf_color h-auto text-lg font-semibold my-2 px-5">محله مورد نظر خود را جستجو و انتخاب کنید</div>
-                <div className="mx-4 mb-1 flex flex-row items-center bg-white rounded">
-                    <input type="text" placeholder="جستجوی محله" className="my-2 w-full h-10 text-black focus:outline-0 mr-1" onChange={(event) => searchNeighbourhoodHandler(event.target.value)} />
-                    <img src="./image/search.svg" alt="search" className="w-6 h-6 ml-1" />
-                </div>
-                <div className=" px-4 py-4 mb-2 text-base overflow-y-scroll overflow-x-hidden md:text-xl h-full">
-                    <div className="grid grid-cols-3 gap-2">
-                        {parameter}
+            <div className="w-screen lg:w-2/5 h-full">
+                <div className="flex flex-col  h-full w-full text-white">
+                    <div className="text-right text-hf_color h-auto text-lg font-semibold my-2 px-5">محله مورد نظر خود را جستجو و انتخاب کنید</div>
+                    <div className="mx-4 mb-1 flex flex-row items-center bg-white rounded">
+                        <input type="text" placeholder="جستجوی محله" className="my-2 w-full h-10 text-black focus:outline-0 mr-1" onChange={(event) => searchNeighbourhoodHandler(event.target.value)} />
+                        <img src="./image/search.svg" alt="search" className="w-6 h-6 ml-1" />
                     </div>
+                    <div className=" px-4 py-4 mb-2 text-base overflow-y-scroll overflow-x-hidden md:text-xl h-full">
+                        <div className="grid grid-cols-3 gap-2">
+                            {parameter}
+                        </div>
+                    </div>
+                    <div className="sticky bottom-0 w-full h-20 bg-gradient-to-b from-upnblue_gradient to-downnblue_gradient px-4 py-3 flex justify-between"><button id="NeighbourhoodSubmit" onClick={getNeighbourhoodExit} className="bg-gradient-to-b from-upgreen_gradient to-downgreen_gradient w-full rounded-md">تایید</button></div>
                 </div>
-                <div className="sticky bottom-0 w-full h-20 bg-gradient-to-b from-upnblue_gradient to-downnblue_gradient px-4 py-3 flex justify-between"><button id="NeighbourhoodSubmit" onClick={getNeighbourhoodExit} className="bg-gradient-to-b from-upgreen_gradient to-downgreen_gradient w-full rounded-md">تایید</button></div>
-            </div>
-        </div></main>
-        </div>
+            </div></main>
+    </div>
 }
 export default Neighbourhoods
