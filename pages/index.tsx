@@ -1,4 +1,3 @@
-import { Player } from '@lottiefiles/react-lottie-player';
 import { CircularProgress } from "@mui/material";
 import { checkCookies, getCookie } from "cookies-next";
 import Head from "next/head";
@@ -7,7 +6,6 @@ import React, { useEffect, useState } from "react";
 import { RootStateOrAny, useDispatch, useSelector } from "react-redux";
 import { CityDto, ClientsApi, CountryApi, SystemApi } from "../api";
 import AddDash from "../models/addDash";
-import Touch from "../public/lottie/touch.json";
 import { changeCity } from "../store/reducer";
 
 export default function Home() {
@@ -252,8 +250,8 @@ export default function Home() {
               <div
                 className={(saleCountAds || saleCountAds == 0) && (rentCountAds || rentCountAds == 0) ? "relative bg-gradient-to-b from-sale_up to-sale_down w-full h-20 md:w-full flex flex-row items-center justify-between px-2 rounded-md" : "relative cursor-not-allowed bg-gray-500 w-full h-20 md:w-full flex flex-row items-center justify-between px-2 rounded-md"}>
                 <p className="text-lg sm:text-lg font-bold">آگهی های فروش</p>
-                <span className="absolute left-1/2 right-1/2 flex items-center">
-                  <Player autoplay={true} src={Touch} loop={true} style={{ width: '60px', height: '60px' }} />
+                <span className="absolute left-1/2 right-1/2 w-4 h-4 flex items-center">
+                  <span className="animate-ping w-full h-full bg-white rounded-full"></span>
                 </span>
                 <span className="text-base sm:text-base">{saleCountAds || saleCountAds == 0 ? saleCountAds < 0 ? "مشکل در برقراری اتصال به سرور" : saleCountAds + " مورد" : <CircularProgress color="inherit" size={20} />}</span>
               </div></a>
@@ -262,8 +260,8 @@ export default function Home() {
             <a href={listingLetURL} className="w-full h-full">
               <div
                 className={(rentCountAds || rentCountAds == 0) && (saleCountAds || saleCountAds == 0) ? "relative bg-gradient-to-b from-rent_up to-rent_down w-full h-20 md:full flex flex-row items-center justify-between px-2 rounded-md" : "relative cursor-not-allowed bg-gray-500 w-full h-20 md:full flex flex-row items-center justify-between px-2 rounded-md"}>
-                <p className="text-lg sm:text-lg font-bold">آگهی های اجاره</p><span className="absolute left-1/2 right-1/2 flex items-center">
-                  <Player autoplay={true} src={Touch} loop={true} style={{ width: '60px', height: '60px' }} />
+                <p className="text-lg sm:text-lg font-bold">آگهی های اجاره</p><span className="absolute left-1/2 right-1/2 w-4 h-4 flex items-center">
+                <span className="animate-ping w-full h-full bg-white rounded-full"></span>
                 </span>
                 <span className="text-base sm:text-base">{rentCountAds || rentCountAds == 0 ? rentCountAds < 0 ? "مشکل در برقراری اتصال به سرور" : rentCountAds + " مورد" : <CircularProgress color="inherit" size={20} />}</span>
               </div></a>
