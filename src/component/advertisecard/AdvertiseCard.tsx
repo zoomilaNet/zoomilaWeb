@@ -20,31 +20,38 @@ function AdvertiseCard({ dataSell }: { dataSell: SellAd }) {
         </div>
         <div className="w-full lg:w-1/2 aspect-w-4 aspect-h-3 lg:aspect-w-3 lg:aspect-h-1 row-start-2 bg-white">
             <div className="flex flex-col items-start justify-between ">
-                <div className="w-full grid grid-cols-5 gap-1 my-2 md:my-4 tracking-tight px-2">
+            <p className="flex items-center text-xs md:text-sm xl:text-base px-2">آگهی جدید</p>
+                <div className="w-full my-2 xl:my-3 tracking-tight px-2">
                     <a href={"/fsp-" + dataSell.sellId + "/" + AddDash(dataSell.slug!)} className="col-span-4 flex flex-row items-center">
-                        <h2 className="ml-2 font-iransansbold text-ads_title text-base sm:text-xl md:text-2xl lg:text-3xl">{dataSell.slug}</h2>
+                        <h2 className="ml-2 font-iransansbold text-ads_title text-base sm:text-xl md:text-2xl xl:text-3xl">{dataSell.slug}</h2>
                         <p className="text-gray_text text-xs md:text-base">{dataSell.cityName}</p>
                     </a>
-                    <p className="col-span-1 flex items-center text-xs md:text-base">آگهی جدید</p>
                 </div>
-                <div className="w-full flex flex-row items-center my-2 lg:mb-2 md:text-lg px-2">
+                <div className="w-full flex flex-row items-center lg:mb-2 md:text-sm xl:text-lg px-2">
+                    طبقه سوم/ دو واحدی
+                </div>
+                <div className="w-full flex flex-row items-center my-1 lg:mb-2 md:text-sm xl:text-lg px-2">
+                    پارکینگ اختصاصی-آسانسور دارد
+                </div>
+                <div className="w-full flex flex-row items-center lg:mb-2 md:text-base xl:text-lg px-2">
                     <img src="/image/Location.svg" alt="icon" className="w-4 h-4" />
                     <p>آدرس </p>
                 </div>
-                <div className="my-1 lg:mb-2 text-xs md:text-base text-gray_text px-2">توضیحات</div>
-                <div className="w-full flex flex-row justify-between items-center text-sm md:text-lg my-2 md:my-4 lg:mb-2 px-2">
+                <div className="my-1 lg:mb-2 text-xs md:text-base xl:text-lg text-gray_text px-2">توضیحات</div>
+                <div className="w-full flex flex-row justify-between items-center text-sm md:text-lg my-2 lg:mb-2 px-2">
                     <div className="flex flex-row items-center">
-                        <img src={dataSell.agencyLogo == null ? "/image/aseman.png" : dataSell.agencyLogo} alt="agencylogo" className="border w-12 h-12 lg:w-20 lg:h-20 object-cover rounded ml-4" />
+                        <img src={dataSell.agencyLogo == null ? "/image/aseman.png" : dataSell.agencyLogo} alt="agencylogo" className="border w-12 h-12 lg:w-16 lg:h-16 object-cover rounded ml-4" />
                         <p >{dataSell.agencyName == null ? "املاک آسمان" : dataSell.agencyName}</p>
                     </div>
                     <div>
                         {dataSell.publishType != SellAdPublishTypeEnum.Simple ? <span className={dataSell.publishType == SellAdPublishTypeEnum.Featured ? "bg-featured_ads_tag p-2 rounded ml-1 md:ml-3 text-black" : dataSell.publishType == SellAdPublishTypeEnum.Occasion ? "bg-featured_ads_tag p-2 rounded ml-1 md:ml-3 text-black" : "p-2 rounded ml-1 md:ml-3 text-black"}>{dataSell.publishType == SellAdPublishTypeEnum.Featured ? "فوری" : dataSell.publishType == SellAdPublishTypeEnum.Occasion ? "ویژه" : ""}</span> : null}
-                        <button id={"SMSButton" + dataSell.sellId} className="p-3 lg:p-4 text-sm lg:text-lg rounded ml-1 md:ml-3 text-white bg-green_accent">پیامک</button>
-                        <button id={"CallButton" + dataSell.sellId} className="p-3 lg:p-4 text-sm lg:text-lg rounded text-white bg-green_accent">تماس</button>
+                        <button id={"SMSButton" + dataSell.sellId} className="py-2  px-6 lg:px-12 text-sm lg:text-lg rounded ml-1 md:ml-3 text-white bg-green_accent">پیامک</button>
+                        <button id={"CallButton" + dataSell.sellId} className="py-2  px-6 lg:px-12 text-sm lg:text-lg rounded text-white bg-green_accent">تماس</button>
                     </div>
                 </div>
-                <div className={dataSell.publishType == SellAdPublishTypeEnum.Simple ? "bg-simple_ads_tag w-full h-12 md:h-16 lg:mt-2 flex flex-row justify-between items-center px-2 text-black" : dataSell.publishType != SellAdPublishTypeEnum.Featured ? "featured_ads_tag w-full h-12 md:h-16 flex flex-row justify-between items-center px-2 text-black" : "occasion_ads_tag w-full h-12 md:h-16 flex flex-row justify-between items-center px-2 text-black"}>
-                    <div className="flex flex-row items-center text-xl">قیمت کل: <p className=" font-semibold mr-2"> {dataSell.price == "0" ? "توافقی" : Seperator((dataSell.price)?.toString()!) + " تومان"}</p></div>
+                <div className={dataSell.publishType == SellAdPublishTypeEnum.Simple ? "bg-simple_ads_tag w-full h-12 md:h-16 lg:mt-1 xl:mt-2 flex flex-row justify-between items-center px-2 text-black" : dataSell.publishType != SellAdPublishTypeEnum.Featured ? "featured_ads_tag w-full h-12 md:h-16 flex flex-row justify-between items-center px-2 text-black" : "occasion_ads_tag w-full h-12 md:h-16 flex flex-row justify-between items-center px-2 text-black"}>
+                <div className="flex flex-row items-center text-xl">رهن: <p className="ml-8
+                 font-semibold">{dataSell.price == "0" ? "توافقی" : Seperator(dataSell.price!) + " تومان"}</p>وام: <p className="font-semibold">0 تومان</p></div>
                 </div>
             </div>
         </div>

@@ -1,10 +1,11 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="85396787-6298-4985-82c3-6d22319d4af6" name="Default Changelist" comment="change show map image to show map button in detail page Bm">
+    <list default="true" id="85396787-6298-4985-82c3-6d22319d4af6" name="Default Changelist" comment="delete lottie package and replace with animate css Bm">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/next.config.js" beforeDir="false" afterPath="$PROJECT_DIR$/next.config.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/package.json" beforeDir="false" afterPath="$PROJECT_DIR$/package.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/pages/index.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/pages/index.tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/yarn.lock" beforeDir="false" afterPath="$PROJECT_DIR$/yarn.lock" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -35,7 +36,7 @@
     &quot;RunOnceActivity.OpenProjectViewOnStart&quot;: &quot;true&quot;,
     &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
     &quot;WebServerToolWindowFactoryState&quot;: &quot;false&quot;,
-    &quot;last_opened_file_path&quot;: &quot;C:/Users/hp1/Documents/samplezoomila/UI&quot;,
+    &quot;last_opened_file_path&quot;: &quot;C:/Users/hp1/Documents/samplenextproject/UI&quot;,
     &quot;node.js.detected.package.eslint&quot;: &quot;true&quot;,
     &quot;node.js.selected.package.eslint&quot;: &quot;(autodetect)&quot;,
     &quot;nodejs_package_manager_path&quot;: &quot;yarn&quot;,
@@ -127,14 +128,16 @@
       <workItem from="1652933137286" duration="14143000" />
       <workItem from="1653107510665" duration="1194000" />
       <workItem from="1653131110581" duration="1260000" />
-      <workItem from="1653192767098" duration="1552000" />
-    </task>
-    <task id="LOCAL-00001" summary="add deactive button for pagination and home page Bm">
-      <created>1651321324567</created>
-      <option name="number" value="00001" />
-      <option name="presentableId" value="LOCAL-00001" />
-      <option name="project" value="LOCAL" />
-      <updated>1651321324567</updated>
+      <workItem from="1653192767098" duration="4714000" />
+      <workItem from="1653278004481" duration="290000" />
+      <workItem from="1653278752259" duration="20000" />
+      <workItem from="1653278831988" duration="1000" />
+      <workItem from="1653278971199" duration="229000" />
+      <workItem from="1653279214827" duration="27000" />
+      <workItem from="1653279290551" duration="10000" />
+      <workItem from="1653279713207" duration="387000" />
+      <workItem from="1653283030934" duration="2673000" />
+      <workItem from="1653295699907" duration="645000" />
     </task>
     <task id="LOCAL-00002" summary="convert img tag to image tag Bm">
       <created>1651383391378</created>
@@ -472,7 +475,14 @@
       <option name="project" value="LOCAL" />
       <updated>1652946339366</updated>
     </task>
-    <option name="localTasksCounter" value="50" />
+    <task id="LOCAL-00050" summary="delete lottie package and replace with animate css Bm">
+      <created>1653194574571</created>
+      <option name="number" value="00050" />
+      <option name="presentableId" value="LOCAL-00050" />
+      <option name="project" value="LOCAL" />
+      <updated>1653194574571</updated>
+    </task>
+    <option name="localTasksCounter" value="51" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -490,7 +500,6 @@
     </option>
   </component>
   <component name="VcsManagerConfiguration">
-    <MESSAGE value="fix fetch neighbourhood error Bm" />
     <MESSAGE value="decrease aspect ratio of advertise card images Bm" />
     <MESSAGE value="fix neighbourhood api method Bm" />
     <MESSAGE value="change image layout of slider Bm" />
@@ -515,7 +524,8 @@
     <MESSAGE value="add some property in deteils page Bm" />
     <MESSAGE value="add facility to details page and add header for section of internal lin in main page Bm" />
     <MESSAGE value="change show map image to show map button in detail page Bm" />
-    <option name="LAST_COMMIT_MESSAGE" value="change show map image to show map button in detail page Bm" />
+    <MESSAGE value="delete lottie package and replace with animate css Bm" />
+    <option name="LAST_COMMIT_MESSAGE" value="delete lottie package and replace with animate css Bm" />
   </component>
   <component name="XSLT-Support.FileAssociations.UIState">
     <expand />
