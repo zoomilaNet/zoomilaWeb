@@ -17,20 +17,20 @@ function LetAdvertiseCard({ dataLet }: { dataLet: LetAd }) {
         <div className="w-full lg:w-1/2 aspect-w-4 aspect-h-3 lg:aspect-w-3 lg:aspect-h-1 row-start-2 bg-white">
             <div className="flex flex-col items-start justify-between">
             <p className="flex items-center text-xs md:text-sm xl:text-base px-2">آگهی جدید</p>
-                <div className="w-full my-2  tracking-tight px-2">
+                <div className="w-full my-1 md:my-2 xl:my-3 tracking-tight px-2">
                     <a href={"/trp-" + dataLet.letId + "/" + AddDash(dataLet.slug!)} className="col-span-4 flex flex-row items-center">
                         <h2 className="ml-2 font-iransansbold text-ads_title text-base md:text-2xl">{dataLet.slug}</h2>
                         <p className="text-gray_text text-xs md:text-base">{dataLet.cityName}</p>
                     </a>
                     
                 </div>
-                <div className="w-full flex flex-row items-center lg:mb-2 md:text-sm xl:text-lg px-2">
+                <div className="w-full flex flex-row items-center lg:mb-2 text-xs md:text-sm xl:text-lg px-2">
                     طبقه سوم/ دو واحدی
                 </div>
-                <div className="w-full flex flex-row items-center my-1 lg:mb-2 md:text-sm xl:text-lg px-2">
+                <div className="w-full flex flex-row items-center my-1 lg:mb-2 text-xs md:text-sm xl:text-lg px-2">
                     پارکینگ اختصاصی-آسانسور دارد
                 </div>
-                <div className="w-full flex flex-row items-center lg:mb-2 md:text-base xl:text-lg px-2">
+                <div className="w-full flex flex-row items-center lg:mb-2 text-sm md:text-base xl:text-lg px-2">
                     <img src="/image/Location.svg" alt="icon" className="w-4 h-4" />
                     <p>آدرس </p>
                 </div>
@@ -47,7 +47,7 @@ function LetAdvertiseCard({ dataLet }: { dataLet: LetAd }) {
                     </div>
                 </div>
                 <div className={dataLet.publishType == LetAdPublishTypeEnum.Simple ? "bg-simple_ads_tag w-full h-12 md:h-16 flex flex-row justify-between items-center px-2 text-black" : dataLet.publishType != LetAdPublishTypeEnum.Featured ? "featured_ads_tag w-full h-12 md:h-16 flex flex-row justify-between items-center px-2 text-black" : "occasion_ads_tag w-full h-12 md:h-16 flex flex-row justify-between items-center px-2 text-black"}>
-                    <div className="flex flex-row items-center text-lg">رهن: <p className="ml-4 font-semibold">{dataLet.deposit == "0" && dataLet.rent == "0" ? "توافقی" : Seperator(dataLet.deposit!) + " تومان"}</p>اجاره: <p className="font-semibold">{dataLet.deposit == "0" && dataLet.rent == "0" ? "توافقی" : Seperator(dataLet.rent!) + " تومان"}</p></div>
+                    <div className="flex flex-row items-center text-base lg:text-lg">رهن: <p className="ml-4 font-semibold">{dataLet.deposit == "0" && dataLet.rent == "0" ? "توافقی" : Seperator(dataLet.deposit!) + " تومان"}</p>اجاره: <p className="font-semibold">{dataLet.deposit == "0" && dataLet.rent == "0" ? "توافقی" : Seperator(dataLet.rent!) + " تومان"}</p></div>
                 </div>
             </div>
         </div>

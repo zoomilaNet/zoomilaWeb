@@ -1,10 +1,10 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="85396787-6298-4985-82c3-6d22319d4af6" name="Default Changelist" comment="add infinite scroll to listing page Bm">
+    <list default="true" id="85396787-6298-4985-82c3-6d22319d4af6" name="Default Changelist" comment="fix pagination for totalcount under the 60 for infinite scroll Bm">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/component/listoflet/letList.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/component/listoflet/letList.tsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/component/listofsell/sellList.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/component/listofsell/sellList.tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/component/advertisecard/AdvertiseCard.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/component/advertisecard/AdvertiseCard.tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/component/letAdsCard/LetAdvertiseCard.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/component/letAdsCard/LetAdvertiseCard.tsx" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/yarn.lock" beforeDir="false" afterPath="$PROJECT_DIR$/yarn.lock" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -135,14 +135,7 @@
       <workItem from="1653283030934" duration="2673000" />
       <workItem from="1653295699907" duration="645000" />
       <workItem from="1653733686203" duration="184000" />
-      <workItem from="1653733897024" duration="1912000" />
-    </task>
-    <task id="LOCAL-00003" summary="set pagination next and previous page button correct image Bm">
-      <created>1651389760844</created>
-      <option name="number" value="00003" />
-      <option name="presentableId" value="LOCAL-00003" />
-      <option name="project" value="LOCAL" />
-      <updated>1651389760844</updated>
+      <workItem from="1653733897024" duration="2817000" />
     </task>
     <task id="LOCAL-00004" summary="fix seo problem and code problem for site speed Bm">
       <created>1651405640384</created>
@@ -480,7 +473,14 @@
       <option name="project" value="LOCAL" />
       <updated>1653734759117</updated>
     </task>
-    <option name="localTasksCounter" value="52" />
+    <task id="LOCAL-00052" summary="fix pagination for totalcount under the 60 for infinite scroll Bm">
+      <created>1653735938494</created>
+      <option name="number" value="00052" />
+      <option name="presentableId" value="LOCAL-00052" />
+      <option name="project" value="LOCAL" />
+      <updated>1653735938494</updated>
+    </task>
+    <option name="localTasksCounter" value="53" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -498,7 +498,6 @@
     </option>
   </component>
   <component name="VcsManagerConfiguration">
-    <MESSAGE value="fix neighbourhood api method Bm" />
     <MESSAGE value="change image layout of slider Bm" />
     <MESSAGE value="fix slider number Bm" />
     <MESSAGE value="create neighbourhoods list and building list in listing page url and search by theme and serve page Bm" />
@@ -523,7 +522,8 @@
     <MESSAGE value="change show map image to show map button in detail page Bm" />
     <MESSAGE value="delete lottie package and replace with animate css Bm" />
     <MESSAGE value="add infinite scroll to listing page Bm" />
-    <option name="LAST_COMMIT_MESSAGE" value="add infinite scroll to listing page Bm" />
+    <MESSAGE value="fix pagination for totalcount under the 60 for infinite scroll Bm" />
+    <option name="LAST_COMMIT_MESSAGE" value="fix pagination for totalcount under the 60 for infinite scroll Bm" />
   </component>
   <component name="XSLT-Support.FileAssociations.UIState">
     <expand />
