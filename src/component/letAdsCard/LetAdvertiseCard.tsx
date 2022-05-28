@@ -37,7 +37,7 @@ function LetAdvertiseCard({ dataLet }: { dataLet: LetAd }) {
                 <div className="my-1 lg:mb-2 text-xs md:text-base xl:text-lg text-gray_text px-2">توضیحات</div>
                 <div className="w-full flex flex-row justify-between items-center text-sm md:text-lg my-2 md:my-4 lg:mb-2 px-2">
                     <div className="flex flex-row items-center">
-                        <Image src={dataLet.agencyLogo == null ? "/image/aseman.png" : dataLet.agencyLogo} alt="agencylogo" width="60px" height="60px" className="border w-12 h-12 lg:w-16 lg:h-16 object-cover rounded ml-4" />
+                        <Image src={dataLet.agencyLogo == null ? "/image/aseman.png" : dataLet.agencyLogo} alt="agencylogo"  className="border w-10 h-10 md:w-12 md:h-12 lg:w-16 lg:h-16 object-cover rounded ml-4" />
                         <p >{dataLet.agencyName == null ? "املاک آسمان" : dataLet.agencyName}</p>
                     </div>
                     <div>

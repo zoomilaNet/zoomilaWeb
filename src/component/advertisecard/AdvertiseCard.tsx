@@ -40,7 +40,7 @@ function AdvertiseCard({ dataSell }: { dataSell: SellAd }) {
                 <div className="my-1 lg:mb-2 text-xs md:text-base xl:text-lg text-gray_text px-2">توضیحات</div>
                 <div className="w-full flex flex-row justify-between items-center text-sm md:text-lg my-2 lg:mb-2 px-2">
                     <div className="flex flex-row items-center">
-                        <img src={dataSell.agencyLogo == null ? "/image/aseman.png" : dataSell.agencyLogo} alt="agencylogo" className="border w-12 h-12 lg:w-16 lg:h-16 object-cover rounded ml-4" />
+                        <img src={dataSell.agencyLogo == null ? "/image/aseman.png" : dataSell.agencyLogo} alt="agencylogo" className="border w-10 h-10 md:w-12 md:h-12 lg:w-16 lg:h-16 object-cover rounded ml-4" />
                         <p >{dataSell.agencyName == null ? "املاک آسمان" : dataSell.agencyName}</p>
                     </div>
                     <div>
