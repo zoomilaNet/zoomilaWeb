@@ -4,9 +4,8 @@ import React from "react";
 import { CityDto, ClientsApi, CountryApi, LetAd, SellAd, SystemApi } from "../api";
 import DeleteDash from "../models/deleteDash";
 import cityOfProvince from "../public/ProvincesAndCities.json";
-import AdvertiseCard from "../src/component/advertisecard/AdvertiseCard";
-import LetAdvertiseCard from "../src/component/letAdsCard/LetAdvertiseCard";
-import Pagination from "../src/component/pagination/pagination";
+import SellList from "../src/component/listofsell/sellList";
+import LetList from "../src/component/listoflet/letList";
 
 export const getServerSideProps: GetServerSideProps = async (context) => {
     //await new Promise((resolve)=>setTimeout(resolve,1000));
@@ -62,7 +61,7 @@ export const getServerSideProps: GetServerSideProps = async (context) => {
         buildingTypeList.push(selectedtBuilding)
     }
 
-    if (context.query.page != null && Number(context.query.page) > 1) {
+    if (context.query.page != null && Number(context.query.page) > 4) {
         currentPage = Number(context.query.page);
     }
 
@@ -81,26 +80,36 @@ export const getServerSideProps: GetServerSideProps = async (context) => {
     }
 
     if (path[0] === "خرید-فروش") {
-        data = await fetchAdvertiseList.apiClientsAdsSellGet(cityId, neighbourhood, buildingTypeList, currentPage, 15);
+        data = await fetchAdvertiseList.apiClientsAdsSellGet(cityId, neighbourhood, buildingTypeList, currentPage, currentPage==1?60:15);
         isSellOrNot = true;
         totalPageOfAds = Number(data.data.totalPages);
         listTitle = "خرید" + " " + "ملک" + " " + "در " + findCity.name;
+        if(currentPage<5){
+            currentPage=4;
+        }
     } else if (path[0] === "رهن-اجاره") {
-        data = await fetchAdvertiseList.apiClientsAdsLetGet(cityId, neighbourhood, buildingTypeList, currentPage, 15);
+        data = await fetchAdvertiseList.apiClientsAdsLetGet(cityId, neighbourhood, buildingTypeList, currentPage, currentPage==1?60:15);
         totalPageOfAds = Number(data.data.totalPages);
         isSellOrNot = false;
         listTitle = "اجاره" + " " + "ملک" + " " + "در " + findCity.name;
+        if(currentPage<5){
+            currentPage=4;
+        }
     } else {
-        data = await fetchAdvertiseList.apiClientsAdsSellGet(107, [69], buildingTypeList, currentPage, 15);
+        data = await fetchAdvertiseList.apiClientsAdsSellGet(107, [69], buildingTypeList, currentPage, currentPage==1?60:15);
         totalPageOfAds = Number(data.data.totalPages);
         isSellOrNot = true;
         listTitle = "خرید" + " " + "ملک" + " " + "در " + "تهران";
+        if(currentPage<5){
+            currentPage=4;
+        }
     }
 
     return { props: { sellData: isSellOrNot ? data.data.data as SellAd[] : null, letData: isSellOrNot ? null : data.data.data as LetAd[], isSellAds: isSellOrNot, title: listTitle as string, page: currentPage, totalPage: totalPageOfAds } };
 }
 
 export default function List({ sellData, letData, isSellAds, title, page, totalPage }: { sellData?: SellAd[], letData?: LetAd[], isSellAds: boolean, title: string, page: number, totalPage: number }) {
+
     return (
         <div>
             <Head>
@@ -124,8 +133,8 @@ export default function List({ sellData, letData, isSellAds, title, page, totalP
                 <div className="w-screen h-auto flex flex-row justify-center px-4">
                     <div className="w-full flex flex-col items-center">
                         <h1 className="font-iransansbold text-xl mt-3 mb-1">{title}</h1>
-                        {isSellAds ? sellData?.map((item) => <AdvertiseCard dataSell={item as SellAd} key={item.sellId} />) : letData?.map((item) => <LetAdvertiseCard dataLet={item as LetAd} key={item.letId} />)}
-                        <Pagination length={totalPage} currentPage={page}></Pagination>
+                        {isSellAds ? <SellList sellData={sellData as SellAd[]} totalPage={totalPage} currentpage={page}/> : <LetList letData={letData as LetAd[]} totalPage={totalPage} currentpage={page}/>}
+
                     </div>
                 </div>
             </main>
