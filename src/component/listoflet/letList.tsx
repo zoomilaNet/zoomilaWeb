@@ -18,7 +18,7 @@ export default function LetList({letData,totalPage,currentpage}:{letData:LetAd[]
                 setData(tempData)
                 setLenght(lenght+5)
             }
-            if(letData.length == lenght+5){
+            if(letData.length == lenght+5||letData.length < lenght+5){
                 setHasMore(false);
             }
         },1500)

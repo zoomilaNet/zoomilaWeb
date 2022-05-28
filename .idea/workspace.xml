@@ -1,12 +1,10 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="85396787-6298-4985-82c3-6d22319d4af6" name="Default Changelist" comment="delete lottie package and replace with animate css Bm">
-      <change afterPath="$PROJECT_DIR$/src/component/listoflet/letList.tsx" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/component/listofsell/sellList.tsx" afterDir="false" />
+    <list default="true" id="85396787-6298-4985-82c3-6d22319d4af6" name="Default Changelist" comment="add infinite scroll to listing page Bm">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/package.json" beforeDir="false" afterPath="$PROJECT_DIR$/package.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/pages/[...slug].tsx" beforeDir="false" afterPath="$PROJECT_DIR$/pages/[...slug].tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/component/listoflet/letList.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/component/listoflet/letList.tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/component/listofsell/sellList.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/component/listofsell/sellList.tsx" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/yarn.lock" beforeDir="false" afterPath="$PROJECT_DIR$/yarn.lock" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -137,14 +135,7 @@
       <workItem from="1653283030934" duration="2673000" />
       <workItem from="1653295699907" duration="645000" />
       <workItem from="1653733686203" duration="184000" />
-      <workItem from="1653733897024" duration="607000" />
-    </task>
-    <task id="LOCAL-00002" summary="convert img tag to image tag Bm">
-      <created>1651383391378</created>
-      <option name="number" value="00002" />
-      <option name="presentableId" value="LOCAL-00002" />
-      <option name="project" value="LOCAL" />
-      <updated>1651383391378</updated>
+      <workItem from="1653733897024" duration="1912000" />
     </task>
     <task id="LOCAL-00003" summary="set pagination next and previous page button correct image Bm">
       <created>1651389760844</created>
@@ -482,7 +473,14 @@
       <option name="project" value="LOCAL" />
       <updated>1653194574571</updated>
     </task>
-    <option name="localTasksCounter" value="51" />
+    <task id="LOCAL-00051" summary="add infinite scroll to listing page Bm">
+      <created>1653734759101</created>
+      <option name="number" value="00051" />
+      <option name="presentableId" value="LOCAL-00051" />
+      <option name="project" value="LOCAL" />
+      <updated>1653734759117</updated>
+    </task>
+    <option name="localTasksCounter" value="52" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -500,7 +498,6 @@
     </option>
   </component>
   <component name="VcsManagerConfiguration">
-    <MESSAGE value="decrease aspect ratio of advertise card images Bm" />
     <MESSAGE value="fix neighbourhood api method Bm" />
     <MESSAGE value="change image layout of slider Bm" />
     <MESSAGE value="fix slider number Bm" />
@@ -525,7 +522,8 @@
     <MESSAGE value="add facility to details page and add header for section of internal lin in main page Bm" />
     <MESSAGE value="change show map image to show map button in detail page Bm" />
     <MESSAGE value="delete lottie package and replace with animate css Bm" />
-    <option name="LAST_COMMIT_MESSAGE" value="delete lottie package and replace with animate css Bm" />
+    <MESSAGE value="add infinite scroll to listing page Bm" />
+    <option name="LAST_COMMIT_MESSAGE" value="add infinite scroll to listing page Bm" />
   </component>
   <component name="XSLT-Support.FileAssociations.UIState">
     <expand />

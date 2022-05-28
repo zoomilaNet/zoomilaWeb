@@ -17,7 +17,7 @@ export default function SellList({sellData,totalPage,currentpage}:{sellData:Sell
                 setData(tempData)
                 setLenght(lenght+5)
             }
-            if(sellData.length == lenght+5){
+            if(sellData.length == lenght+5|| sellData.length < lenght+5){
                 setHasMore(false);
             }
         },1500)
