@@ -170,6 +170,72 @@ export interface LetAd {
      * @memberof LetAd
      */
     'link'?: string | null;
+    /**
+     * 
+     * @type {string}
+     * @memberof LetAd
+     */
+    'floors'?: string | null;
+    /**
+     * 
+     * @type {string}
+     * @memberof LetAd
+     */
+    'floorLevel'?: string | null;
+    /**
+     * 
+     * @type {string}
+     * @memberof LetAd
+     */
+    'unit'?: string | null;
+    /**
+     * 
+     * @type {string}
+     * @memberof LetAd
+     */
+    'unitPerLevel'?: string | null;
+    /**
+     * 
+     * @type {string}
+     * @memberof LetAd
+     */
+    'mainAddress'?: string | null;
+    /**
+     * 
+     * @type {string}
+     * @memberof LetAd
+     */
+    'description'?: string | null;
+    /**
+     * 
+     * @type {string}
+     * @memberof LetAd
+     */
+    'parking'?: string | null;
+    /**
+     * 
+     * @type {boolean}
+     * @memberof LetAd
+     */
+    'lift'?: boolean | null;
+    /**
+     * 
+     * @type {boolean}
+     * @memberof LetAd
+     */
+    'seprate'?: boolean | null;
+    /**
+     * 
+     * @type {boolean}
+     * @memberof LetAd
+     */
+    'yard'?: boolean | null;
+    /**
+     * 
+     * @type {boolean}
+     * @memberof LetAd
+     */
+    'storage'?: boolean | null;
 }
 
 /**

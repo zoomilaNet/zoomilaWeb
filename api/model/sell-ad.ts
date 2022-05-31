@@ -164,6 +164,72 @@ export interface SellAd {
      * @memberof SellAd
      */
     'createdAt'?: string | null;
+    /**
+     * 
+     * @type {boolean}
+     * @memberof SellAd
+     */
+    'storage'?: boolean | null;
+    /**
+     * 
+     * @type {boolean}
+     * @memberof SellAd
+     */
+    'yard'?: boolean | null;
+    /**
+     * 
+     * @type {boolean}
+     * @memberof SellAd
+     */
+    'seprate'?: boolean | null;
+    /**
+     * 
+     * @type {boolean}
+     * @memberof SellAd
+     */
+    'lift'?: boolean | null;
+    /**
+     * 
+     * @type {string}
+     * @memberof SellAd
+     */
+    'parking'?: string | null;
+    /**
+     * 
+     * @type {string}
+     * @memberof SellAd
+     */
+    'description'?: string | null;
+    /**
+     * 
+     * @type {string}
+     * @memberof SellAd
+     */
+    'mainAddress'?: string | null;
+    /**
+     * 
+     * @type {string}
+     * @memberof SellAd
+     */
+    'unitPerLevel'?: string | null;
+    /**
+     * 
+     * @type {string}
+     * @memberof SellAd
+     */
+    'unit'?: string | null;
+    /**
+     * 
+     * @type {string}
+     * @memberof SellAd
+     */
+    'floorLevel'?: string | null;
+    /**
+     * 
+     * @type {string}
+     * @memberof SellAd
+     */
+    'floors'?: string | null;
 }
 
 /**
