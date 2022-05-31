@@ -33,6 +33,9 @@ module.exports = {
       'pagination':'#123e56',
     },
     extend: {
+      zIndex: {
+        '9999': '9999',
+      },
       aspectRatio: {
         '4/3': '4 / 3',
       },

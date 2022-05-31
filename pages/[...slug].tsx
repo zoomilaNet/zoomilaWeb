@@ -12,6 +12,7 @@ export const getServerSideProps: GetServerSideProps = async (context) => {
     let path: string[] = context.params!.slug! as string[];
     const fetchAdvertiseList: ClientsApi = new ClientsApi();
     let data: any;
+    let dataForTotalCount:any;
     let cityId: number = 107;
     let neighbourhood: number[] = [];
     let buildingTypeList: string[] = [];
@@ -81,27 +82,40 @@ export const getServerSideProps: GetServerSideProps = async (context) => {
 
     if (path[0] === "خرید-فروش") {
         data = await fetchAdvertiseList.apiClientsAdsSellGet(cityId, neighbourhood, buildingTypeList, currentPage, currentPage==1?60:15);
+        dataForTotalCount=await fetchAdvertiseList.apiClientsAdsSellGet(cityId, neighbourhood, buildingTypeList, 1, 15);
         isSellOrNot = true;
-        totalPageOfAds = Number(data.data.totalPages);
+        totalPageOfAds = Number(dataForTotalCount.data.totalPages);
         listTitle = "خرید" + " " + "ملک" + " " + "در " + findCity.name;
-        if(currentPage<5){
+        if(totalPageOfAds>5){
             currentPage=4;
+        }else{
+            currentPage=1;
+            totalPageOfAds=1;
         }
+
     } else if (path[0] === "رهن-اجاره") {
         data = await fetchAdvertiseList.apiClientsAdsLetGet(cityId, neighbourhood, buildingTypeList, currentPage, currentPage==1?60:15);
-        totalPageOfAds = Number(data.data.totalPages);
+        dataForTotalCount=await fetchAdvertiseList.apiClientsAdsSellGet(cityId, neighbourhood, buildingTypeList, 1, 15);
+        totalPageOfAds = Number(dataForTotalCount.data.totalPages);
         isSellOrNot = false;
         listTitle = "اجاره" + " " + "ملک" + " " + "در " + findCity.name;
-        if(currentPage<5){
+        if(totalPageOfAds>5){
             currentPage=4;
+        }else{
+            currentPage=1;
+            totalPageOfAds=1;
         }
     } else {
         data = await fetchAdvertiseList.apiClientsAdsSellGet(107, [69], buildingTypeList, currentPage, currentPage==1?60:15);
-        totalPageOfAds = Number(data.data.totalPages);
+        dataForTotalCount=await fetchAdvertiseList.apiClientsAdsSellGet(cityId, neighbourhood, buildingTypeList, 1, 15);
+        totalPageOfAds = Number(dataForTotalCount.data.totalPages);
         isSellOrNot = true;
         listTitle = "خرید" + " " + "ملک" + " " + "در " + "تهران";
-        if(currentPage<5){
+        if(totalPageOfAds>5){
             currentPage=4;
+        }else{
+            currentPage=1;
+            totalPageOfAds=1;
         }
     }
 

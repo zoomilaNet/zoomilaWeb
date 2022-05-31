@@ -1,10 +1,12 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="85396787-6298-4985-82c3-6d22319d4af6" name="Default Changelist" comment="change agency logo size Bm">
+    <list default="true" id="85396787-6298-4985-82c3-6d22319d4af6" name="Default Changelist" comment="remove extra header from projects page Bm">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/pages/projects/index.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/pages/projects/index.tsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/yarn.lock" beforeDir="false" afterPath="$PROJECT_DIR$/yarn.lock" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/pages/[...slug].tsx" beforeDir="false" afterPath="$PROJECT_DIR$/pages/[...slug].tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/component/loading/loading.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/component/loading/loading.tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/component/pagination/pagination.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/component/pagination/pagination.tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/tailwind.config.js" beforeDir="false" afterPath="$PROJECT_DIR$/tailwind.config.js" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -138,14 +140,7 @@
       <workItem from="1653970534331" duration="612000" />
       <workItem from="1653977831889" duration="38000" />
       <workItem from="1653981336517" duration="40000" />
-      <workItem from="1653984773152" duration="625000" />
-    </task>
-    <task id="LOCAL-00006" summary="implement project listing ui Bm">
-      <created>1651921698022</created>
-      <option name="number" value="00006" />
-      <option name="presentableId" value="LOCAL-00006" />
-      <option name="project" value="LOCAL" />
-      <updated>1651921698022</updated>
+      <workItem from="1653984773152" duration="2863000" />
     </task>
     <task id="LOCAL-00007" summary="add lang property to site">
       <created>1652002481470</created>
@@ -483,7 +478,14 @@
       <option name="project" value="LOCAL" />
       <updated>1653737068064</updated>
     </task>
-    <option name="localTasksCounter" value="55" />
+    <task id="LOCAL-00055" summary="remove extra header from projects page Bm">
+      <created>1653985457636</created>
+      <option name="number" value="00055" />
+      <option name="presentableId" value="LOCAL-00055" />
+      <option name="project" value="LOCAL" />
+      <updated>1653985457636</updated>
+    </task>
+    <option name="localTasksCounter" value="56" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -501,7 +503,6 @@
     </option>
   </component>
   <component name="VcsManagerConfiguration">
-    <MESSAGE value="create neighbourhoods list and building list in listing page url and search by theme and serve page Bm" />
     <MESSAGE value="create detail page and method of fetch by url Bm" />
     <MESSAGE value="set some option of Ads details in details page Bm" />
     <MESSAGE value="change base url Bm" />
@@ -526,7 +527,8 @@
     <MESSAGE value="fix pagination for totalcount under the 60 for infinite scroll Bm" />
     <MESSAGE value="fix font size in sell and let card in listing Bm" />
     <MESSAGE value="change agency logo size Bm" />
-    <option name="LAST_COMMIT_MESSAGE" value="change agency logo size Bm" />
+    <MESSAGE value="remove extra header from projects page Bm" />
+    <option name="LAST_COMMIT_MESSAGE" value="remove extra header from projects page Bm" />
   </component>
   <component name="XSLT-Support.FileAssociations.UIState">
     <expand />
