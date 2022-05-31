@@ -9,14 +9,6 @@ export default function Projects() {
             <meta name="robots" content="noindex" />
             <title>خرید پروژه های ساختمانی | آماده فروش و در حال ساخت | زومیلا</title>
         </Head>
-        <header className='bg-hf_color w-screen h-14 lg:h-16 grid grid-cols-4 gap-4 px-4'>
-            <div className="flex justify-start items-center"><img src="/image/menu.svg" alt="منو زومیلا"
-                className="w-6 h-6" /></div>
-            <Link href={`./`}>
-                <div className="col-span-2 flex justify-center items-center cursor-pointer"><img
-                    src="/image/Zoomila_Logo.svg" alt="زومیلا" className="h-12 lg:h-14 w-52" /></div>
-            </Link>
-        </header>
         <main className="flex flex-col justify-start">
             <div className="w-screen h-auto flex flex-row justify-center px-4">
                 <div className="w-full flex flex-col items-center">
