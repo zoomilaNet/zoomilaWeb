@@ -87,7 +87,7 @@ export const getServerSideProps: GetServerSideProps = async (context) => {
         totalPageOfAds = Number(dataForTotalCount.data.totalPages);
         listTitle = "خرید" + " " + "ملک" + " " + "در " + findCity.name;
         if(totalPageOfAds>5){
-            currentPage=4;
+            if(currentPage<5){currentPage=4;}
         }else{
             currentPage=1;
             totalPageOfAds=1;
@@ -100,7 +100,8 @@ export const getServerSideProps: GetServerSideProps = async (context) => {
         isSellOrNot = false;
         listTitle = "اجاره" + " " + "ملک" + " " + "در " + findCity.name;
         if(totalPageOfAds>5){
-            currentPage=4;
+            if(currentPage<5){currentPage=4;}
+
         }else{
             currentPage=1;
             totalPageOfAds=1;
@@ -112,7 +113,7 @@ export const getServerSideProps: GetServerSideProps = async (context) => {
         isSellOrNot = true;
         listTitle = "خرید" + " " + "ملک" + " " + "در " + "تهران";
         if(totalPageOfAds>5){
-            currentPage=4;
+            if(currentPage<5){currentPage=4;}
         }else{
             currentPage=1;
             totalPageOfAds=1;

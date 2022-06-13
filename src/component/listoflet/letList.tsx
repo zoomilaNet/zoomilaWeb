@@ -23,8 +23,9 @@ export default function LetList({letData,totalPage,currentpage}:{letData:LetAd[]
             }
         },1500)
     };
+
     return <div className="w-full">
-        {currentpage==4?
+        {currentpage<5?
             <InfiniteScroll className="w-full flex flex-col items-center"
                             dataLength={data.length}
                             next={getMorePost}

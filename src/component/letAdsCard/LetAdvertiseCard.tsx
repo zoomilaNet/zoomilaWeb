@@ -25,16 +25,19 @@ function LetAdvertiseCard({ dataLet }: { dataLet: LetAd }) {
                     
                 </div>
                 <div className="w-full flex flex-row items-center lg:mb-2 text-xs md:text-sm xl:text-lg px-2">
-                    طبقه سوم/ دو واحدی
+                    {dataLet.floorLevel==null?null:dataLet.floorLevel=="0"?"طبقه همکف":"طبقه"+dataLet.floorLevel}{dataLet.floorLevel==null||dataLet.unit==null||dataLet.unit=="0"?null:"/"}{dataLet.unit==null || dataLet.unit=="0"?null:"واحد"+dataLet.unit}
                 </div>
                 <div className="w-full flex flex-row items-center my-1 lg:mb-2 text-xs md:text-sm xl:text-lg px-2">
-                    پارکینگ اختصاصی-آسانسور دارد
+                    {dataLet.parking!=null?"پارکینگ "+dataLet.parking+"-":null}{dataLet.lift??"آسانسور دارد-"}{dataLet.seprate??"راه جدا-"}{dataLet.storage??"انباری دارد-"}{dataLet.yard??"حیاط دارد"}
                 </div>
-                <div className="w-full flex flex-row items-center lg:mb-2 text-sm md:text-base xl:text-lg px-2">
+                <div className="w-full h-auto flex flex-row items-center lg:mb-2 text-sm md:text-base xl:text-lg px-2">
                     <img src="/image/Location.svg" alt="icon" className="w-4 h-4" />
-                    <p>آدرس </p>
+                    <span className="flex flex-row">
+                        <p>آدرس:</p>
+                        <p>{dataLet.mainAddress!=null?dataLet.mainAddress:dataLet.cityName+"-"+dataLet.neibourhoodName}</p>
+                    </span>
                 </div>
-                <div className="my-1 lg:mb-2 text-xs md:text-base xl:text-lg text-gray_text px-2">توضیحات</div>
+                <div className="my-1 lg:mb-2 text-xs md:text-base xl:text-lg text-gray_text text-justify overflow-hidden px-2">توضیحات: {dataLet.description}</div>
                 <div className="w-full flex flex-row justify-between items-center text-sm md:text-lg my-2 md:my-4 lg:mb-2 px-2">
                     <div className="flex flex-row items-center">
                         <Image src={dataLet.agencyLogo == null ? "/image/aseman.png" : dataLet.agencyLogo} alt="agencylogo"  className="border w-10 h-10 md:w-12 md:h-12 lg:w-16 lg:h-16 object-cover rounded ml-4" />

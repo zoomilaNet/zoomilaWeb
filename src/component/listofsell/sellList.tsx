@@ -22,8 +22,9 @@ export default function SellList({sellData,totalPage,currentpage}:{sellData:Sell
             }
         },1500)
     };
+    console.log(currentpage+"**")
     return <div className="w-full">
-        {currentpage==4?
+        {currentpage<5?
             <InfiniteScroll className="w-full flex flex-col items-center"
                             dataLength={data.length}
                             next={getMorePost}

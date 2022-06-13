@@ -1,10 +1,11 @@
-import React from 'react';
-import { LetAd, SellAd, SellAdPublishTypeEnum } from "../../../api";
+import React, {useEffect, useState} from 'react';
+import {LetAd, SellAd, SellAdPublishTypeEnum, SystemApi} from "../../../api";
 import Slider from "../../slider/slider";
 import Seperator from '../../../models/seperator';
 import Image from "next/image";
 import AddDash from "../../../models/addDash";
 function AdvertiseCard({ dataSell }: { dataSell: SellAd }) {
+
     let showSlider: any;
     showSlider = dataSell!.photos!.length == 0 ?
         <div className="w-full h-full bg-no_image flex justify-center items-center">
@@ -28,16 +29,19 @@ function AdvertiseCard({ dataSell }: { dataSell: SellAd }) {
                     </a>
                 </div>
                 <div className="w-full flex flex-row items-center lg:mb-2 text-xs md:text-sm xl:text-lg px-2">
-                    طبقه سوم/ دو واحدی
+                    {dataSell.floorLevel==null?null:dataSell.floorLevel=="0"?"طبقه همکف":"طبقه"+dataSell.floorLevel}{dataSell.floorLevel==null||dataSell.unit==null||dataSell.unit=="0"?null:"/"}{dataSell.unit==null || dataSell.unit=="0"?null:"واحد"+dataSell.unit}
                 </div>
                 <div className="w-full flex flex-row items-center my-1 lg:mb-2 text-xs md:text-sm xl:text-lg px-2">
-                    پارکینگ اختصاصی-آسانسور دارد
+                    {dataSell.parking!=null?"پارکینگ "+dataSell.parking+"-":null}{dataSell.lift??"آسانسور دارد-"}{dataSell.seprate??"راه جدا-"}{dataSell.storage??"انباری دارد-"}{dataSell.yard??"حیاط دارد"}
                 </div>
-                <div className="w-full flex flex-row items-center lg:mb-2 text-sm md:text-base xl:text-lg px-2">
+                <div className="w-full h-auto flex flex-row items-center lg:mb-2 text-sm md:text-base xl:text-lg px-2">
                     <img src="/image/Location.svg" alt="icon" className="w-4 h-4" />
-                    <p>آدرس </p>
+                    <span className="flex flex-row">
+                        <p>آدرس:</p>
+                        <p>{dataSell.mainAddress!=null?dataSell.mainAddress:dataSell.cityName+"-"+dataSell.neibourhoodName}</p>
+                    </span>
                 </div>
-                <div className="my-1 lg:mb-2 text-xs md:text-base xl:text-lg text-gray_text px-2">توضیحات</div>
+                <div className="my-1 lg:mb-2 text-xs md:text-base xl:text-lg text-justify overflow-hidden text-gray_text px-2">توضیحات: {dataSell.description}</div>
                 <div className="w-full flex flex-row justify-between items-center text-sm md:text-lg my-2 lg:mb-2 px-2">
                     <div className="flex flex-row items-center">
                         <img src={dataSell.agencyLogo == null ? "/image/aseman.png" : dataSell.agencyLogo} alt="agencylogo" className="border w-10 h-10 md:w-12 md:h-12 lg:w-16 lg:h-16 object-cover rounded ml-4" />
