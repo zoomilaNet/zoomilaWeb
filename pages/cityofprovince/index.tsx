@@ -81,7 +81,7 @@ function CityOfProvince() {
                 <div className="flex flex-col  h-full w-full text-white">
                     <div className="text-right text-hf_color h-auto text-lg font-semibold mt-4 px-5">{isCity ? "شهر مورد نظر خود را انتخاب کنید" : "استان مورد نظر خود را انتخاب کنید"}</div>
                     <div className="px-4 py-4 mb-2 text-base overflow-y-scroll overflow-x-hidden md:text-xl h-full">
-                        <div className="grid grid-cols-3 gap-2">
+                        <div className="grid grid-cols-3 gap-1">
                             {parameter}
                         </div>
                     </div>

@@ -80,7 +80,7 @@ function Neighbourhoods() {
                         <img src="./image/search.svg" alt="search" className="w-6 h-6 ml-1" />
                     </div>
                     <div className=" px-4 py-4 mb-2 text-base overflow-y-scroll overflow-x-hidden md:text-xl h-full">
-                        <div className="grid grid-cols-3 gap-2">
+                        <div className="grid grid-cols-3 gap-1">
                             {parameter}
                         </div>
                     </div>

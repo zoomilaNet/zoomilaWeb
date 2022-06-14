@@ -1,13 +1,11 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="85396787-6298-4985-82c3-6d22319d4af6" name="Default Changelist" comment="complete scroll infinite in listing page Bm">
+    <list default="true" id="85396787-6298-4985-82c3-6d22319d4af6" name="Default Changelist" comment="fix pagination in scroll infinite Bm">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/pages/[...slug].tsx" beforeDir="false" afterPath="$PROJECT_DIR$/pages/[...slug].tsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/component/advertisecard/AdvertiseCard.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/component/advertisecard/AdvertiseCard.tsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/component/letAdsCard/LetAdvertiseCard.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/component/letAdsCard/LetAdvertiseCard.tsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/component/listoflet/letList.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/component/listoflet/letList.tsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/component/listofsell/sellList.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/component/listofsell/sellList.tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/pages/buildingtype/index.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/pages/buildingtype/index.tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/pages/cityofprovince/index.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/pages/cityofprovince/index.tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/pages/neighbourhoods/index.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/pages/neighbourhoods/index.tsx" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -155,14 +153,8 @@
       <workItem from="1654056469784" duration="3925000" />
       <workItem from="1654063721144" duration="617000" />
       <workItem from="1655033851362" duration="805000" />
-      <workItem from="1655093966694" duration="348000" />
-    </task>
-    <task id="LOCAL-00008" summary="delete extra font and lang for test Bm">
-      <created>1652074269361</created>
-      <option name="number" value="00008" />
-      <option name="presentableId" value="LOCAL-00008" />
-      <option name="project" value="LOCAL" />
-      <updated>1652074269361</updated>
+      <workItem from="1655093966694" duration="5610000" />
+      <workItem from="1655183156102" duration="169000" />
     </task>
     <task id="LOCAL-00009" summary="delete local property from next.config Bm">
       <created>1652074977872</created>
@@ -500,7 +492,14 @@
       <option name="project" value="LOCAL" />
       <updated>1653989264116</updated>
     </task>
-    <option name="localTasksCounter" value="57" />
+    <task id="LOCAL-00057" summary="fix pagination in scroll infinite Bm">
+      <created>1655094382213</created>
+      <option name="number" value="00057" />
+      <option name="presentableId" value="LOCAL-00057" />
+      <option name="project" value="LOCAL" />
+      <updated>1655094382228</updated>
+    </task>
+    <option name="localTasksCounter" value="58" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
