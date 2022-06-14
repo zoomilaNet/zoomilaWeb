@@ -1,11 +1,10 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="85396787-6298-4985-82c3-6d22319d4af6" name="Default Changelist" comment="fix pagination in scroll infinite Bm">
+    <list default="true" id="85396787-6298-4985-82c3-6d22319d4af6" name="Default Changelist" comment="decrease gap in city of province Bm">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/pages/buildingtype/index.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/pages/buildingtype/index.tsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/pages/cityofprovince/index.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/pages/cityofprovince/index.tsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/pages/neighbourhoods/index.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/pages/neighbourhoods/index.tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/component/listofsell/sellList.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/component/listofsell/sellList.tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/slider/slider.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/slider/slider.tsx" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -154,14 +153,7 @@
       <workItem from="1654063721144" duration="617000" />
       <workItem from="1655033851362" duration="805000" />
       <workItem from="1655093966694" duration="5610000" />
-      <workItem from="1655183156102" duration="169000" />
-    </task>
-    <task id="LOCAL-00009" summary="delete local property from next.config Bm">
-      <created>1652074977872</created>
-      <option name="number" value="00009" />
-      <option name="presentableId" value="LOCAL-00009" />
-      <option name="project" value="LOCAL" />
-      <updated>1652074977872</updated>
+      <workItem from="1655183156102" duration="3871000" />
     </task>
     <task id="LOCAL-00010" summary="delete local property from next.config Bm">
       <created>1652075621213</created>
@@ -499,7 +491,14 @@
       <option name="project" value="LOCAL" />
       <updated>1655094382228</updated>
     </task>
-    <option name="localTasksCounter" value="58" />
+    <task id="LOCAL-00058" summary="decrease gap in city of province Bm">
+      <created>1655183482790</created>
+      <option name="number" value="00058" />
+      <option name="presentableId" value="LOCAL-00058" />
+      <option name="project" value="LOCAL" />
+      <updated>1655183482790</updated>
+    </task>
+    <option name="localTasksCounter" value="59" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -517,7 +516,6 @@
     </option>
   </component>
   <component name="VcsManagerConfiguration">
-    <MESSAGE value="change base url Bm" />
     <MESSAGE value="add map in details page with static coordinate and method for convert string coordinate to standard coordinate Bm" />
     <MESSAGE value="change font format to woff2 Bm" />
     <MESSAGE value="change img tag sor fix width and height Bm" />
@@ -542,7 +540,8 @@
     <MESSAGE value="remove extra header from projects page Bm" />
     <MESSAGE value="complete scroll infinite in listing page Bm" />
     <MESSAGE value="fix pagination in scroll infinite Bm" />
-    <option name="LAST_COMMIT_MESSAGE" value="fix pagination in scroll infinite Bm" />
+    <MESSAGE value="decrease gap in city of province Bm" />
+    <option name="LAST_COMMIT_MESSAGE" value="decrease gap in city of province Bm" />
   </component>
   <component name="XSLT-Support.FileAssociations.UIState">
     <expand />
