@@ -1,10 +1,9 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="85396787-6298-4985-82c3-6d22319d4af6" name="Default Changelist" comment="decrease gap in city of province Bm">
+    <list default="true" id="85396787-6298-4985-82c3-6d22319d4af6" name="Default Changelist" comment="fix counter of image slider Bm">
+      <change afterPath="$PROJECT_DIR$/pages/newmainpage.tsx" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/component/listofsell/sellList.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/component/listofsell/sellList.tsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/slider/slider.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/slider/slider.tsx" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -153,14 +152,26 @@
       <workItem from="1654063721144" duration="617000" />
       <workItem from="1655033851362" duration="805000" />
       <workItem from="1655093966694" duration="5610000" />
-      <workItem from="1655183156102" duration="3871000" />
-    </task>
-    <task id="LOCAL-00010" summary="delete local property from next.config Bm">
-      <created>1652075621213</created>
-      <option name="number" value="00010" />
-      <option name="presentableId" value="LOCAL-00010" />
-      <option name="project" value="LOCAL" />
-      <updated>1652075621213</updated>
+      <workItem from="1655183156102" duration="5830000" />
+      <workItem from="1655611970087" duration="596000" />
+      <workItem from="1656825135844" duration="31000" />
+      <workItem from="1656825260757" duration="21000" />
+      <workItem from="1656825306209" duration="8000" />
+      <workItem from="1656830229882" duration="3545000" />
+      <workItem from="1657173831394" duration="1274000" />
+      <workItem from="1657175264227" duration="60000" />
+      <workItem from="1657685838234" duration="339000" />
+      <workItem from="1657948885022" duration="46000" />
+      <workItem from="1657974276639" duration="250000" />
+      <workItem from="1658032872446" duration="2069000" />
+      <workItem from="1658047767951" duration="1454000" />
+      <workItem from="1658292820845" duration="1485000" />
+      <workItem from="1658297421691" duration="592000" />
+      <workItem from="1658305590301" duration="2423000" />
+      <workItem from="1660021699462" duration="2080000" />
+      <workItem from="1660367586712" duration="32000" />
+      <workItem from="1660471255227" duration="3816000" />
+      <workItem from="1660478039820" duration="1517000" />
     </task>
     <task id="LOCAL-00011" summary="Delete woff font Bm">
       <created>1652075925264</created>
@@ -498,7 +509,14 @@
       <option name="project" value="LOCAL" />
       <updated>1655183482790</updated>
     </task>
-    <option name="localTasksCounter" value="59" />
+    <task id="LOCAL-00059" summary="fix counter of image slider Bm">
+      <created>1655189587480</created>
+      <option name="number" value="00059" />
+      <option name="presentableId" value="LOCAL-00059" />
+      <option name="project" value="LOCAL" />
+      <updated>1655189587480</updated>
+    </task>
+    <option name="localTasksCounter" value="60" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -516,7 +534,6 @@
     </option>
   </component>
   <component name="VcsManagerConfiguration">
-    <MESSAGE value="add map in details page with static coordinate and method for convert string coordinate to standard coordinate Bm" />
     <MESSAGE value="change font format to woff2 Bm" />
     <MESSAGE value="change img tag sor fix width and height Bm" />
     <MESSAGE value="set width and height for pagination button Bm" />
@@ -541,7 +558,8 @@
     <MESSAGE value="complete scroll infinite in listing page Bm" />
     <MESSAGE value="fix pagination in scroll infinite Bm" />
     <MESSAGE value="decrease gap in city of province Bm" />
-    <option name="LAST_COMMIT_MESSAGE" value="decrease gap in city of province Bm" />
+    <MESSAGE value="fix counter of image slider Bm" />
+    <option name="LAST_COMMIT_MESSAGE" value="fix counter of image slider Bm" />
   </component>
   <component name="XSLT-Support.FileAssociations.UIState">
     <expand />
