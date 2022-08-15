@@ -1,9 +1,9 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="85396787-6298-4985-82c3-6d22319d4af6" name="Default Changelist" comment="fix counter of image slider Bm">
-      <change afterPath="$PROJECT_DIR$/pages/newmainpage.tsx" afterDir="false" />
+    <list default="true" id="85396787-6298-4985-82c3-6d22319d4af6" name="Default Changelist" comment="create new main page in another url for sample mode Bm:|">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/pages/newmainpage.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/pages/newmainpage.tsx" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -171,14 +171,9 @@
       <workItem from="1660021699462" duration="2080000" />
       <workItem from="1660367586712" duration="32000" />
       <workItem from="1660471255227" duration="3816000" />
-      <workItem from="1660478039820" duration="1517000" />
-    </task>
-    <task id="LOCAL-00011" summary="Delete woff font Bm">
-      <created>1652075925264</created>
-      <option name="number" value="00011" />
-      <option name="presentableId" value="LOCAL-00011" />
-      <option name="project" value="LOCAL" />
-      <updated>1652075925264</updated>
+      <workItem from="1660478039820" duration="1696000" />
+      <workItem from="1660536361821" duration="9172000" />
+      <workItem from="1660563803088" duration="54000" />
     </task>
     <task id="LOCAL-00012" summary="add again woff font Bm">
       <created>1652076455000</created>
@@ -516,7 +511,14 @@
       <option name="project" value="LOCAL" />
       <updated>1655189587480</updated>
     </task>
-    <option name="localTasksCounter" value="60" />
+    <task id="LOCAL-00060" summary="create new main page in another url for sample mode Bm:|">
+      <created>1660479633655</created>
+      <option name="number" value="00060" />
+      <option name="presentableId" value="LOCAL-00060" />
+      <option name="project" value="LOCAL" />
+      <updated>1660479633655</updated>
+    </task>
+    <option name="localTasksCounter" value="61" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -534,7 +536,6 @@
     </option>
   </component>
   <component name="VcsManagerConfiguration">
-    <MESSAGE value="change font format to woff2 Bm" />
     <MESSAGE value="change img tag sor fix width and height Bm" />
     <MESSAGE value="set width and height for pagination button Bm" />
     <MESSAGE value="delete lottie from slider Bm" />
@@ -559,7 +560,8 @@
     <MESSAGE value="fix pagination in scroll infinite Bm" />
     <MESSAGE value="decrease gap in city of province Bm" />
     <MESSAGE value="fix counter of image slider Bm" />
-    <option name="LAST_COMMIT_MESSAGE" value="fix counter of image slider Bm" />
+    <MESSAGE value="create new main page in another url for sample mode Bm:|" />
+    <option name="LAST_COMMIT_MESSAGE" value="create new main page in another url for sample mode Bm:|" />
   </component>
   <component name="XSLT-Support.FileAssociations.UIState">
     <expand />
