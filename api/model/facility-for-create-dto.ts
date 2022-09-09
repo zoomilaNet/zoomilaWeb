@@ -248,6 +248,12 @@ export interface FacilityForCreateDto {
      * @memberof FacilityForCreateDto
      */
     'penthouse'?: boolean | null;
+    /**
+     * وام دارد یا ندارد
+     * @type {string}
+     * @memberof FacilityForCreateDto
+     */
+    'loan'?: string | null;
 }
 
 /**

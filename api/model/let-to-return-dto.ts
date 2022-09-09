@@ -76,12 +76,6 @@ export interface LetToReturnDto {
      */
     'adStatus'?: string | null;
     /**
-     * لینک
-     * @type {string}
-     * @memberof LetToReturnDto
-     */
-    'link'?: string | null;
-    /**
      * 
      * @type {BuildingToReturnDto}
      * @memberof LetToReturnDto

@@ -13,9 +13,6 @@
  */
 
 
-import { AddressToReturnDto } from './address-to-return-dto';
-import { ExistingFacilityDto } from './existing-facility-dto';
-import { FacilityToReturnDto } from './facility-to-return-dto';
 
 /**
  * 
@@ -24,71 +21,11 @@ import { FacilityToReturnDto } from './facility-to-return-dto';
  */
 export interface LetAdDetail {
     /**
-     * کد آگهی
+     * 
      * @type {number}
      * @memberof LetAdDetail
      */
-    'letId'?: number;
-    /**
-     * کد آژانس
-     * @type {number}
-     * @memberof LetAdDetail
-     */
-    'agencyId'?: number;
-    /**
-     * نام آژانس
-     * @type {string}
-     * @memberof LetAdDetail
-     */
-    'agencyName'?: string | null;
-    /**
-     * شماره تماس مشاور
-     * @type {string}
-     * @memberof LetAdDetail
-     */
-    'adviserPhone'?: string | null;
-    /**
-     * شماره تماس آژانس
-     * @type {string}
-     * @memberof LetAdDetail
-     */
-    'agencyPhone'?: string | null;
-    /**
-     * لوگو آژانس
-     * @type {string}
-     * @memberof LetAdDetail
-     */
-    'agencyLogo'?: string | null;
-    /**
-     * نام مشاور
-     * @type {string}
-     * @memberof LetAdDetail
-     */
-    'adviserName'?: string | null;
-    /**
-     * کد مشاور
-     * @type {number}
-     * @memberof LetAdDetail
-     */
-    'adviserId'?: number;
-    /**
-     * توضیحات
-     * @type {string}
-     * @memberof LetAdDetail
-     */
-    'description'?: string | null;
-    /**
-     * امکانات کلیدی
-     * @type {Array<string>}
-     * @memberof LetAdDetail
-     */
-    'keyFeatures'?: Array<string> | null;
-    /**
-     * نوع انتشار
-     * @type {string}
-     * @memberof LetAdDetail
-     */
-    'publishType'?: LetAdDetailPublishTypeEnum;
+    'buildingId'?: number;
     /**
      * 
      * @type {number}
@@ -102,209 +39,179 @@ export interface LetAdDetail {
      */
     'rent'?: number;
     /**
-     * اسلاگ
+     * 
+     * @type {number}
+     * @memberof LetAdDetail
+     */
+    'trackingCode'?: number;
+    /**
+     * 
      * @type {string}
      * @memberof LetAdDetail
      */
     'slug'?: string | null;
     /**
-     * کد شهر
+     * 
+     * @type {string}
+     * @memberof LetAdDetail
+     */
+    'publishType'?: LetAdDetailPublishTypeEnum;
+    /**
+     * 
      * @type {number}
      * @memberof LetAdDetail
      */
     'cityId'?: number;
     /**
-     * نام شهر
+     * 
      * @type {string}
      * @memberof LetAdDetail
      */
     'cityName'?: string | null;
     /**
-     * محله
+     * 
      * @type {number}
      * @memberof LetAdDetail
      */
     'neighbourhoodId'?: number;
     /**
-     * نام محله
+     * 
      * @type {string}
      * @memberof LetAdDetail
      */
     'neighbourhoodName'?: string | null;
     /**
-     * کد ساختمان
-     * @type {number}
-     * @memberof LetAdDetail
-     */
-    'buildingId'?: number;
-    /**
-     * نوع ساختمان
+     * 
      * @type {string}
      * @memberof LetAdDetail
      */
-    'type'?: LetAdDetailTypeEnum;
+    'buildingType'?: LetAdDetailBuildingTypeEnum;
     /**
-     * کاربری ساختمان
-     * @type {string}
-     * @memberof LetAdDetail
-     */
-    'use'?: LetAdDetailUseEnum;
-    /**
-     * کد پیگیری
-     * @type {string}
-     * @memberof LetAdDetail
-     */
-    'trackingCode'?: string | null;
-    /**
-     * متراژ ملک
+     * 
      * @type {number}
      * @memberof LetAdDetail
      */
     'area'?: number;
     /**
-     * نوع متراژ
+     * 
      * @type {boolean}
      * @memberof LetAdDetail
      */
     'areaType'?: boolean;
     /**
-     * زیر بنا
-     * @type {number}
-     * @memberof LetAdDetail
-     */
-    'foundation'?: number | null;
-    /**
-     * نوع سند
-     * @type {string}
-     * @memberof LetAdDetail
-     */
-    'documentType'?: LetAdDetailDocumentTypeEnum;
-    /**
-     * شرایط فروش
-     * @type {string}
-     * @memberof LetAdDetail
-     */
-    'condition'?: LetAdDetailConditionEnum;
-    /**
-     * موقعیت جغرافیایی
-     * @type {Array<string>}
-     * @memberof LetAdDetail
-     */
-    'direction'?: Array<string> | null;
-    /**
-     * سال ساخت از 1360 تا کنون
-     * @type {string}
-     * @memberof LetAdDetail
-     */
-    'buildingAge'?: string | null;
-    /**
-     * تعداد اتاق
+     * 
      * @type {number}
      * @memberof LetAdDetail
      */
     'rooms'?: number;
     /**
-     * تعداد طبقات شامل ساختمان بدون طبقه یک طبقه دو طبقه تا...... شصت طبقه
-     * @type {number}
-     * @memberof LetAdDetail
-     */
-    'floors'?: number;
-    /**
-     * طبقه چندم زیر همکف طبقه اول طبقه دوم تا...... طبقه شصتم
-     * @type {number}
-     * @memberof LetAdDetail
-     */
-    'floorLevel'?: number;
-    /**
-     * شماره واحد
-     * @type {number}
-     * @memberof LetAdDetail
-     */
-    'unit'?: number;
-    /**
-     * تعداد واحد شامل در این طبقه تک واحدی دو واحدی سه واحدی چهار واحدی پنج واحدی شش واحد یا بیشتر
-     * @type {number}
-     * @memberof LetAdDetail
-     */
-    'unitPerLevel'?: number;
-    /**
-     * لوکیشن حاوی lat , lon
-     * @type {string}
-     * @memberof LetAdDetail
-     */
-    'coordinate'?: string | null;
-    /**
-     * امتیاز سازه
-     * @type {number}
-     * @memberof LetAdDetail
-     */
-    'ranking'?: number;
-    /**
-     * تاریخ تخلیه
-     * @type {string}
-     * @memberof LetAdDetail
-     */
-    'availableDate'?: string | null;
-    /**
      * 
-     * @type {AddressToReturnDto}
-     * @memberof LetAdDetail
-     */
-    'address'?: AddressToReturnDto;
-    /**
-     * 
-     * @type {FacilityToReturnDto}
-     * @memberof LetAdDetail
-     */
-    'facility'?: FacilityToReturnDto;
-    /**
-     * امکانات موجود
-     * @type {Array<ExistingFacilityDto>}
-     * @memberof LetAdDetail
-     */
-    'existingFacilities'?: Array<ExistingFacilityDto> | null;
-    /**
-     * آدرس فولدر عکس ها
      * @type {string}
      * @memberof LetAdDetail
      */
     'photoPath'?: string | null;
     /**
-     * لیست عکسها
+     * 
      * @type {Array<string>}
      * @memberof LetAdDetail
      */
     'photos'?: Array<string> | null;
     /**
-     * آدرس ویدیوی آگهی  https://www.aparat.com/v/UCj85
+     * 
+     * @type {number}
+     * @memberof LetAdDetail
+     */
+    'myProperty'?: number;
+    /**
+     * 
+     * @type {number}
+     * @memberof LetAdDetail
+     */
+    'agencyId'?: number;
+    /**
+     * 
      * @type {string}
      * @memberof LetAdDetail
      */
-    'video'?: string | null;
+    'agencyName'?: string | null;
     /**
-     * ایجاد شده در
+     * 
      * @type {string}
      * @memberof LetAdDetail
      */
-    'createdAt'?: string | null;
+    'adviserName'?: string | null;
     /**
-     * ویرایش شده در
+     * 
      * @type {string}
      * @memberof LetAdDetail
      */
-    'updatedAt'?: string | null;
+    'adviserPhone'?: string | null;
     /**
-     * لینک آگهی
+     * 
+     * @type {string}
+     * @memberof LetAdDetail
+     */
+    'agencyPhone'?: string | null;
+    /**
+     * 
+     * @type {string}
+     * @memberof LetAdDetail
+     */
+    'ranking'?: string | null;
+    /**
+     * 
+     * @type {string}
+     * @memberof LetAdDetail
+     */
+    'documentType'?: string | null;
+    /**
+     * 
+     * @type {string}
+     * @memberof LetAdDetail
+     */
+    'floor'?: string | null;
+    /**
+     * 
+     * @type {string}
+     * @memberof LetAdDetail
+     */
+    'floorLevel'?: string | null;
+    /**
+     * 
+     * @type {string}
+     * @memberof LetAdDetail
+     */
+    'condition'?: string | null;
+    /**
+     * 
+     * @type {string}
+     * @memberof LetAdDetail
+     */
+    'buildingAge'?: string | null;
+    /**
+     * 
+     * @type {Array<string>}
+     * @memberof LetAdDetail
+     */
+    'keyFeatures'?: Array<string> | null;
+    /**
+     * 
+     * @type {string}
+     * @memberof LetAdDetail
+     */
+    'description'?: string | null;
+    /**
+     * 
+     * @type {string}
+     * @memberof LetAdDetail
+     */
+    'cordinate'?: string | null;
+    /**
+     * 
      * @type {string}
      * @memberof LetAdDetail
      */
     'link'?: string | null;
-    /**
-     * 
-     * @type {boolean}
-     * @memberof LetAdDetail
-     */
-    'agreedPrice'?: boolean;
 }
 
 /**
@@ -320,7 +227,7 @@ export enum LetAdDetailPublishTypeEnum {
     * @export
     * @enum {string}
     */
-export enum LetAdDetailTypeEnum {
+export enum LetAdDetailBuildingTypeEnum {
     Apartment = 'Apartment',
     Home = 'Home',
     Villa = 'Villa',
@@ -337,57 +244,6 @@ export enum LetAdDetailTypeEnum {
     Workshop = 'Workshop',
     Factory = 'Factory',
     CoastalLand = 'CoastalLand'
-}
-/**
-    * @export
-    * @enum {string}
-    */
-export enum LetAdDetailUseEnum {
-    Residential = 'Residential',
-    Commercial = 'Commercial',
-    LandAndGarden = 'LandAndGarden',
-    Industrial = 'Industrial',
-    ResidentialProperties = 'ResidentialProperties',
-    Apartment = 'Apartment',
-    Villa = 'Villa',
-    Home = 'Home',
-    ResidentialLand = 'ResidentialLand',
-    Garden = 'Garden',
-    OldHouse = 'OldHouse',
-    Farm = 'Farm',
-    CommercialLand = 'CommercialLand',
-    Office = 'Office',
-    Clinic = 'Clinic',
-    Store = 'Store',
-    Shop = 'Shop',
-    IndustrialShed = 'IndustrialShed',
-    Factory = 'Factory'
-}
-/**
-    * @export
-    * @enum {string}
-    */
-export enum LetAdDetailDocumentTypeEnum {
-    WrittenPromise = 'WrittenPromise',
-    Certain = 'Certain',
-    Mortgage = 'Mortgage',
-    Advocacy = 'Advocacy',
-    Endowment = 'Endowment',
-    Common = 'Common',
-    RightOfBusiness = 'RightOfBusiness',
-    Ongoing = 'Ongoing',
-    Other = 'Other'
-}
-/**
-    * @export
-    * @enum {string}
-    */
-export enum LetAdDetailConditionEnum {
-    CashSales = 'CashSales',
-    Changeable = 'Changeable',
-    Leasing = 'Leasing',
-    Presell = 'Presell',
-    ParticipationInConstruction = 'ParticipationInConstruction'
 }
 
 

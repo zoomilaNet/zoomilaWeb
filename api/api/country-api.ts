@@ -25,8 +25,6 @@ import { CityDto } from '../model';
 // @ts-ignore
 import { CityDtoPagedListResultSET } from '../model';
 // @ts-ignore
-import { LatLon } from '../model';
-// @ts-ignore
 import { NeighbourhoodDto } from '../model';
 // @ts-ignore
 import { NeighbourhoodDtoPagedListResultSET } from '../model';
@@ -104,44 +102,6 @@ export const CountryApiAxiosParamCreator = function (configuration?: Configurati
             // verify required parameter 'cityId' is not null or undefined
             assertParamExists('apiCountryCityCityIdGet', 'cityId', cityId)
             const localVarPath = `/api/Country/City/{cityId}`
-                .replace(`{${"cityId"}}`, encodeURIComponent(String(cityId)));
-            // use dummy base URL string because the URL constructor only accepts absolute URLs.
-            const localVarUrlObj = new URL(localVarPath, DUMMY_BASE_URL);
-            let baseOptions;
-            if (configuration) {
-                baseOptions = configuration.baseOptions;
-            }
-
-            const localVarRequestOptions = { method: 'GET', ...baseOptions, ...options};
-            const localVarHeaderParameter = {} as any;
-            const localVarQueryParameter = {} as any;
-
-            // authentication Bearer required
-            // http bearer authentication required
-            await setBearerAuthToObject(localVarHeaderParameter, configuration)
-
-
-    
-            setSearchParams(localVarUrlObj, localVarQueryParameter);
-            let headersFromBaseOptions = baseOptions && baseOptions.headers ? baseOptions.headers : {};
-            localVarRequestOptions.headers = {...localVarHeaderParameter, ...headersFromBaseOptions, ...options.headers};
-
-            return {
-                url: toPathString(localVarUrlObj),
-                options: localVarRequestOptions,
-            };
-        },
-        /**
-         * 
-         * @summary نزدیکترین نقطه در شهر
-         * @param {number} cityId 
-         * @param {*} [options] Override http request option.
-         * @throws {RequiredError}
-         */
-        apiCountryCityCityIdNearByLocationGet: async (cityId: number, options: AxiosRequestConfig = {}): Promise<RequestArgs> => {
-            // verify required parameter 'cityId' is not null or undefined
-            assertParamExists('apiCountryCityCityIdNearByLocationGet', 'cityId', cityId)
-            const localVarPath = `/api/Country/City/{cityId}/NearByLocation`
                 .replace(`{${"cityId"}}`, encodeURIComponent(String(cityId)));
             // use dummy base URL string because the URL constructor only accepts absolute URLs.
             const localVarUrlObj = new URL(localVarPath, DUMMY_BASE_URL);
@@ -384,17 +344,6 @@ export const CountryApiFp = function(configuration?: Configuration) {
         },
         /**
          * 
-         * @summary نزدیکترین نقطه در شهر
-         * @param {number} cityId 
-         * @param {*} [options] Override http request option.
-         * @throws {RequiredError}
-         */
-        async apiCountryCityCityIdNearByLocationGet(cityId: number, options?: AxiosRequestConfig): Promise<(axios?: AxiosInstance, basePath?: string) => AxiosPromise<LatLon>> {
-            const localVarAxiosArgs = await localVarAxiosParamCreator.apiCountryCityCityIdNearByLocationGet(cityId, options);
-            return createRequestFunction(localVarAxiosArgs, globalAxios, BASE_PATH, configuration);
-        },
-        /**
-         * 
          * @summary محله
          * @param {number} neighbourhoodId 
          * @param {*} [options] Override http request option.
@@ -477,16 +426,6 @@ export const CountryApiFactory = function (configuration?: Configuration, basePa
         },
         /**
          * 
-         * @summary نزدیکترین نقطه در شهر
-         * @param {number} cityId 
-         * @param {*} [options] Override http request option.
-         * @throws {RequiredError}
-         */
-        apiCountryCityCityIdNearByLocationGet(cityId: number, options?: any): AxiosPromise<LatLon> {
-            return localVarFp.apiCountryCityCityIdNearByLocationGet(cityId, options).then((request) => request(axios, basePath));
-        },
-        /**
-         * 
          * @summary محله
          * @param {number} neighbourhoodId 
          * @param {*} [options] Override http request option.
@@ -561,16 +500,6 @@ export interface CountryApiInterface {
      * @memberof CountryApiInterface
      */
     apiCountryCityCityIdGet(cityId: number, options?: AxiosRequestConfig): AxiosPromise<CityDto>;
-
-    /**
-     * 
-     * @summary نزدیکترین نقطه در شهر
-     * @param {number} cityId 
-     * @param {*} [options] Override http request option.
-     * @throws {RequiredError}
-     * @memberof CountryApiInterface
-     */
-    apiCountryCityCityIdNearByLocationGet(cityId: number, options?: AxiosRequestConfig): AxiosPromise<LatLon>;
 
     /**
      * 
@@ -651,18 +580,6 @@ export class CountryApi extends BaseAPI implements CountryApiInterface {
      */
     public apiCountryCityCityIdGet(cityId: number, options?: AxiosRequestConfig) {
         return CountryApiFp(this.configuration).apiCountryCityCityIdGet(cityId, options).then((request) => request(this.axios, this.basePath));
-    }
-
-    /**
-     * 
-     * @summary نزدیکترین نقطه در شهر
-     * @param {number} cityId 
-     * @param {*} [options] Override http request option.
-     * @throws {RequiredError}
-     * @memberof CountryApi
-     */
-    public apiCountryCityCityIdNearByLocationGet(cityId: number, options?: AxiosRequestConfig) {
-        return CountryApiFp(this.configuration).apiCountryCityCityIdNearByLocationGet(cityId, options).then((request) => request(this.axios, this.basePath));
     }
 
     /**

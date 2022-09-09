@@ -70,12 +70,6 @@ export interface SellToReturnDto {
      */
     'adStatus'?: string | null;
     /**
-     * لینک
-     * @type {string}
-     * @memberof SellToReturnDto
-     */
-    'link'?: string | null;
-    /**
      * 
      * @type {BuildingToReturnDto}
      * @memberof SellToReturnDto

@@ -115,6 +115,6 @@ export interface AdviserToReturnDto {
      * @type {number}
      * @memberof AdviserToReturnDto
      */
-    'provinceId'?: number | null;
+    'provinceId'?: number;
 }
 
